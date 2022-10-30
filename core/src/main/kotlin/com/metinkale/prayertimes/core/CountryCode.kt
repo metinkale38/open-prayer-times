@@ -55,7 +55,7 @@ value class CountryCode private constructor(val code: String) {
 
 
         private fun readTSV(lang: Lang): Sequence<Pair<String, String>> {
-            return Cities::class.java.getResourceAsStream("/countrycodes/${lang.name}.tsv")!!
+            return CountryCode::class.java.getResourceAsStream("/countrycodes/${lang.name}.tsv")!!
                 .bufferedReader(Charsets.UTF_8)
                 .lineSequence().map { it.split("\t").let { it[0] to it[1] } }
         }
