@@ -8,7 +8,7 @@ repositories {
 plugins{
     id("kotlin")
     id("com.github.johnrengelman.shadow") version "7.0.0"
-    kotlin("plugin.serialization") version "1.6.20"
+    kotlin("plugin.serialization")
 }
 
 val invoker by configurations.creating
@@ -40,7 +40,7 @@ tasks.withType<ShadowJar> {
     archiveFileName.set("shadowJar/function.jar")
     mergeServiceFiles()
     manifest {
-        attributes(mapOf("Main-Class" to "com.metinkale.prayertimes.cloudfunctions.App"))
+        attributes(mapOf("Main-Class" to "dev.metinkale.prayertimes.cloudfunctions.App"))
     }
 }
 
@@ -49,7 +49,7 @@ task<JavaExec>("runFunction") {
     classpath(invoker)
     inputs.files(configurations.runtimeClasspath, sourceSets["main"].output)
     args(
-        "--target", project.findProperty("runFunction.target") ?: "com.metinkale.prayertimes.cloudfunctions.App",
+        "--target", project.findProperty("runFunction.target") ?: "dev.metinkale.prayertimes.cloudfunctions.App",
         "--port", project.findProperty("runFunction.port") ?: 8080
     )
     doFirst {

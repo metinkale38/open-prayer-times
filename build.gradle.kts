@@ -1,23 +1,16 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "1.6.20"
+    kotlin("multiplatform") version "1.7.10" apply false
+    kotlin("plugin.serialization") version "1.7.10" apply false
 }
 
-group = "com.metinkale.prayertimes"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
+allprojects {
+    //manage common setting and dependencies
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+subprojects {
+    group = "dev.metinkale.prayertimes"
+    version = "1.0-SNAPSHOT"
 }
