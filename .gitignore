@@ -2,3 +2,4 @@
 .gradle
 **/Secrets.kt
 build
+node_modules

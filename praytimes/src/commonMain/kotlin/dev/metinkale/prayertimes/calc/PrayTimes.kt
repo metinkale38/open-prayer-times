@@ -10,7 +10,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlin.math.abs
 import kotlin.math.floor
-import kotlin.math.roundToInt
 import kotlin.math.sqrt
 
 
@@ -125,7 +124,7 @@ data class PrayTimes(
      * @return timediff
      */
     private fun timeDiff(time1: Double, time2: Double): Double {
-        return fixHour(time2 - time1)
+        return DMath.fixHour(time2 - time1)
     }
 
 
@@ -180,7 +179,7 @@ data class PrayTimes(
      */
     private fun asrTime(jdate: Double, factor: Int, time: Double): Double {
         val decl = sunPositionDeclination(jdate + time)
-        val angle = -arccot(factor + tan(abs(latitude - decl)))
+        val angle = -DMath.arccot(factor + DMath.tan(abs(latitude - decl)))
         return sunAngleTime(jdate, angle, time, false)
     }
 
@@ -196,8 +195,8 @@ data class PrayTimes(
     private fun sunAngleTime(jdate: Double, angle: Double, time: Double, ccw: Boolean): Double {
         val decl = sunPositionDeclination(jdate + time)
         val noon = midDay(jdate, time)
-        val t = 1.0 / 15.0 * arccos(
-            (-sin(angle) - sin(decl) * sin(latitude)) / (cos(decl) * cos(
+        val t = 1.0 / 15.0 * DMath.arccos(
+            (-DMath.sin(angle) - DMath.sin(decl) * DMath.sin(latitude)) / (DMath.cos(decl) * DMath.cos(
                 latitude
             ))
         )
@@ -213,7 +212,7 @@ data class PrayTimes(
      */
     private fun midDay(jdate: Double, time: Double): Double {
         val eqt = equationOfTime(jdate + time)
-        return fixHour(12 - eqt)
+        return DMath.fixHour(12 - eqt)
     }
 
     /**
@@ -225,12 +224,12 @@ data class PrayTimes(
      */
     private fun equationOfTime(jd: Double): Double {
         val d = jd - 2451545.0
-        val g = fixAngle(357.529 + 0.98560028 * d)
-        val q = fixAngle(280.459 + 0.98564736 * d)
-        val l = fixAngle(q + 1.915 * sin(g) + 0.020 * sin(2 * g))
+        val g = DMath.fixAngle(357.529 + 0.98560028 * d)
+        val q = DMath.fixAngle(280.459 + 0.98564736 * d)
+        val l = DMath.fixAngle(q + 1.915 * DMath.sin(g) + 0.020 * DMath.sin(2 * g))
         val e = 23.439 - 0.00000036 * d
-        val ra = arctan2(cos(e) * sin(l), cos(l)) / 15
-        return q / 15.0 - fixHour(ra)
+        val ra = DMath.arctan2(DMath.cos(e) * DMath.sin(l), DMath.cos(l)) / 15
+        return q / 15.0 - DMath.fixHour(ra)
     }
 
     /**
@@ -242,11 +241,11 @@ data class PrayTimes(
      */
     private fun sunPositionDeclination(jd: Double): Double {
         val d = jd - 2451545.0
-        val g = fixAngle(357.529 + 0.98560028 * d)
-        val q = fixAngle(280.459 + 0.98564736 * d)
-        val l = fixAngle(q + 1.915 * sin(g) + 0.020 * sin(2 * g))
+        val g = DMath.fixAngle(357.529 + 0.98560028 * d)
+        val q = DMath.fixAngle(280.459 + 0.98564736 * d)
+        val l = DMath.fixAngle(q + 1.915 * DMath.sin(g) + 0.020 * DMath.sin(2 * g))
         val e = 23.439 - 0.00000036 * d
-        return arcsin(sin(e) * sin(l))
+        return DMath.arcsin(DMath.sin(e) * DMath.sin(l))
     }
 
     /**
@@ -298,7 +297,7 @@ data class PrayTimes(
     fun serialize(): String = listOf("$latitude",
         "$longitude",
         elevation.takeIf { it != 0.0 }?.let { "$it" } ?: "",
-        timezone.id.replace("/", ":"),
+        timezone.id.replace("/", "::"),
         method.serialize()).joinToString(";")
 
     companion object {
@@ -307,7 +306,7 @@ data class PrayTimes(
                 it[0].toDouble(),
                 it[1].toDouble(),
                 it[2].toDoubleOrNull() ?: 0.0,
-                TimeZone.of(it[3].replace(":", "/")),
+                TimeZone.of(it[3].replace("::", "/")),
                 Method.deserialize(it.drop(4).joinToString(";"))
             )
         }
@@ -315,7 +314,7 @@ data class PrayTimes(
         object Serializer : KSerializer<PrayTimes> {
             override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("PrayTimes", PrimitiveKind.STRING)
             override fun serialize(encoder: Encoder, value: PrayTimes) = encoder.encodeString(value.serialize())
-            override fun deserialize(decoder: Decoder): PrayTimes = PrayTimes.deserialize(decoder.decodeString())
+            override fun deserialize(decoder: Decoder): PrayTimes = deserialize(decoder.decodeString())
         }
     }
 }
