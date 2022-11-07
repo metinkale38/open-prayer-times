@@ -22,13 +22,3 @@ fun doRequest(req: JRequest, res: JResponse): Promise<dynamic> = GlobalScope.pro
     res.type(response.contentType ?: "")
     res.send(response.body ?: "")
 }
-
-
-@ExperimentalTime
-fun main() {
-    GlobalScope.launch {
-        measureTime {
-            Router.route(Request.fromURL("/search?q=Braunschweig"))
-        }.also { console.error(it.inWholeMilliseconds.toInt()) }
-    }
-}
