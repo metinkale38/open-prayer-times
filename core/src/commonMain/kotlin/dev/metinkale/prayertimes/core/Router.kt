@@ -8,6 +8,8 @@ import dev.metinkale.prayertimes.core.sources.Source
 import dev.metinkale.prayertimes.core.sources.features.ByLocationFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.sources.features.SearchFeature
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 
 object Router {
 
@@ -26,15 +28,15 @@ object Router {
         return if (query != null && lat == null && lng == null) {
             val geo = Geocoder.search(query, languages.first())
             Response(200,
-                Source.values().flatMap {
+                Source.values().parallelMap {
                     (it as? SearchFeature)?.search(query)
                         ?: geo?.let { geo -> (it as? ByLocationFeature)?.search(geo) } ?: emptyList()
-                })
+                }.flatten())
         } else if (query == null && lat != null && lng != null) {
             val geo = Geocoder.reverse(lat, lng, languages.first())
             if (geo == null) Response(500, error = "reverse geocoding did not work")
             else Response(200,
-                Source.values().mapNotNull { it as? ByLocationFeature }.flatMap { it.search(geo) }
+                Source.values().mapNotNull { it as? ByLocationFeature }.parallelMap { it.search(geo) }.flatten()
             )
         } else Response(400, error = "you must either set 'lat' and 'lng' or only 'q'")
     }
@@ -48,3 +50,7 @@ object Router {
         } ?: Response(404)
     }
 }
+
+suspend fun <F, T> List<F>.parallelMap(block: suspend (F) -> T) = map {
+    GlobalScope.async { block.invoke(it) }
+}.map { it.await() }
