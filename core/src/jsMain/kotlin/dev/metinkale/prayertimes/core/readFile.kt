@@ -1,8 +1,6 @@
 package dev.metinkale.prayertimes.core
 
-import nodejs.fs
 
-/*
 val Resources = nodejs.require("Resources/resources.js")
 
 actual fun readFileAsLineSequence(filePath: String): Sequence<String> {
@@ -15,12 +13,12 @@ actual fun readFileAsLineSequence(filePath: String): Sequence<String> {
     return lines.asSequence()
 }
 
-*/
 
 
+/*
 val resourcesPath = js("process").env.RESOURCES_PATH
+
 actual fun readFileAsLineSequence(filePath: String): Sequence<String> {
-    console.error(filePath)
     val string = fs.readFileSync(resourcesPath + "/" + filePath, "utf8") as String
     return string.lineSequence()
-}
+}*/

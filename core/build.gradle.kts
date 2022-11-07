@@ -28,7 +28,7 @@ kotlin {
 
         val jsMain by getting {
             dependencies {
-                //implementation(npm("Resources", generatedResourcePath))
+                implementation(npm("Resources", generatedResourcePath))
             }
         }
 
