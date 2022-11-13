@@ -17,7 +17,7 @@ fun String.normalize(): String {
                 'Ş', 'ş' -> builder.append("s")
                 'Ä', 'ä', 'à', 'â', 'À', 'Â' -> builder.append("a")
                 'ü', 'Ü', 'û', 'ù', 'Û', 'Ù' -> builder.append("u")
-                else -> builder.append(c)
+                else -> builder.append(' ')
             }
         }
     }

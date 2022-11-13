@@ -1,12 +1,10 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.utils.now
-import dev.metinkale.prayertimes.core.utils.readTSV
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
@@ -47,7 +45,6 @@ object NVC : Source, CityListFeature, DayTimesFeature {
     }
 
 
-    override fun getCities(): Sequence<Entry> = readTSV(this, "/tsv/nvc.tsv")
 
 
     // toLocalTime() seems not to work so we do it here

@@ -20,12 +20,6 @@ data class Entry(
         names.first().let { it[l] }
     } ?: names.first().values.first()
 
-    fun names(vararg language: String): List<String> = names.map { map ->
-        language.firstNotNullOfOrNull { l ->
-            map.let { it[l] }
-        } ?: map.values.first()
-    }
-
     fun encodeToString() = buildString {
         append(id)
         append(DELIM)
@@ -42,8 +36,8 @@ data class Entry(
         }.let { append(it) }
     }
 
-    fun withTimeZone(): Entry =
-      /*  if (lat != null && lng != null) copy(timeZone = Geocoder.getTimeZone(lat, lng)) else */ this
+    suspend fun withTimeZone(): Entry =
+        if (lat != null && lng != null) copy(timeZone = Geocoder.getTimeZone(lat, lng)) else this
 
     companion object {
         val DELIM = '\t'

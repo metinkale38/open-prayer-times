@@ -13,44 +13,7 @@ value class CountryCode private constructor(val code: String) {
     companion object {
 
         fun find(name: String): CountryCode? {
-
-            return when (name) {
-                "Bosnia-Herzegovina" -> "BA"
-                "Butan" -> "BT"
-                "Cad" -> "TD"
-                "Chechenia" -> "RU"
-                "Czech Republic" -> "CZ"
-                "Demokratic Republic Of The Congo" -> "CD"
-                "Dogu Timor" -> "TL"
-                "Fildisi Sahili" -> "CI"
-                "Gronland" -> "GL"
-                "Guadelope" -> "GP"
-                "Guam Island" -> "GU"
-                "South Korea" -> "KR"
-                "Hirvatistan" -> "HR"
-                "Hollanda Antilleri" -> "AN"
-                "Izlanda" -> "IS"
-                "Kambocya" -> "KH"
-                "Karadag" -> "ME"
-                "Kirgizhstan" -> "KG"
-                "Kostarika" -> "CR"
-                "Kudus" -> "PS"
-                "North Cyprus" -> "CY"
-                "North Korea" -> "KP"
-                "Martinik" -> "MQ"
-                "Mauritius Adasi" -> "MU"
-                "Moldavya" -> "MD"
-                "Montserrat (U.K.)" -> "MS"
-                "Pitcairn Adasi" -> "PN"
-                "Seysel Adalari" -> "SC"
-                "Sirbistan" -> "RS"
-                "Trinidat ve Tobago" -> "TT"
-                "Tunusia" -> "TN"
-                "Ukraine-Krym" -> "UA"
-                "Yesil Burun" -> "CV"
-                "Man Island" -> "IM"
-                else -> null
-            }?.let { CountryCode(it) } ?: Lang.values().firstNotNullOfOrNull { find(it, name) }
+            return Lang.values().firstNotNullOfOrNull { find(it, name) }
         }
 
         fun find(lang: Lang, name: String): CountryCode? =
@@ -62,7 +25,9 @@ value class CountryCode private constructor(val code: String) {
 
 
         private fun readTSV(lang: Lang): Sequence<Pair<String, String>> {
-           return readFileAsLineSequence("/countrycodes/${lang.name}.tsv").map { it.split("\t").let { it[0] to it[1] } }
+            return readFileAsLineSequence("/countrycodes/${lang.name}.tsv").map {
+                it.split("\t").let { it[0] to it[1] }
+            }
         }
     }
 }

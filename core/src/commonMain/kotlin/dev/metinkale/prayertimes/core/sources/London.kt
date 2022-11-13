@@ -58,6 +58,8 @@ object London : Source, CityListFeature, DayTimesFeature {
         } ?: emptyList()
     }
 
+    override fun getCitiesTSV(): Sequence<String> = getCities().map { it.encodeToString() }
+
     override fun getCities(): Sequence<Entry> = sequenceOf(
         Entry(
             id = "0",

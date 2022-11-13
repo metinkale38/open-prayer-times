@@ -1,13 +1,11 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.Secrets
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.utils.now
-import dev.metinkale.prayertimes.core.utils.readTSV
 import dev.metinkale.prayertimes.core.utils.toDMY
 import kotlinx.datetime.*
 import kotlinx.serialization.Serializable
@@ -53,7 +51,6 @@ object IGMG : CityListFeature, DayTimesFeature {
         getDayTimes(key = key, from = day, to = day).firstOrNull()
 
 
-    override fun getCities(): Sequence<Entry> = readTSV(this, "/tsv/igmg.tsv")
 
     @Serializable
     internal data class PrayerTimesResponse(

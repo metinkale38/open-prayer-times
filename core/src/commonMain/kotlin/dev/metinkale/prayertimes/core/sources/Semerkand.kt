@@ -1,12 +1,10 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.utils.now
-import dev.metinkale.prayertimes.core.utils.readTSV
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
@@ -37,7 +35,6 @@ object Semerkand : Source, CityListFeature, DayTimesFeature {
     }
 
 
-    override fun getCities(): Sequence<Entry> = readTSV(this, "/tsv/semerkand.tsv")
 
     @Serializable
     private class Day(
