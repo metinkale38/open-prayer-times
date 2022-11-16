@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 
-object Semerkand : Source, CityListFeature, DayTimesFeature {
+internal object Semerkand : Source, CityListFeature {
     override val name: String = "Semerkand"
     override fun getCities(): Sequence<Entry> = loadEntries(this)
     override suspend fun getDayTimes(key: String): List<DayTimes> {

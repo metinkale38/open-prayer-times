@@ -19,7 +19,7 @@ Usage:
 
 This module does not need an active internet connection. 
 
-## core
+## core module
 
 This is also a multi-plattform module, which contains some web-based prayer-time providers like Diyanet, IGMG, NamazVakti.com and SemerkandTakvimi (feel free to make PRs for more providers).
 
@@ -61,6 +61,7 @@ I wanted to keep the main parts independent of plattform code, so it can be used
 At first tried to deploy this library as cloud function in the google cloud. I tried the JVM-Engine which had very bad cold start times (which are crucial for cloud functions). Then i tried to compile the kotlin multiplattform project into a node.js server, which gave me much better cold start times, but searching for cities still took too long, so i decided to deploy the server as a Google App Engine Server. The server code resides in the `server` Module
 
 
-## server
+## server module
+
 
 A simple wrapper around the `coreRouter` (see above) to deploy it in Googles App Engine plattform.

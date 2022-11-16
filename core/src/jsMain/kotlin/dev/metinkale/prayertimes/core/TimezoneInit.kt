@@ -1,12 +1,12 @@
 package dev.metinkale.prayertimes.core
 
 
-object TimezoneInit {
+internal object TimezoneInit {
     private val jsJodaTz = JsJodaTimeZoneModule
     fun init() {}
 }
 
 @JsModule("@js-joda/timezone")
 @JsNonModule
-external object JsJodaTimeZoneModule
+internal external object JsJodaTimeZoneModule
 

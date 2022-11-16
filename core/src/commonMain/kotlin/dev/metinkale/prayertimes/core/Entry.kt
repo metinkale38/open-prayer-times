@@ -22,9 +22,9 @@ data class Entry(
             .distinct()
     }
 
-    fun name(vararg language: String): String = language.firstNotNullOfOrNull { l ->
-        names.first().let { it[l] }
-    } ?: names.first().values.first()
+    fun names(vararg language: String): List<String> = names.map { map ->
+        language.firstNotNullOfOrNull { map[it] } ?: map.values.first()
+    }
 
     fun encodeToString() = buildString {
         append(id)

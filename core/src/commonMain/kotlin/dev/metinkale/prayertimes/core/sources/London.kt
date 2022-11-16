@@ -3,7 +3,7 @@ package dev.metinkale.prayertimes.core.sources
 import dev.metinkale.prayertimes.core.DayTimes
 import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
-import dev.metinkale.prayertimes.core.Secrets
+import dev.metinkale.prayertimes.core.Configuration
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.utils.now
@@ -14,14 +14,14 @@ import kotlinx.datetime.toLocalTime
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
-object London : Source, CityListFeature, DayTimesFeature {
+internal object London : Source, CityListFeature {
 
     override val name: String = "London"
     private val json = Json { ignoreUnknownKeys = true }
 
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val response =
-            HttpClient.get("https://www.londonprayertimes.com/api/times/?format=json&key=${Secrets.londonPrayerTimesKey}&year=" + LocalDate.now().year)
+            HttpClient.get("https://www.londonprayertimes.com/api/times/?format=json&key=${Configuration.LONDON_PRAYER_TIMES_API_KEY}&year=" + LocalDate.now().year)
                 .let {
                     json.decodeFromString(Result.serializer(), it)
                 }

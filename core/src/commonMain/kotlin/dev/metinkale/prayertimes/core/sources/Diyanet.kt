@@ -9,7 +9,7 @@ import dev.metinkale.prayertimes.core.utils.loadEntries
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
-object Diyanet : Source, CityListFeature, DayTimesFeature {
+internal object Diyanet : Source, CityListFeature {
     override val name: String = "Diyanet"
 
     override fun getCities(): Sequence<Entry> = loadEntries(this)

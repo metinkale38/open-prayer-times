@@ -11,6 +11,7 @@ plugins {
     kotlin("plugin.serialization")
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("com.google.cloud.tools.appengine") version "2.4.2"
+    id("maven-publish")
 }
 
 tasks.withType<KotlinCompile> {

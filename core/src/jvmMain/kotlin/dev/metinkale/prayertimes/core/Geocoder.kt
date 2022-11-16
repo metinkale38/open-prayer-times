@@ -14,8 +14,8 @@ import kotlinx.coroutines.withContext
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toKotlinTimeZone
 
-actual object Geocoder {
-    private val geoApiContext = GeoApiContext.Builder().apiKey(Secrets.googleApiKey).build()
+internal actual object Geocoder {
+    private val geoApiContext = GeoApiContext.Builder().apiKey(Configuration.GOOGLE_API_KEY).build()
 
     actual suspend fun getTimeZone(lat: Double, lng: Double): TimeZone = withContext(Dispatchers.IO) {
         TimeZoneApi.getTimeZone(geoApiContext, LatLng(lat, lng)).await().toZoneId().toKotlinTimeZone()
@@ -25,13 +25,13 @@ actual object Geocoder {
         ElevationApi.getByPoint(geoApiContext, LatLng(lat, lng)).await().elevation.roundLatLng()
     }
 
-    actual suspend fun reverse(lat: Double, lng: Double, lang: String): GeocoderResult? = withContext(Dispatchers.IO) {
+    actual suspend fun reverse(lat: Double, lng: Double, lang: String): Geolocation? = withContext(Dispatchers.IO) {
         val results: Array<GeocodingResult> =
             GeocodingApi.reverseGeocode(geoApiContext, LatLng(lat, lng)).resultType(AddressType.LOCALITY).language(lang)
                 .await()
 
         results.firstOrNull()?.let {
-            GeocoderResult(
+            Geolocation(
                 it.geometry.location.lat.roundLatLng(),
                 it.geometry.location.lng.roundLatLng(),
                 it.addressComponents.find { it.types.contains(AddressComponentType.COUNTRY) }?.shortName ?: "",
@@ -40,12 +40,12 @@ actual object Geocoder {
         }
     }
 
-    actual suspend fun search(q: String, lang: String): GeocoderResult? = withContext(Dispatchers.IO) {
+    actual suspend fun search(q: String, lang: String): Geolocation? = withContext(Dispatchers.IO) {
         val results: Array<GeocodingResult> =
             GeocodingApi.geocode(geoApiContext, q).language(lang).resultType(AddressType.LOCALITY).await()
 
         results.firstOrNull()?.let {
-            GeocoderResult(
+            Geolocation(
                 it.geometry.location.lat.roundLatLng(),
                 it.geometry.location.lng.roundLatLng(),
                 it.addressComponents.find { it.types.contains(AddressComponentType.COUNTRY) }?.shortName ?: "",

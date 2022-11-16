@@ -1,5 +1,6 @@
 package dev.metinkale.prayertimes.server
 
+import dev.metinkale.prayertimes.core.Configuration
 import dev.metinkale.prayertimes.core.router.HttpHandler
 import dev.metinkale.prayertimes.core.router.Method
 import dev.metinkale.prayertimes.core.router.Request
@@ -14,6 +15,11 @@ import io.ktor.server.routing.*
 import io.ktor.util.*
 
 fun main() {
+    Configuration.GOOGLE_API_KEY = ""
+    Configuration.IGMG_API_KEY = ""
+    Configuration.LONDON_PRAYER_TIMES_API_KEY = ""
+
+
     embeddedServer(Netty, port = 8080) {
         routing {
             get("{...}") {

@@ -6,7 +6,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 
-actual object HttpClient {
+internal actual object HttpClient {
     actual suspend fun get(url: String, build: HTTPClientBuilder.() -> Unit): String = send("GET", url, build)
 
     actual suspend fun post(url: String, build: HTTPClientBuilder.() -> Unit): String = send("POST", url, build)

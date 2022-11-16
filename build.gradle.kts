@@ -4,7 +4,6 @@ plugins {
 }
 
 allprojects {
-    //manage common setting and dependencies
     repositories {
         mavenCentral()
     }

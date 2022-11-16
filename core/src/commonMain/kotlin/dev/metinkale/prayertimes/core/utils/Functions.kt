@@ -3,11 +3,11 @@ package dev.metinkale.prayertimes.core.utils
 import kotlinx.datetime.*
 import kotlin.math.roundToInt
 
-fun LocalDateTime.Companion.now() = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
-fun LocalDate.Companion.now() = LocalDateTime.now().date
-fun LocalTime.Companion.now() = LocalDateTime.now().time
+internal fun LocalDateTime.Companion.now() = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
+internal fun LocalDate.Companion.now() = LocalDateTime.now().date
+internal fun LocalTime.Companion.now() = LocalDateTime.now().time
 
-fun LocalDate.toDMY() = toString().split("-").reversed().joinToString(".")
+internal fun LocalDate.toDMY() = toString().split("-").reversed().joinToString(".")
 
 
 /**
@@ -17,4 +17,4 @@ fun LocalDate.toDMY() = toString().split("-").reversed().joinToString(".")
  *
  * by rounding to 3 decimal places, we have a maximum distance of 0.001, which is only a few seconds, so its negligible
  */
-fun Double.roundLatLng(): Double = (this * 1000).roundToInt() / 1000.0
+internal fun Double.roundLatLng(): Double = (this * 1000).roundToInt() / 1000.0

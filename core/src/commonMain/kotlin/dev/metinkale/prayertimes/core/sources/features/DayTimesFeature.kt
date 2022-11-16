@@ -5,7 +5,7 @@ import dev.metinkale.prayertimes.core.sources.Source
 import dev.metinkale.prayertimes.core.utils.now
 import kotlinx.datetime.LocalDate
 
-interface DayTimesFeature : Source {
+interface DayTimesFeature {
     suspend fun getDayTimes(key: String): List<DayTimes>
     suspend fun getDayTime(key: String, day: LocalDate = LocalDate.now()): DayTimes? =
         getDayTimes(key).firstOrNull { it.date == day }

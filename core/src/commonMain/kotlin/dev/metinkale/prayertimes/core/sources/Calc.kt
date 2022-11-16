@@ -5,7 +5,7 @@ import dev.metinkale.prayertimes.calc.PrayTimes
 import dev.metinkale.prayertimes.core.DayTimes
 import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.Geocoder
-import dev.metinkale.prayertimes.core.GeocoderResult
+import dev.metinkale.prayertimes.core.Geolocation
 import dev.metinkale.prayertimes.core.sources.features.ByLocationFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.utils.now
@@ -13,8 +13,8 @@ import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.plus
 
-object Calc : Source, DayTimesFeature, ByLocationFeature {
-    override suspend fun search(geolocation: GeocoderResult): List<Entry> {
+internal object Calc : Source, ByLocationFeature {
+    override suspend fun search(geolocation: Geolocation): List<Entry> {
         val tz = Geocoder.getTimeZone(geolocation.lat, geolocation.lng)
         val elv = Geocoder.getElevation(geolocation.lat, geolocation.lng)
         return Method.values().map {

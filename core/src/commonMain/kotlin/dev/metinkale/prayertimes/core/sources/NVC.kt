@@ -10,7 +10,7 @@ import dev.metinkale.prayertimes.core.utils.now
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
-object NVC : Source, CityListFeature, DayTimesFeature {
+internal object NVC : Source, CityListFeature {
 
     override val name: String = "NVC"
 
@@ -25,7 +25,8 @@ object NVC : Source, CityListFeature, DayTimesFeature {
                     LocalDate(year, it[5].toInt(), it[3].toInt())
                 }
 
-                val times = it.split(">")[1].split("<")[0].split("\t").map { it.padStart(5 - it.length, '0') }
+                val times = it.split(">")[1].split("<")[0].split("\t")
+                    .map { it.padStart(5 - it.length, '0') }
 
 
                 DayTimes(
@@ -50,5 +51,6 @@ object NVC : Source, CityListFeature, DayTimesFeature {
 
 
     // toLocalTime() seems not to work so we do it here
-    private fun String.parseTime() = split(":").let { LocalTime(it[0].toInt(), it[1].toInt()) }
+    private fun String.parseTime() =
+        replace("*", "").split(":").let { LocalTime(it[0].toInt(), it[1].toInt()) }
 }

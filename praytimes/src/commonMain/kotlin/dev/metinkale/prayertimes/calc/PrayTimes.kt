@@ -19,7 +19,7 @@ data class PrayTimes(
 ) {
     constructor(
         latitude: Double, longitude: Double, elevation: Double, timezone: TimeZone, method: MethodBuilder
-    ) : this(latitude, longitude, elevation, timezone, method.invoke(latitude, longitude, elevation))
+    ) : this(latitude, longitude, elevation, timezone, method.build(latitude, longitude, elevation))
 
 
     /**
@@ -94,15 +94,15 @@ data class PrayTimes(
 
 
 
-        method.imsakMinute?.let { times.imsak += it / 60.0 }
-        method.fajrMinute?.let { times.fajr += it / 60.0 }
-        method.sunriseMinute?.let { times.sunrise += it / 60.0 }
-        method.dhuhrMinute?.let { times.dhuhr += it / 60.0 }
-        method.asrShafiMinute?.let { times.asrShafi += it / 60.0 }
-        method.asrHanafiMinute?.let { times.asrHanafi += it / 60.0 }
-        method.sunsetMinutes?.let { times.sunset += it / 60.0 }
-        method.maghribMinute?.let { times.maghrib += it / 60.0 }
-        method.ishaaMinute?.let { times.ishaa += it / 60.0 }
+        method.imsakMinute.let { times.imsak += it / 60.0 }
+        method.fajrMinute.let { times.fajr += it / 60.0 }
+        method.sunriseMinute.let { times.sunrise += it / 60.0 }
+        method.dhuhrMinute.let { times.dhuhr += it / 60.0 }
+        method.asrShafiMinute.let { times.asrShafi += it / 60.0 }
+        method.asrHanafiMinute.let { times.asrHanafi += it / 60.0 }
+        method.sunsetMinutes.let { times.sunset += it / 60.0 }
+        method.maghribMinute.let { times.maghrib += it / 60.0 }
+        method.ishaaMinute.let { times.ishaa += it / 60.0 }
 
         Times.properties<Double>().forEach {
             var time = it.get(times)

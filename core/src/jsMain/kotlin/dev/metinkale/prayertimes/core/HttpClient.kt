@@ -1,12 +1,10 @@
 package dev.metinkale.prayertimes.core
 
-import nodejs.obj
-import nodejs.require
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 
-actual object HttpClient {
+internal actual object HttpClient {
 
     val https = require("https")
 

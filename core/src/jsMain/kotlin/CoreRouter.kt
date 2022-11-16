@@ -1,7 +1,7 @@
+import dev.metinkale.prayertimes.core.obj
 import dev.metinkale.prayertimes.core.router.Method
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.promise
-import nodejs.obj
 import kotlin.js.Json
 import dev.metinkale.prayertimes.core.router.coreRouter as router
 

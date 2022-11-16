@@ -1,7 +1,7 @@
 package dev.metinkale.prayertimes.core.sources.features
 
 import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.GeocoderResult
+import dev.metinkale.prayertimes.core.Geolocation
 import dev.metinkale.prayertimes.core.sources.Source
 import dev.metinkale.prayertimes.core.utils.normalize
 import kotlin.math.abs
@@ -33,7 +33,7 @@ interface CityListFeature : Source, ByLocationFeature, SearchFeature {
         }
 
 
-    override suspend fun search(geolocation: GeocoderResult): List<Entry> {
+    override suspend fun search(geolocation: Geolocation): List<Entry> {
         val lat = geolocation.lat
         val lng = geolocation.lng
         var bestMatch: Entry? = null

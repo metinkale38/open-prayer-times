@@ -1,5 +1,8 @@
 package dev.metinkale.prayertimes.core.sources
 
+import dev.metinkale.prayertimes.core.sources.features.ByLocationFeature
+import dev.metinkale.prayertimes.core.sources.features.CityListFeature
+import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.descriptors.PrimitiveKind
@@ -10,15 +13,24 @@ import kotlinx.serialization.encoding.Encoder
 
 
 @Serializable(with = SourceSerializer::class)
-interface Source {
+interface Source : DayTimesFeature {
     val name: String
 
+    fun ordinal() = values().indexOf(this)
+
     companion object {
-        fun values(): List<Source> = listOf(Diyanet, IGMG, London, NVC, Semerkand, Calc)
+        fun values(): List<Source> = listOf(Diyanet, IGMG, London, NVC, Semerkand, Calc, CSV)
         fun valueOf(value: String) = values().firstOrNull { it.name.equals(value) }
+
+        val Diyanet: CityListFeature = dev.metinkale.prayertimes.core.sources.Diyanet
+        val IGMG: CityListFeature = dev.metinkale.prayertimes.core.sources.IGMG
+        val London: CityListFeature = dev.metinkale.prayertimes.core.sources.London
+        val NVC: CityListFeature = dev.metinkale.prayertimes.core.sources.NVC
+        val Semerkand: CityListFeature = dev.metinkale.prayertimes.core.sources.Semerkand
+        val Calc: ByLocationFeature = dev.metinkale.prayertimes.core.sources.Calc
+        val CSV: Source = dev.metinkale.prayertimes.core.sources.CSV
     }
 }
-
 
 object SourceSerializer : KSerializer<Source> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("Source", PrimitiveKind.STRING)

@@ -1,7 +1,5 @@
 package dev.metinkale.prayertimes.calc
 
-import kotlin.math.abs
-
 
 data class Method(
     /**
@@ -31,38 +29,39 @@ data class Method(
     /** Imsak: if angle is null, sunrise + minute is used, given angle + minute otherwise */
     val imsakAngle: Double? = null,
     /** Imsak: if angle is null, sunrise + minute is used, given angle + minute otherwise */
-    val imsakMinute: Double? = null,
+    val imsakMinute: Int = 0,
     /** Fajr: if angle is null, sunrise + minute is used, given angle + minute otherwise */
     val fajrAngle: Double? = null,
     /** Fajr: if angle is null, sunrise + minute is used, given angle + minute otherwise */
-    val fajrMinute: Double? = null,
+    val fajrMinute: Int = 0,
     /** Sunrise: sunrise has a fix calculation, we can only shift minutes */
-    val sunriseMinute: Double? = null,
+    val sunriseMinute: Int = 0,
     /** Dhuhr: dhuhr has a fix calculation (see Zawal), we can only shift minutes */
-    val dhuhrMinute: Double? = null,
+    val dhuhrMinute: Int = 0,
     /** AsrShafi: Asr has a fix calculation, we can only shift minutes */
-    val asrShafiMinute: Double? = null,
+    val asrShafiMinute: Int = 0,
     /** AsrHanafi: Asr has a fix calculation, we can only shift minutes */
-    val asrHanafiMinute: Double? = null,
+    val asrHanafiMinute: Int = 0,
     /** Sunset: sunset has a fix calculation, we can only shift minutes */
-    val sunsetMinutes: Double? = null,
+    val sunsetMinutes: Int = 0,
     /** Maghrib: if angle is null, sunset + minute is used, given angle + minute otherwise */
     val maghribAngle: Double? = null,
     /** Maghrib: if angle is null, sunset + minute is used, given angle + minute otherwise */
-    val maghribMinute: Double? = null,
+    val maghribMinute: Int = 0,
     /** Ishaa: if angle is null, sunset + minute is used, given angle + minute otherwise */
     val ishaaAngle: Double? = null,
     /** Ishaa: if angle is null, sunset + minute is used, given angle + minute otherwise */
-    val ishaaMinute: Double? = null,
+    val ishaaMinute: Int = 0,
     /** for more accuracy we use the elevation for more accuracy, but some methods might disable it to match the original sources */
     val useElevation: Boolean = true
-) {
+) : MethodBuilder {
 
+    override fun build(latitude: Double, longitude: Double, elevation: Double): Method = this
 
     companion object {
 
         fun values(): List<MethodBuilder> =
-            listOf(MWL, ISNA, Egypt, Makkah, Karachi, UOIF, Tehran, Jafari).map { it.asBuilder() } + IGMG
+            listOf(MWL, ISNA, Egypt, Makkah, Karachi, UOIF, Tehran, Jafari)
 
         /**
          * Muslim World League
@@ -109,7 +108,7 @@ data class Method(
             midnight = Midnight.Standard,
             fajrAngle = 18.5,
             imsakAngle = 18.5,
-            ishaaMinute = 90.0
+            ishaaMinute = 90
         ).apply { serializeTo = "Makkah" }
 
 
@@ -164,62 +163,43 @@ data class Method(
             ishaaAngle = 14.0
         ).apply { serializeTo = "Jafari" }
 
-        val IGMG: MethodBuilder = { latitude, _, _ ->
-            // see https://www.igmg.org/neuregelung-der-gebetszeiten/
-            val fajr = if (abs(latitude) < 48) -74 else -80
-            val ishaa = if (abs(latitude) < 48) 64 else 70
-            val buffer = 6.0 // how is this calculated? 4-6 according IGMG
-
-            Method(
-                HighLatsAdjustment.AngleBased,
-                Midnight.Standard,
-                imsakMinute = fajr - buffer,
-                fajrMinute = fajr - buffer,
-                sunriseMinute = -buffer,
-                dhuhrMinute = buffer,
-                asrShafiMinute = buffer,
-                asrHanafiMinute = buffer,
-                maghribMinute = buffer,
-                ishaaMinute = ishaa + buffer,
-                useElevation = false
-            ).apply { serializeTo = "IGMG" }
-        }
 
 
         fun deserialize(value: String): MethodBuilder = when (value) {
-            "MWL" -> MWL.asBuilder()
-            "ISNA" -> ISNA.asBuilder()
-            "Egypt" -> Egypt.asBuilder()
-            "Makkah" -> Makkah.asBuilder()
-            "Karachi" -> Karachi.asBuilder()
-            "UOIF" -> UOIF.asBuilder()
-            "Tehran" -> Tehran.asBuilder()
-            "Jafari" -> Jafari.asBuilder()
-            "IGMG" -> IGMG
+            "MWL" -> MWL
+            "ISNA" -> ISNA
+            "Egypt" -> Egypt
+            "Makkah" -> Makkah
+            "Karachi" -> Karachi
+            "UOIF" -> UOIF
+            "Tehran" -> Tehran
+            "Jafari" -> Jafari
             else -> value.split(";").let {
                 Method(
                     highLats = HighLatsAdjustment.valueOf(it[0]),
                     midnight = Midnight.valueOf(it[1]),
                     imsakAngle = it[2].toDoubleOrNull(),
-                    imsakMinute = it[3].toDoubleOrNull(),
+                    imsakMinute = it[3].toIntOrNull() ?: 0,
                     fajrAngle = it[4].toDoubleOrNull(),
-                    fajrMinute = it[5].toDoubleOrNull(),
-                    sunriseMinute = it[6].toDoubleOrNull(),
-                    dhuhrMinute = it[7].toDoubleOrNull(),
-                    asrShafiMinute = it[8].toDoubleOrNull(),
-                    asrHanafiMinute = it[9].toDoubleOrNull(),
-                    sunsetMinutes = it[10].toDoubleOrNull(),
+                    fajrMinute = it[5].toIntOrNull() ?: 0,
+                    sunriseMinute = it[6].toIntOrNull() ?: 0,
+                    dhuhrMinute = it[7].toIntOrNull() ?: 0,
+                    asrShafiMinute = it[8].toIntOrNull() ?: 0,
+                    asrHanafiMinute = it[9].toIntOrNull() ?: 0,
+                    sunsetMinutes = it[10].toIntOrNull() ?: 0,
                     maghribAngle = it[11].toDoubleOrNull(),
-                    maghribMinute = it[12].toDoubleOrNull(),
+                    maghribMinute = it[12].toIntOrNull() ?: 0,
                     ishaaAngle = it[13].toDoubleOrNull(),
-                    ishaaMinute = it[14].toDoubleOrNull()
-                ).asBuilder()
+                    ishaaMinute = it[14].toIntOrNull() ?: 0
+                )
             }
         }
 
     }
 
     private var serializeTo: String? = null
+
+    val shortName get() = serializeTo ?: "Custom"
 
     val name
         get() = when (serializeTo) {
@@ -239,18 +219,18 @@ data class Method(
         highLats.name,
         midnight.name,
         imsakAngle?.toString(),
-        imsakMinute?.toString(),
+        imsakMinute.takeIf { it != 0 }?.toString(),
         fajrAngle?.toString(),
-        fajrMinute?.toString(),
-        sunriseMinute?.toString(),
-        dhuhrMinute?.toString(),
-        asrShafiMinute?.toString(),
-        asrHanafiMinute?.toString(),
-        sunsetMinutes?.toString(),
+        fajrMinute.takeIf { it != 0 }?.toString(),
+        sunriseMinute.takeIf { it != 0 }?.toString(),
+        dhuhrMinute.takeIf { it != 0 }?.toString(),
+        asrShafiMinute.takeIf { it != 0 }?.toString(),
+        asrHanafiMinute.takeIf { it != 0 }?.toString(),
+        sunsetMinutes.takeIf { it != 0 }?.toString(),
         maghribAngle?.toString(),
-        maghribMinute?.toString(),
+        maghribMinute.takeIf { it != 0 }?.toString(),
         ishaaAngle?.toString(),
-        ishaaMinute?.toString()
+        ishaaMinute.takeIf { it != 0 }?.toString()
     ).map {
         it.orEmpty()
     }.joinToString(";").also { serializeTo = it }
@@ -258,10 +238,6 @@ data class Method(
 }
 
 
-typealias MethodBuilder = (
-    latitude: Double,
-    longitude: Double,
-    elevation: Double
-) -> Method
-
-fun Method.asBuilder(): MethodBuilder = { _, _, _ -> this }
+fun interface MethodBuilder {
+    fun build(latitude: Double, longitude: Double, elevation: Double): Method
+}
