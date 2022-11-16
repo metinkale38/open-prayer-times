@@ -11,10 +11,8 @@ repositories {
 
 
 kotlin {
-    js {
-        nodejs { }
-    }
     jvm()
+    js { nodejs { } }
 
     sourceSets {
         all {
@@ -33,9 +31,19 @@ kotlin {
 
         val jsMain by getting {
             dependencies {
-                implementation(npm("n-readlines","1.0.1"))
+                implementation(npm("n-readlines", "1.0.1"))
             }
         }
+
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+                implementation(kotlin("test-common"))
+                implementation(kotlin("test-junit"))
+                implementation(kotlin("test-annotations-common"))
+            }
+        }
+
 
         val jvmMain by getting {
             dependencies {

@@ -1,15 +1,19 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
+import dev.metinkale.prayertimes.core.utils.loadEntries
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
 object Diyanet : Source, CityListFeature, DayTimesFeature {
-
     override val name: String = "Diyanet"
+
+    override fun getCities(): Sequence<Entry> = loadEntries(this)
+
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         var result = HttpClient.post("https://namazvakti.diyanet.gov.tr/wsNamazVakti.svc") {
             contentType = "text/xml; charset=utf-8"

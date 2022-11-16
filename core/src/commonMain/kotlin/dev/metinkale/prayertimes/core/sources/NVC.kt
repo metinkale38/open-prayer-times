@@ -1,9 +1,11 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
+import dev.metinkale.prayertimes.core.utils.loadEntries
 import dev.metinkale.prayertimes.core.utils.now
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
@@ -11,6 +13,8 @@ import kotlinx.datetime.LocalTime
 object NVC : Source, CityListFeature, DayTimesFeature {
 
     override val name: String = "NVC"
+
+    override fun getCities(): Sequence<Entry> = loadEntries(this)
 
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val year = LocalDate.now().year
@@ -43,8 +47,6 @@ object NVC : Source, CityListFeature, DayTimesFeature {
                 )
             }
     }
-
-
 
 
     // toLocalTime() seems not to work so we do it here

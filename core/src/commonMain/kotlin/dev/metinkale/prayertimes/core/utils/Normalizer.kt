@@ -1,25 +1,21 @@
 package dev.metinkale.prayertimes.core.utils
 
-fun String.normalize(): String {
-    val builder = StringBuilder()
-    for (c in toCharArray()) {
-        if (c.code in 0x41..0x5A) { //A-Z
-            builder.append((c.code + 0x20).toChar())
-        } else if (c.code in 0x61..0x7A) { //a-z
-            builder.append(c)
-        } else {
-            when (c) {
-                'é', 'è', 'ê', 'ë', 'È', 'É', 'Ë', 'Ê' -> builder.append("e")
-                'Ç', 'ç' -> builder.append("c")
-                'Ğ', 'ğ' -> builder.append("g")
-                'ı', 'İ', 'ï', 'î', 'Ï', 'Î' -> builder.append("i")
-                'Ö', 'ö', 'Ô' -> builder.append("o")
-                'Ş', 'ş' -> builder.append("s")
-                'Ä', 'ä', 'à', 'â', 'À', 'Â' -> builder.append("a")
-                'ü', 'Ü', 'û', 'ù', 'Û', 'Ù' -> builder.append("u")
-                else -> builder.append(' ')
+fun String.normalize(): String = StringBuilder(length).apply {
+    this@normalize.forEach { char ->
+        append(
+            when (char) {
+                in 'A'..'Z' -> char + 0x20
+                in 'a'..'z' -> char
+                'é', 'è', 'ê', 'ë', 'È', 'É', 'Ë', 'Ê' -> 'e'
+                'Ç', 'ç' -> 'c'
+                'Ğ', 'ğ' -> 'g'
+                'ı', 'İ', 'ï', 'î', 'Ï', 'Î' -> 'i'
+                'Ö', 'ö', 'Ô' -> 'o'
+                'Ş', 'ş' -> 's'
+                'Ä', 'ä', 'à', 'â', 'À', 'Â' -> 'a'
+                'ü', 'Ü', 'û', 'ù', 'Û', 'Ù' -> 'u'
+                else -> ' '
             }
-        }
+        )
     }
-    return builder.toString()
-}
+}.toString()

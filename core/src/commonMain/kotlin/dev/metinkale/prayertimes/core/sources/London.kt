@@ -58,8 +58,6 @@ object London : Source, CityListFeature, DayTimesFeature {
         } ?: emptyList()
     }
 
-    override fun getCitiesTSV(): Sequence<String> = getCities().map { it.encodeToString() }
-
     override fun getCities(): Sequence<Entry> = sequenceOf(
         Entry(
             id = "0",
@@ -70,7 +68,6 @@ object London : Source, CityListFeature, DayTimesFeature {
             source = London
         )
     )
-
 
     @Serializable
     private data class Result(

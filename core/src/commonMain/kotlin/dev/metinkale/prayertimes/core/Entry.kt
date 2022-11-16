@@ -1,6 +1,7 @@
 package dev.metinkale.prayertimes.core
 
 import dev.metinkale.prayertimes.core.sources.Source
+import dev.metinkale.prayertimes.core.utils.normalize
 import dev.metinkale.prayertimes.core.utils.roundLatLng
 import kotlinx.datetime.TimeZone
 import kotlinx.serialization.Serializable
@@ -16,6 +17,11 @@ data class Entry(
     val source: Source,
     val timeZone: TimeZone? = null
 ) {
+    val normalizedNames by lazy {
+        this.names.flatMap { it.values.flatMap { it.normalize().split(' ') } }.filter { it.isNotEmpty() }
+            .distinct()
+    }
+
     fun name(vararg language: String): String = language.firstNotNullOfOrNull { l ->
         names.first().let { it[l] }
     } ?: names.first().values.first()
@@ -44,8 +50,8 @@ data class Entry(
         fun decodeFromString(source: Source, line: String): Entry = line.split(DELIM).let {
             Entry(
                 id = it[0],
-                lat = it[1].toDoubleOrNull()?.roundLatLng(),
-                lng = it[2].toDoubleOrNull()?.roundLatLng(),
+                lat = it[1].ifBlank { null }?.toDouble()?.roundLatLng(),
+                lng = it[2].ifBlank { null }?.toDouble()?.roundLatLng(),
                 country = it[3],
                 names = it.drop(4).parseNames(),
                 source = source

@@ -1,11 +1,12 @@
 package dev.metinkale.prayertimes.core
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.channels.ReceiveChannel
-import kotlinx.coroutines.channels.produce
-import kotlinx.coroutines.withContext
+import java.io.File
 
 
-actual fun readFileAsLineSequence(filePath: String): Sequence<String> =
-    Entry::class.java.getResourceAsStream(filePath)!!.bufferedReader(Charsets.UTF_8).lineSequence()
+val RESOURCES_PATH = System.getenv("RESOURCES_PATH")
+actual fun readFileAsLineSequence(filePath: String): Sequence<String> = run {
+    if (RESOURCES_PATH != null && RESOURCES_PATH.isNotEmpty())
+        File("$RESOURCES_PATH$filePath").bufferedReader(Charsets.UTF_8)
+    else
+        Entry::class.java.getResourceAsStream(filePath)!!.bufferedReader(Charsets.UTF_8)
+}.lineSequence()

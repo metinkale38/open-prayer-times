@@ -29,19 +29,25 @@ val search = HttpHandler {
             geolocation = Geocoder.search(query, lang.first())
             geolocation
         }
-        Response(
-            200,
-            Source.values().parallelMap {
+
+        val results = Source.values().parallelMap {
+            run {
                 (it as? SearchFeature)?.search(query)
-                    ?: geo()?.let { geo -> (it as? ByLocationFeature)?.search(geo) } ?: emptyList()
-            }.flatten()
-        )
+                    ?: geo()?.let { geo -> (it as? ByLocationFeature)?.search(geo) }
+                    ?: emptyList()
+            }.map { it.withTimeZone() }
+        }.flatten()
+
+        Response(200, results)
     } else if (query == null && lat != null && lng != null) {
         val geo = Geocoder.reverse(lat, lng, lang.first())
         if (geo == null) Response(500, error = "reverse geocoding did not work")
-        else Response(200,
-            Source.values().mapNotNull { it as? ByLocationFeature }.parallelMap { it.search(geo) }.flatten()
-        )
+        else {
+            val results = Source.values().mapNotNull { it as? ByLocationFeature }
+                .parallelMap { it.search(geo).map { it.withTimeZone() } }
+                .flatten()
+            Response(200, results)
+        }
     } else Response(400, error = "you must either set 'lat' and 'lng' or only 'q'")
 }
 

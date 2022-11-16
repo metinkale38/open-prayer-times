@@ -1,10 +1,12 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.Secrets
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
+import dev.metinkale.prayertimes.core.utils.loadEntries
 import dev.metinkale.prayertimes.core.utils.now
 import dev.metinkale.prayertimes.core.utils.toDMY
 import kotlinx.datetime.*
@@ -16,6 +18,9 @@ object IGMG : CityListFeature, DayTimesFeature {
 
     override val name: String = "IGMG"
     private val json = Json { ignoreUnknownKeys = true }
+
+    override fun getCities(): Sequence<Entry> = loadEntries(this)
+
     suspend fun getDayTimes(key: String, from: LocalDate, to: LocalDate): List<DayTimes> {
         val list = HttpClient.get(
             ("https://live.igmgapp.org:8091/api/Calendar/GetPrayerTimes" +
@@ -49,7 +54,6 @@ object IGMG : CityListFeature, DayTimesFeature {
 
     override suspend fun getDayTime(key: String, day: LocalDate): DayTimes? =
         getDayTimes(key = key, from = day, to = day).firstOrNull()
-
 
 
     @Serializable

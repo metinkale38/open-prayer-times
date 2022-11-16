@@ -14,3 +14,5 @@ subprojects {
     group = "dev.metinkale.prayertimes"
     version = "1.0-SNAPSHOT"
 }
+
+tasks.findByName("appengineDeploy")?.dependsOn(tasks.findByName("shadowJar"))

@@ -1,9 +1,11 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
+import dev.metinkale.prayertimes.core.utils.loadEntries
 import dev.metinkale.prayertimes.core.utils.now
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
@@ -15,7 +17,7 @@ import kotlinx.serialization.json.Json
 
 object Semerkand : Source, CityListFeature, DayTimesFeature {
     override val name: String = "Semerkand"
-
+    override fun getCities(): Sequence<Entry> = loadEntries(this)
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val year = LocalDate.now().year
         return HttpClient.get(
@@ -33,7 +35,6 @@ object Semerkand : Source, CityListFeature, DayTimesFeature {
             )
         }
     }
-
 
 
     @Serializable

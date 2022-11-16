@@ -2,39 +2,36 @@ package dev.metinkale.prayertimes.core.sources.features
 
 import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.GeocoderResult
-import dev.metinkale.prayertimes.core.readFileAsLineSequence
 import dev.metinkale.prayertimes.core.sources.Source
-import dev.metinkale.prayertimes.core.utils.dropRows
-import dev.metinkale.prayertimes.core.utils.levenshtein
 import dev.metinkale.prayertimes.core.utils.normalize
 import kotlin.math.abs
 
 interface CityListFeature : Source, ByLocationFeature, SearchFeature {
-
-    fun getCitiesTSV(): Sequence<String> = readFileAsLineSequence("/tsv/${name}.tsv")
-    fun getCities(): Sequence<Entry> = getCitiesTSV().map { line -> Entry.decodeFromString(this, line) }
-
+    fun getCities(): Sequence<Entry>
 
     override suspend fun search(query: String): List<Entry> {
-
-        val words = query.normalize().split(" ")
-        var bestScore = -(5 * words.size)
-        var bestEntry: String? = null
-
-        for (entry in getCitiesTSV()) {
-            val names = entry.dropRows(4).normalize().split(" ")
-            val score = words.sumOf { lhs ->
-                names.mapIndexed { index, it -> index to it }.maxOf { (index, rhs) ->
-                    -(levenshtein(lhs, rhs) + index)
-                }
-            }
+        val words = query.normalize().split(' ')
+        var bestEntry: Entry? = null
+        var bestScore = 0
+        for (entry in getCities()) {
+            val normalizedNames = entry.normalizedNames
+            val score = calculateSearchScore(words, normalizedNames)
             if (score > bestScore) {
-                bestScore = score
                 bestEntry = entry
+                bestScore = score
             }
         }
-        return listOfNotNull(bestEntry?.let { Entry.decodeFromString(this, it) }?.withTimeZone())
+        return listOfNotNull(bestEntry)
     }
+
+    fun calculateSearchScore(normalizedQueries: Collection<String>, normalizedNames: Collection<String>) =
+        normalizedQueries.sumOf { lhs ->
+            normalizedNames.indexOf(lhs).let {
+                if (it < 0) 0
+                else normalizedNames.size - it
+            }
+        }
+
 
     override suspend fun search(geolocation: GeocoderResult): List<Entry> {
         val lat = geolocation.lat
@@ -55,6 +52,6 @@ interface CityListFeature : Source, ByLocationFeature, SearchFeature {
             }
         }
 
-        return listOfNotNull(bestMatch?.withTimeZone())
+        return listOfNotNull(bestMatch)
     }
 }
