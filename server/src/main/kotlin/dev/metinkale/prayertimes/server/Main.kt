@@ -15,9 +15,9 @@ import io.ktor.server.routing.*
 import io.ktor.util.*
 
 fun main() {
-    Configuration.GOOGLE_API_KEY = ""
-    Configuration.IGMG_API_KEY = ""
-    Configuration.LONDON_PRAYER_TIMES_API_KEY = ""
+    Configuration.GOOGLE_API_KEY = Secrets.GOOGLE_API_KEY
+    Configuration.IGMG_API_KEY = Secrets.IGMG_API_KEY
+    Configuration.LONDON_PRAYER_TIMES_API_KEY = Secrets.LONDON_PRAYER_TIMES_API_KEY
 
 
     embeddedServer(Netty, port = 8080) {

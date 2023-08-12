@@ -1,0 +1,39 @@
+import dev.metinkale.prayertimes.core.sources.Diyanet
+import kotlinx.coroutines.runBlocking
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
+import kotlin.test.assertEquals
+
+class CitySearch {
+
+    @ParameterizedTest(name = "search for {0}")
+    @ValueSource(
+        strings = [
+            "Braunschweig",
+            "Hannover",
+            "Berlin",
+            "Kayseri̇",
+            "Ankara",
+            "İstanbul",
+            "Develi̇",
+            "Beypazari",
+            "Kartal",
+            "Deni̇zli̇"
+        ]
+    )
+    fun checkSearchExact(city: String) {
+        val result = runBlocking { Diyanet.search(city) }
+        assertEquals(1, result.size)
+        assertEquals(city, result.first().names("tr").first())
+    }
+
+    @Test
+    fun checkMultipleResults() {
+        val city = "Fürth"
+        val result = runBlocking { Diyanet.search(city) }
+        assertEquals(3, result.size)
+    }
+
+}
+

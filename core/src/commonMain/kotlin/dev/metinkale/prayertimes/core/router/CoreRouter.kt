@@ -26,7 +26,7 @@ val search = HttpHandler {
 
         suspend fun geo() = if (geolocated) geolocation else {
             geolocated = true
-            geolocation = Geocoder.search(query, lang.first())
+            geolocation = runCatching { Geocoder.search(query, lang.first()) }.getOrNull()
             geolocation
         }
 
@@ -62,6 +62,8 @@ val times = HttpHandler {
 
 
 val coreRouter: HttpHandler<String> = Router {
-    "search" GET search.mapBody { Json.encodeToString(Json.serializersModule.serializer(), it) }.withContentTypeJson()
-    "times" GET times.mapBody { Json.encodeToString(Json.serializersModule.serializer(), it) }.withContentTypeJson()
+    "search" GET search.mapBody { Json.encodeToString(Json.serializersModule.serializer(), it) }
+        .withContentTypeJson()
+    "times" GET times.mapBody { Json.encodeToString(Json.serializersModule.serializer(), it) }
+        .withContentTypeJson()
 }

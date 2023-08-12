@@ -11,24 +11,27 @@ interface CityListFeature : Source, ByLocationFeature, SearchFeature {
 
     override suspend fun search(query: String): List<Entry> {
         val words = query.normalize().split(' ')
-        var bestEntry: Entry? = null
+        val bestEntries: MutableList<Entry> = mutableListOf()
         var bestScore = 0
         for (entry in getCities()) {
             val normalizedNames = entry.normalizedNames
             val score = calculateSearchScore(words, normalizedNames)
             if (score > bestScore) {
-                bestEntry = entry
+                bestEntries.clear()
+                bestEntries.add(entry)
                 bestScore = score
+            } else if (score == bestScore && score > 0) {
+                bestEntries.add(entry)
             }
         }
-        return listOfNotNull(bestEntry)
+        return bestEntries ?: emptyList()
     }
 
     fun calculateSearchScore(normalizedQueries: Collection<String>, normalizedNames: Collection<String>) =
         normalizedQueries.sumOf { lhs ->
             normalizedNames.indexOf(lhs).let {
                 if (it < 0) 0
-                else normalizedNames.size - it
+                else maxOf(10 - it, 1)
             }
         }
 
