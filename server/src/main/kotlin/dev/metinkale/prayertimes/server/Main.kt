@@ -21,9 +21,10 @@ fun main() {
 
 
     embeddedServer(Netty, port = 8080) {
+        install(IgnoreTrailingSlash)
         routing {
             get("{...}") {
-                coreRouter.handle(call)
+                    coreRouter.handle(call)
             }
         }
     }.start(wait = true)
