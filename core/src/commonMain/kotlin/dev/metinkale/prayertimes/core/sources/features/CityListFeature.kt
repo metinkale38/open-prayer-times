@@ -24,14 +24,17 @@ interface CityListFeature : Source, ByLocationFeature, SearchFeature {
                 bestEntries.add(entry)
             }
         }
-        return bestEntries ?: emptyList()
+        return bestEntries
     }
 
-    fun calculateSearchScore(normalizedQueries: Collection<String>, normalizedNames: Collection<String>) =
+    fun calculateSearchScore(
+        normalizedQueries: Collection<String>,
+        normalizedNames: Collection<String>
+    ) =
         normalizedQueries.sumOf { lhs ->
             normalizedNames.indexOf(lhs).let {
                 if (it < 0) 0
-                else maxOf(10 - it, 1)
+                else maxOf(10 - it, 1) * 10 + normalizedNames.size
             }
         }
 

@@ -24,9 +24,10 @@ interface HttpHandler<T> {
 
 
     companion object {
-        operator fun <T> invoke(build: suspend Request.() -> Response<T>) = object : HttpHandler<T> {
-            override suspend fun invoke(request: Request): Response<T> = build.invoke(request)
-        }
+        operator fun <T> invoke(build: suspend Request.() -> Response<T>) =
+            object : HttpHandler<T> {
+                override suspend fun invoke(request: Request): Response<T> = build.invoke(request)
+            }
     }
 }
 
@@ -36,20 +37,30 @@ fun HttpHandler<String>.withContentTypeJson() = withContentType("application/jso
 class Router<T> : MutableList<Router.Route<T>> by mutableListOf() {
     data class Route<T>(val method: Method, val path: String, val router: HttpHandler<T>)
 
-    infix fun String.GET(handler: HttpHandler<T>): Unit = add(Route(Method.GET, this, handler)).let { }
-    infix fun String.POST(handler: HttpHandler<T>): Unit = add(Route(Method.POST, this, handler)).let { }
-    infix fun String.PUT(handler: HttpHandler<T>): Unit = add(Route(Method.PUT, this, handler)).let { }
-    infix fun String.DELETE(handler: HttpHandler<T>): Unit = add(Route(Method.DELETE, this, handler)).let { }
-    infix fun String.PATCH(handler: HttpHandler<T>): Unit = add(Route(Method.PATCH, this, handler)).let { }
+    infix fun String.GET(handler: HttpHandler<T>): Unit =
+        add(Route(Method.GET, this, handler)).let { }
+
+    infix fun String.POST(handler: HttpHandler<T>): Unit =
+        add(Route(Method.POST, this, handler)).let { }
+
+    infix fun String.PUT(handler: HttpHandler<T>): Unit =
+        add(Route(Method.PUT, this, handler)).let { }
+
+    infix fun String.DELETE(handler: HttpHandler<T>): Unit =
+        add(Route(Method.DELETE, this, handler)).let { }
+
+    infix fun String.PATCH(handler: HttpHandler<T>): Unit =
+        add(Route(Method.PATCH, this, handler)).let { }
 
     companion object {
         operator fun <T> invoke(build: Router<T>.() -> Unit): HttpHandler<T> = HttpHandler {
-            Router<T>().apply(build).filter { it.method == method }.firstNotNullOfOrNull { (_, route, build) ->
-                val routerParts = route.trim('/').split("/")
-                if (routerParts.indices.all { routerParts[it] == pathParts[it] }) {
-                    build.invoke(dropPathParts(routerParts.size))
-                } else null
-            } ?: Response(404)
+            Router<T>().apply(build).filter { it.method == method }
+                .firstNotNullOfOrNull { (_, route, build) ->
+                    val routerParts = route.trim('/').split("/")
+                    if (routerParts.indices.all { routerParts[it] == pathParts[it] }) {
+                        build.invoke(dropPathParts(routerParts.size))
+                    } else null
+                } ?: Response(404)
         }
     }
 }
@@ -69,6 +80,6 @@ data class Request(
     val params: Map<String, String>,
     val headers: Map<String, String>
 ) {
-    val pathParts get() = path.trim('/').split("/")
+    val pathParts get() = path.trim('/').ifBlank { null }?.split("/") ?: emptyList()
     fun dropPathParts(drop: Int) = copy(path = pathParts.drop(drop).joinToString("/"))
 }

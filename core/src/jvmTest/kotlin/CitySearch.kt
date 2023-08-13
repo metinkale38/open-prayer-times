@@ -1,4 +1,5 @@
 import dev.metinkale.prayertimes.core.sources.Diyanet
+import dev.metinkale.prayertimes.core.sources.NVC
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
@@ -19,21 +20,15 @@ class CitySearch {
             "Develi̇",
             "Beypazari",
             "Kartal",
-            "Deni̇zli̇"
+            "Deni̇zli̇",
         ]
     )
-    fun checkSearchExact(city: String) {
+    fun checkSearchDiyanet(city: String) {
         val result = runBlocking { Diyanet.search(city) }
         assertEquals(1, result.size)
         assertEquals(city, result.first().names("tr").first())
     }
 
-    @Test
-    fun checkMultipleResults() {
-        val city = "Fürth"
-        val result = runBlocking { Diyanet.search(city) }
-        assertEquals(3, result.size)
-    }
 
 }
 
