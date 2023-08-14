@@ -15,6 +15,8 @@ import kotlinx.serialization.encoding.Encoder
 @Serializable(with = SourceSerializer::class)
 interface Source : DayTimesFeature {
     val name: String
+    val fullName: String
+        get() = name
 
     fun ordinal() = values().indexOf(this)
 

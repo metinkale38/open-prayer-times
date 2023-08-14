@@ -13,7 +13,7 @@ import kotlinx.datetime.LocalTime
 internal object NVC : Source, CityListFeature {
 
     override val name: String = "NVC"
-
+    override val fullName: String = "NamazVakti.com"
     override fun getCities(): Sequence<Entry> = loadEntries(this)
 
     override suspend fun getDayTimes(key: String): List<DayTimes> {

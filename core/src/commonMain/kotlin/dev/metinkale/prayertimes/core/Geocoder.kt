@@ -12,7 +12,7 @@ data class Geolocation(
     val name: List<String>,
 )
 
-internal expect object Geocoder {
+expect object Geocoder {
     suspend fun getTimeZone(lat: Double, lng: Double): TimeZone
     suspend fun getElevation(lat: Double, lng: Double): Double
     suspend fun reverse(lat: Double, lng: Double, lang: String): Geolocation?

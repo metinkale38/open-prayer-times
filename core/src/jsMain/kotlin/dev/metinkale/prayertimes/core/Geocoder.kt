@@ -5,7 +5,7 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.internal.JSJoda.Instant
 
 
-internal actual object Geocoder {
+actual object Geocoder {
     init {
         TimezoneInit.init()
     }

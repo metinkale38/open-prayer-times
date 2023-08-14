@@ -14,7 +14,7 @@ import kotlinx.coroutines.withContext
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toKotlinTimeZone
 
-internal actual object Geocoder {
+actual object Geocoder {
     private val geoApiContext = GeoApiContext.Builder().apiKey(Configuration.GOOGLE_API_KEY).build()
 
     actual suspend fun getTimeZone(lat: Double, lng: Double): TimeZone = withContext(Dispatchers.IO) {

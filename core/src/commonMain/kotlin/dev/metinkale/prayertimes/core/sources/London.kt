@@ -17,7 +17,9 @@ import kotlinx.serialization.json.Json
 internal object London : Source, CityListFeature {
 
     override val name: String = "London"
-    private val json = Json { ignoreUnknownKeys = true }
+    override val fullName: String ="LondonPrayerTimes.com"
+        private
+    val json = Json { ignoreUnknownKeys = true }
 
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val response =
