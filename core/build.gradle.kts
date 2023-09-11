@@ -8,10 +8,6 @@ plugins {
 
 kotlin {
     jvm()
-    js(IR) {
-        browser()
-        nodejs()
-    }
 
     sourceSets {
 
@@ -23,8 +19,9 @@ kotlin {
 
         val ktor_version = "2.3.4"
 
-        val commonMain by getting {
+        val jvmMain by getting {
             dependencies {
+                implementation("io.ktor:ktor-client-cio:$ktor_version")
                 api("io.ktor:ktor-client-core:$ktor_version")
                 api("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
                 api(kotlin("stdlib-common"))
@@ -33,15 +30,10 @@ kotlin {
             }
         }
 
-        val jvmMain by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-cio:$ktor_version")
-            }
-        }
-
-        val jsMain by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-js:$ktor_version")
+        val jvmTest by getting{
+            dependencies{
+                implementation(kotlin("test"))
+                implementation("org.junit.jupiter:junit-jupiter-params:5.1.0")
             }
         }
 
