@@ -2,9 +2,9 @@ package dev.metinkale.prayertimes.core
 
 object Configuration {
     /**
-     * needed to search cities by geolocation
+     * defined the api url
      */
-    var GOOGLE_API_KEY: String = ""
+    var API_URL: String = "https://open-prayer-times.lm.r.appspot.com/"
 
     /**
      * needed for igmg prayer times
@@ -18,12 +18,4 @@ object Configuration {
      */
     var LONDON_PRAYER_TIMES_API_KEY: String = ""
 
-    /**
-     *  if true Entries will be evaluated on the fly to reduce memory usage
-     *  if false Entries will be loaded into memory once to speedup following requests
-     *
-     *  use true e.g. for Mobile or Web applications with limited resources
-     *  use false e.g. for Server oder Desktop applications
-     */
-    var HOT_ENTRIES: Boolean = false
 }

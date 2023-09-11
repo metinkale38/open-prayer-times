@@ -1,35 +1,34 @@
 package dev.metinkale.prayertimes.core.sources
 
-import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.HttpClient
 import dev.metinkale.prayertimes.core.Configuration
+import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
-import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
-import dev.metinkale.prayertimes.core.utils.loadEntries
+import dev.metinkale.prayertimes.core.sources.features.cityListDelegate
 import dev.metinkale.prayertimes.core.utils.now
 import dev.metinkale.prayertimes.core.utils.toDMY
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import kotlinx.datetime.*
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 
-internal object IGMG : CityListFeature {
+internal object IGMG : Source, CityListFeature by cityListDelegate("IGMG") {
 
     override val name: String = "IGMG"
     private val json = Json { ignoreUnknownKeys = true }
 
-    override fun getCities(): Sequence<Entry> = loadEntries(this)
 
     suspend fun getDayTimes(key: String, from: LocalDate, to: LocalDate): List<DayTimes> {
-        val list = HttpClient.get(
+        val list = httpClient.get(
             ("https://live.igmgapp.org:8091/api/Calendar/GetPrayerTimes" +
                     "?cityID=" + key +
                     "&from=" + from.toDMY() +
                     "&to=" + to.toDMY())
         ) {
             header("X-API-Key", Configuration.IGMG_API_KEY)
-        }.let { json.decodeFromString(PrayerTimesResponse.serializer(), it) }.list
+        }.bodyAsText().let { json.decodeFromString(PrayerTimesResponse.serializer(), it) }.list
 
 
         return list.map {

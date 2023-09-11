@@ -1,30 +1,29 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.HttpClient
+import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
-import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
-import dev.metinkale.prayertimes.core.utils.loadEntries
+import dev.metinkale.prayertimes.core.sources.features.cityListDelegate
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
+import io.ktor.http.*
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
-internal object Diyanet : Source, CityListFeature {
+internal object Diyanet : Source, CityListFeature by cityListDelegate("Diyanet") {
     override val name: String = "Diyanet"
 
-    override fun getCities(): Sequence<Entry> = loadEntries(this)
-
     override suspend fun getDayTimes(key: String): List<DayTimes> {
-        var result = HttpClient.post("https://namazvakti.diyanet.gov.tr/wsNamazVakti.svc") {
-            contentType = "text/xml; charset=utf-8"
+        var result = httpClient.post("https://namazvakti.diyanet.gov.tr/wsNamazVakti.svc") {
+            contentType(ContentType.parse("text/xml; charset=utf-8"))
             header("SOAPAction", "http://tempuri.org/IwsNamazVakti/AylikNamazVakti")
-            body =
+            setBody(
                 "<v:Envelope xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:d=\"http://www.w3.org/2001/XMLSchema\" xmlns:c=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:v=\"http://schemas.xmlsoap.org/soap/envelope/\">" +
                         "<v:Header /><v:Body>" + "<AylikNamazVakti xmlns=\"http://tempuri.org/\" id=\"o0\" c:root=\"1\">" +
                         "<IlceID i:type=\"d:int\">" + key + "</IlceID>" +
                         "<username i:type=\"d:string\">namazuser</username>" + "<password i:type=\"d:string\">NamVak!14</password>" +
-                        "</AylikNamazVakti></v:Body></v:Envelope>"
-        }
+                        "</AylikNamazVakti></v:Body></v:Envelope>")
+        }.bodyAsText()
 
         result = result.substring(result.indexOf("<a:NamazVakti>") + 14)
         result = result.substring(0, result.indexOf("</AylikNamazVaktiResult>"))

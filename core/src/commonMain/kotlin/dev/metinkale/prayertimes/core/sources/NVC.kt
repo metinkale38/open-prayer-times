@@ -1,24 +1,23 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.HttpClient
+import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
-import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
-import dev.metinkale.prayertimes.core.utils.loadEntries
+import dev.metinkale.prayertimes.core.sources.features.cityListDelegate
 import dev.metinkale.prayertimes.core.utils.now
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
-internal object NVC : Source, CityListFeature {
+internal object NVC : Source, CityListFeature by cityListDelegate("NVC") {
 
     override val name: String = "NVC"
     override val fullName: String = "NamazVakti.com"
-    override fun getCities(): Sequence<Entry> = loadEntries(this)
 
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val year = LocalDate.now().year
-        return HttpClient.get("https://namazvakti.com/XML.php?cityID=$key").lines()
+        return httpClient.get("https://namazvakti.com/XML.php?cityID=$key").bodyAsText().lines()
             .filter { "<prayertimes" in it }
             .map {
                 val date = it.split("\"").let {

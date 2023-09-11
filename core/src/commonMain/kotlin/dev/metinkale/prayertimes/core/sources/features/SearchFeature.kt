@@ -3,7 +3,7 @@ package dev.metinkale.prayertimes.core.sources.features
 import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.sources.Source
 
-interface SearchFeature : Source {
-    suspend fun search(query: String): List<Entry>
+interface SearchFeature  {
+    suspend fun search(query: String, lang: List<String>): Entry?
 }
 

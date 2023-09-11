@@ -1,32 +1,32 @@
 package dev.metinkale.prayertimes.core.sources
 
-import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.HttpClient
-import dev.metinkale.prayertimes.core.Configuration
+import dev.metinkale.prayertimes.core.*
+import dev.metinkale.prayertimes.core.geo.Geolocation
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
-import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.utils.now
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.toLocalDate
 import kotlinx.datetime.toLocalTime
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
+import kotlin.math.abs
 
 internal object London : Source, CityListFeature {
 
     override val name: String = "London"
-    override val fullName: String ="LondonPrayerTimes.com"
-        private
+    override val fullName: String = "LondonPrayerTimes.com"
+
+    private
     val json = Json { ignoreUnknownKeys = true }
 
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val response =
-            HttpClient.get("https://www.londonprayertimes.com/api/times/?format=json&key=${Configuration.LONDON_PRAYER_TIMES_API_KEY}&year=" + LocalDate.now().year)
-                .let {
-                    json.decodeFromString(Result.serializer(), it)
-                }
+            httpClient.get("https://www.londonprayertimes.com/api/times/?format=json&key=${Configuration.LONDON_PRAYER_TIMES_API_KEY}&year=" + LocalDate.now().year)
+                .bodyAsText()
+                .let { json.decodeFromString(Result.serializer(), it) }
 
 
         return response.times?.values?.map {
@@ -60,16 +60,27 @@ internal object London : Source, CityListFeature {
         } ?: emptyList()
     }
 
-    override fun getCities(): Sequence<Entry> = sequenceOf(
-        Entry(
-            id = "0",
-            lat = 51.5073219,
-            lng = -0.1276473,
-            country = "EN",
-            names = listOf(mapOf("" to "London")),
-            source = London
-        )
+
+    private val entry = Entry(
+        id = "0",
+        lat = 51.5073219,
+        lng = -0.1276473,
+        country = "EN",
+        names = listOf(mapOf("" to "London")),
+        source = London
     )
+
+    override suspend fun search(query: String, lang: List<String>): Entry? =
+        entry.takeIf { "London".contains(query, true) }
+
+
+    override suspend fun search(geolocation: Geolocation, lang: List<String>): Entry? =
+        entry.takeIf { abs(geolocation.lat - entry.lat!!) < 2 && abs(geolocation.lng - entry.lng!!) < 2 }
+
+    override suspend fun list(path: List<String>, lang: List<String>): Pair<List<String>?, Entry?> {
+        return null to entry
+    }
+
 
     @Serializable
     private data class Result(

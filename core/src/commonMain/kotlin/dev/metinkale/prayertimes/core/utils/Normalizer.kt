@@ -1,6 +1,6 @@
 package dev.metinkale.prayertimes.core.utils
 
-internal fun String.normalize(): String = StringBuilder(length).apply {
+fun String.normalize(): String = StringBuilder(length).apply {
     this@normalize.forEach { char ->
         append(
             when (char) {
@@ -14,7 +14,7 @@ internal fun String.normalize(): String = StringBuilder(length).apply {
                 'Ş', 'ş' -> 's'
                 'Ä', 'ä', 'à', 'â', 'À', 'Â' -> 'a'
                 'ü', 'Ü', 'û', 'ù', 'Û', 'Ù' -> 'u'
-                else -> ' '
+                else -> char
             }
         )
     }

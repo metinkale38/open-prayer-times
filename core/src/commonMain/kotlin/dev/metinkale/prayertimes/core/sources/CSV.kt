@@ -1,21 +1,23 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.HttpClient
-import dev.metinkale.prayertimes.core.readFileAsLineSequence
+import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.utils.now
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 
 internal object CSV : Source {
     override val name: String = "CSV"
 
+
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val year = LocalDate.now().year
         val content = if (key.startsWith("http://") || key.startsWith("https://")) {
-            HttpClient.get(key).lineSequence()
+            httpClient.get(key).bodyAsText().lineSequence()
         } else {
-            readFileAsLineSequence(key)
+            "".lineSequence()//TODO   File(key).readText().lineSequence()
         }
 
         return content.map { it.replace("\"", "") }.mapNotNull {

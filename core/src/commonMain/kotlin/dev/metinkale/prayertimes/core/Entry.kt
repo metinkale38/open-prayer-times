@@ -42,8 +42,6 @@ data class Entry(
         }.let { append(it) }
     }
 
-    suspend fun withTimeZone(): Entry =
-        if (lat != null && lng != null) copy(timeZone = Geocoder.getTimeZone(lat, lng)) else this
 
     companion object {
         val DELIM = '\t'

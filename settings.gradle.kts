@@ -11,9 +11,10 @@ pluginManagement {
         }
     }
 }
+
 rootProject.name = "open-prayer-times"
 
 
 include("praytimes")
 include("core")
-include("server")
+include("service")

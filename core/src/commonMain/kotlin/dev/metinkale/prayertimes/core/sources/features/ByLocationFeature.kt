@@ -1,9 +1,8 @@
 package dev.metinkale.prayertimes.core.sources.features
 
 import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.Geolocation
-import dev.metinkale.prayertimes.core.sources.Source
+import dev.metinkale.prayertimes.core.geo.Geolocation
 
-interface ByLocationFeature : Source {
-    suspend fun search(geolocation: Geolocation): List<Entry>
+interface ByLocationFeature  {
+    suspend fun search(geolocation: Geolocation, lang: List<String>): Entry?
 }

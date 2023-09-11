@@ -4,31 +4,30 @@ import dev.metinkale.prayertimes.calc.Method
 import dev.metinkale.prayertimes.calc.PrayTimes
 import dev.metinkale.prayertimes.core.DayTimes
 import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.Geocoder
-import dev.metinkale.prayertimes.core.Geolocation
+import dev.metinkale.prayertimes.core.geo.Geolocation
 import dev.metinkale.prayertimes.core.sources.features.ByLocationFeature
-import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
 import dev.metinkale.prayertimes.core.utils.now
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.plus
 
 internal object Calc : Source, ByLocationFeature {
-    override suspend fun search(geolocation: Geolocation): List<Entry> {
-        val tz = Geocoder.getTimeZone(geolocation.lat, geolocation.lng)
-        val elv = Geocoder.getElevation(geolocation.lat, geolocation.lng)
-        return Method.values().map {
-            Entry(
-                id = PrayTimes(geolocation.lat, geolocation.lng, elv, tz, it).serialize(),
-                lat = geolocation.lat,
-                lng = geolocation.lng,
-                timeZone = tz,
-                country = geolocation.country,
-                names = geolocation.name.map { mapOf("" to it) },
-                source = Calc
-            )
-        }
-    }
+    override suspend fun search(geolocation: Geolocation, lang: List<String>): Entry? =
+        Entry(
+            id = PrayTimes(
+                geolocation.lat,
+                geolocation.lng,
+                geolocation.elv,
+                geolocation.timezone,
+                Method.MWL
+            ).serialize(),
+            lat = geolocation.lat,
+            lng = geolocation.lng,
+            timeZone = geolocation.timezone,
+            country = geolocation.country,
+            names = geolocation.name.map { mapOf("" to it) },
+            source = Calc
+        )
 
 
     override val name: String = "Calc"

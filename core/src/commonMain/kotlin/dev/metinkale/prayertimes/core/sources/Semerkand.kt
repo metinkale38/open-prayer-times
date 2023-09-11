@@ -1,12 +1,12 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.HttpClient
+import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
-import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
-import dev.metinkale.prayertimes.core.utils.loadEntries
+import dev.metinkale.prayertimes.core.sources.features.cityListDelegate
 import dev.metinkale.prayertimes.core.utils.now
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
@@ -15,15 +15,14 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 
-internal object Semerkand : Source, CityListFeature {
+internal object Semerkand : Source, CityListFeature by cityListDelegate("Semerkand") {
     override val name: String = "Semerkand"
-    override fun getCities(): Sequence<Entry> = loadEntries(this)
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val year = LocalDate.now().year
-        return HttpClient.get(
+        return httpClient.get(
             "http://semerkandtakvimi.semerkandmobile.com/salaattimes?year=" + year + "&" + (if (key[0] == 'c') "cityId=" else "districtId=") +
                     key.substring(1)
-        ).let { Json.decodeFromString(ListSerializer(Day.serializer()), it) }.map {
+        ).bodyAsText().let { Json.decodeFromString(ListSerializer(Day.serializer()), it) }.map {
             DayTimes(
                 date = LocalDate(year, 1, 1).plus(it.DayOfYear - 1, DateTimeUnit.DAY),
                 fajr = it.Fajr.parseTime(),

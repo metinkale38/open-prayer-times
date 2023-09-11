@@ -24,12 +24,12 @@ interface Source : DayTimesFeature {
         fun values(): List<Source> = listOf(Diyanet, IGMG, London, NVC, Semerkand, Calc, CSV)
         fun valueOf(value: String) = values().firstOrNull { it.name.equals(value) }
 
-        val Diyanet: CityListFeature = dev.metinkale.prayertimes.core.sources.Diyanet
-        val IGMG: CityListFeature = dev.metinkale.prayertimes.core.sources.IGMG
-        val London: CityListFeature = dev.metinkale.prayertimes.core.sources.London
-        val NVC: CityListFeature = dev.metinkale.prayertimes.core.sources.NVC
-        val Semerkand: CityListFeature = dev.metinkale.prayertimes.core.sources.Semerkand
-        val Calc: ByLocationFeature = dev.metinkale.prayertimes.core.sources.Calc
+        val Diyanet: Source = dev.metinkale.prayertimes.core.sources.Diyanet
+        val IGMG: Source = dev.metinkale.prayertimes.core.sources.IGMG
+        val London: Source = dev.metinkale.prayertimes.core.sources.London
+        val NVC: Source = dev.metinkale.prayertimes.core.sources.NVC
+        val Semerkand: Source = dev.metinkale.prayertimes.core.sources.Semerkand
+        val Calc: Source = dev.metinkale.prayertimes.core.sources.Calc
         val CSV: Source = dev.metinkale.prayertimes.core.sources.CSV
     }
 }
