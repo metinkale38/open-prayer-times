@@ -10,13 +10,16 @@ import kotlin.math.abs
 object Geocoder {
     private val geonames
         get() =
-            readFile("/tsv/geonames.tsv").lineSequence()
+            readFile("/tsv/cities500.txt").lineSequence()
                 .map { it.split("\t") }
                 .map { Geolocation(it) }
 
+    private val allowedPPLA = listOf("PPLG", "PPLC", "PPLA", "PPLA1", "PPLA2", "PPLA3", "PPLA4", "PPLA5")
+
+    private val onlyPPLA = geonames.filter { it.feature_code in allowedPPLA }
 
     suspend fun byLocation(lat: Double, lng: Double): Geolocation? = withContext(Dispatchers.IO) {
-        var bestMatch = geonames.first()
+        var bestMatch = onlyPPLA.first()
         for (entry in geonames) {
             if (abs(lat - entry.lat) + abs(lng - entry.lng) < abs(lat - bestMatch.lat) + abs(lng - bestMatch.lng)) {
                 bestMatch = entry

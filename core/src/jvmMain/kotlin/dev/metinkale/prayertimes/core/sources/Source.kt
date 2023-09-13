@@ -1,13 +1,6 @@
 package dev.metinkale.prayertimes.core.sources
 
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.geo.Geocoder
-import dev.metinkale.prayertimes.core.geo.Geolocation
-import dev.metinkale.prayertimes.core.router.parallelMap
-import dev.metinkale.prayertimes.core.sources.features.ByLocationFeature
-import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.sources.features.DayTimesFeature
-import dev.metinkale.prayertimes.core.sources.features.SearchFeature
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.descriptors.PrimitiveKind

@@ -24,7 +24,7 @@ internal object Calc : Source, ByLocationFeature {
             lat = geolocation.lat,
             lng = geolocation.lng,
             timeZone = geolocation.timezone,
-            country = geolocation.country,
+            country = geolocation.country_code,
             names = listOf(mapOf("" to geolocation.name)),
             source = Calc
         )
