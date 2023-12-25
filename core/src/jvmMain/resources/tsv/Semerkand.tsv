@@ -3776,7 +3776,7 @@ d8	38.267	36.217	TR	Tufanbeyli	Adana
 d9	36.767	35.783	TR	Yumurtalık	Adana
 d10	37.55	35.4	TR	Aladağ	Adana
 d11	37.25	35.667	TR	İmamoğlu	Adana
-d12	37.767	38.283	TR	Merkez	Adıyaman
+d12	37.767	38.283	TR	Adıyaman
 d13	37.7	37.867	TR	Besni	Adıyaman
 d14	38.033	38.25	TR	Çelikhan	Adıyaman
 d15	38.033	39.05	TR	Gerger	Adıyaman
@@ -3800,13 +3800,13 @@ d32	38.7	30.783	TR	Çobanlar	Afyon
 d33	38.05	29.883	TR	Evciler	Afyon
 d34	38.567	29.967	TR	Hocalar	Afyon
 d35	38.25	30.15	TR	Kızılören	Afyon
-d36	39.717	43.05	TR	Merkez	Ağrı
+d36	39.717	43.05	TR	Ağrı
 d37	39.533	43.667	TR	Diyadin	Ağrı
 d38	39.8	42.683	TR	Eleşkirt	Ağrı
 d39	39.233	42.867	TR	Patnos	Ağrı
 d40	39.633	43.383	TR	Taşlıçay	Ağrı
 d41	39.55	42.767	TR	Tutak	Ağrı
-d42	40.65	35.833	TR	Merkez	Amasya
+d42	40.65	35.833	TR	Amasya
 d43	40.4	35.533	TR	Göynücek	Amasya
 d44	40.867	35.233	TR	Gümüşhacıköy	Amasya
 d45	40.867	35.45	TR	Merzifon	Amasya
@@ -3842,7 +3842,7 @@ d75	36.917	31.1	TR	Serik	Antalya
 d76	36.25	29.983	TR	Demre	Antalya
 d77	41.117	42.067	TR	Ardanuç	Artvin
 d78	41.35	41.317	TR	Arhavi	Artvin
-d79	41.183	41.817	TR	Merkez	Artvin
+d79	41.183	41.817	TR	Artvin
 d80	41.396	41.804	TR	Borçka	Artvin
 d81	41.383	41.417	TR	Hopa	Artvin
 d82	41.25	42.35	TR	Şavşat	Artvin
@@ -3876,11 +3876,11 @@ d109	39.233	28.167	TR	Sındırgı	Balıkesir
 d110	39.917	28.15	TR	Susurluk	Balıkesir
 d111	40.583	27.55	TR	Marmara	Balıkesir
 d112	39.383	26.833	TR	Gömeç	Balıkesir
-d113	40.144	29.975	TR	Merkez	Bilecik
+d113	40.144	29.975	TR	Bilecik
 d114	39.824	29.924	TR	Bozüyük	Bilecik
 d115	40.262	30.299	TR	Gölpazarı	Bilecik
 d116	40.003	30.174	TR	Söğüt	Bilecik
-d117	38.883	40.483	TR	Merkez	Bingöl
+d117	38.883	40.483	TR	Bingöl
 d118	39.3	41.0	TR	Karlıova	Bingöl
 d119	39.317	40.35	TR	Kiğı	Bingöl
 d120	38.967	41.05	TR	Solhan	Bingöl
@@ -3888,11 +3888,11 @@ d121	39.233	40.067	TR	Yayladere	Bingöl
 d122	39.433	40.55	TR	Yedisu	Bingöl
 d123	38.8	42.733	TR	Adilcevaz	Bitlis
 d124	38.75	42.5	TR	Ahlat	Bitlis
-d125	38.383	42.1	TR	Merkez	Bitlis
+d125	38.383	42.1	TR	Bitlis
 d126	38.217	42.417	TR	Hizan	Bitlis
 d127	38.417	41.917	TR	Mutki	Bitlis
 d128	38.5	42.283	TR	Tatvan	Bitlis
-d129	40.733	31.617	TR	Merkez	Bolu
+d129	40.733	31.617	TR	Bolu
 d130	40.8	32.2	TR	Gerede	Bolu
 d131	40.4	30.783	TR	Göynük	Bolu
 d132	40.417	31.85	TR	Kıbrıscık	Bolu
@@ -3903,7 +3903,7 @@ d136	40.717	32.05	TR	Dörtdivan	Bolu
 d137	40.75	32.0	TR	Yeniçağa	Bolu
 d138	37.65	30.533	TR	Ağlasun	Burdur
 d139	37.45	30.583	TR	Bucak	Burdur
-d140	37.717	30.283	TR	Merkez	Burdur
+d140	37.717	30.283	TR	Burdur
 d141	37.15	29.517	TR	Gölhisar	Burdur
 d142	37.3	29.767	TR	Tefenni	Burdur
 d143	37.517	29.75	TR	Yeşilova	Burdur
@@ -3923,11 +3923,11 @@ d156	39.817	26.617	TR	Bayramiç	Çanakkale
 d157	40.233	27.233	TR	Biga	Çanakkale
 d158	39.817	26.033	TR	Bozcaada	Çanakkale
 d159	40.033	27.05	TR	Çan	Çanakkale
-d160	40.15	26.417	TR	Merkez	Çanakkale
+d160	40.15	26.417	TR	Çanakkale
 d161	40.417	26.667	TR	Gelibolu	Çanakkale
 d162	40.2	25.9	TR	Gökçeada	Çanakkale
 d163	40.35	26.7	TR	Lapseki	Çanakkale
-d164	40.6	33.617	TR	Merkez	Çankırı
+d164	40.6	33.617	TR	Çankırı
 d165	40.817	32.9	TR	Çerkeş	Çankırı
 d166	40.917	33.633	TR	Ilgaz	Çankırı
 d167	40.833	33.267	TR	Kurşunlu	Çankırı
@@ -3939,7 +3939,7 @@ d172	40.333	33.983	TR	Kızılırmak	Çankırı
 d173	40.95	33.2	TR	Bayramören	Çankırı
 d174	40.167	34.85	TR	Alaca	Çorum
 d175	40.65	34.25	TR	Bayat	Çorum
-d176	40.55	34.95	TR	Merkez	Çorum
+d176	40.55	34.95	TR	Çorum
 d177	40.733	34.467	TR	İskilip	Çorum
 d178	41.133	34.483	TR	Kargı	Çorum
 d179	40.517	35.3	TR	Mecitözü	Çorum
@@ -3976,7 +3976,7 @@ d209	38.45	40.65	TR	Lice	Diyarbakır
 d210	38.133	41.0	TR	Silvan	Diyarbakır
 d211	38.233	40.083	TR	Eğil	Diyarbakır
 d212	38.3	40.5	TR	Kocaköy	Diyarbakır
-d213	41.667	26.567	TR	Merkez	Edirne
+d213	41.667	26.567	TR	Edirne
 d214	40.733	26.083	TR	Enez	Edirne
 d215	41.55	26.817	TR	Havsa	Edirne
 d216	40.933	26.383	TR	İpsala	Edirne
@@ -3987,7 +3987,7 @@ d220	41.267	26.683	TR	Uzunköprü	Edirne
 d221	41.767	26.917	TR	Süloğlu	Edirne
 d222	38.95	38.717	TR	Ağın	Elazığ
 d223	38.567	38.817	TR	Baskil	Elazığ
-d224	38.683	39.233	TR	Merkez	Elazığ
+d224	38.683	39.233	TR	Elazığ
 d225	38.95	40.033	TR	Karakoçan	Elazığ
 d226	38.8	38.75	TR	Keban	Elazığ
 d227	38.383	39.667	TR	Maden	Elazığ
@@ -3997,7 +3997,7 @@ d230	38.564	40.136	TR	Arıcak	Elazığ
 d231	38.717	39.867	TR	Kovancılar	Elazığ
 d232	38.467	39.867	TR	Alacakaya	Elazığ
 d233	39.8	40.033	TR	Çayırlı	Erzincan
-d234	39.75	39.5	TR	Merkez	Erzincan
+d234	39.75	39.5	TR	Erzincan
 d235	39.45	38.567	TR	İliç	Erzincan
 d236	39.6	39.033	TR	Kemah	Erzincan
 d237	39.267	38.483	TR	Kemaliye	Erzincan
@@ -4041,7 +4041,7 @@ d274	40.933	38.217	TR	Bulancak	Giresun
 d275	40.733	38.45	TR	Dereli	Giresun
 d276	40.95	38.717	TR	Espiye	Giresun
 d277	41.05	39.133	TR	Eynesil	Giresun
-d278	40.917	38.4	TR	Merkez	Giresun
+d278	40.917	38.4	TR	Giresun
 d279	41.033	39.0	TR	Görele	Giresun
 d280	40.917	38.517	TR	Keşap	Giresun
 d281	40.283	38.417	TR	Şebinkarahisar	Giresun
@@ -4052,13 +4052,13 @@ d285	40.133	38.733	TR	Çamoluk	Giresun
 d286	40.917	39.0	TR	Çanakçı	Giresun
 d287	40.8	38.917	TR	Doğankent	Giresun
 d288	40.9	38.8	TR	Güce	Giresun
-d289	40.45	39.483	TR	Merkez	Gümüşhane
+d289	40.45	39.483	TR	Gümüşhane
 d290	40.183	39.117	TR	Şiran	Gümüşhane
 d291	40.55	39.283	TR	Torul	Gümüşhane
 d292	40.217	39.65	TR	Köse	Gümüşhane
 d293	40.7	39.083	TR	Kürtün	Gümüşhane
 d294	37.246	43.611	TR	Çukurca	Hakkari
-d295	37.575	43.738	TR	Merkez	Hakkari
+d295	37.575	43.738	TR	Hakkari
 d296	37.216	44.515	TR	Şemdinli	Hakkari
 d297	37.572	44.282	TR	Yüksekova	Hakkari
 d298	36.117	36.25	TR	Altınözü	Hatay
@@ -4073,7 +4073,7 @@ d306	36.5	36.183	TR	Belen	Hatay
 d307	36.367	36.45	TR	Kumlu	Hatay
 d308	37.821	30.876	TR	Eğirdir	Isparta
 d309	38.117	31.017	TR	Gelendost	Isparta
-d310	37.767	30.55	TR	Merkez	Isparta
+d310	37.767	30.55	TR	Isparta
 d311	37.95	30.3	TR	Keçiborlu	Isparta
 d312	37.483	31.0	TR	Sütçüler	Isparta
 d313	38.083	31.367	TR	Şarkikaraağaç	Isparta
@@ -4125,7 +4125,7 @@ d358	38.35	26.883	TR	Güzelbahçe	İzmir
 d359	40.85	43.317	TR	Arpaçay	Kars
 d360	40.367	43.417	TR	Digor	Kars
 d361	40.15	43.117	TR	Kağızman	Kars
-d362	40.6	43.083	TR	Merkez	Kars
+d362	40.6	43.083	TR	Kars
 d363	40.333	42.583	TR	Sarıkamış	Kars
 d364	40.467	42.783	TR	Selim	Kars
 d365	40.733	43.617	TR	Akyaka	Kars
@@ -4137,7 +4137,7 @@ d370	41.9	33.0	TR	Cide	Kastamonu
 d371	41.95	34.217	TR	Çatalzeytin	Kastamonu
 d372	41.483	33.467	TR	Daday	Kastamonu
 d373	41.967	33.75	TR	İnebolu	Kastamonu
-d374	41.367	33.783	TR	Merkez	Kastamonu
+d374	41.367	33.783	TR	Kastamonu
 d375	41.8	33.717	TR	Küre	Kastamonu
 d376	41.517	34.217	TR	Taşköprü	Kastamonu
 d377	41.017	34.033	TR	Tosya	Kastamonu
@@ -4159,13 +4159,13 @@ d392	38.35	35.083	TR	Yeşilhisar	Kayseri
 d393	39.0	36.167	TR	Akkışla	Kayseri
 d394	39.158	35.752	TR	Özvatan	Kayseri
 d395	41.833	27.767	TR	Demirköy	Kırklareli
-d396	41.733	27.217	TR	Merkez	Kırklareli
+d396	41.733	27.217	TR	Kırklareli
 d397	41.4	27.35	TR	Lüleburgaz	Kırklareli
 d398	41.35	26.917	TR	Pehlivanköy	Kırklareli
 d399	41.633	27.517	TR	Pınarhisar	Kırklareli
 d400	39.6	34.417	TR	Çiçekdağı	Kırşehir
 d401	39.367	33.717	TR	Kaman	Kırşehir
-d402	39.15	34.167	TR	Merkez	Kırşehir
+d402	39.15	34.167	TR	Kırşehir
 d403	39.067	34.383	TR	Mucur	Kırşehir
 d404	39.45	33.967	TR	Akpınar	Kırşehir
 d405	40.8	29.433	TR	Gebze	Kocaeli
@@ -4204,7 +4204,7 @@ d437	39.067	30.117	TR	Altıntaş	Kütahya
 d438	39.8	29.617	TR	Domaniç	Kütahya
 d439	39.339	29.257	TR	Emet	Kütahya
 d440	38.983	29.383	TR	Gediz	Kütahya
-d441	39.417	29.983	TR	Merkez	Kütahya
+d441	39.417	29.983	TR	Kütahya
 d442	39.1	28.983	TR	Simav	Kütahya
 d443	39.55	29.483	TR	Tavşanlı	Kütahya
 d444	39.217	29.867	TR	Aslanapa	Kütahya
@@ -4263,18 +4263,18 @@ d496	36.767	28.8	TR	Dalaman	Muğla
 d497	36.833	28.767	TR	Ortaca	Muğla
 d498	39.1	42.267	TR	Bulanık	Muş
 d499	39.15	42.533	TR	Malazgirt	Muş
-d500	38.733	41.5	TR	Merkez	Muş
+d500	38.733	41.5	TR	Muş
 d501	39.167	41.45	TR	Varto	Muş
 d502	38.683	41.7	TR	Hasköy	Muş
 d503	38.733	41.783	TR	Korkut	Muş
 d504	38.95	34.567	TR	Hacıbektaş	Nevşehir
 d505	39.217	34.85	TR	Kozaklı	Nevşehir
-d506	38.633	34.717	TR	Merkez	Nevşehir
+d506	38.633	34.717	TR	Nevşehir
 d507	38.633	34.917	TR	Ürgüp	Nevşehir
 d508	38.55	34.5	TR	Acıgöl	Nevşehir
 d509	37.883	34.55	TR	Bor	Niğde
 d510	37.833	34.983	TR	Çamardı	Niğde
-d511	37.967	34.683	TR	Merkez	Niğde
+d511	37.967	34.683	TR	Niğde
 d512	37.55	34.483	TR	Ulukışla	Niğde
 d513	38.0	34.367	TR	Altunhisar	Niğde
 d514	38.167	34.483	TR	Çiftlik	Niğde
@@ -4298,7 +4298,7 @@ d531	41.05	41.0	TR	Çamlıhemşin	Rize
 d532	41.083	40.733	TR	Çayeli	Rize
 d533	41.268	41.139	TR	Fındıklı	Rize
 d534	40.783	40.55	TR	İkizdere	Rize
-d535	41.033	40.517	TR	Merkez	Rize
+d535	41.033	40.517	TR	Rize
 d536	41.05	40.9	TR	Hemşin	Rize
 d537	41.017	40.367	TR	İyidere	Rize
 d538	40.633	30.65	TR	Akyazı	Sakarya
@@ -4327,13 +4327,13 @@ d560	38.167	41.783	TR	Baykan	Siirt
 d561	37.75	42.183	TR	Eruh	Siirt
 d562	37.927	41.703	TR	Kurtalan	Siirt
 d563	37.933	42.55	TR	Pervari	Siirt
-d564	37.933	41.95	TR	Merkez	Siirt
+d564	37.933	41.95	TR	Siirt
 d565	41.95	34.583	TR	Ayancık	Sinop
 d566	41.467	34.767	TR	Boyabat	Sinop
 d567	41.417	35.05	TR	Durağan	Sinop
 d568	41.883	34.9	TR	Erfelek	Sinop
 d569	41.8	35.183	TR	Gerze	Sinop
-d570	42.033	35.15	TR	Merkez	Sinop
+d570	42.033	35.15	TR	Sinop
 d571	41.95	34.333	TR	Türkeli	Sinop
 d572	41.652	35.265	TR	Dikmen	Sinop
 d573	41.333	34.85	TR	Saraydüzü	Sinop
@@ -4344,7 +4344,7 @@ d577	39.85	37.4	TR	Hafik	Sivas
 d578	39.867	38.117	TR	İmranlı	Sivas
 d579	39.233	37.383	TR	Kangal	Sivas
 d580	40.3	37.833	TR	Koyulhisar	Sivas
-d581	39.75	37.017	TR	Merkez	Sivas
+d581	39.75	37.017	TR	Sivas
 d582	40.167	38.083	TR	Suşehri	Sivas
 d583	39.35	36.417	TR	Şarkışla	Sivas
 d584	39.867	36.6	TR	Yıldızeli	Sivas
@@ -4362,7 +4362,7 @@ d595	40.367	36.9	TR	Almus	Tokat
 d596	40.117	36.3	TR	Artova	Tokat
 d597	40.583	36.95	TR	Niksar	Tokat
 d598	40.383	37.35	TR	Reşadiye	Tokat
-d599	40.317	36.55	TR	Merkez	Tokat
+d599	40.317	36.55	TR	Tokat
 d600	40.383	36.083	TR	Turhal	Tokat
 d601	40.3	35.883	TR	Zile	Tokat
 d602	40.283	36.283	TR	Pazar	Tokat
@@ -4390,7 +4390,7 @@ d623	39.1	39.217	TR	Hozat	Tunceli
 d624	39.183	39.833	TR	Nazımiye	Tunceli
 d625	38.867	39.333	TR	Pertek	Tunceli
 d626	39.483	39.9	TR	Pülümür	Tunceli
-d627	39.117	39.533	TR	Merkez	Tunceli
+d627	39.117	39.533	TR	Tunceli
 d628	36.717	38.95	TR	Akçakale	Şanlıurfa
 d629	37.367	38.533	TR	Bozova	Şanlıurfa
 d630	36.85	40.05	TR	Ceylanpınar	Şanlıurfa
@@ -4401,7 +4401,7 @@ d634	38.767	29.75	TR	Banaz	Uşak
 d635	38.4	28.967	TR	Eşme	Uşak
 d636	38.333	29.533	TR	Karahallı	Uşak
 d637	38.5	29.667	TR	Sivaslı	Uşak
-d638	38.683	29.4	TR	Merkez	Uşak
+d638	38.683	29.4	TR	Uşak
 d639	38.05	44.017	TR	Başkale	Van
 d640	38.0	43.05	TR	Çatak	Van
 d641	39.033	43.35	TR	Erciş	Van
@@ -4420,7 +4420,7 @@ d653	39.5	35.367	TR	Sarıkaya	Yozgat
 d654	39.817	35.183	TR	Sorgun	Yozgat
 d655	39.5	34.75	TR	Şefaatli	Yozgat
 d656	39.65	34.467	TR	Yerköy	Yozgat
-d657	39.817	34.8	TR	Merkez	Yozgat
+d657	39.817	34.8	TR	Yozgat
 d658	40.133	35.283	TR	Aydıncık	Yozgat
 d659	39.25	35.5	TR	Çandır	Yozgat
 d660	40.0	35.8	TR	Kadışehri	Yozgat
@@ -4429,32 +4429,32 @@ d662	39.217	35.0	TR	Yenifakılı	Yozgat
 d663	41.428	32.074	TR	Çaycuma	Zonguldak
 d664	41.174	31.937	TR	Devrek	Zonguldak
 d665	41.241	31.633	TR	Ereğli	Zonguldak
-d666	41.452	31.788	TR	Merkez	Zonguldak
+d666	41.452	31.788	TR	Zonguldak
 d667	41.113	31.473	TR	Alaplı	Zonguldak
 d668	41.306	32.144	TR	Gökçebey	Zonguldak
-d669	38.367	34.033	TR	Merkez	Aksaray
+d669	38.367	34.033	TR	Aksaray
 d670	38.733	34.033	TR	Ortaköy	Aksaray
 d671	38.867	33.917	TR	Ağaçören	Aksaray
 d672	38.267	34.383	TR	Güzelyurt	Aksaray
 d673	38.983	33.85	TR	Sarıyahşi	Aksaray
 d674	38.4	33.417	TR	Eskil	Aksaray
 d675	38.4	34.35	TR	Gülağaç	Aksaray
-d676	40.25	40.233	TR	Merkez	Bayburt
+d676	40.25	40.233	TR	Bayburt
 d677	40.383	40.15	TR	Aydıntepe	Bayburt
 d678	40.167	39.883	TR	Demirözü	Bayburt
 d679	36.633	32.883	TR	Ermenek	Karaman
-d680	37.183	33.217	TR	Merkez	Karaman
+d680	37.183	33.217	TR	Karaman
 d681	37.35	33.683	TR	Ayrancı	Karaman
 d682	37.292	32.938	TR	Kazımkarabekir	Karaman
 d683	36.75	32.683	TR	Başyayla	Karaman
 d684	36.7	32.633	TR	Sarıveliler	Karaman
 d685	39.95	34.033	TR	Delice	Kırıkkale
-d686	39.85	33.5	TR	Merkez	Kırıkkale
+d686	39.85	33.5	TR	Kırıkkale
 d687	40.167	33.717	TR	Sulakyurt	Kırıkkale
 d688	39.917	33.717	TR	Balışeyh	Kırıkkale
 d689	39.467	33.517	TR	Çelebi	Kırıkkale
 d690	39.6	33.383	TR	Karakeçili	Kırıkkale
-d691	37.867	41.117	TR	Merkez	Batman
+d691	37.867	41.117	TR	Batman
 d692	37.917	41.3	TR	Beşiri	Batman
 d693	37.567	41.383	TR	Gercüş	Batman
 d694	38.183	41.483	TR	Kozluk	Batman
@@ -4464,43 +4464,43 @@ d697	37.567	43.167	TR	Beytüşşebap	Şırnak
 d698	37.333	42.183	TR	Cizre	Şırnak
 d699	37.333	41.883	TR	İdil	Şırnak
 d700	37.25	42.467	TR	Silopi	Şırnak
-d701	37.517	42.467	TR	Merkez	Şırnak
+d701	37.517	42.467	TR	Şırnak
 d702	37.45	42.85	TR	Uludere	Şırnak
 d703	37.467	41.9	TR	Güçlükonak	Şırnak
-d704	41.633	32.333	TR	Merkez	Bartın
+d704	41.633	32.333	TR	Bartın
 d705	41.833	32.717	TR	Kurucaşile	Bartın
 d706	41.583	32.633	TR	Ulus	Bartın
-d707	41.117	42.7	TR	Merkez	Ardahan
+d707	41.117	42.7	TR	Ardahan
 d708	41.133	43.133	TR	Çıldır	Ardahan
 d709	40.783	42.617	TR	Göle	Ardahan
 d710	41.233	42.833	TR	Hanak	Ardahan
 d711	41.517	42.733	TR	Posof	Ardahan
 d712	41.35	42.833	TR	Damal	Ardahan
 d713	39.867	44.517	TR	Aralık	Iğdır
-d714	39.917	44.033	TR	Merkez	Iğdır
+d714	39.917	44.033	TR	Iğdır
 d715	40.05	43.667	TR	Tuzluca	Iğdır
 d716	39.967	44.167	TR	Karakoyunlu	Iğdır
-d717	40.65	29.267	TR	Merkez	Yalova
+d717	40.65	29.267	TR	Yalova
 d718	40.7	29.517	TR	Altınova	Yalova
 d719	40.533	28.817	TR	Armutlu	Yalova
 d720	40.65	29.1	TR	Çınarcık	Yalova
 d721	40.6	29.167	TR	Termal	Yalova
 d722	41.417	32.967	TR	Eflani	Karabük
-d723	41.2	32.633	TR	Merkez	Karabük
+d723	41.2	32.633	TR	Karabük
 d724	41.083	32.917	TR	Ovacık	Karabük
 d725	41.217	32.3	TR	Yenice	Karabük
-d726	36.717	37.117	TR	Merkez	Kilis
+d726	36.717	37.117	TR	Kilis
 d727	36.667	37.467	TR	Elbeyli	Kilis
 d728	36.883	36.917	TR	Musabeyli	Kilis
 d729	37.2	36.583	TR	Bahçe	Osmaniye
 d730	37.367	36.1	TR	Kadirli	Osmaniye
-d731	37.067	36.25	TR	Merkez	Osmaniye
+d731	37.067	36.25	TR	Osmaniye
 d732	37.25	36.467	TR	Düziçi	Osmaniye
 d733	37.133	36.55	TR	Hasanbeyli	Osmaniye
 d734	37.454	36.019	TR	Sumbas	Osmaniye
 d735	37.067	36.133	TR	Toprakkale	Osmaniye
 d736	41.083	31.117	TR	Akçakoca	Düzce
-d737	40.85	31.15	TR	Merkez	Düzce
+d737	40.85	31.15	TR	Düzce
 d738	40.967	31.45	TR	Yığılca	Düzce
 d739	40.883	30.95	TR	Cumayeri	Düzce
 d740	40.783	31.0	TR	Gölyaka	Düzce
@@ -4508,7 +4508,7 @@ d741	40.9	31.05	TR	Çilimli	Düzce
 d742	40.85	30.933	TR	Gümüşova	Düzce
 d743	40.783	31.3	TR	Kaynaşlı	Düzce
 d744	37.783	37.633	TR	Gölbaşı	Adıyaman
-d745	38.75	30.55	TR	Merkez	Afyon
+d745	38.75	30.55	TR	Afyon
 d746	38.983	30.917	TR	Bayat	Afyon
 d747	39.589	44.123	TR	Doğubayazıt	Ağrı
 d748	36.95	30.833	TR	Aksu	Antalya
@@ -4529,7 +4529,7 @@ d762	39.933	27.25	TR	Yenice	Çanakkale
 d763	40.267	35.25	TR	Ortaköy	Çorum
 d764	37.817	29.6	TR	Bozkurt	Denizli
 d765	37.45	28.833	TR	Kale	Denizli
-d766	37.067	37.383	TR	Merkez	Gaziantep
+d766	37.067	37.383	TR	Gaziantep
 d767	37.017	36.633	TR	İslahiye	Gaziantep
 d768	37.017	37.8	TR	Nizip	Gaziantep
 d769	36.967	37.517	TR	Oğuzeli	Gaziantep
@@ -4553,35 +4553,35 @@ d787			TR	Girne	Kıbrıs
 d788			TR	İskele	Kıbrıs
 d790			TR	Lefke	Kıbrıs
 d791	35.188	33.366	TR	Lefkoşa	Kıbrıs
-d793	37.0	35.317	TR	Merkez	Adana
-d794	39.933	32.85	TR	Merkez	Ankara
-d795	36.883	30.7	TR	Merkez	Antalya
-d796	37.85	27.85	TR	Merkez	Aydın
-d797	39.65	27.883	TR	Merkez	Balıkesir
-d798	40.2	29.067	TR	Merkez	Bursa
-d799	37.783	29.083	TR	Merkez	Denizli
-d800	37.917	40.233	TR	Merkez	Diyarbakır
-d801	39.917	41.267	TR	Merkez	Erzurum
-d802	39.783	30.517	TR	Merkez	Eskişehir
-d803	36.345	36.075	TR	Merkez	Hatay
-d804	36.8	34.633	TR	Merkez	Mersin
-d805	41.0	29.0	TR	Merkez	İstanbul
-d806	38.417	27.133	TR	Merkez	İzmir
-d807	38.733	35.483	TR	Merkez	Kayseri
-d808	40.768	29.968	TR	Merkez	Kocaeli
-d809	37.867	32.483	TR	Merkez	Konya
-d810	38.35	38.317	TR	Merkez	Malatya
-d811	38.6	27.433	TR	Merkez	Manisa
-d812	37.583	36.933	TR	Merkez	Kahramanmaraş
-d813	37.3	40.733	TR	Merkez	Mardin
-d814	37.217	28.367	TR	Merkez	Muğla
-d815	40.983	37.883	TR	Merkez	Ordu
-d816	40.772	30.404	TR	Merkez	Sakarya
-d817	41.283	36.333	TR	Merkez	Samsun
-d818	40.983	27.517	TR	Merkez	Tekirdağ
-d819	41.0	39.717	TR	Merkez	Trabzon
-d820	37.15	38.8	TR	Merkez	Şanlıurfa
-d821	38.5	43.383	TR	Merkez	Van
+d793	37.0	35.317	TR	Adana
+d794	39.933	32.85	TR	Ankara
+d795	36.883	30.7	TR	Antalya
+d796	37.85	27.85	TR	Aydın
+d797	39.65	27.883	TR	Balıkesir
+d798	40.2	29.067	TR	Bursa
+d799	37.783	29.083	TR	Denizli
+d800	37.917	40.233	TR	Diyarbakır
+d801	39.917	41.267	TR	Erzurum
+d802	39.783	30.517	TR	Eskişehir
+d803	36.345	36.075	TR	Hatay
+d804	36.8	34.633	TR	Mersin
+d805	41.0	29.0	TR	İstanbul
+d806	38.417	27.133	TR	İzmir
+d807	38.733	35.483	TR	Kayseri
+d808	40.768	29.968	TR	Kocaeli
+d809	37.867	32.483	TR	Konya
+d810	38.35	38.317	TR	Malatya
+d811	38.6	27.433	TR	Manisa
+d812	37.583	36.933	TR	Kahramanmaraş
+d813	37.3	40.733	TR	Mardin
+d814	37.217	28.367	TR	Muğla
+d815	40.983	37.883	TR	Ordu
+d816	40.772	30.404	TR	Sakarya
+d817	41.283	36.333	TR	Samsun
+d818	40.983	27.517	TR	Tekirdağ
+d819	41.0	39.717	TR	Trabzon
+d820	37.15	38.8	TR	Şanlıurfa
+d821	38.5	43.383	TR	Van
 d822			TR	Adalar	İstanbul
 d823			TR	Ataşehir	İstanbul
 d824	41.038	28.717	TR	Avcılar	İstanbul

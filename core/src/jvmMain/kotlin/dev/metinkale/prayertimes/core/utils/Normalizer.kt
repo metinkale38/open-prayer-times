@@ -1,7 +1,7 @@
 package dev.metinkale.prayertimes.core.utils
 
 internal fun String.normalize(): String = StringBuilder(length).apply {
-    this@normalize.forEach { char ->
+    this@normalize.filter { it.code != 775 /*weird invisible character*/ }.forEach { char ->
         append(
             when (char) {
                 in 'A'..'Z' -> char + 0x20
@@ -18,4 +18,5 @@ internal fun String.normalize(): String = StringBuilder(length).apply {
             }
         )
     }
-}.toString()
+}.toString().trim()
+

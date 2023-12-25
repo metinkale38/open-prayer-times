@@ -34,7 +34,6 @@ internal object Semerkand : Source, CityListFeature {
         }
     }
 
-
     @Serializable
     private class Day(
         val DayOfYear: Int,

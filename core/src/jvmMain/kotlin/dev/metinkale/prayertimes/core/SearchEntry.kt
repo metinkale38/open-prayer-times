@@ -12,7 +12,7 @@ object SearchEntry {
         val geo = Geocoder.searchByName(query)
 
         return Source.values().parallelMap { source ->
-            (source as? SearchFeature)?.search(query)?.copy(timeZone = geo?.timezone)
+            (source as? SearchFeature)?.search(query, geo)
                 ?: geo?.let { source as? ByLocationFeature }?.search(geo)
         }.filterNotNull()
     }
@@ -25,7 +25,6 @@ object SearchEntry {
     }
 
     suspend fun list(path: List<String>): Pair<List<String>?, Entry?> {
-        println(path)
         return if (path.isEmpty()) {
             Source.values().mapNotNull { it as? CityListFeature }.map { it.name }
                 .let { it to null }

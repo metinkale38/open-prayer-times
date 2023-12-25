@@ -70,8 +70,8 @@ internal object London : Source, CityListFeature {
         source = London
     )
 
-    override suspend fun search(query: String): Entry? =
-        entry.takeIf { "London".contains(query, true) }
+    override suspend fun search(query: String, location: Geolocation?): Entry? =
+        entry.takeIf { "London".contains(query, true) || location?.name == "London" }
 
 
     override suspend fun search(geolocation: Geolocation): Entry? =

@@ -3,20 +3,28 @@ package dev.metinkale.prayertimes.core.sources.features
 import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.geo.Geolocation
 import dev.metinkale.prayertimes.core.sources.Source
-import dev.metinkale.prayertimes.core.utils.SearchEngine
+import dev.metinkale.prayertimes.core.utils.TextSearchEngine
 import dev.metinkale.prayertimes.core.utils.readFile
 import kotlin.Pair
 import kotlin.math.abs
 
 
 interface CityListFeature : Source, ByLocationFeature, SearchFeature {
-    private val cities: Sequence<Entry>
+    val cities: Sequence<Entry>
         get() = readFile("/tsv/${name}.tsv").lineSequence()
             .map { line -> Entry.decodeFromString(this, line) }
 
 
-    override suspend fun search(query: String): Entry? =
-        SearchEngine.search(cities, { it.normalizedNames }, query)
+    override suspend fun search(query: String, location: Geolocation?): Entry? =
+        TextSearchEngine.search(cities, { it.normalizedNames }, { entry ->
+            location?.let { loc ->
+                entry.lat?.let { lat ->
+                    entry.lng?.let { lng ->
+                        (abs(loc.lat - lat) + abs(loc.lng - lng) * 1000).toInt()
+                    }
+                }
+            } ?: 0
+        }, query)
 
     override suspend fun search(geolocation: Geolocation): Entry? {
         val lat = geolocation.lat

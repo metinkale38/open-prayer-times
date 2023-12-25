@@ -1,6 +1,6 @@
 package dev.metinkale.prayertimes.core.utils
 
-internal object SearchEngine {
+internal object TextSearchEngine {
 
     private fun calculateSearchScore(
         normalizedQueries: Collection<String>,
@@ -9,12 +9,17 @@ internal object SearchEngine {
         normalizedQueries.sumOf { lhs ->
             normalizedNames.indexOf(lhs).let {
                 if (it < 0) 0
-                else maxOf(10 - it, 1) * 10 + normalizedNames.size
+                else maxOf(10 - it, 1) * 10
             }
         }
 
 
-    fun <T> search(list: Sequence<T>, normalizedTextGetter: (T) -> Collection<String>, query: String): T? {
+    fun <T> search(
+        list: Sequence<T>,
+        normalizedTextGetter: (T) -> Collection<String>,
+        priority: (T) -> Int = { 0 },
+        query: String
+    ): T? {
         val words = query.normalize().split(' ')
         val bestEntries: MutableList<T> = mutableListOf()
         var bestScore = 0
@@ -29,7 +34,8 @@ internal object SearchEngine {
                 bestEntries.add(entry)
             }
         }
-        return bestEntries.firstOrNull()
+
+        return bestEntries.minByOrNull { priority(it) }
     }
 
 

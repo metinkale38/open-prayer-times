@@ -67,8 +67,8 @@ data class Geolocation(
 
     val lat by lazy { latStr.toDouble() }
     val lng by lazy { lngStr.toDouble() }
-    val elv by lazy { elvStr.toDouble() }
-    val population by lazy { populationStr.toDouble() }
+    val elv by lazy { dem.toDouble() }
+    val population by lazy { populationStr.toInt() }
     val timezone by lazy { TimeZone.of(zoneId) }
     internal val normalizedNames by lazy {
         listOf(
