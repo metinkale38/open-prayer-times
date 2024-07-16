@@ -18,6 +18,14 @@ enum class HighLatsAdjustment {
 
     /**
      * Adjust Methods for Higher Latitudes
+     * Method: third of night
+     *
+     *
+     * In this method, the period between sunset and sunrise is divided into three parts. Isha begins after the first one-third part, and Fajr is at the beginning of the third part.
+     */
+    OneThird,
+    /**
+     * Adjust Methods for Higher Latitudes
      * Method: 1/7th of night
      *
      *
@@ -32,5 +40,7 @@ enum class HighLatsAdjustment {
      *
      * In this method, the period from sunset to sunrise is divided into two halves. The first half is considered to be the "night" and the other half as "day break". Fajr and Isha in this method are assumed to be at mid-night during the abnormal periods.
      */
-    NightMiddle
+    NightMiddle,
+
+
 }

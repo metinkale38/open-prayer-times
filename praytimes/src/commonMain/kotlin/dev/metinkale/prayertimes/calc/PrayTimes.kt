@@ -32,8 +32,10 @@ data class PrayTimes(
             val prop2 = Times.properties<LocalTime>()
 
             prop1.map { it.get(times) }.forEachIndexed { index, value ->
-                val time = date.atTime(floor(value).toInt(), floor((value - floor(value)) * 60).toInt())
-                    .toInstant(TimeZone.UTC).toLocalDateTime(timezone).time
+                val time = if (value.isNaN()) LocalTime(0, 0) else date.atTime(
+                    floor(value).toInt(),
+                    floor((value - floor(value)) * 60).toInt()
+                ).toInstant(TimeZone.UTC).toLocalDateTime(timezone).time
                 prop2[index].set(result, time)
             }
         }
@@ -165,6 +167,7 @@ data class PrayTimes(
             HighLatsAdjustment.AngleBased -> 1.0 / 60.0 * angle
             HighLatsAdjustment.OneSeventh -> 1.0 / 7.0
             HighLatsAdjustment.NightMiddle -> 1.0 / 2.0
+            HighLatsAdjustment.OneThird -> 1.0 / 3.0
         }
     }
 
@@ -196,9 +199,7 @@ data class PrayTimes(
         val decl = sunPositionDeclination(jdate + time)
         val noon = midDay(jdate, time)
         val t = 1.0 / 15.0 * DMath.arccos(
-            (-DMath.sin(angle) - DMath.sin(decl) * DMath.sin(latitude)) / (DMath.cos(decl) * DMath.cos(
-                latitude
-            ))
+            (-DMath.sin(angle) - DMath.sin(decl) * DMath.sin(latitude)) / (DMath.cos(decl) * DMath.cos(latitude))
         )
         return noon + if (ccw) -t else t
     }
