@@ -2,6 +2,7 @@ package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.Configuration
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.cached
 import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.utils.now
@@ -19,7 +20,7 @@ internal object IGMG : Source, CityListFeature {
     private val json = Json { ignoreUnknownKeys = true }
 
 
-    suspend fun getDayTimes(key: String, from: LocalDate, to: LocalDate): List<DayTimes> {
+    suspend fun getDayTimes(key: String, from: LocalDate, to: LocalDate): List<DayTimes> = cached("$key-$from-$to") {
         val list = httpClient.get(
             ("https://live.igmgapp.org:8091/api/Calendar/GetPrayerTimes" +
                     "?cityID=" + key +
@@ -30,7 +31,7 @@ internal object IGMG : Source, CityListFeature {
         }.bodyAsText().let { json.decodeFromString(PrayerTimesResponse.serializer(), it) }.list
 
 
-        return list.map {
+        list.map {
             DayTimes(
                 date = it.date.split(".").reversed().joinToString("-").toLocalDate(),
                 fajr = it.fajr.toLocalTime(),

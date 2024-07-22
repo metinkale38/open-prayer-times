@@ -1,11 +1,11 @@
 package dev.metinkale.prayertimes.core.sources.features
 
+import dev.metinkale.prayertimes.core.Configuration
 import dev.metinkale.prayertimes.core.Entry
 import dev.metinkale.prayertimes.core.geo.Geolocation
 import dev.metinkale.prayertimes.core.sources.Source
 import dev.metinkale.prayertimes.core.utils.TextSearchEngine
 import dev.metinkale.prayertimes.core.utils.readFile
-import kotlin.Pair
 import kotlin.math.abs
 
 
@@ -48,19 +48,21 @@ interface CityListFeature : Source, ByLocationFeature, SearchFeature {
         return bestMatch?.copy(timeZone = geolocation.timezone)
     }
 
-    suspend fun list(path: List<String>): Pair<List<String>?, Entry?> =
+    suspend fun list(
+        path: List<String>,
+        languages: List<String> = Configuration.languages
+    ): Pair<List<String>?, Entry?> =
         if (path.isEmpty()) {
             cities.map { it.country }.distinct().toList().let { it to null }
         } else {
             val country = path[0]
             val parts = path.drop(1)
 
-
-            val entries = cities.filter { it.country == country }
-                .map { it.localizedNames.reversed() to it }
+            val entries: List<Pair<List<String>, Entry>> = cities.filter { it.country == country }
+                .map { it.names.reversed().map { it.values } to it }
                 .filter { (it, _) ->
-                    parts.withIndex().all { (index, name) -> it.getOrNull(index) == name }
-                }.toList()
+                    parts.withIndex().all { (index, name) -> it.getOrNull(index)?.contains(name) == true }
+                }.map { (_, entry) -> entry.localizedNames(*languages.toTypedArray()).reversed() to entry }.toList()
 
             if (entries.size == 1) {
                 entries.first().second.let { null to it }

@@ -1,6 +1,7 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.cached
 import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.utils.now
@@ -16,9 +17,9 @@ import kotlinx.serialization.json.Json
 
 internal object Semerkand : Source, CityListFeature {
     override val name: String = "Semerkand"
-    override suspend fun getDayTimes(key: String): List<DayTimes> {
+    override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
         val year = LocalDate.now().year
-        return httpClient.get(
+        httpClient.get(
             "https://semerkandtakvimi.semerkandmobile.com/salaattimes?year=" + year + "&" + (if (key[0] == 'c') "cityId=" else "districtId=") +
                     key.substring(1)
         ).bodyAsText().let { Json.decodeFromString(ListSerializer(Day.serializer()), it) }.map {

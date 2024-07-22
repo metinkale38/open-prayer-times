@@ -22,16 +22,19 @@ data class Entry(
             .distinct()
     }
 
-    val localizedNames by lazy {
-        names.map { map ->
-            Configuration.languages.firstNotNullOfOrNull { map[it] } ?: map.values.first()
-        }
+    val localizedNames by lazy { localizedNames(*Configuration.languages.toTypedArray()) }
+
+    val localizedName by lazy { localizedName(*Configuration.languages.toTypedArray()) }
+
+    val localizedRegion by lazy { localizedRegion(*Configuration.languages.toTypedArray()) }
+
+    fun localizedNames(vararg languages: String) = names.map { map ->
+        languages.firstNotNullOfOrNull { map[it] } ?: map.values.first()
     }
 
-    val localizedName by lazy { localizedNames.firstOrNull() ?: "" }
+    fun localizedName(vararg languages: String) = localizedNames(*languages).firstOrNull() ?: ""
 
-    val localizedRegion by lazy { localizedNames.drop(1).joinToString(" - ") }
-
+    fun localizedRegion(vararg languages: String) = localizedNames(*languages).drop(1).joinToString(" - ")
 
     companion object {
         val DELIM = '\t'

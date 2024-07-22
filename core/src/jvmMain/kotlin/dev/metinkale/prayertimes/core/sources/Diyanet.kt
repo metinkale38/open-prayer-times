@@ -1,6 +1,7 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.cached
 import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import io.ktor.client.request.*
@@ -12,7 +13,7 @@ import kotlinx.datetime.LocalTime
 internal object Diyanet : Source, CityListFeature {
     override val name: String = "Diyanet"
 
-    override suspend fun getDayTimes(key: String): List<DayTimes> {
+    override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
         var result = httpClient.post("https://namazvakti.diyanet.gov.tr/wsNamazVakti.svc") {
             contentType(ContentType.parse("text/xml; charset=utf-8"))
             header("SOAPAction", "http://tempuri.org/IwsNamazVakti/AylikNamazVakti")
@@ -29,7 +30,7 @@ internal object Diyanet : Source, CityListFeature {
         result = result.substring(0, result.indexOf("</AylikNamazVaktiResult>"))
         val days = result.split("</a:NamazVakti><a:NamazVakti>".toRegex()).dropLastWhile { it.isEmpty() }
             .toTypedArray()
-        return days.map { day ->
+        days.map { day ->
             val parts = day.split("><a:".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
             val times = arrayOfNulls<String>(6)
             var date: String? = null

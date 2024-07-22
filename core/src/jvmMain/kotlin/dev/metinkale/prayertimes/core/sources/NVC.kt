@@ -1,6 +1,7 @@
 package dev.metinkale.prayertimes.core.sources
 
 import dev.metinkale.prayertimes.core.DayTimes
+import dev.metinkale.prayertimes.core.cached
 import dev.metinkale.prayertimes.core.httpClient
 import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.utils.now
@@ -14,9 +15,9 @@ internal object NVC : Source, CityListFeature {
     override val name: String = "NVC"
     override val fullName: String = "NamazVakti.com"
 
-    override suspend fun getDayTimes(key: String): List<DayTimes> {
+    override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
         val year = LocalDate.now().year
-        return httpClient.get("https://namazvakti.com/XML.php?cityID=$key").bodyAsText().lines()
+        httpClient.get("https://namazvakti.com/XML.php?cityID=$key").bodyAsText().lines()
             .filter { "<prayertimes" in it }
             .map {
                 val date = it.split("\"").let {
