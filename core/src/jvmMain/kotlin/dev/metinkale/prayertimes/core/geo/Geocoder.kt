@@ -14,8 +14,7 @@ object Geocoder {
     private val geonames
         get() =
             readFile("/tsv/cities500.txt").lineSequence()
-                .map { it.split("\t") }
-                .map { Geolocation(it) }
+                .map { Geolocation.readFromLine(it) }
 
     private val allowedPPLA = listOf("PPLG", "PPLC", "PPLA", "PPLA1", "PPLA2", "PPLA3", "PPLA4", "PPLA5")
 

@@ -1,5 +1,6 @@
 package dev.metinkale.prayertimes.core.geo
 
+import dev.metinkale.prayertimes.core.utils.FastTokenizer
 import dev.metinkale.prayertimes.core.utils.normalize
 import kotlinx.datetime.TimeZone
 
@@ -76,5 +77,33 @@ data class Geolocation(
             asciiname.normalize(),
             *alternatenames.split(",").map { it.normalize() }.toTypedArray()
         )
+    }
+
+    companion object {
+        fun readFromLine(line: String): Geolocation {
+            val tokenizer = FastTokenizer(line, '\t')
+            return Geolocation(
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next(),
+                tokenizer.next()
+            )
+
+        }
     }
 }
