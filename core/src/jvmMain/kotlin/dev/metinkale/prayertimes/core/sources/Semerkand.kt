@@ -7,6 +7,7 @@ import dev.metinkale.prayertimes.core.sources.features.CityListFeature
 import dev.metinkale.prayertimes.core.utils.now
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
+import io.ktor.http.*
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
@@ -17,12 +18,15 @@ import kotlinx.serialization.json.Json
 
 internal object Semerkand : Source, CityListFeature {
     override val name: String = "Semerkand"
+    private val json = Json { ignoreUnknownKeys = true }
     override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
         val year = LocalDate.now().year
-        httpClient.get(
-            "https://semerkandtakvimi.semerkandmobile.com/salaattimes?year=" + year + "&" + (if (key[0] == 'c') "cityId=" else "districtId=") +
-                    key.substring(1)
-        ).bodyAsText().let { Json.decodeFromString(ListSerializer(Day.serializer()), it) }.map {
+        val doy = LocalDate.now().dayOfYear
+        httpClient.post("https://www.semerkandtakvimi.com/Home/" + if (key[0] == 'c') "CityTimeList" else "DistricTimeList") {
+            cookie("timeZone", "1")
+            contentType(ContentType.parse("application/x-www-form-urlencoded; charset=UTF-8"))
+            setBody((if (key[0] == 'c') "City=" else "distric=") + key.substring(1) + "&Year=$year&Day=$doy")
+        }.bodyAsText().let { json.decodeFromString(ListSerializer(Day.serializer()), it) }.map {
             DayTimes(
                 date = LocalDate(year, 1, 1).plus(it.DayOfYear - 1, DateTimeUnit.DAY),
                 fajr = it.Fajr.parseTime(),

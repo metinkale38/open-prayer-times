@@ -1,6 +1,6 @@
 package dev.metinkale.prayertimes.api
 
-import com.metinkale.prayer.date.HijriDate
+import dev.metinkale.hijri.HijriDate
 import io.ktor.server.application.*
 import io.ktor.server.plugins.*
 import io.ktor.server.response.*

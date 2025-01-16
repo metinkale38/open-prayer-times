@@ -12,13 +12,13 @@ object Configuration {
      * needed for igmg prayer times
      * no public id - obtained through private contacts
      */
-    var IGMG_API_KEY: String = ""
+    var IGMG_API_KEY: String = System.getenv("IGMG_API_KEY") ?: ""
 
     /**
      * needed for london prayer times.
      * Can be obtained on their website
      */
-    var LONDON_PRAYER_TIMES_API_KEY: String = ""
+    var LONDON_PRAYER_TIMES_API_KEY: String = System.getenv("LONDON_PRAYER_TIMES_API_KEY") ?: ""
 
 
     interface CacheProvider {

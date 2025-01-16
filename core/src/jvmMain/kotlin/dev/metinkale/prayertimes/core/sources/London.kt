@@ -19,8 +19,7 @@ internal object London : Source, CityListFeature {
     override val name: String = "London"
     override val fullName: String = "LondonPrayerTimes.com"
 
-    private
-    val json = Json { ignoreUnknownKeys = true }
+    private val json = Json { ignoreUnknownKeys = true }
 
     override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
         val response =

@@ -1,5 +1,7 @@
-package com.metinkale.prayer.date
+package dev.metinkale.hijri
 
+import com.metinkale.prayer.date.HijriEvent
+import com.metinkale.prayer.date.HijriMonth
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.chrono.HijrahChronology
@@ -13,9 +15,9 @@ class HijriDate private constructor(val year: Int, val monthValue: Int, val day:
     Comparable<HijriDate> {
 
     init {
-        if (year > MAX_HIJRI_YEAR) throw java.lang.RuntimeException("cannot create Hijri-Date after $MAX_HIJRI_YEAR")
-        if (monthValue !in 1..12) throw java.lang.RuntimeException("Hijri-month must be within 1..12")
-        if (day !in 1..30) throw java.lang.RuntimeException("Hijri-day must be within 1..30")
+        if (year > MAX_HIJRI_YEAR) throw RuntimeException("cannot create Hijri-Date after $MAX_HIJRI_YEAR")
+        if (monthValue !in 1..12) throw RuntimeException("Hijri-month must be within 1..12")
+        if (day !in 1..30) throw RuntimeException("Hijri-day must be within 1..30")
     }
 
     val month get() = HijriMonth.values()[monthValue - 1]

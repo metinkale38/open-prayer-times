@@ -33,13 +33,13 @@ internal object IGMG : Source, CityListFeature {
 
         list.map {
             DayTimes(
-                date = it.date.split(".").reversed().joinToString("-").toLocalDate(),
-                fajr = it.fajr.toLocalTime(),
-                sun = it.sunrise.toLocalTime(),
-                dhuhr = it.dhuhr.toLocalTime(),
-                asr = it.asr.toLocalTime(),
-                maghrib = it.maghrib.toLocalTime(),
-                ishaa = it.ishaa.toLocalTime()
+                date = it.date.split(".").reversed().joinToString("-").let(LocalDate::parse),
+                fajr = it.fajr.let(LocalTime::parse),
+                sun = it.sunrise.let(LocalTime::parse),
+                dhuhr = it.dhuhr.let(LocalTime::parse),
+                asr = it.asr.let(LocalTime::parse),
+                maghrib = it.maghrib.let(LocalTime::parse),
+                ishaa = it.ishaa.let(LocalTime::parse)
             )
         }
 
@@ -52,7 +52,7 @@ internal object IGMG : Source, CityListFeature {
     }
 
     override suspend fun getDayTime(key: String, day: LocalDate): DayTimes? =
-        getDayTimes(key = key, from = day, to = day).firstOrNull()
+        getDayTimes(key = key, from = day, to = day.plus(1, DateTimeUnit.DAY)).firstOrNull()
 
 
     @Serializable
