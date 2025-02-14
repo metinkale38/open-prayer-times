@@ -29,15 +29,15 @@ internal object London : Source, CityListFeature {
 
 
         response.times?.values?.map {
-            val date = it.date!!.toLocalDate()
+            val date = LocalDate.parse(it.date!!)
             val times = mutableListOf(
-                it.fajr!!.toLocalTime(),
-                it.sunrise!!.toLocalTime(),
-                it.dhuhr!!.toLocalTime(),
-                it.asr!!.toLocalTime(),
-                it.asr_2!!.toLocalTime(),
-                it.magrib!!.toLocalTime(),
-                it.isha!!.toLocalTime(),
+                LocalTime.parse(it.fajr!!),
+                LocalTime.parse(it.sunrise!!),
+                LocalTime.parse(it.dhuhr!!),
+                LocalTime.parse(it.asr!!),
+                LocalTime.parse(it.asr_2!!),
+                LocalTime.parse(it.magrib!!),
+                LocalTime.parse(it.isha!!),
             )
 
             var last: LocalTime? = null
