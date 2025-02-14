@@ -34,19 +34,3 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
-
-
-
-tasks.named("compileJava") {
-    dependsOn(":webapp:npmBuild")
-}
-
-tasks.register<Copy>("copyWebApp") {
-    dependsOn(":webapp:npmBuild")
-    from("$rootDir/webapp/build")
-    into("$buildDir/resources/main/static/.")
-}
-
-tasks.named("processResources") {
-    dependsOn("copyWebApp")
-}
