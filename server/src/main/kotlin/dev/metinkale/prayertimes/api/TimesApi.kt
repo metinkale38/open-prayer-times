@@ -1,16 +1,14 @@
 package dev.metinkale.prayertimes.api
 
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.SearchEntry
-import dev.metinkale.prayertimes.core.sources.Source
-import dev.metinkale.prayertimes.core.sources.features.CityListFeature
+import dev.metinkale.prayertimes.providers.Entry
+import dev.metinkale.prayertimes.providers.SearchEntry
+import dev.metinkale.prayertimes.providers.sources.Source
+import dev.metinkale.prayertimes.providers.sources.features.CityListFeature
 import dev.metinkale.prayertimes.dto.EntryDTO
-import io.ktor.server.application.*
 import io.ktor.server.plugins.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import io.ktor.util.pipeline.*
 import kotlinx.datetime.LocalDate
 
 private val REGEX_DATE =
@@ -61,15 +59,9 @@ private fun listCities(source: CityListFeature): Route.() -> Unit = {
             }
         }
     }
-
-    route("/today") {
-        handle {
-            call.respond("Hallo")
-        }
-    }
 }
 
-private suspend fun PipelineContext<*, ApplicationCall>.handleTime(city: Entry, date: String) {
+private suspend fun RoutingContext.handleTime(city: Entry, date: String) {
     if (date == "today") call.respond(city.source.getDayTime(city.id) ?: throw NotFoundException())
     else call.respond(city.source.getDayTime(city.id, LocalDate.parse(date)) ?: throw NotFoundException())
 }

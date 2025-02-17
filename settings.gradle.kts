@@ -3,19 +3,12 @@ pluginManagement {
         gradlePluginPortal()
         mavenCentral()
     }
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.id.startsWith("com.google.cloud.tools.appengine")) {
-                useModule("com.google.cloud.tools:appengine-gradle-plugin:${requested.version}")
-            }
-        }
-    }
 }
 
 rootProject.name = "open-prayer-times"
 
 
-include("core")
 include("praytimes")
+include("providers")
 include("hijri")
 include("server")

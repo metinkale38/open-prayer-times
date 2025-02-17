@@ -1,7 +1,7 @@
 package dev.metinkale.prayertimes.dto
 
-import dev.metinkale.prayertimes.core.Entry
-import dev.metinkale.prayertimes.core.geo.Geocoder
+import dev.metinkale.prayertimes.providers.Entry
+import dev.metinkale.prayertimes.providers.geo.Geocoder
 import kotlinx.datetime.TimeZone
 import kotlinx.serialization.Serializable
 

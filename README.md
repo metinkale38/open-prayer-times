@@ -19,7 +19,7 @@ Usage:
 
 This module does not need an active internet connection. 
 
-## core module
+## providers module
 
 This is also a multi-plattform module, which contains some web-based prayer-time providers like Diyanet, IGMG, NamazVakti.com and SemerkandTakvimi (feel free to make PRs for more providers).
 
