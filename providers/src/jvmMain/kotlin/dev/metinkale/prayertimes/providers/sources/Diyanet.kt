@@ -5,61 +5,44 @@ import dev.metinkale.prayertimes.providers.httpClient
 import dev.metinkale.prayertimes.providers.sources.features.CityListFeature
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
-import io.ktor.http.*
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
+
 
 internal object Diyanet : Source, CityListFeature {
     override val name: String = "Diyanet"
 
-    override suspend fun getDayTimes(key: String): List<DayTimes> {
-        var result = httpClient.post("https://namazvakti.diyanet.gov.tr/wsNamazVakti.svc") {
-            contentType(ContentType.parse("text/xml; charset=utf-8"))
-            header("SOAPAction", "http://tempuri.org/IwsNamazVakti/AylikNamazVakti")
-            setBody(
-                "<v:Envelope xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:d=\"http://www.w3.org/2001/XMLSchema\" xmlns:c=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:v=\"http://schemas.xmlsoap.org/soap/envelope/\">" +
-                        "<v:Header /><v:Body>" + "<AylikNamazVakti xmlns=\"http://tempuri.org/\" id=\"o0\" c:root=\"1\">" +
-                        "<IlceID i:type=\"d:int\">" + key + "</IlceID>" +
-                        "<username i:type=\"d:string\">namazuser</username>" + "<password i:type=\"d:string\">NamVak!14</password>" +
-                        "</AylikNamazVakti></v:Body></v:Envelope>"
-            )
-        }.bodyAsText()
 
-        result = result.substring(result.indexOf("<a:NamazVakti>") + 14)
-        result = result.substring(0, result.indexOf("</AylikNamazVaktiResult>"))
-        val days = result.split("</a:NamazVakti><a:NamazVakti>".toRegex()).dropLastWhile { it.isEmpty() }
-            .toTypedArray()
-        return days.map { day ->
-            val parts = day.split("><a:".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-            val times = arrayOfNulls<String>(6)
-            var date: String? = null
-            for (part: String in parts) {
-                if (!part.contains(">")) continue
-                var name = part.substring(0, part.indexOf('>'))
-                if (name.contains(":")) name = name.substring(name.indexOf(':') + 1)
-                var content = part.substring(part.indexOf('>') + 1)
-                content = content.substring(0, content.indexOf('<'))
-                when (name) {
-                    "Imsak" -> times[0] = content
-                    "Gunes" -> times[1] = content
-                    "Ogle" -> times[2] = content
-                    "Ikindi" -> times[3] = content
-                    "Aksam" -> times[4] = content
-                    "Yatsi" -> times[5] = content
-                    "MiladiTarihKisa" -> date = content
-                }
-            }
-            val d = date!!.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-            val ld = LocalDate(d[2].toInt(), d[1].toInt(), d[0].toInt())
+    override suspend fun getDayTimes(key: String): List<DayTimes> {
+        var result = httpClient.get("https://namazvakitleri.diyanet.gov.tr/tr-TR/$key").bodyAsText()
+
+        result = result.substringAfter("id=\"tab-2\"").substringBefore("</table>")
+
+        return result.split("</tr>").filter { it.contains("td>") }.map {
+            val day = it.split("</td>").filter { it.contains("td>") }.map { it.substringAfter("td>") }
 
             DayTimes(
-                ld,
-                fajr = LocalTime.parse(times[0]!!),
-                sun = LocalTime.parse(times[1]!!),
-                dhuhr = LocalTime.parse(times[2]!!),
-                asr = LocalTime.parse(times[3]!!),
-                maghrib = LocalTime.parse(times[4]!!),
-                ishaa = LocalTime.parse(times[5]!!)
+                LocalDate.parse(
+                    day[0].substringBeforeLast(" ").split(" ").reversed().joinToString("-")
+                        .replace("Ocak", "01")
+                        .replace("Şubat", "02")
+                        .replace("Mart", "03")
+                        .replace("Nisan", "04")
+                        .replace("Mayıs", "05")
+                        .replace("Haziran", "06")
+                        .replace("Temmuz", "07")
+                        .replace("Ağustos", "08")
+                        .replace("Eyl&#252;l", "09")
+                        .replace("Ekim", "10")
+                        .replace("Kasım", "11")
+                        .replace("Aralık", "12")
+                ),
+                LocalTime.parse(day[2]),
+                LocalTime.parse(day[3]),
+                LocalTime.parse(day[4]),
+                LocalTime.parse(day[5]),
+                LocalTime.parse(day[6]),
+                LocalTime.parse(day[7])
             )
         }
     }
