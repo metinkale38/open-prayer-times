@@ -14,6 +14,8 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import kotlinx.datetime.toKotlinLocalDate
 import java.time.LocalDate
+import java.time.Month
+import java.time.temporal.ChronoUnit
 
 private val REGEX_DATE =
     "([0-9]{4})[\\-](1[0-2]|0[1-9]|[1-9])[\\-](3[01]|[12][0-9]|0[1-9]|[1-9])$".toRegex()
@@ -69,14 +71,14 @@ private fun listCities(source: CityListFeature): Route.() -> Unit = {
 
 
 private suspend fun RoutingContext.handleTime(city: Entry, path: String) {
-    val (from, to, minTimes) = when (path) {
-        "csv" -> Triple(LocalDate.now(), null, 28)
-        "today" -> LocalDate.now().let { Triple(it, it, 1) }
-        in REGEX_DATE -> LocalDate.parse(path).let { Triple(it, it, 1) }
+    val (from, to) = when (path) {
+        "csv" -> LocalDate.now().let { it to LocalDate.of(it.year, Month.DECEMBER, 31) }
+        "today" -> LocalDate.now().let { it to it }
+        in REGEX_DATE -> LocalDate.parse(path).let { it to it }
         else -> throw NotFoundException()
     }
     var times = TimesDatabase.get(city.source, city.id, from, to ?: LocalDate.MAX)
-    if (times.size < minTimes) {
+    if (times.size < ChronoUnit.DAYS.between(from, to) + 1) {
         times = city.source.getDayTimes(city.id)
             .also { TimesDatabase.persist(city.source, city.id, *it.toTypedArray()) }
             .filter { it.date >= from.toKotlinLocalDate() && (to == null || it.date <= to.toKotlinLocalDate()) }
@@ -86,7 +88,8 @@ private suspend fun RoutingContext.handleTime(city: Entry, path: String) {
         val csv = (listOf("Date;Fajr;Shuruq;Dhuhr;Asr;Maghrib;Ishaa")
                 + times.map { "${it.date};${it.fajr};${it.sun};${it.dhuhr};${it.asr};${it.maghrib};${it.ishaa}" }
                 ).joinToString("\n")
-        call.respondText(csv,contentType = ContentType.Text.CSV)
+        call.response.header(HttpHeaders.ContentDisposition, "inline; filename=\"${city.localizedName}.csv\"")
+        call.respondText(csv, contentType = ContentType.Text.CSV)
     } else {
         call.respond(times.map { DayTimesDTO.from(it) })
     }
