@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS times (
+    source     text NOT NULL,
+	key        text NOT NULL,
+    date       integer NOT NULL,
+    fajr       text NOT NULL,
+    sun        text NOT NULL,
+    dhuhr      text NOT NULL,
+    asr        text NOT NULL,
+    maghrib    text NOT NULL,
+    ishaa      text NOT NULL,
+    asrHanafi  text,
+    sabah      text,
+    PRIMARY KEY(source, key, date)
+);
+
+selectAll:
+SELECT * FROM times WHERE source = ? AND key = ? AND date >= ? AND date <= ?;
+
+
+insert:
+INSERT OR REPLACE INTO times (source, 	key, date, fajr, sun, dhuhr, asr, maghrib, ishaa, asrHanafi, sabah)
+VALUES (?, ?,?,?,?,?,?,?,?, ?, ?);
+

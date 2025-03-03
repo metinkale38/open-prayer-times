@@ -1,7 +1,6 @@
 package dev.metinkale.prayertimes.providers.sources
 
 import dev.metinkale.prayertimes.providers.DayTimes
-import dev.metinkale.prayertimes.providers.cached
 import dev.metinkale.prayertimes.providers.httpClient
 import dev.metinkale.prayertimes.providers.utils.now
 import io.ktor.client.request.*
@@ -14,7 +13,7 @@ internal object CSV : Source {
     override val name: String = "CSV"
 
 
-    override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
+    override suspend fun getDayTimes(key: String): List<DayTimes> {
         val year = LocalDate.now().year
         val content = if (key.startsWith("http://") || key.startsWith("https://")) {
             httpClient.get(key).bodyAsText().lineSequence()
@@ -22,7 +21,7 @@ internal object CSV : Source {
             File(key).readText().lineSequence()
         }
 
-        content.map { it.replace("\"", "") }.mapNotNull {
+        return content.map { it.replace("\"", "") }.mapNotNull {
             runCatching {
                 val rows = it.split(';', ',', ';', '\t', ' ').filter { it.isNotBlank() }
 

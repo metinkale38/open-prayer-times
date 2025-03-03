@@ -5,3 +5,4 @@ build
 node_modules
 kotlin-js-store
 .kotlin
+.env

@@ -19,14 +19,14 @@ internal object London : Source, CityListFeature {
 
     private val json = Json { ignoreUnknownKeys = true }
 
-    override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
+    override suspend fun getDayTimes(key: String): List<DayTimes> {
         val response =
             httpClient.get("https://www.londonprayertimes.com/api/times/?format=json&key=${Configuration.LONDON_PRAYER_TIMES_API_KEY}&year=" + LocalDate.now().year)
                 .bodyAsText()
                 .let { json.decodeFromString(Result.serializer(), it) }
 
 
-        response.times?.values?.map {
+        return response.times?.values?.map {
             val date = LocalDate.parse(it.date!!)
             val times = mutableListOf(
                 LocalTime.parse(it.fajr!!),

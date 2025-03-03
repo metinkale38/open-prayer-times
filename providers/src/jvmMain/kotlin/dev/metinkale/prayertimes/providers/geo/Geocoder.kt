@@ -1,6 +1,5 @@
 package dev.metinkale.prayertimes.providers.geo
 
-import dev.metinkale.prayertimes.providers.cached
 import dev.metinkale.prayertimes.providers.utils.TextSearchEngine
 import dev.metinkale.prayertimes.providers.utils.readFile
 import kotlinx.coroutines.Dispatchers
@@ -21,7 +20,7 @@ object Geocoder {
     private val onlyPPLA get() = geonames.filter { it.feature_code in allowedPPLA }
 
 
-    suspend fun byLocation(lat: Double, lng: Double): Geolocation? = cached("byLocation=$lat-$lng") {
+    suspend fun byLocation(lat: Double, lng: Double): Geolocation? =
         withContext(Dispatchers.IO) {
             var bestMatch: Geolocation? = null
             for (entry in onlyPPLA) {
@@ -33,12 +32,9 @@ object Geocoder {
                 }
             }
             bestMatch?.takeIf { abs(lat - it.lat) < 2 && abs(lng - it.lng) < 2 }
-        }.let { Optional.ofNullable(it) }
-    }.getOrNull()
+        }.let { Optional.ofNullable(it) }.getOrNull()
 
-    suspend fun searchByName(q: String): Geolocation? = cached("searchByName=$q") {
-        withContext(Dispatchers.IO) {
+    suspend fun searchByName(q: String): Geolocation? = withContext(Dispatchers.IO) {
             TextSearchEngine.search(geonames, { it.normalizedNames }, { -it.population }, q)
-        }.let { Optional.ofNullable(it) }
-    }.getOrNull()
+        }.let { Optional.ofNullable(it) }.getOrNull()
 }

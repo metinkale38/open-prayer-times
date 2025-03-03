@@ -1,7 +1,6 @@
 package dev.metinkale.prayertimes.providers.sources
 
 import dev.metinkale.prayertimes.providers.DayTimes
-import dev.metinkale.prayertimes.providers.cached
 import dev.metinkale.prayertimes.providers.httpClient
 import dev.metinkale.prayertimes.providers.sources.features.CityListFeature
 import dev.metinkale.prayertimes.providers.utils.now
@@ -19,10 +18,10 @@ import kotlinx.serialization.json.Json
 internal object Semerkand : Source, CityListFeature {
     override val name: String = "Semerkand"
     private val json = Json { ignoreUnknownKeys = true }
-    override suspend fun getDayTimes(key: String): List<DayTimes> = cached(key) {
+    override suspend fun getDayTimes(key: String): List<DayTimes>  {
         val year = LocalDate.now().year
         val doy = LocalDate.now().dayOfYear
-        httpClient.post("https://www.semerkandtakvimi.com/Home/" + if (key[0] == 'c') "CityTimeList" else "DistricTimeList") {
+        return httpClient.post("https://www.semerkandtakvimi.com/Home/" + if (key[0] == 'c') "CityTimeList" else "DistricTimeList") {
             cookie("timeZone", "1")
             contentType(ContentType.parse("application/x-www-form-urlencoded; charset=UTF-8"))
             setBody((if (key[0] == 'c') "City=" else "distric=") + key.substring(1) + "&Year=$year&Day=$doy")

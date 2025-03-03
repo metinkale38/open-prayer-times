@@ -6,7 +6,19 @@ plugins {
     kotlin("jvm")
     id("io.ktor.plugin")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("app.cash.sqldelight")
 }
+
+sqldelight {
+    databases {
+        create("Times") {
+            packageName.set("org.metinkale.prayertimes.db")
+            srcDirs.setFrom("src/main/kotlin")
+        }
+    }
+}
+
+
 
 
 application {
@@ -29,6 +41,5 @@ dependencies {
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("com.ucasoft.ktor:ktor-simple-cache-jvm:0.4.3")
-    implementation("com.ucasoft.ktor:ktor-simple-memory-cache-jvm:0.4.3")
+    implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
 }

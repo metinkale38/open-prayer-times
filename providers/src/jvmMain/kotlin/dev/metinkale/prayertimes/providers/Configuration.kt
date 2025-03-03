@@ -19,16 +19,9 @@ object Configuration {
     var LONDON_PRAYER_TIMES_API_KEY: String = System.getenv("LONDON_PRAYER_TIMES_API_KEY") ?: ""
 
 
-    interface CacheProvider {
-        suspend fun <T : Any> applyCache(key: String, action: suspend () -> T): T
-    }
-
-
-    var CACHE_PROVIDER: CacheProvider = object : CacheProvider {
-        override suspend fun <T : Any> applyCache(key: String, action: suspend () -> T): T = action.invoke()
-    }
-
+    /**
+     * Reads city-list on the fly, if set to true
+     * Loads city-list into the memory, if set to false
+     */
+    var LOW_MEMORY_MODE : Boolean = true
 }
-
-suspend fun <T : Any> cached(key: String, action: suspend () -> T): T =
-    Configuration.CACHE_PROVIDER.applyCache(key, action)

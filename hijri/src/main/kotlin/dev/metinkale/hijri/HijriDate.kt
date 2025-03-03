@@ -54,7 +54,7 @@ class HijriDate private constructor(val year: Int, val monthValue: Int, val day:
     override fun hashCode(): Int = year * 10000 + monthValue * 100 + day
 
     override fun toString(): String {
-        return "$year-${if (monthValue < 10) "0$monthValue" else monthValue}-$day"
+        return "$year-${if (monthValue < 10) "0$monthValue" else monthValue}-${if (day < 10) "0$day" else day}"
     }
 
 
