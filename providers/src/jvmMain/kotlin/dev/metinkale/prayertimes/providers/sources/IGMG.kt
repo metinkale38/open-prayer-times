@@ -46,7 +46,7 @@ internal object IGMG : Source, CityListFeature {
 
     override suspend fun getDayTimes(key: String): List<DayTimes> {
         val from: LocalDate = LocalDate.now().let { LocalDate(it.year, it.monthNumber, 1) }
-        val to: LocalDate = from.plus(1, DateTimeUnit.YEAR)
+        val to: LocalDate = from.plus(1, DateTimeUnit.YEAR).plus(1, DateTimeUnit.DAY)
         return getDayTimes(key, from, to)
     }
 

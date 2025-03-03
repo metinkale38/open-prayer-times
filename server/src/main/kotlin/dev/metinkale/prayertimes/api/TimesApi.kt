@@ -7,13 +7,13 @@ import dev.metinkale.prayertimes.providers.Entry
 import dev.metinkale.prayertimes.providers.SearchEntry
 import dev.metinkale.prayertimes.providers.sources.Source
 import dev.metinkale.prayertimes.providers.sources.features.CityListFeature
+import io.ktor.http.*
 import io.ktor.server.plugins.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import kotlinx.datetime.toKotlinLocalDate
 import java.time.LocalDate
-import java.time.Month
 
 private val REGEX_DATE =
     "([0-9]{4})[\\-](1[0-2]|0[1-9]|[1-9])[\\-](3[01]|[12][0-9]|0[1-9]|[1-9])$".toRegex()
@@ -49,7 +49,7 @@ private fun listCities(source: CityListFeature): Route.() -> Unit = {
             var path = call.parameters.getAll("path") ?: throw NotFoundException()
             val last = path.lastOrNull()
 
-            val endsWithDate = last == "all" || last == "today" || REGEX_DATE.matches(path.lastOrNull() ?: "")
+            val endsWithDate = last == "csv" || last == "today" || REGEX_DATE.matches(path.lastOrNull() ?: "")
             if (endsWithDate) path = path.dropLast(1)
 
             val languages = call.request.acceptLanguageItems().map { it.value.split("-")[0] }.distinct()
@@ -68,24 +68,11 @@ private fun listCities(source: CityListFeature): Route.() -> Unit = {
 }
 
 
-private suspend fun RoutingContext.handleTime(city: Entry, date: String) {
-    val (from, to, minTimes) = when (date) {
-        "all" -> Triple(LocalDate.now(), null, 28)
-        "month" -> Triple(
-            LocalDate.now().withDayOfMonth(1),
-            LocalDate.now().withDayOfMonth(1).plusMonths(1).minusDays(1), 28
-        )
-
-        "year" -> {
-            val year = LocalDate.now().year
-            Triple(
-                LocalDate.of(year, Month.JANUARY, 1),
-                LocalDate.of(year, Month.DECEMBER, 31),
-                365
-            )
-        }
+private suspend fun RoutingContext.handleTime(city: Entry, path: String) {
+    val (from, to, minTimes) = when (path) {
+        "csv" -> Triple(LocalDate.now(), null, 28)
         "today" -> LocalDate.now().let { Triple(it, it, 1) }
-        in REGEX_DATE -> LocalDate.parse(date).let { Triple(it, it, 1) }
+        in REGEX_DATE -> LocalDate.parse(path).let { Triple(it, it, 1) }
         else -> throw NotFoundException()
     }
     var times = TimesDatabase.get(city.source, city.id, from, to ?: LocalDate.MAX)
@@ -95,7 +82,13 @@ private suspend fun RoutingContext.handleTime(city: Entry, date: String) {
             .filter { it.date >= from.toKotlinLocalDate() && (to == null || it.date <= to.toKotlinLocalDate()) }
     }
 
-
-    call.respond(times.map { DayTimesDTO.from(it) })
+    if (path == "csv") {
+        val csv = (listOf("Date;Fajr;Shuruq;Dhuhr;Asr;Maghrib;Ishaa")
+                + times.map { "${it.date};${it.fajr};${it.sun};${it.dhuhr};${it.asr};${it.maghrib};${it.ishaa}" }
+                ).joinToString("\n")
+        call.respondText(csv,contentType = ContentType.Text.CSV)
+    } else {
+        call.respond(times.map { DayTimesDTO.from(it) })
+    }
 }
 
