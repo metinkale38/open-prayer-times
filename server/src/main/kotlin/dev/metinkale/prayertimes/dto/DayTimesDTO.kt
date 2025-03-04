@@ -2,13 +2,9 @@ package dev.metinkale.prayertimes.dto
 
 import com.metinkale.prayer.date.HijriEvent
 import dev.metinkale.hijri.HijriDate
-import dev.metinkale.prayertimes.db.Times
 import dev.metinkale.prayertimes.providers.DayTimes
-import kotlinx.datetime.Month
 import kotlinx.datetime.toJavaLocalDate
 import kotlinx.serialization.Serializable
-import java.time.LocalDate
-
 
 @Serializable
 data class DayTimesDTO(
