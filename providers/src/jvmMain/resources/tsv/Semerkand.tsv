@@ -30,7 +30,7 @@ c2973	37.111	65.23	AF	Chaghcharan
 c2974	34.652	70.095	AF	Mihtarlam
 c2975	32.607	62.671	AF	Farah
 c2976	34.012	69.01	AF	Pul-i-Alam
-c2977	36.0	67.667	AF	Samangan
+c2977	36	67.667	AF	Samangan
 c2978	31.55	64.552	AF	Lashkar Gah
 c2979	30.932	62.002	AF	Zaranj
 c2980	34.43	70.46	AF	Jalalabad
@@ -68,7 +68,6 @@ c2816	40.725	19.558	AL	Fier
 c2817	40.676	20.595	AL	Korçë
 c2818	40.617	20.105	AL	Berat
 c2819	40.077	20.139	AL	Gjirokastër
-c2820	41.502	19.757	AL	Kruje
 c2821	40.34	20.68	AL	Ersekë
 c2822	40.942	19.706	AL	Lushnjë
 c2823	42.355	20.078	AL	Bajram Curri
@@ -517,7 +516,7 @@ c199	48.306	14.286	AT	Linz
 c200	47.798	13.046	AT	Salzburg
 c201	48.039	14.419	AT	Steyr
 c202	47.305	11.072	AT	Telfs
-c203	48.208	16.373	AT	Wien
+c203	48.208	16.373	AT	Viyana
 c204	47.813	16.244	AT	Wiener Neustadt
 c326	48.09	14.733	AT	Amstetten
 c339	48.009	16.233	AT	Baden
@@ -622,7 +621,7 @@ c992	48.293	13.439	AT	Sankt Martin im Innkreis
 c993	48.415	14.039	AT	Sankt Martin im Mühlkreis
 c994	48.175	14.532	AT	St Valentin (Linz)
 c995			AT	Badgastein
-c996	47.514	12.302	AT	Ellmau (Salzburg)
+c996			AT	Ellmau (Salzburg)
 c997	47.514	12.302	AT	Ellmau (Kufstein)
 c998	47.973	15.974	AT	Fürth (Aufhausen)
 c999	48.375	15.613	AT	Furth bei Göttweig
@@ -636,9 +635,9 @@ c1006	47.382	10.892	AT	Biberwier
 c1007	47.399	10.921	AT	Ehrwald
 c1008	47.399	10.888	AT	Lermoos
 c1009	47.169	10.73	AT	Wenns
-c1010	47.041	15.96	AT	Lahn (Hallstatt)
+c1010			AT	Lahn (Hallstatt)
 c1011	47.34	10.543	AT	Elmen
-c1012	47.041	15.96	AT	Lähn (Lermoos)
+c1012			AT	Lähn (Lermoos)
 c1013	47.531	10.693	AT	Oberpinswang
 c1014	47.446	10.746	AT	Heiterwang
 c1015	48.093	13.57	AT	Wassenbach
@@ -658,7 +657,7 @@ c1028	48.025	14.074	AT	Ried im Traunkreis
 c1029	47.3	11.871	AT	Ried im Zillertal
 c1030	47.054	10.652	AT	Ried im Oberinntal
 c1031	48.27	14.529	AT	Ried in der Riedmark
-c1032	47.316	9.61	AT	Ried (Salzburg)
+c1032	47.905	13.02	AT	Ried (Salzburg)
 c1033	47.98	13.255	AT	Strasswalchen
 c1034	47.738	13.448	AT	St. Wolfgang im Salzkammergut
 c1035	46.798	13.496	AT	Spittal an der Drau (Spittal)
@@ -1035,7 +1034,6 @@ c7889			AU	Salisbury (South Australia)
 c7890			AU	Wemen
 c7891			AU	Liparoo
 c7892			AU	Tea Tree Gully
-c7893			AU	Teatree gully
 c7894			AU	Modbury
 c7895			AU	Port Adelaide
 c7896			AU	Shoalhaven
@@ -1704,8 +1702,8 @@ c1226	50.914	4.18	BE	Asse (Bruksel)
 c1227	51.011	4.193	BE	Buggenhout
 c1228	50.693	4.041	BE	Edingen (Enghien)
 c1229	50.561	4.692	BE	Gembloux
-c1230	51.0	3.341	BE	Tielt (Tielt-Winge,Vlaams-Brabant)
-c1231	51.0	3.341	BE	Tielt (West-Vlaanderen)
+c1230			BE	Tielt (Tielt-Winge,Vlaams-Brabant)
+c1231	51	3.341	BE	Tielt (West-Vlaanderen)
 c1232	50.827	5.203	BE	Sint-Truiden
 c1233	51.185	3.501	BE	Adegem
 c1234	51.128	3.314	BE	Beernem
@@ -2004,7 +2002,7 @@ c2561	37.852	95.36	CN	Da Qaidam
 c2562	46.597	125.101	CN	Daqing
 c2563	35.255	104.649	CN	Daxian
 c2564	32.011	119.601	CN	Danyang
-c2565	30.085	122.0	CN	Dinghai
+c2565	30.085	122	CN	Dinghai
 c2566	19.114	108.66	CN	Dongfang
 c2567	29.717	112.523	CN	Dongsheng (Imar)
 c2568	37.432	118.654	CN	Dongying
@@ -2042,7 +2040,7 @@ c2599	30.128	112.504	CN	Jiangling (Hubei)
 c2600	30.354	112.187	CN	Jingzhou
 c2601	31.909	120.263	CN	Jiangyin
 c2602	37.023	111.916	CN	Jiexiu
-c2603	43.0	125.982	CN	Jilin
+c2603	43	125.982	CN	Jilin
 c2604	29.291	117.204	CN	Jingdezhen
 c2605	35.413	116.585	CN	Jining (Imar)
 c2606	41.109	121.119	CN	Jinzhou
@@ -2109,7 +2107,7 @@ c2666	41.805	123.428	CN	Shenyang
 c2667	38.101	114.601	CN	Shijiazhuang (Hebei)
 c2668	32.392	110.413	CN	Shiyan (Hubei)
 c2669	43.164	124.344	CN	Siping (Jilin)
-c2670	31.298	120.622	CN	Suzhou (Anhui)
+c2670			CN	Suzhou (Anhui)
 c2671	31.298	120.622	CN	Suzhou (Jiangsu)
 c2672	36.651	117.114	CN	Jinan
 c2673	37.856	112.556	CN	Taiyuan
@@ -2119,7 +2117,7 @@ c2676	37.149	106.785	CN	Tianshuibu
 c2677	34.628	105.53	CN	Tianshui
 c2678	43.639	122.25	CN	Tongliao
 c2679	26.759	110.709	CN	Wugang (Hunan)
-c2680	26.759	110.709	CN	Wugang (Henan)
+c2680			CN	Wugang (Henan)
 c2681	30.596	114.299	CN	Wuhan
 c2682	31.576	120.295	CN	Wuxi
 c2683	23.478	111.297	CN	Wuzhou
@@ -2141,7 +2139,7 @@ c2698	35.413	116.585	CN	Jining (Shondog)
 c2699	18.257	109.503	CN	Sanya (Yaxian)
 c2700	28.557	104.765	CN	Yibin
 c2701	47.721	128.88	CN	Yichun (Heilongjiang)
-c2702	47.721	128.88	CN	Yichun (Jiangxi)
+c2702			CN	Yichun (Jiangxi)
 c2703	38.483	106.212	CN	Yinchuan
 c2704	40.675	122.236	CN	Yingkou
 c2705	43.911	81.322	CN	Yining (Ili)
@@ -2325,7 +2323,7 @@ c150	47.551	9.693	DE	Lindau
 c151	48.896	9.19	DE	Ludwigsburg
 c152	53.866	10.685	DE	Lübeck
 c153	51.218	7.64	DE	Lüdenscheid
-c154	50.0	8.271	DE	Mainz
+c154	50	8.271	DE	Mainz
 c155	49.49	8.467	DE	Mannheim
 c156	50.001	12.086	DE	Marktredwitz
 c157	51.438	7.795	DE	Menden
@@ -2503,7 +2501,7 @@ c714	49.303	10.572	DE	Ansbach
 c715	50.05	10.233	DE	Schweinfurt
 c716	48.715	8.738	DE	Calw
 c717	48.581	10.495	DE	Dillingen (Saarland)
-c718	52.212	7.024	DE	Gronau (Leine)
+c718			DE	Gronau (Leine)
 c719	54.783	9.433	DE	Flensburg
 c720	48.743	9.307	DE	Esslingen am Neckar
 c721	48.567	7.82	DE	Kehl (BW)
@@ -2565,7 +2563,7 @@ c776	50.143	8.572	DE	Eschborn
 c777	50.012	8.712	DE	Dreieich
 c778	50.91	6.808	DE	Frechen
 c779	51.152	14.984	DE	Görlitz
-c780	49.919	8.485	DE	Gross-Gerau
+c780	49.919	8.485	DE	Groß-Gerau
 c781	53.937	10.304	DE	Bad Segeberg
 c782	51.785	6.131	DE	Kleve (Nordrhein-Westfalen)
 c783	52.683	13.588	DE	Bernau (Brandenburg)
@@ -2775,12 +2773,11 @@ c3204	18.48	-69.942	DO	Santo Domingo
 c3205	19.052	-70.632	DO	La Vega
 c3206	18.46	-69.303	DO	San Pedro de Macorís
 c3716			DO	San Juan
-c321	28.0	3.0	DZ	Algiers
+c321	28	3	DZ	Algiers
 c2393	35.703	-0.649	DZ	Oran
 c2394	36.365	6.608	DZ	Constantine
 c2395	36.897	7.746	DZ	Annaba
 c2396	36.47	2.829	DZ	Blida
-c2397	36.751	5.065	DZ	Bejaia
 c2398	35.554	6.177	DZ	Batna
 c2399	34.671	3.254	DZ	Djelfa
 c2400	36.189	5.405	DZ	Setif
@@ -2790,7 +2787,6 @@ c2403	35.404	8.12	DZ	Tébessa
 c2404	33.256	7.137	DZ	El Oued
 c2405	36.88	6.907	DZ	Skikda
 c2406	35.366	1.319	DZ	Tiaret
-c2407	35.404	8.12	DZ	Tebessa
 c2408	36.751	5.065	DZ	Béjaïa
 c2409	36.25	6.287	DZ	Oued Athmania
 c2410	34.882	-1.317	DZ	Tlemcen
@@ -3056,7 +3052,7 @@ c555	3.59	98.674	ID	Medan
 c2511	3.606	98.49	ID	Binjai
 c2512	1.49	124.841	ID	Manado
 c2513	0.537	101.446	ID	Pekanbaru
-c2514	2.972	99.803	ID	Tanjung Balai (Karimun)
+c2514			ID	Tanjung Balai (Karimun)
 c2515	2.972	99.803	ID	Tanjung Balai (Sumatera Utara)
 c2516	2.959	99.065	ID	Pematangsiantar
 c2517	3.327	99.162	ID	Tebing Tinggi (Sumatera Utara)
@@ -3123,14 +3119,13 @@ c2506	19.194	72.97	IN	Thane
 c2507	22.318	73.363	IN	Vadodara
 c2508	17.723	83.301	IN	Visakhapatnam
 c2509	17.362	78.475	IN	Hyderabad (Haydarabad)
-c2510	28.614	77.216	IN	New Delhi (Yeni Delhi)
 c400	36.535	44.253	IQ	Erbil
 c2935	31.338	43.841	IQ	An-Najaf
 c2936	33.421	43.308	IQ	Ar-Ramadi
 c2937	32.598	44.016	IQ	Al-Karbala (Kerbela)
 c2938	32.482	44.433	IQ	Al-Hillah
 c2939	32.501	45.83	IQ	Al-Kut
-c2940	32.0	47.0	IQ	Al-Amarah
+c2940	32	47	IQ	Al-Amarah
 c2941	30.999	45.998	IQ	An-Nasiriyah
 c2942	33.744	44.65	IQ	Baqubah
 c2943	36.347	43.127	IQ	Musul
@@ -3345,7 +3340,7 @@ c2760	41.177	20.683	MK	Struga
 c2761	41.523	20.527	MK	Debar
 c2762	41.346	21.553	MK	Prilep
 c2763	41.09	21.012	MK	Resen
-c3471	12.649	-8.0	ML	Bamako
+c3471	12.649	-8	ML	Bamako
 c3472	16.279	-0.041	ML	Gao
 c3473	16.772	-3.009	ML	Tombouctou
 c3474	13.442	-6.268	ML	Segou
@@ -3386,7 +3381,7 @@ c3481	19.433	-99.035	MX	Nezahualcóyotl
 c3482	31.655	-106.429	MX	Ciudad Juárez
 c3483	20.676	-103.347	MX	Guadalajara
 c3484	25.64	-100.293	MX	Monterrey
-c3485	18.833	-98.0	MX	Puebla
+c3485	18.833	-98	MX	Puebla
 c3486	32.501	-116.964	MX	Tijuana
 c3487	20.721	-103.391	MX	Zapopan
 c3488	19.433	-99.133	MX	Mexico City
@@ -3498,7 +3493,7 @@ c307	59.185	10.869	NO	Fredrikstad
 c308	59.913	10.739	NO	Oslo
 c309	58.968	5.732	NO	Stavanger
 c391	59.728	10.178	NO	Drammen
-c395	58.452	6.0	NO	Egersund
+c395	58.452	6	NO	Egersund
 c1292	58.147	7.996	NO	Kristiansand
 c1293	59.266	9.531	NO	Skien
 c1294	59.892	10.525	NO	Sandvika (Baerum)
@@ -3667,7 +3662,7 @@ c2391	13.152	32.673	SD	Kosti
 c2392	13.183	30.223	SD	Al Ubayyid
 c288	57.707	11.967	SE	Göteborg
 c289	57.781	14.163	SE	Jönköping
-c290	55.605	13.0	SE	Malmö
+c290	55.605	13	SE	Malmö
 c291	59.325	18.071	SE	Stockholm
 c292	59.859	17.641	SE	Uppsala
 c402	59.372	16.505	SE	Eskilstuna
@@ -3776,7 +3771,7 @@ d8	38.267	36.217	TR	Tufanbeyli	Adana
 d9	36.767	35.783	TR	Yumurtalık	Adana
 d10	37.55	35.4	TR	Aladağ	Adana
 d11	37.25	35.667	TR	İmamoğlu	Adana
-d12	37.767	38.283	TR	Adıyaman
+d12	37.767	38.283	TR	Adıyaman	Adıyaman
 d13	37.7	37.867	TR	Besni	Adıyaman
 d14	38.033	38.25	TR	Çelikhan	Adıyaman
 d15	38.033	39.05	TR	Gerger	Adıyaman
@@ -3800,13 +3795,13 @@ d32	38.7	30.783	TR	Çobanlar	Afyon
 d33	38.05	29.883	TR	Evciler	Afyon
 d34	38.567	29.967	TR	Hocalar	Afyon
 d35	38.25	30.15	TR	Kızılören	Afyon
-d36	39.717	43.05	TR	Ağrı
+d36	39.717	43.05	TR	Ağrı	Ağrı
 d37	39.533	43.667	TR	Diyadin	Ağrı
 d38	39.8	42.683	TR	Eleşkirt	Ağrı
 d39	39.233	42.867	TR	Patnos	Ağrı
 d40	39.633	43.383	TR	Taşlıçay	Ağrı
 d41	39.55	42.767	TR	Tutak	Ağrı
-d42	40.65	35.833	TR	Amasya
+d42	40.65	35.833	TR	Amasya	Amasya
 d43	40.4	35.533	TR	Göynücek	Amasya
 d44	40.867	35.233	TR	Gümüşhacıköy	Amasya
 d45	40.867	35.45	TR	Merzifon	Amasya
@@ -3829,7 +3824,7 @@ d61	38.933	33.55	TR	Şereflikoçhisar	Ankara
 d63	40.133	33.083	TR	Akyurt	Ankara
 d64	39.033	33.817	TR	Evren	Ankara
 d65	37.05	31.783	TR	Akseki	Antalya
-d66	36.567	32.0	TR	Alanya	Antalya
+d66	36.567	32	TR	Alanya	Antalya
 d67	36.733	29.917	TR	Elmalı	Antalya
 d68	36.3	30.133	TR	Finike	Antalya
 d69	36.267	32.3	TR	Gazipaşa	Antalya
@@ -3842,7 +3837,7 @@ d75	36.917	31.1	TR	Serik	Antalya
 d76	36.25	29.983	TR	Demre	Antalya
 d77	41.117	42.067	TR	Ardanuç	Artvin
 d78	41.35	41.317	TR	Arhavi	Artvin
-d79	41.183	41.817	TR	Artvin
+d79	41.183	41.817	TR	Artvin	Artvin
 d80	41.396	41.804	TR	Borçka	Artvin
 d81	41.383	41.417	TR	Hopa	Artvin
 d82	41.25	42.35	TR	Şavşat	Artvin
@@ -3876,23 +3871,23 @@ d109	39.233	28.167	TR	Sındırgı	Balıkesir
 d110	39.917	28.15	TR	Susurluk	Balıkesir
 d111	40.583	27.55	TR	Marmara	Balıkesir
 d112	39.383	26.833	TR	Gömeç	Balıkesir
-d113	40.144	29.975	TR	Bilecik
+d113	40.144	29.975	TR	Bilecik	Bilecik
 d114	39.824	29.924	TR	Bozüyük	Bilecik
 d115	40.262	30.299	TR	Gölpazarı	Bilecik
 d116	40.003	30.174	TR	Söğüt	Bilecik
-d117	38.883	40.483	TR	Bingöl
-d118	39.3	41.0	TR	Karlıova	Bingöl
+d117	38.883	40.483	TR	Bingöl	Bingöl
+d118	39.3	41	TR	Karlıova	Bingöl
 d119	39.317	40.35	TR	Kiğı	Bingöl
 d120	38.967	41.05	TR	Solhan	Bingöl
 d121	39.233	40.067	TR	Yayladere	Bingöl
 d122	39.433	40.55	TR	Yedisu	Bingöl
 d123	38.8	42.733	TR	Adilcevaz	Bitlis
 d124	38.75	42.5	TR	Ahlat	Bitlis
-d125	38.383	42.1	TR	Bitlis
+d125	38.383	42.1	TR	Bitlis	Bitlis
 d126	38.217	42.417	TR	Hizan	Bitlis
 d127	38.417	41.917	TR	Mutki	Bitlis
 d128	38.5	42.283	TR	Tatvan	Bitlis
-d129	40.733	31.617	TR	Bolu
+d129	40.733	31.617	TR	Bolu	Bolu
 d130	40.8	32.2	TR	Gerede	Bolu
 d131	40.4	30.783	TR	Göynük	Bolu
 d132	40.417	31.85	TR	Kıbrıscık	Bolu
@@ -3900,10 +3895,10 @@ d133	40.933	32.067	TR	Mengen	Bolu
 d134	40.467	31.217	TR	Mudurnu	Bolu
 d135	40.417	31.567	TR	Seben	Bolu
 d136	40.717	32.05	TR	Dörtdivan	Bolu
-d137	40.75	32.0	TR	Yeniçağa	Bolu
+d137	40.75	32	TR	Yeniçağa	Bolu
 d138	37.65	30.533	TR	Ağlasun	Burdur
 d139	37.45	30.583	TR	Bucak	Burdur
-d140	37.717	30.283	TR	Burdur
+d140	37.717	30.283	TR	Burdur	Burdur
 d141	37.15	29.517	TR	Gölhisar	Burdur
 d142	37.3	29.767	TR	Tefenni	Burdur
 d143	37.517	29.75	TR	Yeşilova	Burdur
@@ -3923,11 +3918,11 @@ d156	39.817	26.617	TR	Bayramiç	Çanakkale
 d157	40.233	27.233	TR	Biga	Çanakkale
 d158	39.817	26.033	TR	Bozcaada	Çanakkale
 d159	40.033	27.05	TR	Çan	Çanakkale
-d160	40.15	26.417	TR	Çanakkale
+d160	40.15	26.417	TR	Çanakkale	Çanakkale
 d161	40.417	26.667	TR	Gelibolu	Çanakkale
 d162	40.2	25.9	TR	Gökçeada	Çanakkale
 d163	40.35	26.7	TR	Lapseki	Çanakkale
-d164	40.6	33.617	TR	Çankırı
+d164	40.6	33.617	TR	Çankırı	Çankırı
 d165	40.817	32.9	TR	Çerkeş	Çankırı
 d166	40.917	33.633	TR	Ilgaz	Çankırı
 d167	40.833	33.267	TR	Kurşunlu	Çankırı
@@ -3939,7 +3934,7 @@ d172	40.333	33.983	TR	Kızılırmak	Çankırı
 d173	40.95	33.2	TR	Bayramören	Çankırı
 d174	40.167	34.85	TR	Alaca	Çorum
 d175	40.65	34.25	TR	Bayat	Çorum
-d176	40.55	34.95	TR	Çorum
+d176	40.55	34.95	TR	Çorum	Çorum
 d177	40.733	34.467	TR	İskilip	Çorum
 d178	41.133	34.483	TR	Kargı	Çorum
 d179	40.517	35.3	TR	Mecitözü	Çorum
@@ -3971,12 +3966,12 @@ d204	38.367	40.067	TR	Dicle	Diyarbakır
 d205	38.267	39.767	TR	Ergani	Diyarbakır
 d206	38.4	40.4	TR	Hani	Diyarbakır
 d207	38.25	40.783	TR	Hazro	Diyarbakır
-d208	38.5	41.0	TR	Kulp	Diyarbakır
+d208	38.5	41	TR	Kulp	Diyarbakır
 d209	38.45	40.65	TR	Lice	Diyarbakır
-d210	38.133	41.0	TR	Silvan	Diyarbakır
+d210	38.133	41	TR	Silvan	Diyarbakır
 d211	38.233	40.083	TR	Eğil	Diyarbakır
 d212	38.3	40.5	TR	Kocaköy	Diyarbakır
-d213	41.667	26.567	TR	Edirne
+d213	41.667	26.567	TR	Edirne	Edirne
 d214	40.733	26.083	TR	Enez	Edirne
 d215	41.55	26.817	TR	Havsa	Edirne
 d216	40.933	26.383	TR	İpsala	Edirne
@@ -3987,7 +3982,7 @@ d220	41.267	26.683	TR	Uzunköprü	Edirne
 d221	41.767	26.917	TR	Süloğlu	Edirne
 d222	38.95	38.717	TR	Ağın	Elazığ
 d223	38.567	38.817	TR	Baskil	Elazığ
-d224	38.683	39.233	TR	Elazığ
+d224	38.683	39.233	TR	Elazığ	Elazığ
 d225	38.95	40.033	TR	Karakoçan	Elazığ
 d226	38.8	38.75	TR	Keban	Elazığ
 d227	38.383	39.667	TR	Maden	Elazığ
@@ -3997,7 +3992,7 @@ d230	38.564	40.136	TR	Arıcak	Elazığ
 d231	38.717	39.867	TR	Kovancılar	Elazığ
 d232	38.467	39.867	TR	Alacakaya	Elazığ
 d233	39.8	40.033	TR	Çayırlı	Erzincan
-d234	39.75	39.5	TR	Erzincan
+d234	39.75	39.5	TR	Erzincan	Erzincan
 d235	39.45	38.567	TR	İliç	Erzincan
 d236	39.6	39.033	TR	Kemah	Erzincan
 d237	39.267	38.483	TR	Kemaliye	Erzincan
@@ -4009,7 +4004,7 @@ d242	39.917	40.7	TR	Aşkale	Erzurum
 d243	39.617	40.967	TR	Çat	Erzurum
 d244	39.35	41.717	TR	Hınıs	Erzurum
 d245	40.033	42.167	TR	Horasan	Erzurum
-d246	40.483	41.0	TR	İspir	Erzurum
+d246	40.483	41	TR	İspir	Erzurum
 d247	39.7	42.15	TR	Karayazı	Erzurum
 d248	40.35	41.867	TR	Narman	Erzurum
 d249	40.55	41.983	TR	Oltu	Erzurum
@@ -4034,31 +4029,31 @@ d267	39.817	30.133	TR	İnönü	Eskişehir
 d268	39.383	31.817	TR	Günyüzü	Eskişehir
 d269	39.158	30.863	TR	Han	Eskişehir
 d270	37.433	37.7	TR	Araban	Gaziantep
-d271	36.833	38.0	TR	Karkamış	Gaziantep
+d271	36.833	38	TR	Karkamış	Gaziantep
 d272	37.183	36.733	TR	Nurdağı	Gaziantep
 d273	40.317	38.767	TR	Alucra	Giresun
 d274	40.933	38.217	TR	Bulancak	Giresun
 d275	40.733	38.45	TR	Dereli	Giresun
 d276	40.95	38.717	TR	Espiye	Giresun
 d277	41.05	39.133	TR	Eynesil	Giresun
-d278	40.917	38.4	TR	Giresun
-d279	41.033	39.0	TR	Görele	Giresun
+d278	40.917	38.4	TR	Giresun	Giresun
+d279	41.033	39	TR	Görele	Giresun
 d280	40.917	38.517	TR	Keşap	Giresun
 d281	40.283	38.417	TR	Şebinkarahisar	Giresun
 d282	41.017	38.817	TR	Tirebolu	Giresun
 d283	40.95	38.117	TR	Piraziz	Giresun
 d284	40.85	38.633	TR	Yağlıdere	Giresun
 d285	40.133	38.733	TR	Çamoluk	Giresun
-d286	40.917	39.0	TR	Çanakçı	Giresun
+d286	40.917	39	TR	Çanakçı	Giresun
 d287	40.8	38.917	TR	Doğankent	Giresun
 d288	40.9	38.8	TR	Güce	Giresun
-d289	40.45	39.483	TR	Gümüşhane
+d289	40.45	39.483	TR	Gümüşhane	Gümüşhane
 d290	40.183	39.117	TR	Şiran	Gümüşhane
 d291	40.55	39.283	TR	Torul	Gümüşhane
 d292	40.217	39.65	TR	Köse	Gümüşhane
 d293	40.7	39.083	TR	Kürtün	Gümüşhane
 d294	37.246	43.611	TR	Çukurca	Hakkari
-d295	37.575	43.738	TR	Hakkari
+d295	37.575	43.738	TR	Hakkari	Hakkari
 d296	37.216	44.515	TR	Şemdinli	Hakkari
 d297	37.572	44.282	TR	Yüksekova	Hakkari
 d298	36.117	36.25	TR	Altınözü	Hatay
@@ -4073,9 +4068,9 @@ d306	36.5	36.183	TR	Belen	Hatay
 d307	36.367	36.45	TR	Kumlu	Hatay
 d308	37.821	30.876	TR	Eğirdir	Isparta
 d309	38.117	31.017	TR	Gelendost	Isparta
-d310	37.767	30.55	TR	Isparta
+d310	37.767	30.55	TR	Isparta	Isparta
 d311	37.95	30.3	TR	Keçiborlu	Isparta
-d312	37.483	31.0	TR	Sütçüler	Isparta
+d312	37.483	31	TR	Sütçüler	Isparta
 d313	38.083	31.367	TR	Şarkikaraağaç	Isparta
 d314	38.083	30.45	TR	Uluborlu	Isparta
 d315	38.283	31.167	TR	Yalvaç	Isparta
@@ -4125,7 +4120,7 @@ d358	38.35	26.883	TR	Güzelbahçe	İzmir
 d359	40.85	43.317	TR	Arpaçay	Kars
 d360	40.367	43.417	TR	Digor	Kars
 d361	40.15	43.117	TR	Kağızman	Kars
-d362	40.6	43.083	TR	Kars
+d362	40.6	43.083	TR	Kars	Kars
 d363	40.333	42.583	TR	Sarıkamış	Kars
 d364	40.467	42.783	TR	Selim	Kars
 d365	40.733	43.617	TR	Akyaka	Kars
@@ -4133,11 +4128,11 @@ d366	41.945	34.079	TR	Abana	Kastamonu
 d367	41.25	33.317	TR	Araç	Kastamonu
 d368	41.65	33.3	TR	Azdavay	Kastamonu
 d369	41.95	34.017	TR	Bozkurt	Kastamonu
-d370	41.9	33.0	TR	Cide	Kastamonu
+d370	41.9	33	TR	Cide	Kastamonu
 d371	41.95	34.217	TR	Çatalzeytin	Kastamonu
 d372	41.483	33.467	TR	Daday	Kastamonu
 d373	41.967	33.75	TR	İnebolu	Kastamonu
-d374	41.367	33.783	TR	Kastamonu
+d374	41.367	33.783	TR	Kastamonu	Kastamonu
 d375	41.8	33.717	TR	Küre	Kastamonu
 d376	41.517	34.217	TR	Taşköprü	Kastamonu
 d377	41.017	34.033	TR	Tosya	Kastamonu
@@ -4156,16 +4151,16 @@ d389	38.483	36.5	TR	Sarız	Kayseri
 d390	38.45	35.8	TR	Tomarza	Kayseri
 d391	38.1	35.35	TR	Yahyalı	Kayseri
 d392	38.35	35.083	TR	Yeşilhisar	Kayseri
-d393	39.0	36.167	TR	Akkışla	Kayseri
+d393	39	36.167	TR	Akkışla	Kayseri
 d394	39.158	35.752	TR	Özvatan	Kayseri
 d395	41.833	27.767	TR	Demirköy	Kırklareli
-d396	41.733	27.217	TR	Kırklareli
+d396	41.733	27.217	TR	Kırklareli	Kırklareli
 d397	41.4	27.35	TR	Lüleburgaz	Kırklareli
 d398	41.35	26.917	TR	Pehlivanköy	Kırklareli
 d399	41.633	27.517	TR	Pınarhisar	Kırklareli
 d400	39.6	34.417	TR	Çiçekdağı	Kırşehir
 d401	39.367	33.717	TR	Kaman	Kırşehir
-d402	39.15	34.167	TR	Kırşehir
+d402	39.15	34.167	TR	Kırşehir	Kırşehir
 d403	39.067	34.383	TR	Mucur	Kırşehir
 d404	39.45	33.967	TR	Akpınar	Kırşehir
 d405	40.8	29.433	TR	Gebze	Kocaeli
@@ -4204,7 +4199,7 @@ d437	39.067	30.117	TR	Altıntaş	Kütahya
 d438	39.8	29.617	TR	Domaniç	Kütahya
 d439	39.339	29.257	TR	Emet	Kütahya
 d440	38.983	29.383	TR	Gediz	Kütahya
-d441	39.417	29.983	TR	Kütahya
+d441	39.417	29.983	TR	Kütahya	Kütahya
 d442	39.1	28.983	TR	Simav	Kütahya
 d443	39.55	29.483	TR	Tavşanlı	Kütahya
 d444	39.217	29.867	TR	Aslanapa	Kütahya
@@ -4212,7 +4207,7 @@ d445	38.85	29.983	TR	Dumlupınar	Kütahya
 d446	39.25	29.233	TR	Hisarcık	Kütahya
 d447	39.033	29.217	TR	Şaphane	Kütahya
 d448	39.2	29.617	TR	Çavdarhisar	Kütahya
-d449	39.0	29.117	TR	Pazarlar	Kütahya
+d449	39	29.117	TR	Pazarlar	Kütahya
 d450	38.35	37.967	TR	Akçadağ	Malatya
 d451	39.05	38.483	TR	Arapgir	Malatya
 d452	38.767	38.267	TR	Arguvan	Malatya
@@ -4263,20 +4258,20 @@ d496	36.767	28.8	TR	Dalaman	Muğla
 d497	36.833	28.767	TR	Ortaca	Muğla
 d498	39.1	42.267	TR	Bulanık	Muş
 d499	39.15	42.533	TR	Malazgirt	Muş
-d500	38.733	41.5	TR	Muş
+d500	38.733	41.5	TR	Muş	Muş
 d501	39.167	41.45	TR	Varto	Muş
 d502	38.683	41.7	TR	Hasköy	Muş
 d503	38.733	41.783	TR	Korkut	Muş
 d504	38.95	34.567	TR	Hacıbektaş	Nevşehir
 d505	39.217	34.85	TR	Kozaklı	Nevşehir
-d506	38.633	34.717	TR	Nevşehir
+d506	38.633	34.717	TR	Nevşehir	Nevşehir
 d507	38.633	34.917	TR	Ürgüp	Nevşehir
 d508	38.55	34.5	TR	Acıgöl	Nevşehir
 d509	37.883	34.55	TR	Bor	Niğde
 d510	37.833	34.983	TR	Çamardı	Niğde
-d511	37.967	34.683	TR	Niğde
+d511	37.967	34.683	TR	Niğde	Niğde
 d512	37.55	34.483	TR	Ulukışla	Niğde
-d513	38.0	34.367	TR	Altunhisar	Niğde
+d513	38	34.367	TR	Altunhisar	Niğde
 d514	38.167	34.483	TR	Çiftlik	Niğde
 d515	40.792	37.018	TR	Akkuş	Ordu
 d516	40.683	37.4	TR	Aybastı	Ordu
@@ -4294,11 +4289,11 @@ d527	41.017	37.1	TR	Çaybaşı	Ordu
 d528	41.05	37.067	TR	İkizce	Ordu
 d529	40.752	37.45	TR	Kabataş	Ordu
 d530	41.183	40.967	TR	Ardeşen	Rize
-d531	41.05	41.0	TR	Çamlıhemşin	Rize
+d531	41.05	41	TR	Çamlıhemşin	Rize
 d532	41.083	40.733	TR	Çayeli	Rize
 d533	41.268	41.139	TR	Fındıklı	Rize
 d534	40.783	40.55	TR	İkizdere	Rize
-d535	41.033	40.517	TR	Rize
+d535	41.033	40.517	TR	Rize	Rize
 d536	41.05	40.9	TR	Hemşin	Rize
 d537	41.017	40.367	TR	İyidere	Rize
 d538	40.633	30.65	TR	Akyazı	Sakarya
@@ -4327,13 +4322,13 @@ d560	38.167	41.783	TR	Baykan	Siirt
 d561	37.75	42.183	TR	Eruh	Siirt
 d562	37.927	41.703	TR	Kurtalan	Siirt
 d563	37.933	42.55	TR	Pervari	Siirt
-d564	37.933	41.95	TR	Siirt
+d564	37.933	41.95	TR	Siirt	Siirt
 d565	41.95	34.583	TR	Ayancık	Sinop
 d566	41.467	34.767	TR	Boyabat	Sinop
 d567	41.417	35.05	TR	Durağan	Sinop
 d568	41.883	34.9	TR	Erfelek	Sinop
 d569	41.8	35.183	TR	Gerze	Sinop
-d570	42.033	35.15	TR	Sinop
+d570	42.033	35.15	TR	Sinop	Sinop
 d571	41.95	34.333	TR	Türkeli	Sinop
 d572	41.652	35.265	TR	Dikmen	Sinop
 d573	41.333	34.85	TR	Saraydüzü	Sinop
@@ -4344,7 +4339,7 @@ d577	39.85	37.4	TR	Hafik	Sivas
 d578	39.867	38.117	TR	İmranlı	Sivas
 d579	39.233	37.383	TR	Kangal	Sivas
 d580	40.3	37.833	TR	Koyulhisar	Sivas
-d581	39.75	37.017	TR	Sivas
+d581	39.75	37.017	TR	Sivas	Sivas
 d582	40.167	38.083	TR	Suşehri	Sivas
 d583	39.35	36.417	TR	Şarkışla	Sivas
 d584	39.867	36.6	TR	Yıldızeli	Sivas
@@ -4353,7 +4348,7 @@ d586	40.083	38.35	TR	Akıncılar	Sivas
 d587	39.267	36.75	TR	Altınyayla	Sivas
 d588	40.217	37.533	TR	Doğanşar	Sivas
 d589	40.067	38.617	TR	Gölova	Sivas
-d590	41.283	28.0	TR	Çerkezköy	Tekirdağ
+d590	41.283	28	TR	Çerkezköy	Tekirdağ
 d591	41.167	27.8	TR	Çorlu	Tekirdağ
 d592	41.217	27.1	TR	Hayrabolu	Tekirdağ
 d593	40.9	26.9	TR	Malkara	Tekirdağ
@@ -4362,13 +4357,13 @@ d595	40.367	36.9	TR	Almus	Tokat
 d596	40.117	36.3	TR	Artova	Tokat
 d597	40.583	36.95	TR	Niksar	Tokat
 d598	40.383	37.35	TR	Reşadiye	Tokat
-d599	40.317	36.55	TR	Tokat
+d599	40.317	36.55	TR	Tokat	Tokat
 d600	40.383	36.083	TR	Turhal	Tokat
 d601	40.3	35.883	TR	Zile	Tokat
 d602	40.283	36.283	TR	Pazar	Tokat
-d603	40.0	36.217	TR	Yeşilyurt	Tokat
+d603	40	36.217	TR	Yeşilyurt	Tokat
 d604	40.55	37.167	TR	Başçiftlik	Tokat
-d605	40.0	36.083	TR	Sulusaray	Tokat
+d605	40	36.083	TR	Sulusaray	Tokat
 d606	41.017	39.583	TR	Akçaabat	Trabzon
 d607	40.933	40.067	TR	Araklı	Trabzon
 d608	40.95	39.933	TR	Arsin	Trabzon
@@ -4390,7 +4385,7 @@ d623	39.1	39.217	TR	Hozat	Tunceli
 d624	39.183	39.833	TR	Nazımiye	Tunceli
 d625	38.867	39.333	TR	Pertek	Tunceli
 d626	39.483	39.9	TR	Pülümür	Tunceli
-d627	39.117	39.533	TR	Tunceli
+d627	39.117	39.533	TR	Tunceli	Tunceli
 d628	36.717	38.95	TR	Akçakale	Şanlıurfa
 d629	37.367	38.533	TR	Bozova	Şanlıurfa
 d630	36.85	40.05	TR	Ceylanpınar	Şanlıurfa
@@ -4401,12 +4396,12 @@ d634	38.767	29.75	TR	Banaz	Uşak
 d635	38.4	28.967	TR	Eşme	Uşak
 d636	38.333	29.533	TR	Karahallı	Uşak
 d637	38.5	29.667	TR	Sivaslı	Uşak
-d638	38.683	29.4	TR	Uşak
+d638	38.683	29.4	TR	Uşak	Uşak
 d639	38.05	44.017	TR	Başkale	Van
-d640	38.0	43.05	TR	Çatak	Van
+d640	38	43.05	TR	Çatak	Van
 d641	39.033	43.35	TR	Erciş	Van
 d642	38.3	43.1	TR	Gevaş	Van
-d643	39.0	43.767	TR	Muradiye	Van
+d643	39	43.767	TR	Muradiye	Van
 d644	38.65	43.983	TR	Özalp	Van
 d645	38.133	42.8	TR	Bahçesaray	Van
 d646	39.133	43.9	TR	Çaldıran	Van
@@ -4420,41 +4415,41 @@ d653	39.5	35.367	TR	Sarıkaya	Yozgat
 d654	39.817	35.183	TR	Sorgun	Yozgat
 d655	39.5	34.75	TR	Şefaatli	Yozgat
 d656	39.65	34.467	TR	Yerköy	Yozgat
-d657	39.817	34.8	TR	Yozgat
+d657	39.817	34.8	TR	Yozgat	Yozgat
 d658	40.133	35.283	TR	Aydıncık	Yozgat
 d659	39.25	35.5	TR	Çandır	Yozgat
-d660	40.0	35.8	TR	Kadışehri	Yozgat
+d660	40	35.8	TR	Kadışehri	Yozgat
 d661	39.7	35.5	TR	Saraykent	Yozgat
-d662	39.217	35.0	TR	Yenifakılı	Yozgat
+d662	39.217	35	TR	Yenifakılı	Yozgat
 d663	41.428	32.074	TR	Çaycuma	Zonguldak
 d664	41.174	31.937	TR	Devrek	Zonguldak
 d665	41.241	31.633	TR	Ereğli	Zonguldak
-d666	41.452	31.788	TR	Zonguldak
+d666	41.452	31.788	TR	Zonguldak   Zonguldak	Zonguldak   Zonguldak
 d667	41.113	31.473	TR	Alaplı	Zonguldak
 d668	41.306	32.144	TR	Gökçebey	Zonguldak
-d669	38.367	34.033	TR	Aksaray
+d669	38.367	34.033	TR	Aksaray	Aksaray
 d670	38.733	34.033	TR	Ortaköy	Aksaray
 d671	38.867	33.917	TR	Ağaçören	Aksaray
 d672	38.267	34.383	TR	Güzelyurt	Aksaray
 d673	38.983	33.85	TR	Sarıyahşi	Aksaray
 d674	38.4	33.417	TR	Eskil	Aksaray
 d675	38.4	34.35	TR	Gülağaç	Aksaray
-d676	40.25	40.233	TR	Bayburt
+d676	40.25	40.233	TR	Bayburt	Bayburt
 d677	40.383	40.15	TR	Aydıntepe	Bayburt
 d678	40.167	39.883	TR	Demirözü	Bayburt
 d679	36.633	32.883	TR	Ermenek	Karaman
-d680	37.183	33.217	TR	Karaman
+d680	37.183	33.217	TR	Karaman	Karaman
 d681	37.35	33.683	TR	Ayrancı	Karaman
 d682	37.292	32.938	TR	Kazımkarabekir	Karaman
 d683	36.75	32.683	TR	Başyayla	Karaman
 d684	36.7	32.633	TR	Sarıveliler	Karaman
 d685	39.95	34.033	TR	Delice	Kırıkkale
-d686	39.85	33.5	TR	Kırıkkale
+d686	39.85	33.5	TR	Kırıkkale	Kırıkkale
 d687	40.167	33.717	TR	Sulakyurt	Kırıkkale
 d688	39.917	33.717	TR	Balışeyh	Kırıkkale
 d689	39.467	33.517	TR	Çelebi	Kırıkkale
 d690	39.6	33.383	TR	Karakeçili	Kırıkkale
-d691	37.867	41.117	TR	Batman
+d691	37.867	41.117	TR	Batman	Batman
 d692	37.917	41.3	TR	Beşiri	Batman
 d693	37.567	41.383	TR	Gercüş	Batman
 d694	38.183	41.483	TR	Kozluk	Batman
@@ -4464,51 +4459,51 @@ d697	37.567	43.167	TR	Beytüşşebap	Şırnak
 d698	37.333	42.183	TR	Cizre	Şırnak
 d699	37.333	41.883	TR	İdil	Şırnak
 d700	37.25	42.467	TR	Silopi	Şırnak
-d701	37.517	42.467	TR	Şırnak
+d701	37.517	42.467	TR	Şırnak	Şırnak
 d702	37.45	42.85	TR	Uludere	Şırnak
 d703	37.467	41.9	TR	Güçlükonak	Şırnak
-d704	41.633	32.333	TR	Bartın
+d704	41.633	32.333	TR	Bartın	Bartın
 d705	41.833	32.717	TR	Kurucaşile	Bartın
 d706	41.583	32.633	TR	Ulus	Bartın
-d707	41.117	42.7	TR	Ardahan
+d707	41.117	42.7	TR	Ardahan	Ardahan
 d708	41.133	43.133	TR	Çıldır	Ardahan
 d709	40.783	42.617	TR	Göle	Ardahan
 d710	41.233	42.833	TR	Hanak	Ardahan
 d711	41.517	42.733	TR	Posof	Ardahan
 d712	41.35	42.833	TR	Damal	Ardahan
 d713	39.867	44.517	TR	Aralık	Iğdır
-d714	39.917	44.033	TR	Iğdır
+d714	39.917	44.033	TR	Iğdır	Iğdır
 d715	40.05	43.667	TR	Tuzluca	Iğdır
 d716	39.967	44.167	TR	Karakoyunlu	Iğdır
-d717	40.65	29.267	TR	Yalova
+d717	40.65	29.267	TR	Yalova	Yalova
 d718	40.7	29.517	TR	Altınova	Yalova
 d719	40.533	28.817	TR	Armutlu	Yalova
 d720	40.65	29.1	TR	Çınarcık	Yalova
 d721	40.6	29.167	TR	Termal	Yalova
 d722	41.417	32.967	TR	Eflani	Karabük
-d723	41.2	32.633	TR	Karabük
+d723	41.2	32.633	TR	Karabük	Karabük
 d724	41.083	32.917	TR	Ovacık	Karabük
 d725	41.217	32.3	TR	Yenice	Karabük
-d726	36.717	37.117	TR	Kilis
+d726	36.717	37.117	TR	Kilis	Kilis
 d727	36.667	37.467	TR	Elbeyli	Kilis
 d728	36.883	36.917	TR	Musabeyli	Kilis
 d729	37.2	36.583	TR	Bahçe	Osmaniye
 d730	37.367	36.1	TR	Kadirli	Osmaniye
-d731	37.067	36.25	TR	Osmaniye
+d731	37.067	36.25	TR	Osmaniye	Osmaniye
 d732	37.25	36.467	TR	Düziçi	Osmaniye
 d733	37.133	36.55	TR	Hasanbeyli	Osmaniye
 d734	37.454	36.019	TR	Sumbas	Osmaniye
 d735	37.067	36.133	TR	Toprakkale	Osmaniye
 d736	41.083	31.117	TR	Akçakoca	Düzce
-d737	40.85	31.15	TR	Düzce
+d737	40.85	31.15	TR	Düzce	Düzce
 d738	40.967	31.45	TR	Yığılca	Düzce
 d739	40.883	30.95	TR	Cumayeri	Düzce
-d740	40.783	31.0	TR	Gölyaka	Düzce
+d740	40.783	31	TR	Gölyaka	Düzce
 d741	40.9	31.05	TR	Çilimli	Düzce
 d742	40.85	30.933	TR	Gümüşova	Düzce
 d743	40.783	31.3	TR	Kaynaşlı	Düzce
 d744	37.783	37.633	TR	Gölbaşı	Adıyaman
-d745	38.75	30.55	TR	Afyon
+d745	38.75	30.55	TR	Afyon	Afyon
 d746	38.983	30.917	TR	Bayat	Afyon
 d747	39.589	44.123	TR	Doğubayazıt	Ağrı
 d748	36.95	30.833	TR	Aksu	Antalya
@@ -4519,7 +4514,7 @@ d752	39.6	27.017	TR	Edremit	Balıkesir
 d753	40.1	27.65	TR	Gönen	Balıkesir
 d754	40.061	30.397	TR	İnhisar	Bilecik
 d755	40.177	30.519	TR	Yenipazar	Bilecik
-d756	37.0	29.55	TR	Altınyayla	Burdur
+d756	37	29.55	TR	Altınyayla	Burdur
 d757	40.083	29.517	TR	İnegöl	Bursa
 d758	40.433	29.717	TR	İznik	Bursa
 d759	40.5	29.3	TR	Orhangazi	Bursa
@@ -4529,7 +4524,7 @@ d762	39.933	27.25	TR	Yenice	Çanakkale
 d763	40.267	35.25	TR	Ortaköy	Çorum
 d764	37.817	29.6	TR	Bozkurt	Denizli
 d765	37.45	28.833	TR	Kale	Denizli
-d766	37.067	37.383	TR	Gaziantep
+d766	37.067	37.383	TR	Gaziantep	Gaziantep
 d767	37.017	36.633	TR	İslahiye	Gaziantep
 d768	37.017	37.8	TR	Nizip	Gaziantep
 d769	36.967	37.517	TR	Oğuzeli	Gaziantep
@@ -4553,35 +4548,35 @@ d787			TR	Girne	Kıbrıs
 d788			TR	İskele	Kıbrıs
 d790			TR	Lefke	Kıbrıs
 d791	35.188	33.366	TR	Lefkoşa	Kıbrıs
-d793	37.0	35.317	TR	Adana
-d794	39.933	32.85	TR	Ankara
-d795	36.883	30.7	TR	Antalya
-d796	37.85	27.85	TR	Aydın
-d797	39.65	27.883	TR	Balıkesir
-d798	40.2	29.067	TR	Bursa
-d799	37.783	29.083	TR	Denizli
-d800	37.917	40.233	TR	Diyarbakır
-d801	39.917	41.267	TR	Erzurum
-d802	39.783	30.517	TR	Eskişehir
-d803	36.345	36.075	TR	Hatay
-d804	36.8	34.633	TR	Mersin
-d805	41.0	29.0	TR	İstanbul
-d806	38.417	27.133	TR	İzmir
-d807	38.733	35.483	TR	Kayseri
-d808	40.768	29.968	TR	Kocaeli
-d809	37.867	32.483	TR	Konya
-d810	38.35	38.317	TR	Malatya
-d811	38.6	27.433	TR	Manisa
-d812	37.583	36.933	TR	Kahramanmaraş
-d813	37.3	40.733	TR	Mardin
-d814	37.217	28.367	TR	Muğla
-d815	40.983	37.883	TR	Ordu
-d816	40.772	30.404	TR	Sakarya
-d817	41.283	36.333	TR	Samsun
-d818	40.983	27.517	TR	Tekirdağ
-d819	41.0	39.717	TR	Trabzon
-d820	37.15	38.8	TR	Şanlıurfa
-d821	38.5	43.383	TR	Van
+d793	37	35.317	TR	Adana	Adana
+d794	39.933	32.85	TR	Ankara	Ankara
+d795	36.883	30.7	TR	Antalya	Antalya
+d796	37.85	27.85	TR	Aydın	Aydın
+d797	39.65	27.883	TR	Balıkesir	Balıkesir
+d798	40.2	29.067	TR	Bursa	Bursa
+d799	37.783	29.083	TR	Denizli	Denizli
+d800	37.917	40.233	TR	Diyarbakır	Diyarbakır
+d801	39.917	41.267	TR	Erzurum	Erzurum
+d802	39.783	30.517	TR	Eskişehir	Eskişehir
+d803	36.345	36.075	TR	Hatay	Hatay
+d804	36.8	34.633	TR	Mersin	Mersin
+d805	41	29	TR	İstanbul	İstanbul
+d806	38.417	27.133	TR	İzmir	İzmir
+d807	38.733	35.483	TR	Kayseri	Kayseri
+d808	40.768	29.968	TR	Kocaeli	Kocaeli
+d809	37.867	32.483	TR	Konya	Konya
+d810	38.35	38.317	TR	Malatya	Malatya
+d811	38.6	27.433	TR	Manisa	Manisa
+d812	37.583	36.933	TR	Kahramanmaraş	Kahramanmaraş
+d813	37.3	40.733	TR	Mardin	Mardin
+d814	37.217	28.367	TR	Muğla	Muğla
+d815	40.983	37.883	TR	Ordu	Ordu
+d816	40.772	30.404	TR	Sakarya	Sakarya
+d817	41.283	36.333	TR	Samsun	Samsun
+d818	40.983	27.517	TR	Tekirdağ    Tekirdağ	Tekirdağ    Tekirdağ
+d819	41	39.717	TR	Trabzon	Trabzon
+d820	37.15	38.8	TR	Şanlıurfa	Şanlıurfa
+d821	38.5	43.383	TR	Van	Van
 d822			TR	Adalar	İstanbul
 d823			TR	Ataşehir	İstanbul
 d824	41.038	28.717	TR	Avcılar	İstanbul
@@ -4724,1007 +4719,36 @@ c3581	2.478	33.393	UG	Lira
 c3582	1.002	34.198	UG	Mbale
 c3583	0.547	33.225	UG	Jinja
 c3584	0.318	32.581	UG	Kampala
-c282	53.721	-1.867	UK	Halifax
-c283	54.822	-1.744	UK	Lanchester
-c284	53.405	-2.981	UK	Liverpool
-c285	51.507	-0.128	UK	London
-c286	53.479	-2.244	UK	Manchester
-c311	50.845	-0.15	UK	Brighton & Hove
-c312	52.637	-1.131	UK	Leicester
-c313	52.629	1.292	UK	Norwich
-c314	50.903	-1.404	UK	Southampton
-c565	53.797	-1.544	UK	Leeds
-c646	52.239	-0.902	UK	Northampton
-c671	52.478	-1.895	UK	Birmingham
-c672	51.453	-2.597	UK	Bristol
-c1264	54.048	-2.799	UK	Lancaster
-c1265	53.759	-2.705	UK	Preston
-c1266	52.953	-1.149	UK	Nottingham
-c1267	50.371	-4.143	UK	Plymouth
-c1268	53.794	-1.749	UK	Bradford
-c1269	53.016	-2.181	UK	Stoke-on-Trent
-c1270	54.906	-1.375	UK	Sunderland
-c1271	53.683	-1.5	UK	Wakefield
-c1272	52.585	-2.128	UK	Wolverhampton
-c1273	52.408	-1.51	UK	Coventry
-c1274	53.744	-0.339	UK	Hull
-c1275	54.977	-1.614	UK	Newcastle upon Tyne
-c1276	52.921	-1.476	UK	Derby
-c1277	53.381	-1.47	UK	Sheffield
-c1278	53.546	-2.626	UK	WIGAN
-c280			US	Edinburgh
-c281			US	Glasgow
-c625	42.651	-73.755	US	Albany (NY)
-c626	33.749	-84.39	US	Atlanta (GA)
-c627	42.36	-71.06	US	Boston (MA)
-c628	41.876	-87.624	US	Chicago (IL)
-c629	32.776	-96.797	US	Dallas (TX)
-c630	29.759	-95.368	US	Houston (TX)
-c631	39.084	-94.563	US	Kansas city (MO)
-c632	34.055	-118.244	US	Los Angeles (CA)
-c633	25.774	-80.194	US	Miami (FL)
-c634	40.731	-73.987	US	New York (NY)
-c635	28.542	-81.379	US	Orlando (FL)
-c636	40.917	-74.172	US	Paterson (NJ)
-c637	39.952	-75.164	US	Philadelphia (PA)
-c638	40.442	-79.99	US	Pittsburgh (PA)
-c639	43.157	-77.615	US	Rochester (NY)
-c640	37.779	-122.419	US	San francisco (CA)
-c641	43.048	-76.147	US	Syracuse (NY)
-c642	38.895	-77.037	US	Washington DC
-c1354	39.084	-94.563	US	Kansas City (KS)
-c1355	39.311	-94.923	US	Leavenworth (KS)
-c1356	38.982	-94.671	US	Overland Park (KS)
-c1357	38.884	-94.816	US	Olathe (KS)
-c1358	38.972	-95.236	US	Lawrence (KS)
-c1359	39.049	-95.678	US	Topeka (KS)
-c1360	40.79	-73.96	US	Manhattan (KS)
-c1361	39.029	-96.831	US	Junction City (KS)
-c1362	38.911	-94.382	US	Lee's Summit (MO)
-c1363	37.224	-95.708	US	Independence (MO)
-c1364	39.017	-94.282	US	Blue Springs (MO)
-c1365	39.769	-94.847	US	St Joseph (MO)
-c1366	33.521	-86.802	US	Birmingham (AL)
-c1367	33.382	-86.917	US	Bessemer (AL)
-c1368	33.435	-86.638	US	Hoover (Jefferson County, AL)
-c1369	42.735	-71.325	US	Pelham (Shelby County, AL)
-c1370	33.244	-86.816	US	Alabaster (AL)
-c1371	33.586	-86.286	US	Pell City (AL)
-c1372	32.471	-85.001	US	Phenix City (AL)
-c1373	38.834	-104.825	US	Colorado Springs (CO)
-c1374	43.207	-71.537	US	Concord (CA)
-c1375	37.948	-122.061	US	Pleasant Hill (CA)
-c1376	38.019	-122.134	US	Martinez (CA)
-c1377	37.706	-122.462	US	Daly City (CA)
-c1378	37.974	-122.531	US	San Rafael (CA)
-c1379	40.442	-79.99	US	Pittsburg (CA)
-c1380	30.696	-87.01	US	Santa Rosa (CA)
-c1381	38.34	-122.701	US	Rohnert Park (CA)
-c1382	38.27	-122.606	US	Petaluma (CA)
-c1383	38.106	-122.568	US	Novato (CA)
-c1384	38.297	-122.286	US	Napa (CA)
-c1385	38.249	-122.04	US	Fairfield (CA)
-c1386	38.357	-121.988	US	Vacaville (CA)
-c1387	38.104	-122.257	US	Vallejo (CA)
-c1388	38.511	-122.847	US	Sonoma (CA)
-c1389	41.591	-93.604	US	Des Moines (IA)
-c1390	41.565	-93.76	US	West Des Moines (IA)
-c1391	41.627	-93.738	US	Urbandale (IA)
-c1392	41.732	-93.6	US	Ankeny (IA)
-c1393	40.519	-78.395	US	Altoona (IA)
-c1394	41.976	-91.67	US	Cedar Rapids (IA)
-c1395	37.731	-88.933	US	Marion (IA)
-c1396	41.661	-91.53	US	Iowa City (IA)
-c1397	41.524	-90.578	US	Davenport (IA)
-c1398	33.122	-117.081	US	Escondido (CA)
-c1399	33.2	-117.243	US	Vista (CA)
-c1400	41.08	-85.139	US	Fort Wayne (IN)
-c1401	37.548	-121.989	US	Fremont (CA)
-c1402	33.678	-118.0	US	Huntington Beach (CA)
-c1403	33.617	-117.929	US	Newport Beach (CA)
-c1404	33.663	-117.903	US	Costa Mesa (CA)
-c1405	33.962	-118.353	US	Inglewood (CA)
-c1406	34.669	-86.442	US	Huntsville (AL)
-c1407	39.845	-88.952	US	Decatur (AL)
-c1408	34.134	-86.878	US	Cullman (AL)
-c1409	32.41	-90.162	US	Jackson (MS)
-c1410	40.8	-96.668	US	Lincoln (NE)
-c1411	33.785	-118.158	US	Long Beach (CA)
-c1412	39.837	-105.037	US	Westminster (CA)
-c1413	33.832	-118.252	US	Carson (CA)
-c1414	33.895	-118.226	US	Compton (CA)
-c1415	43.075	-89.384	US	Madison (WI)
-c1416	42.583	-71.802	US	Fitchburg (WI)
-c1417	40.506	-79.843	US	Verona (WI)
-c1418	43.106	-89.509	US	Middleton (WI)
-c1419	43.183	-89.213	US	Sun Prairie (WI)
-c1420	44.53	-88.025	US	Green Bay (WI)
-c1421	44.261	-88.407	US	Appleton (WI)
-c1422	44.021	-88.541	US	Oshkosh (WI)
-c1423	43.775	-88.446	US	Fond du Lac (WI)
-c1424	43.751	-87.715	US	Sheboygan (WI)
-c1425	44.089	-87.658	US	Manitowoc (WI)
-c1426	42.585	-87.821	US	Kenosha (WI)
-c1427	33.436	-111.586	US	Mesa (AZ)
-c1428	33.294	-111.738	US	Gilbert (AZ)
-c1429	37.639	-120.997	US	Modesto (CA)
-c1430	37.595	-120.958	US	Ceres (CA)
-c1431	38.535	-105.999	US	Salida (CA)
-c1432	43.842	-88.837	US	Ripon (CA)
-c1433	37.799	-121.212	US	Manteca (CA)
-c1434	37.719	-121.434	US	Tracy (CA)
-c1435	29.95	-90.07	US	New Orleans (LA)
-c1436	30.002	-90.177	US	Metairie (LA)
-c1437	29.994	-90.242	US	Kenner (LA)
-c1438	32.522	-93.765	US	Shreveport (LA)
-c1439	32.506	-93.651	US	Bossier City (LA)
-c1440	30.224	-92.02	US	Lafayette (LA)
-c1441	33.196	-117.379	US	Oceanside (CA)
-c1442	33.158	-117.351	US	Carlsbad (CA)
-c1443	33.037	-117.292	US	Encinitas (CA)
-c1444	34.066	-117.648	US	Ontario (CA)
-c1445	34.013	-117.69	US	Chino (CA)
-c1446	34.103	-117.575	US	Rancho Cucamonga (CA)
-c1447	34.106	-117.37	US	Rialto (CA)
-c1448	34.092	-117.435	US	Fontana (CA)
-c1449	34.07	-117.249	US	Redlands (CA)
-c1450	33.953	-117.396	US	Riverside (CA)
-c1451	40.747	-73.86	US	Corona (CA)
-c1452	34.055	-117.752	US	Pomona (CA)
-c1453	34.069	-117.939	US	West Covina (CA)
-c1454	34.016	-118.112	US	Montebello (CA)
-c1455	33.932	-117.946	US	La Habra (CA)
-c1456	41.118	-73.408	US	Norwalk (CA)
-c1457	33.94	-118.133	US	Downey (CA)
-c1458	33.75	-117.87	US	Orange (CA)
-c1459	33.775	-117.946	US	Garden Grove (CA)
-c1460	33.704	-117.963	US	Fountain Valley (CA)
-c1461	33.597	-117.659	US	Mission Viejo (CA)
-c1462	33.938	-117.231	US	Moreno Valley (CA)
-c1463	33.783	-117.229	US	Perris (CA)
-c1464	37.936	-83.601	US	Menifee (CA)
-c1465	33.578	-117.188	US	Murrieta (CA)
-c1466	33.495	-117.147	US	Temecula (CA)
-c1467	33.779	-117.036	US	Hemet (CA)
-c1468	33.825	-116.54	US	Palm Springs (CA)
-c1469	33.781	-116.464	US	Cathedral City (CA)
-c1470	33.729	-116.383	US	Palm Desert (CA)
-c1471	33.744	-116.223	US	Indio (CA)
-c1472	34.198	-119.18	US	Oxnard (CA)
-c1473	34.422	-119.703	US	Santa Barbara (CA)
-c1474	34.953	-120.436	US	Santa Maria (CA)
-c1475	34.344	-119.295	US	Ventura (CA)
-c1476	34.216	-119.038	US	Camarillo (CA)
-c1477	34.269	-118.781	US	Simi Valley (CA)
-c1478	34.286	-118.882	US	Moorpark (CA)
-c1479	34.354	-119.059	US	Santa Paula (CA)
-c1480	34.148	-118.144	US	Pasadena (CA)
-c1481	34.182	-118.326	US	Burbank (CA)
-c1482	35.78	-78.639	US	Raleigh (NC)
-c1483	35.788	-78.781	US	Cary (NC)
-c1484	35.733	-78.851	US	Apex (NC)
-c1485	35.913	-79.056	US	Chapel Hill (NC)
-c1486	44.95	-93.102	US	Saint Paul (MN)
-c1487	44.923	-92.959	US	Woodbury (MN)
-c1488	39.167	-86.534	US	Bloomington (MN)
-c1489	44.855	-93.471	US	Eden Prairie (MN)
-c1490	44.913	-93.499	US	Minnetonka (MN)
-c1491	41.958	-70.667	US	Plymouth (MN)
-c1492	44.818	-93.166	US	Eagan (MN)
-c1493	44.732	-93.218	US	Apple Valley (MN)
-c1494	45.1	-93.344	US	Brooklyn Park (MN)
-c1495	27.77	-82.67	US	Saint Petersburg (FL)
-c1496	27.86	-82.704	US	Pinellas Park (FL)
-c1497	27.909	-82.787	US	Largo (FL)
-c1498	28.046	-82.797	US	Dunedin (FL)
-c1499	28.078	-82.764	US	Palm Harbor (FL)
-c1500	28.148	-82.777	US	Tarpon Springs (FL)
-c1501	28.556	-82.45	US	Spring Hill (Hernando County, FL)
-c1502	27.499	-82.575	US	Bradenton (FL)
-c1503	27.336	-82.531	US	Sarasota (FL)
-c1504	27.1	-82.454	US	Venice (FL)
-c1505	40.893	-73.973	US	Englewood (FL)
-c1506	27.044	-82.236	US	North Port (FL)
-c1507	26.976	-82.091	US	Port Charlotte (FL)
-c1508	26.93	-82.045	US	Punta Gorda (FL)
-c1509	26.606	-81.981	US	Cape Coral (FL)
-c1510	26.641	-81.872	US	Fort Myers (FL)
-c1511	43.543	-99.425	US	Iona (FL)
-c1512	26.353	-81.821	US	Bonita Springs (FL)
-c1513	26.219	-81.792	US	North Naples (FL)
-c1514	26.142	-81.795	US	Naples (FL)
-c1515	25.936	-81.695	US	Marco Island (FL)
-c1516	36.909	-121.753	US	Watsonville (CA)
-c1517	36.674	-121.655	US	Salinas (CA)
-c1518	37.354	-121.955	US	Santa Clara (CA)
-c1519	34.392	-118.543	US	Santa Clarita (CA)
-c1520	40.038	-76.306	US	Lancaster (CA)
-c1521	34.579	-118.117	US	Palmdale (CA)
-c1522	37.958	-121.291	US	Stockton (CA)
-c1523	38.097	-121.388	US	Lodi (CA)
-c1524	38.255	-121.3	US	Galt (CA)
-c1525	34.171	-118.911	US	Thousand Oaks (CA)
-c1526	33.836	-118.341	US	Torrance (CA)
-c1527	33.911	-118.348	US	Hawthorne (CA)
-c1528	42.268	-83.731	US	Ann Arbor (MI)
-c1529	42.241	-83.613	US	Ypsilanti (MI)
-c1530	42.887	-78.878	US	Buffalo (NY)
-c1531	43.021	-78.878	US	Tonawanda (NY)
-c1532	42.38	-72.523	US	Amherst (NY)
-c1533	42.903	-78.755	US	Cheektowaga (NY)
-c1534	42.839	-78.747	US	West Seneca (NY)
-c1535	43.213	-77.58	US	Irondequoit (NY)
-c1536	40.303	-87.947	US	Penfield (NY)
-c1537	39.985	-104.821	US	Brighton (Monroe County, NY)
-c1538	35.227	-80.843	US	Charlotte (NC)
-c1539	36.063	-94.157	US	Fayetteville (NC)
-c1540	39.746	-75.547	US	Wilmington (NC)
-c1541	30.332	-81.656	US	Jacksonville (NC)
-c1542	39.445	-123.803	US	Fort Bragg (NC)
-c1543	34.97	-78.945	US	Hope Mills (NC)
-c1544	31.811	-106.501	US	El Paso (TX)
-c1545	43.616	-84.247	US	Midland (TX)
-c1546	27.506	-99.509	US	Laredo (TX)
-c1547	39.291	-76.611	US	Baltimore (MD)
-c1548	34.001	-81.034	US	Columbia (MD)
-c1549	38.996	-77.029	US	Silver Spring (MD)
-c1550	39.267	-76.798	US	Ellicott City (MD)
-c1551	39.084	-77.153	US	Rockville (MD)
-c1552	39.163	-76.625	US	Glen Burnie (MD)
-c1553	39.257	-76.524	US	Dundalk (MD)
-c1554	39.09	-76.707	US	Odenton (MD)
-c1555	39.485	-76.65	US	Cockeysville (MD)
-c1556	39.459	-76.821	US	Reisterstown (MD)
-c1557	34.083	-118.448	US	Bel Air (Harford County, MD)
-c1558	41.505	-81.693	US	Cleveland (OH)
-c1559	41.52	-81.556	US	Cleveland Heights (OH)
-c1560	41.382	-81.736	US	Parma (OH)
-c1561	39.631	-105.11	US	Lakewood (OH)
-c1562	41.455	-81.918	US	Westlake (OH)
-c1563	41.314	-81.835	US	Strongsville (OH)
-c1564	41.314	-81.725	US	North Royalton (OH)
-c1565	41.368	-82.107	US	Elyria (OH)
-c1566	41.467	-82.178	US	Lorain (OH)
-c1567	41.593	-81.527	US	Euclid (OH)
-c1568	41.519	-81.458	US	Mayfield Heights (OH)
-c1569	41.416	-81.923	US	North Olmsted (OH)
-c1570	43.915	-69.965	US	Brunswick (OH)
-c1571	41.083	-81.518	US	Akron (OH)
-c1572	41.135	-81.485	US	Cuyahoga Falls (OH)
-c1573	41.013	-81.605	US	Barberton (OH)
-c1574	41.026	-81.73	US	Wadsworth (OH)
-c1575	41.1	-81.938	US	Medina (OH)
-c1576	38.013	-78.496	US	Willoughby (OH)
-c1577	41.666	-81.34	US	Mentor (OH)
-c1578	41.724	-81.246	US	Painesville (OH)
-c1579	39.739	-104.985	US	Denver (CO)
-c1580	39.917	-104.905	US	Thornton (CO)
-c1581	39.837	-105.037	US	Westminster (CO)
-c1582	39.821	-105.221	US	Arvada (CO)
-c1583	39.631	-105.11	US	Lakewood (CO)
-c1584	40.893	-73.973	US	Englewood (CO)
-c1585	39.613	-105.017	US	Littleton (CO)
-c1586	41.761	-88.32	US	Aurora (CO)
-c1587	39.568	-104.978	US	Centennial (CO)
-c1588	39.938	-105.059	US	Broomfield (CO)
-c1589	40.551	-105.067	US	Fort Collins (CO)
-c1590	40.386	-105.044	US	Loveland (CO)
-c1591	38.254	-104.609	US	Pueblo (CO)
-c1592	36.065	-119.017	US	Porterville (CA)
-c1593	36.252	-118.853	US	Tulare (CA)
-c1594	36.33	-119.292	US	Visalia (CA)
-c1595	36.73	-119.709	US	Fresno (CA)
-c1596	34.405	-103.205	US	Clovis (CA)
-c1597	44.977	-93.265	US	Minneapolis (MN)
-c1598	43.55	-96.7	US	Sioux Falls (SD)
-c1599	36.889	-76.248	US	Norfolk (VA)
-c1600	36.853	-75.977	US	Virginia Beach (VA)
-c1601	32.702	-97.14	US	Arlington (VA)
-c1602	38.83	-77.196	US	Annandale (VA)
-c1603	39.799	-89.644	US	Springfield (VA)
-c1604	41.824	-71.413	US	Providence (RI)
-c1605	41.879	-71.383	US	Pawtucket (RI)
-c1606	41.85	-71.466	US	North Providence (RI)
-c1607	41.814	-71.37	US	East Providence (RI)
-c1608	41.781	-71.437	US	Cranston (RI)
-c1609	41.7	-71.416	US	Warwick (RI)
-c1610	41.7	-71.683	US	Coventry (RI)
-c1611	41.66	-71.456	US	East Greenwich (RI)
-c1612	41.551	-71.469	US	North Kingstown (RI)
-c1613	41.456	-71.539	US	South Kingstown (RI)
-c1614	41.49	-71.314	US	Newport (RI)
-c1615	26.307	-80.146	US	Newport East (RI)
-c1616	41.378	-71.827	US	Westerly (RI)
-c1617	41.351	-72.077	US	Groton (CT)
-c1618	41.356	-72.1	US	New London (CT)
-c1619	41.524	-72.076	US	Norwich (CT)
-c1620	32.717	-117.163	US	San Diego (CA)
-c1621	32.963	-117.036	US	Poway (CA)
-c1622	32.64	-117.084	US	Chula Vista (CA)
-c1623	32.795	-116.963	US	El Cajon (CA)
-c1624	27.948	-82.458	US	Tampa (FL)
-c1625	28.538	-81.545	US	Ocoee (FL)
-c1626	28.6	-81.343	US	Winter Park (FL)
-c1627	40.733	-124.152	US	Pine Hills (Orange County, FL)
-c1628	35.084	-106.651	US	Albuquerque (NM)
-c1629	35.269	-106.633	US	Rio Rancho (NM)
-c1630	32.314	-106.78	US	Las Cruces (NM)
-c1631	42.349	-83.057	US	Detroit (MI)
-c1632	32.41	-90.162	US	Jackson (MI)
-c1633	47.604	-122.33	US	Seattle (WA)
-c1634	47.614	-122.192	US	Bellevue (WA)
-c1635	47.686	-122.192	US	Kirkland (WA)
-c1636	47.626	-122.52	US	Bainbridge Island (WA)
-c1637	47.533	-122.754	US	Bremerton (WA)
-c1638	47.659	-122.677	US	Silverdale (WA)
-c1639	47.47	-122.349	US	Burien (WA)
-c1640	47.48	-122.203	US	Renton (WA)
-c1641	47.535	-122.043	US	Issaquah (WA)
-c1642	47.669	-122.124	US	Redmond (WA)
-c1643	47.609	-122.042	US	Sammamish (WA)
-c1644	47.205	-121.992	US	Enumclaw (WA)
-c1645	41.154	-81.358	US	Kent (WA)
-c1646	32.546	-85.419	US	Auburn (WA)
-c1647	47.25	-122.44	US	Tacoma (WA)
-c1648	47.185	-122.292	US	Puyallup (WA)
-c1649	39.631	-105.11	US	Lakewood (WA)
-c1650	26.31	-80.237	US	Parkland (WA)
-c1651	36.727	-78.129	US	South Hill (WA)
-c1652	47.098	-122.424	US	Spanaway (WA)
-c1653	47.313	-122.339	US	Federal Way (WA)
-c1654	39.084	-84.508	US	Covington (WA)
-c1655	47.659	-117.425	US	Spokane (WA)
-c1656	47.669	-117.197	US	Spokane Valley (WA)
-c1657	47.967	-122.201	US	Everett (WA)
-c1658	39.146	-121.591	US	Marysville (WA)
-c1659	36.156	-95.993	US	Tulsa (OK)
-c1660	36.053	-95.791	US	Broken Arrow (OK)
-c1661	40.767	-111.89	US	Salt Lake City (UT)
-c1662	40.697	-111.987	US	West Valley City (UT)
-c1663	40.688	-111.858	US	Millcreek (UT)
-c1664	40.669	-111.825	US	Holladay (UT)
-c1665	40.668	-111.939	US	Taylorsville (UT)
-c1666	36.61	-88.315	US	Murray (UT)
-c1667	40.61	-111.939	US	West Jordan (UT)
-c1668	40.62	-111.81	US	Cottonwood Heights (UT)
-c1669	40.573	-111.833	US	Sandy (UT)
-c1670	40.562	-111.93	US	South Jordan (UT)
-c1671	43.025	-108.38	US	Riverton (UT)
-c1672	40.525	-111.864	US	Draper (UT)
-c1673	40.377	-111.796	US	American Fork (UT)
-c1674	40.388	-111.849	US	Lehi (UT)
-c1675	40.364	-111.739	US	Pleasant Grove (UT)
-c1676	40.298	-111.694	US	Orem (UT)
-c1677	40.234	-111.659	US	Provo (UT)
-c1678	40.167	-111.611	US	Springville (UT)
-c1679	44.031	-123.858	US	Mapleton (UT)
-c1680	40.115	-111.655	US	Spanish Fork (UT)
-c1681	44.939	-123.033	US	Salem (UT)
-c1682	34.231	-111.325	US	Payson (UT)
-c1683	39.962	-83.001	US	Columbus (OH)
-c1684	38.692	-75.401	US	Delaware (OH)
-c1685	40.126	-82.929	US	Westerville (OH)
-c1686	32.222	-110.926	US	Tucson (AZ)
-c1687	27.966	-82.8	US	Clearwater (FL)
-c1688	39.799	-89.644	US	Springfield (MO)
-c1689	39.768	-86.158	US	Indianapolis (IN)
-c1690	43.157	-77.615	US	Rochester (MN)
-c1691	44.084	-93.226	US	Owatonna (MN)
-c1692	44.163	-93.999	US	Mankato (MN)
-c1693	29.425	-98.495	US	San Antonio (TX)
-c1694	32.863	-96.979	US	Irving (TX)
-c1695	32.702	-97.14	US	Arlington (TX)
-c1696	32.657	-97.028	US	Grand Prairie (TX)
-c1697	31.549	-97.147	US	Waco (TX)
-c1698	42.963	-85.668	US	Grand Rapids (MI)
-c1699	43.17	-107.569	US	Wyoming (MI)
-c1700	42.869	-85.645	US	Kentwood (MI)
-c1701	38.21	-84.559	US	Georgetown Township (MI)
-c1702	32.753	-97.333	US	Fort Worth (TX)
-c1703	32.767	-96.599	US	Mesquite (TX)
-c1704	33.014	-96.693	US	Plano (TX)
-c1705	33.58	-85.077	US	Carrollton (TX)
-c1706	33.046	-96.994	US	Lewisville (Denton County, TX)
-c1707	33.015	-97.097	US	Flower Mound (TX)
-c1708	33.151	-96.824	US	Frisco (TX)
-c1709	33.198	-96.615	US	McKinney (TX)
-c1710	37.888	-95.317	US	Allen (TX)
-c1711	32.913	-96.639	US	Garland (TX)
-c1712	32.948	-96.73	US	Richardson (TX)
-c1713	32.934	-97.078	US	Grapevine (TX)
-c1714	32.847	-97.067	US	Euless (TX)
-c1715	40.027	-78.524	US	Bedford (TX)
-c1716	37.619	-75.764	US	Keller (TX)
-c1717	27.8	-97.396	US	Corpus Christi (TX)
-c1718	35.207	-101.834	US	Amarillo (TX)
-c1719	33.914	-98.493	US	Wichita Falls (TX)
-c1720	25.914	-97.489	US	Brownsville (TX)
-c1721	26.191	-97.696	US	Harlingen (TX)
-c1722	32.446	-99.733	US	Abilene (TX)
-c1723	30.086	-94.102	US	Beaumont (TX)
-c1724	29.899	-93.929	US	Port Arthur (TX)
-c1725	39.457	-75.661	US	Odessa (TX)
-c1726	42.467	-70.949	US	Lynn (MA)
-c1727	30.451	-91.155	US	Baton Rouge (LA)
-c1728	38.582	-121.494	US	Sacramento (CA)
-c1729	38.604	-121.383	US	Arden-Arcade (CA)
-c1730	38.409	-121.372	US	Elk Grove (CA)
-c1731	38.545	-121.745	US	Davis (CA)
-c1732	38.679	-121.773	US	Woodland (CA)
-c1733	38.589	-121.303	US	Rancho Cordova (CA)
-c1734	38.686	-121.372	US	North Highlands (CA)
-c1735	38.707	-121.281	US	Citrus Heights (CA)
-c1736	39.378	-123.341	US	Fair Oaks (Sacramento County, CA)
-c1737	38.723	-121.186	US	Roseville (CA)
-c1738	38.791	-121.236	US	Rocklin (CA)
-c1739	40.8	-96.668	US	Lincoln (CA)
-c1740	39.101	-84.512	US	Cincinnati (OH)
-c1741	38.046	-84.497	US	Lexington (KY)
-c1742	39.084	-84.508	US	Covington (KY)
-c1743	36.166	-115.149	US	Las Vegas (NV)
-c1744	36.201	-115.112	US	North Las Vegas (NV)
-c1745	36.211	-115.073	US	Sunrise Manor (NV)
-c1746	40.816	-90.91	US	Henderson (NV)
-c1747	35.979	-114.832	US	Boulder City (NV)
-c1748	40.015	-105.271	US	Boulder (CO)
-c1749	35.473	-97.517	US	Oklahoma City (OK)
-c1750	35.223	-97.439	US	Norman (OK)
-c1751	35.657	-97.465	US	Edmond (OK)
-c1752	35.34	-97.487	US	Moore (OK)
-c1753	26.122	-80.143	US	Fort Lauderdale (FL)
-c1754	26.127	-80.258	US	Plantation (Broward County, FL)
-c1755	26.148	-80.329	US	Sunrise (Broward County, FL)
-c1756	26.18	-80.137	US	Oakland Park (Broward County, FL)
-c1757	26.265	-80.265	US	Coral Springs (FL)
-c1758	26.238	-80.125	US	Pompano Beach (FL)
-c1759	26.318	-80.1	US	Deerfield Beach (FL)
-c1760	26.461	-80.073	US	Delray Beach (FL)
-c1761	41.167	-73.205	US	Bridgeport (CT)
-c1762	38.249	-122.04	US	Fairfield (CT)
-c1763	41.185	-73.133	US	Stratford (CT)
-c1764	41.118	-73.408	US	Norwalk (CT)
-c1765	41.053	-73.539	US	Stamford (CT)
-c1766	41.222	-73.056	US	Milford (CT)
-c1767	41.271	-72.947	US	West Haven (CT)
-c1768	41.308	-72.925	US	New Haven (CT)
-c1769	41.276	-72.868	US	East Haven (CT)
-c1770	41.391	-72.86	US	North Haven (CT)
-c1771	41.28	-72.815	US	Branford (CT)
-c1772	41.396	-72.897	US	Hamden (CT)
-c1773	33.75	-117.87	US	Orange (CT)
-c1774	41.316	-73.093	US	Shelton (CT)
-c1775	37.546	-97.269	US	Derby (CT)
-c1776	41.343	-73.079	US	Ansonia (CT)
-c1777	41.307	-80.766	US	Trumbull (CT)
-c1778	41.457	-72.823	US	Wallingford (CT)
-c1779	41.763	-72.683	US	Hartford (CT)
-c1780	41.558	-73.051	US	Waterbury (CT)
-c1781	41.562	-72.651	US	Middletown (CT)
-c1782	41.395	-73.454	US	Danbury (CT)
-c1783	30.438	-84.281	US	Tallahassee (FL)
-c1784	39.936	-91.41	US	Quincy (FL)
-c1785	33.449	-112.077	US	Phoenix (AZ)
-c1786	33.509	-111.899	US	Scottsdale (AZ)
-c1787	29.652	-82.325	US	Gainesville (FL)
-c1788	33.184	-97.141	US	Denton (TX)
-c1789	33.414	-111.909	US	Tempe (AZ)
-c1790	41.259	-95.938	US	Omaha (NE)
-c1791	36.073	-79.792	US	Greensboro (NC)
-c1792	35.956	-80.005	US	High Point (NC)
-c1793	36.1	-80.244	US	Winston-Salem (NC)
-c1794	43.035	-87.922	US	Milwaukee (WI)
-c1795	38.627	-90.198	US	St. Louis (MO)
-c1796	38.801	-90.628	US	St. Peters (MO)
-c1797	41.914	-88.309	US	St Charles (MO)
-c1798	38.656	-90.574	US	Chesterfield (MO)
-c1799	38.592	-89.911	US	O'Fallon (MO)
-c1800	38.593	-90.546	US	Ballwin (MO)
-c1801	38.47	-90.305	US	Oakville (MO)
-c1802	39.032	-76.503	US	Arnold (MO)
-c1803	38.578	-90.419	US	Kirkwood (MO)
-c1804	38.713	-90.43	US	Maryland Heights (MO)
-c1805	38.771	-90.371	US	Hazelwood (MO)
-c1806	38.789	-90.323	US	Florissant (MO)
-c1807	37.336	-121.891	US	San Jose (CA)
-c1808	30.271	-97.744	US	Austin (TX)
-c1809	30.508	-97.679	US	Round Rock (TX)
-c1810	36.162	-86.774	US	Nashville (TN)
-c1811	37.977	-88.934	US	Franklin (TN)
-c1812	39.3	-75.605	US	Smyrna (TN)
-c1813	37.932	-121.696	US	Brentwood (TN)
-c1814	40.347	-76.428	US	Lebanon (TN)
-c1815	21.305	-157.856	US	Honolulu (HI)
-c1816	21.394	-157.744	US	Kailua (HI)
-c1817	21.406	-157.796	US	Kaneohe (HI)
-c1818	38.897	-77.041	US	Aiea (HI)
-c1819	21.4	-157.969	US	Pearl City (HI)
-c1820	21.387	-158.009	US	Waipahu (HI)
-c1821	32.546	-85.419	US	Auburn (AL)
-c1822	30.694	-88.043	US	Mobile (AL)
-c1823	32.367	-86.301	US	Montgomery (AL)
-c1824	32.464	-86.46	US	Prattville (AL)
-c1825	35.96	-83.921	US	Knoxville (TN)
-c1826	36.01	-84.27	US	Oak Ridge (TN)
-c1827	40.346	-94.872	US	Maryville (TN)
-c1828	35.885	-84.154	US	Farragut (TN)
-c1829	38.59	-89.42	US	Clinton (TN)
-c1830	35.797	-84.256	US	Lenoir City (TN)
-c1831	35.846	-86.392	US	Murfreesboro (TN)
-c1832	34.108	-117.29	US	San Bernardino (CA)
-c1833	34.426	-117.301	US	Hesperia (CA)
-c1834	34.536	-117.291	US	Victorville (CA)
-c1835	44.732	-93.218	US	Apple Valley (CA)
-c1836	36.6	-121.895	US	Monterey (CA)
-c1837	36.626	-121.817	US	Seaside (CA)
-c1838	37.007	-121.563	US	Gilroy (CA)
-c1839	26.359	-80.083	US	Boca Raton (FL)
-c1840	34.001	-81.034	US	Columbia (MO)
-c1841	39.962	-83.001	US	Columbus (GA)
-c1842	33.471	-81.975	US	Augusta (GA)
-c1843	34.746	-92.29	US	Little Rock (AR)
-c1844	34.746	-92.153	US	North Little Rock (AR)
-c1845	34.815	-92.224	US	Sherwood (Pulaski County, AR)
-c1846	30.332	-81.656	US	Jacksonville (Pulaski County, AR)
-c1847	45.716	-94.048	US	Benton (AR)
-c1848	34.435	-93.046	US	Hot Springs (AR)
-c1849	40.036	-75.514	US	Malvern (AR)
-c1850	34.121	-93.054	US	Arkadelphia (AR)
-c1851	34.228	-92.003	US	Pine Bluff (AR)
-c1852	34.975	-92.017	US	Cabot (AR)
-c1853	35.089	-92.442	US	Conway (AR)
-c1854	35.151	-92.744	US	Morrilton (AR)
-c1855	35.278	-93.134	US	Russellville (AR)
-c1856	34.142	-118.249	US	Glendale (AZ)
-c1857	40.694	-89.589	US	Peoria (AZ)
-c1858	33.629	-112.368	US	Surprise (AZ)
-c1859	33.436	-112.341	US	Avondale (AZ)
-c1860	35.994	-78.899	US	Durham (NC)
-c1861	30.332	-81.656	US	Jacksonville (FL)
-c1862	25.942	-80.24	US	Miami Gardens (FL)
-c1863	25.933	-80.163	US	North Miami Beach (FL)
-c1864	25.668	-80.302	US	Pinecrest (Miami-Dade County, FL)
-c1865	26.023	-80.341	US	Pembroke Pines (FL)
-c1866	33.307	-111.841	US	Chandler (AZ)
-c1867	33.835	-117.912	US	Anaheim (CA)
-c1868	38.805	-77.047	US	Alexandria (VA)
-c1869	26.525	-80.066	US	Boynton Beach (FL)
-c1870	26.621	-80.063	US	Lake Worth (FL)
-c1871	34.856	-100.214	US	Wellington (FL)
-c1872	26.715	-80.053	US	West Palm Beach (FL)
-c1873	26.775	-80.058	US	Riviera Beach (FL)
-c1874	26.842	-80.135	US	Palm Beach Gardens (FL)
-c1875	26.927	-80.122	US	Jupiter (FL)
-c1876	32.584	-117.084	US	Palm City (FL)
-c1877	27.294	-80.35	US	Port St. Lucie (FL)
-c1878	27.447	-80.326	US	Fort Pierce (FL)
-c1879	27.639	-80.398	US	Vero Beach (FL)
-c1880	35.177	-94.265	US	Sebastian (FL)
-c1881	28.033	-80.643	US	Palm Bay (FL)
-c1882	28.084	-80.608	US	Melbourne (FL)
-c1883	40.081	-75.09	US	Rockledge (FL)
-c1884	28.382	-80.776	US	Cocoa (FL)
-c1885	28.266	-80.664	US	Merritt Island (FL)
-c1886	28.612	-80.808	US	Titusville (FL)
-c1887	28.292	-81.408	US	Kissimmee (FL)
-c1888	28.665	-81.376	US	Altamonte Springs (FL)
-c1889	28.741	-81.534	US	Apopka (FL)
-c1890	28.659	-81.205	US	Oviedo (FL)
-c1891	40.801	-77.862	US	University Park (FL)
-c1892	28.701	-81.349	US	Longwood (FL)
-c1893	35.48	-79.18	US	Sanford (FL)
-c1894	28.901	-81.264	US	Deltona (FL)
-c1895	28.879	-81.323	US	DeBary (FL)
-c1896	29.02	-81.294	US	DeLand (FL)
-c1897	28.949	-81.299	US	Orange City (FL)
-c1898	45.217	-70.478	US	Eustis (FL)
-c1899	36.543	-103.458	US	Mt. Dora (FL)
-c1900	43.617	-116.201	US	Boise (ID)
-c1901	32.364	-88.704	US	Meridian (ID)
-c1902	43.574	-116.56	US	Nampa (ID)
-c1903	39.656	-94.0	US	Caldwell (ID)
-c1904	43.492	-116.42	US	Kuna (ID)
-c1905	33.578	-101.855	US	Lubbock (TX)
-c1906	33.686	-117.826	US	Irvine (CA)
-c1907	42.259	-87.841	US	Lake Forest (CA)
-c1908	42.263	-71.802	US	Worcester (MA)
-c1909	32.546	-85.419	US	Auburn (MA)
-c1910	42.297	-71.714	US	Shrewsbury (MA)
-c1911	42.346	-71.552	US	Marlborough (MA)
-c1912	42.525	-71.76	US	Leominster (MA)
-c1913	42.583	-71.802	US	Fitchburg (MA)
-c1914	42.575	-71.998	US	Gardner (MA)
-c1915	39.613	-105.017	US	Littleton (MA)
-c1916	42.712	-73.204	US	Williamstown (MA)
-c1917	42.45	-73.245	US	Pittsfield (MA)
-c1918	39.799	-89.644	US	Springfield (MA)
-c1919	42.125	-72.75	US	Westfield (MA)
-c1920	42.171	-72.573	US	Chicopee (MA)
-c1921	42.224	-72.64	US	Holyoke (MA)
-c1922	42.267	-72.669	US	Easthampton (MA)
-c1923	42.319	-72.631	US	Northampton (MA)
-c1924	42.38	-72.523	US	Amherst (MA)
-c1925	38.981	-77.123	US	Bethesda (MD)
-c1926	39.046	-77.113	US	North Bethesda (MD)
-c1927	41.154	-81.358	US	Kent (OH)
-c1928	41.239	-81.346	US	Streetsboro (OH)
-c1929	40.844	-90.617	US	Warren (OH)
-c1930	42.029	-87.812	US	Niles (OH)
-c1931	41.1	-80.65	US	Youngstown (OH)
-c1932	41.098	-80.744	US	Austintown (OH)
-c1933	41.025	-80.665	US	Boardman (OH)
-c1934	40.915	-81.106	US	Alliance (OH)
-c1935	40.799	-81.378	US	Canton (OH)
-c1936	40.797	-81.522	US	Massillon (OH)
-c1937	40.49	-81.446	US	New Philadelphia (OH)
-c1938	39.158	-75.524	US	Dover (OH)
-c1939	40.805	-81.935	US	Wooster (OH)
-c1940	40.619	-80.577	US	East Liverpool (OH)
-c1941	45.631	-122.674	US	Vancouver (WA)
-c1942	32.501	-94.74	US	Longview (WA)
-c1943	46.142	-122.906	US	Kelso (WA)
-c1944	39.373	-104.858	US	Castle Rock (WA)
-c1945	38.525	-89.133	US	Centralia (WA)
-c1946	46.602	-120.511	US	Yakima (WA)
-c1947	45.52	-122.674	US	Portland (OR)
-c1948	45.487	-122.804	US	Beaverton (OR)
-c1949	45.507	-122.437	US	Gresham (OR)
-c1950	45.431	-122.772	US	Tigard (OR)
-c1951	45.523	-122.99	US	Hillsboro (OR)
-c1952	45.357	-122.607	US	Oregon City (OR)
-c1953	45.384	-122.766	US	Tualatin (OR)
-c1954	44.051	-123.095	US	Eugene (OR)
-c1955	39.799	-89.644	US	Springfield (OR)
-c1956	44.939	-123.033	US	Salem (OR)
-c1957	42.651	-73.755	US	Albany (OR)
-c1958	44.565	-123.262	US	Corvallis (OR)
-c1959	45.211	-123.198	US	McMinnville (OR)
-c1960	37.975	-87.556	US	Evansville (IN)
-c1961	37.804	-122.271	US	Oakland (CA)
-c1962	37.906	-122.065	US	Walnut Creek (CA)
-c1963	37.596	-122.082	US	Union City (NJ)
-c1964	37.692	-97.338	US	Wichita (KS)
-c1965	37.871	-122.273	US	Berkeley (CA)
-c1966	40.602	-75.471	US	Allentown (PA)
-c1967	40.618	-75.379	US	Bethlehem (PA)
-c1968	38.254	-85.759	US	Louisville (KY)
-c1969	37.988	-85.716	US	Shepherdsville (KY)
-c1970	39.529	-119.814	US	Reno (NV)
-c1971	39.535	-119.753	US	Sparks (NV)
-c1972	38.678	-121.176	US	Folsom (CA)
-c1973	38.669	-120.987	US	Cameron Park (CA)
-c1974	38.656	-121.074	US	El Dorado Hills (CA)
-c1975	35.149	-90.052	US	Memphis (TN)
-c1976	41.679	-83.513	US	Toledo (OH)
-c1977	43.979	-120.737	US	Oregon (OH)
-c1978	41.557	-83.627	US	Perrysburg (OH)
-c1979	35.046	-85.31	US	Chattanooga (TN)
-c1980	41.637	-85.422	US	LaGrange (GA)
-c1981	39.3	-75.605	US	Smyrna (GA)
-c1982	33.953	-84.55	US	Marietta (GA)
-c1983	33.924	-84.379	US	Sandy Springs (GA)
-c1984	32.841	-83.632	US	Macon (GA)
-c1985	39.329	-82.101	US	Athens (GA)
-c1986	42.222	-70.999	US	Braintree (MA)
-c1987	42.375	-71.106	US	Cambridge (MA)
-c1988	42.195	-71.199	US	Norwood (MA)
-c1989	42.616	-70.662	US	Gloucester (MA)
-c1990	42.778	-71.077	US	Haverhill (MA)
-c1991	38.972	-95.236	US	Lawrence (MA)
-c1992	42.633	-71.316	US	Lowell (MA)
-c1993	42.6	-71.367	US	Chelmsford (MA)
-c1994	42.611	-71.234	US	Tewksbury (MA)
-c1995	39.746	-75.547	US	Wilmington (MA)
-c1996	42.726	-71.191	US	Methuen (MA)
-c1997	42.813	-70.877	US	Newburyport (MA)
-c1998	42.858	-70.93	US	Amesbury (MA)
-c1999	42.588	-72.601	US	Greenfield (Franklin County, MA)
-c2000	42.701	-73.109	US	North Adams (MA)
-c2001	39.979	-91.211	US	Adams (MA)
-c2002	42.283	-71.233	US	Needham (MA)
-c2003	42.337	-71.209	US	Newton (MA)
-c2004	42.376	-71.236	US	Waltham (MA)
-c2005	39.936	-91.41	US	Quincy (MA)
-c2006	42.388	-71.099	US	Somerville (MA)
-c2007	42.326	-122.872	US	Medford (MA)
-c2008	42.425	-71.066	US	Malden (MA)
-c2009	32.702	-97.14	US	Arlington (MA)
-c2010	37.52	-122.276	US	Belmont (MA)
-c2011	42.242	-71.166	US	Dedham (MA)
-c2012	42.279	-71.416	US	Framingham (MA)
-c2013	42.408	-71.012	US	Revere (MA)
-c2014	44.939	-123.033	US	Salem (MA)
-c2015	42.479	-71.152	US	Woburn (MA)
-c2016	42.48	-71.099	US	Stoneham (MA)
-c2017	32.636	-93.329	US	Webster (MA)
-c2018	42.075	-72.033	US	Southbridge (MA)
-c2019	42.077	-71.63	US	Uxbridge (MA)
-c2020	41.222	-73.056	US	Milford (MA)
-c2021	37.977	-88.934	US	Franklin (MA)
-c2022	42.065	-71.248	US	Foxborough (MA)
-c2023	40.758	-82.515	US	Mansfield (MA)
-c2024	41.983	-71.333	US	North Attleborough (MA)
-c2025	41.945	-71.286	US	Attleboro (MA)
-c2026	41.9	-71.09	US	Taunton (MA)
-c2027	41.893	-70.911	US	Middleborough (MA)
-c2028	43.226	-103.579	US	Fall River (MA)
-c2029	41.636	-70.934	US	New Bedford (MA)
-c2030	41.551	-70.615	US	Falmouth (MA)
-c2031	41.578	-70.559	US	East Falmouth (MA)
-c2032	42.221	-70.939	US	Weymouth (MA)
-c2033	41.7	-70.299	US	Barnstable (MA)
-c2034	41.653	-70.283	US	Hyannis (MA)
-c2035	43.801	-70.187	US	Yarmouth (MA)
-c2036	41.667	-70.185	US	South Yarmouth (MA)
-c2037	41.69	-70.156	US	South Dennis (MA)
-c2038	41.686	-70.076	US	Harwich (MA)
-c2039	36.826	-79.398	US	Chatham (MA)
-c2040	41.397	-73.617	US	Brewster (MA)
-c2041	43.224	-78.227	US	Orleans (MA)
-c2042	41.83	-69.974	US	Eastham (MA)
-c2043	41.938	-70.033	US	Wellfleet (MA)
-c2044	41.993	-70.05	US	Truro (MA)
-c2045	42.033	-70.095	US	North Truro (MA)
-c2046	42.058	-70.179	US	Provincetown (MA)
-c2047	41.761	-88.32	US	Aurora (IL)
-c2048	41.773	-88.148	US	Naperville (IL)
-c2049	41.573	-87.784	US	Tinley Park (IL)
-c2050	33.472	-86.801	US	Homewood (IL)
-c2051	41.506	-87.636	US	Chicago Heights (IL)
-c2052	41.601	-87.607	US	South Holland (IL)
-c2053	41.616	-87.529	US	Calumet City (IL)
-c2054	41.63	-87.854	US	Orland Park (IL)
-c2055	41.711	-87.758	US	Oak Lawn (IL)
-c2056	41.525	-88.082	US	Joliet (IL)
-c2057	41.429	-88.229	US	Channahon (IL)
-c2058	41.356	-89.04	US	Lasalle (IL)
-c2059	41.327	-89.129	US	Peru (IL)
-c2060	41.121	-88.835	US	Streator (IL)
-c2061	41.352	-88.845	US	Ottawa (IL)
-c2062	38.691	-96.671	US	Morris (IL)
-c2063	41.648	-88.09	US	Romeoville (IL)
-c2064	41.623	-88.228	US	Plainfield (IL)
-c2065	41.7	-88.072	US	Bolingbrook (IL)
-c2066	41.795	-88.007	US	Downers Grove (IL)
-c2067	41.865	-88.11	US	Wheaton (IL)
-c2068	41.88	-88.008	US	Lombard (IL)
-c2069	41.899	-87.94	US	Elmhurst (IL)
-c2070	41.914	-88.309	US	St. Charles (IL)
-c2071	42.037	-88.281	US	Elgin (IL)
-c2072	41.929	-88.75	US	Dekalb (IL)
-c2073	41.989	-88.687	US	Sycamore (IL)
-c2074	42.869	-76.978	US	Geneva (IL)
-c2075	41.913	-88.135	US	Carol Stream (IL)
-c2076	41.91	-88.072	US	Glendale Heights (IL)
-c2077	42.033	-88.083	US	Schaumburg (IL)
-c2078	42.004	-87.971	US	Elk Grove Village (IL)
-c2079	42.042	-87.887	US	Des Plaines (IL)
-c2080	42.081	-87.98	US	Arlington Heights (Cook County, IL)
-c2081	42.066	-87.937	US	Mt Prospect (IL)
-c2082	42.07	-87.811	US	Glenview (Cook County, IL)
-c2083	42.033	-87.733	US	Skokie (IL)
-c2084	42.045	-87.693	US	Evanston (IL)
-c2085	42.13	-87.83	US	Northbrook (Cook County, IL)
-c2086	42.125	-87.929	US	Wheeling (IL)
-c2087	42.11	-88.034	US	Palatine (IL)
-c2088	42.182	-87.8	US	Highland Park (IL)
-c2089	42.171	-87.845	US	Deerfield (IL)
-c2090	42.197	-88.093	US	Lake Zurich (IL)
-c2091	42.219	-87.98	US	Vernon Hills (IL)
-c2092	41.251	-87.831	US	Manteno (IL)
-c2093	41.164	-87.884	US	Bourbonnais (IL)
-c2094	41.12	-87.861	US	Kankakee (IL)
-c2095	42.271	-89.094	US	Rockford (IL)
-c2096	42.32	-89.058	US	Loves Park (IL)
-c2097	42.347	-89.039	US	Machesney Park (IL)
-c2098	41.507	-90.515	US	Moline (IL)
-c2099	39.799	-89.644	US	Springfield (IL)
-c2100	39.845	-88.952	US	Decatur (IL)
-c2101	40.116	-88.243	US	Champaign (IL)
-c2102	40.112	-88.207	US	Urbana (IL)
-c2103	40.694	-89.589	US	Peoria (IL)
-c2104	41.64	-87.455	US	East Chicago (IN)
-c2105	41.602	-87.337	US	Gary (IN)
-c2106	41.583	-87.5	US	Hammond (IN)
-c2107	41.483	-87.333	US	Merrillville (IN)
-c2108	41.417	-87.365	US	Crown Point (IN)
-c2109	41.479	-87.455	US	Schererville (IN)
-c2110	41.532	-87.255	US	Hobart (IN)
-c2111	42.201	-85.58	US	Portage (IN)
-c2112	41.473	-87.061	US	Valparaiso (IN)
-c2113	41.611	-87.064	US	Chesterton (Porter County, IN)
-c2114	41.708	-86.895	US	Michigan City (IN)
-c2115	41.611	-86.723	US	La Porte (IN)
-c2116	41.683	-86.25	US	South Bend (IN)
-c2117	41.662	-86.159	US	Mishawaka (IN)
-c2118	41.682	-85.977	US	Elkhart (IN)
-c2119	41.582	-85.834	US	Goshen (Elkhart County, IN)
-c2120	37.702	-121.936	US	Dublin (OH)
-c2121	42.368	-83.353	US	Livonia (MI)
-c2122	37.972	-100.873	US	Garden City (MI)
-c2123	42.324	-83.401	US	Westland (MI)
-c2124	42.473	-83.222	US	Southfield (MI)
-c2125	42.58	-83.03	US	Sterling Heights (MI)
-c2126	40.844	-90.617	US	Warren (MI)
-c2127	42.497	-82.889	US	Saint Clair Shores (MI)
-c2128	42.489	-83.145	US	Royal Oak (MI)
-c2129	42.485	-83.377	US	Farmington Hills (MI)
-c2130	40.799	-81.378	US	Canton (MI)
-c2131	42.481	-83.475	US	Novi (MI)
-c2132	40.881	-88.63	US	Pontiac (MI)
-c2133	39.188	-77.612	US	Waterford (MI)
-c2134	42.658	-83.15	US	Rochester Hills (MI)
-c2135	42.734	-84.555	US	Lansing (MI)
-c2136	43.017	-83.724	US	Flint (MI)
-c2137	29.736	-94.977	US	Baytown (TX)
-c2138	34.148	-118.144	US	Pasadena (TX)
-c2139	29.564	-95.286	US	Pearland (TX)
-c2140	35.374	-119.019	US	Bakersfield (CA)
-c2141	34.142	-118.249	US	Glendale (CA)
-c2142	33.749	-117.873	US	Santa Ana (CA)
-c2143	25.691	-80.235	US	Coral Gables (FL)
-c2144	36.523	-119.287	US	Cutler (FL)
-c2145	25.576	-80.341	US	Cutler Bay (FL)
-c2146	41.585	-88.432	US	Kendall (FL)
-c2147	25.708	-80.326	US	Glenvar Heights (FL)
-c2148	25.708	-80.407	US	Kendale Lakes (FL)
-c2149	25.672	-80.448	US	The Hammocks (FL)
-c2150	25.634	-80.432	US	Country Walk (FL)
-c2151	25.61	-80.429	US	Richmond West (FL)
-c2152	25.563	-80.382	US	Goulds (FL)
-c2153	25.495	-80.429	US	Leisure City (FL)
-c2154	25.469	-80.478	US	Homestead (FL)
-c2155	25.448	-80.479	US	Florida City (FL)
-c2156	25.759	-80.398	US	Tamiami (FL)
-c2157	25.772	-80.348	US	Fountainebleau (FL)
-c2158	25.858	-80.278	US	Hialeah (FL)
-c2159	25.818	-80.354	US	Doral (FL)
-c2160	25.976	-80.335	US	Miramar (FL)
-c2161	34.103	-118.33	US	Hollywood (FL)
-c2162	25.986	-80.14	US	Hallandale Beach (FL)
-c2163	40.728	-74.078	US	Jersey City (NJ)
-c2164	38.781	-77.387	US	Clifton (NJ)
-c2165	40.736	-74.172	US	Newark (NJ)
-c2166	40.664	-74.211	US	Elizabeth (NJ)
-c2167	37.462	-89.25	US	Union (NJ)
-c2168	41.035	-73.865	US	Irvington (NJ)
-c2169	40.807	-74.185	US	Bloomfield (NJ)
-c2170	40.857	-74.128	US	Passaic (NJ)
-c2171	38.52	-89.984	US	Belleville (NJ)
-c2172	40.886	-74.043	US	Hackensack (NJ)
-c2173	40.804	-74.012	US	North Bergen (NJ)
-c2174	40.851	-73.97	US	Fort Lee (NJ)
-c2175	40.931	-73.899	US	Yonkers (NY)
-c2176	38.317	-88.903	US	Mt Vernon (Westchester County, NY)
-c2177	40.912	-73.783	US	New Rochelle (NY)
-c2178	41.034	-73.763	US	White Plains (NY)
-c2179	41.002	-73.666	US	Port Chester (NY)
-c2180	41.076	-73.859	US	Tarrytown (NY)
-c2181	41.161	-73.878	US	Ossining (NY)
-c2182	41.147	-73.99	US	New City (NY)
-c2183	30.097	-96.078	US	Hempstead (NY)
-c2184	40.701	-73.713	US	Elmont (NY)
-c2185	40.749	-73.641	US	Mineola (NY)
-c2186	40.756	-73.588	US	Westbury (NY)
-c2187	40.768	-73.525	US	Hicksville (NY)
-c2188	40.726	-73.514	US	Levittown (NY)
-c2189	40.664	-73.708	US	Valley Stream (NY)
-c2190	40.659	-73.641	US	Rockville Centre (NY)
-c2191	42.297	-89.621	US	Freeport (NY)
-c2192	33.196	-117.379	US	Oceanside (NY)
-c2193	33.785	-118.158	US	Long Beach (NY)
-c2194	40.714	-73.559	US	East Meadow (NY)
-c2195	40.684	-73.51	US	Wantagh (NY)
-c2196	40.681	-73.474	US	Massapequa (NY)
-c2197	40.687	-73.373	US	Lindenhurst (NY)
-c2198	34.185	-101.707	US	Plainview (NY)
-c2199	40.793	-73.415	US	Melville (NY)
-c2200	38.419	-82.445	US	Huntington (NY)
-c2201	40.843	-73.293	US	Commack (NY)
-c2202	37.932	-121.696	US	Brentwood (NY)
-c2203	40.725	-73.245	US	Bay Shore (NY)
-c2204	40.856	-73.201	US	Smithtown (NY)
-c2205	40.835	-73.131	US	Lake Ronkonkoma (NY)
-c2206	40.826	-73.698	US	Port Washington (NY)
-c2207	40.862	-73.634	US	Glen Cove (NY)
-c2208	40.826	-73.502	US	Syosset (NY)
-c2209	40.805	-73.336	US	Dix Hills (NY)
-c2210	40.826	-73.203	US	Hauppauge (NY)
-c2211	34.904	-110.159	US	Holbrook (NY)
-c2212	40.858	-73.1	US	Centereach (NY)
-c2213	40.866	-73.036	US	Selden (NY)
-c2214	40.869	-73.001	US	Coram (NY)
-c2215	40.926	-73.141	US	Stony Brook (NY)
-c2216	40.767	-72.996	US	East Patchogue (NY)
-c2217	42.577	-78.914	US	Shirley (NY)
-c2218	40.917	-72.662	US	Riverhead (NY)
-c2219	40.869	-72.518	US	Hampton Bays (NY)
-c2220	36.696	-77.159	US	Southampton (NY)
-c2221	39.85	-75.356	US	Chester (PA)
-c2222	40.726	-73.514	US	Levittown (PA)
-c2223	40.355	-80.049	US	Mt Lebanon (PA)
-c2224	40.421	-79.788	US	Monroeville (PA)
-c2225	40.328	-80.039	US	Bethel Park (PA)
-c2226	40.348	-79.864	US	McKeesport (PA)
-c2227	40.473	-79.818	US	Penn Hills (PA)
-c2228	42.129	-80.085	US	Erie (PA)
-c2229	37.03	-76.345	US	Hampton (VA)
-c2230	37.017	-76.451	US	Newport News (VA)
-c2231	37.271	-76.707	US	Williamsburg (VA)
-c2232	38.303	-77.461	US	Fredericksburg (VA)
-c2233	37.539	-77.434	US	Richmond (VA)
-c2234	33.739	-84.399	US	Mechanicsville (Hanover County, VA)
-c2235	40.95	-73.827	US	Tuckahoe (VA)
-c2236	41.625	-87.718	US	Midlothian (VA)
-c2237	46.131	-92.867	US	Sandston (VA)
-c2238	37.666	-77.506	US	Glen Allen (VA)
-c2239	39.85	-75.356	US	Chester (VA)
-c2240	39.099	-76.848	US	Laurel (VA)
-c2241	37.304	-77.287	US	Hopewell (City of Hopewell, VA)
-c2242	37.192	-77.368	US	Petersburg (VA)
-c2243	37.256	-77.411	US	Colonial Heights (VA)
-c2244	37.401	-79.184	US	Lynchburg (VA)
-c2245	37.238	-80.076	US	Roanoke (VA)
-c2246	44.939	-123.033	US	Salem (VA)
-c2247	36.505	-83.557	US	Cave Spring (VA)
-c2248	37.348	-79.95	US	Hollins (VA)
-c2249	38.029	-78.477	US	Charlottesville (VA)
-c2250	37.932	-121.696	US	Brentwood (Contra Costa County, CA)
-c2251	38.005	-121.806	US	Antioch (CA)
-c2252	37.669	-122.081	US	Hayward (CA)
-c2253	37.694	-122.086	US	Castro Valley (CA)
-c2254	37.725	-122.156	US	San Leandro (CA)
-c2255	37.596	-122.082	US	Union City (CA)
-c2256	37.702	-121.936	US	Dublin (CA)
-c2257	37.662	-121.875	US	Pleasanton (CA)
-c2258	37.682	-121.768	US	Livermore (CA)
-c2259	37.442	-122.163	US	Palo Alto (CA)
-c2260	34.075	-118.037	US	El Monte (CA)
-c2261	37.539	-77.434	US	Richmond (CA)
-c2262	37.497	-122.333	US	San Mateo (CA)
-c2263	37.369	-122.036	US	Sunnyvale (CA)
-c2264	37.386	-122.082	US	Mountain View (CA)
-c2265	37.379	-122.117	US	Los Altos (CA)
-c2266	37.428	-121.907	US	Milpitas (CA)
-c2267	37.485	-122.236	US	Redwood City (CA)
-c2268	39.414	-77.411	US	Frederick (MD)
-c2269	43.072	-70.763	US	Portsmouth (VA)
-c2270	36.718	-76.247	US	Chesapeake (VA)
-c2271	40.873	-72.86	US	Suffolk (VA)
-c2272	32.788	-79.94	US	Charleston (SC)
-c2273	32.855	-79.975	US	North Charleston (SC)
-c2274	32.794	-79.863	US	Mt Pleasant (SC)
-c2275	42.996	-71.455	US	Manchester (NH)
-c2276	42.765	-71.468	US	Nashua (NH)
-c2277	43.207	-71.537	US	Concord (NH)
-c2278	46.877	-96.79	US	Fargo (ND)
-c2279	45.787	-108.496	US	Billings (MT)
-c3691			US	Fairfax (VA)
-c4750			US	Athens (TX)
-c4751			US	Carthage (MO)
-c4752			US	Carthage (MS)
-c4753			US	Dothan (AL)
-c4754			US	Elkton (MD)
-c4755			US	Fayetteville (AR)
-c4756			US	Fort Scott (KS)
-c4757			US	Fort Smith (AR)
-c4758			US	Hattiesburg (MS)
-c4759			US	Lawton (OK)
-c4760			US	Longview (TX)
-c4761			US	Lufkin (TX)
-c4762			US	Meridian (MI)
-c4763			US	Nacogdoches (TX)
-c4764			US	Nevada (MO)
-c4765			US	Pensacola (FL)
-c4766			US	Philadelphia (MS)
-c4767			US	Richmond (MI)
-c4768			US	Rogers (AR)
-c4769			US	Savannah (GA)
-c4770			US	Springdale (AR)
-c4771			US	Tuscaloosa (AL)
-c4772			US	Tyler (TX)
-c4773			US	Valdosta (GA)
-c4774			US	Wiggins (MS)
-c4775			US	Wilmington (DE)
+c282	53.721	-1.867	GB	Halifax
+c283	54.822	-1.744	GB	Lanchester
+c284	53.405	-2.981	GB	Liverpool
+c285	51.507	-0.128	GB	London
+c286	53.479	-2.244	GB	Manchester
+c311	50.845	-0.15	GB	Brighton & Hove
+c312	52.637	-1.131	GB	Leicester
+c313	52.629	1.292	GB	Norwich
+c314	50.903	-1.404	GB	Southampton
+c565	53.797	-1.544	GB	Leeds
+c646	52.239	-0.902	GB	Northampton
+c671	52.478	-1.895	GB	Birmingham
+c672	51.453	-2.597	GB	Bristol
+c1264	54.048	-2.799	GB	Lancaster
+c1265	53.759	-2.705	GB	Preston
+c1266	52.953	-1.149	GB	Nottingham
+c1267	50.371	-4.143	GB	Plymouth
+c1268	53.794	-1.749	GB	Bradford
+c1269	53.016	-2.181	GB	Stoke-on-Trent
+c1270	54.906	-1.375	GB	Sunderland
+c1271	53.683	-1.5	GB	Wakefield
+c1272	52.585	-2.128	GB	Wolverhampton
+c1273	52.408	-1.51	GB	Coventry
+c1274	53.744	-0.339	GB	Hull
+c1275	54.977	-1.614	GB	Newcastle upon Tyne
+c1276	52.921	-1.476	GB	Derby
+c1277	53.381	-1.47	GB	Sheffield
+c1278	53.546	-2.626	GB	WIGAN
+c280			GB	Edinburgh
+c281			GB	Glasgow
 c8413			UY	Rivera
 c8414			UY	Salto
 c8415			UY	Paysandu
@@ -5795,3 +4819,974 @@ c8432			ZW	Chitungwiza
 c8433			ZW	Mutare
 c8434			ZW	Gweru
 c8435			ZW	Bulawayo
+c625	42.651	-73.755	US	Albany	New York
+c626	33.749	-84.39	US	Atlanta	Georgia
+c627	42.36	-71.06	US	Boston	Massachusetts
+c628	41.876	-87.624	US	Chicago	Illinois
+c629	32.776	-96.797	US	Dallas	Texas
+c630	29.759	-95.368	US	Houston	Texas
+c631	39.084	-94.563	US	Kansas city	Missouri
+c632	34.055	-118.244	US	Los Angeles	California
+c633	25.774	-80.194	US	Miami	Florida
+c634	40.731	-73.987	US	New York	New York
+c635	28.542	-81.379	US	Orlando	Florida
+c636	40.917	-74.172	US	Paterson	New Jersey
+c637	39.952	-75.164	US	Philadelphia	Pennsylvania
+c638	40.442	-79.99	US	Pittsburgh	Pennsylvania
+c639	43.157	-77.615	US	Rochester	New York
+c640	37.779	-122.419	US	San francisco	California
+c641	43.048	-76.147	US	Syracuse	New York
+c642	38.895	-77.037	US	Washington DC
+c1354			US	Kansas City	Kansas
+c1355	39.311	-94.923	US	Leavenworth	Kansas
+c1356	38.982	-94.671	US	Overland Park	Kansas
+c1357	38.884	-94.816	US	Olathe	Kansas
+c1358	38.972	-95.236	US	Lawrence	Kansas
+c1359	39.049	-95.678	US	Topeka	Kansas
+c1360			US	Manhattan	Kansas
+c1361	39.029	-96.831	US	Junction City	Kansas
+c1362	38.911	-94.382	US	Lee's Summit	Missouri
+c1363	37.224	-95.708	US	Independence	Missouri
+c1364	39.017	-94.282	US	Blue Springs	Missouri
+c1365	39.769	-94.847	US	St Joseph	Missouri
+c1366	33.521	-86.802	US	Birmingham	Alabama
+c1367	33.382	-86.917	US	Bessemer	Alabama
+c1368	33.435	-86.638	US	Hoover (Jefferson County)	Alabama
+c1369			US	Pelham (Shelby County)	Alabama
+c1370	33.244	-86.816	US	Alabaster	Alabama
+c1371	33.586	-86.286	US	Pell City	Alabama
+c1372	32.471	-85.001	US	Phenix City	Alabama
+c1373	38.834	-104.825	US	Colorado Springs	Colorado
+c1374			US	Concord	California
+c1375	37.948	-122.061	US	Pleasant Hill	California
+c1376	38.019	-122.134	US	Martinez	California
+c1377	37.706	-122.462	US	Daly City	California
+c1378	37.974	-122.531	US	San Rafael	California
+c1379			US	Pittsburg	California
+c1380			US	Santa Rosa	California
+c1381	38.34	-122.701	US	Rohnert Park	California
+c1382	38.27	-122.606	US	Petaluma	California
+c1383	38.106	-122.568	US	Novato	California
+c1384	38.297	-122.286	US	Napa	California
+c1385	38.249	-122.04	US	Fairfield	California
+c1386	38.357	-121.988	US	Vacaville	California
+c1387	38.104	-122.257	US	Vallejo	California
+c1388	38.511	-122.847	US	Sonoma	California
+c1389	41.591	-93.604	US	Des Moines	Iowa
+c1390	41.565	-93.76	US	West Des Moines	Iowa
+c1391	41.627	-93.738	US	Urbandale	Iowa
+c1392	41.732	-93.6	US	Ankeny	Iowa
+c1393			US	Altoona	Iowa
+c1394	41.976	-91.67	US	Cedar Rapids	Iowa
+c1395			US	Marion	Iowa
+c1396	41.661	-91.53	US	Iowa City	Iowa
+c1397	41.524	-90.578	US	Davenport	Iowa
+c1398	33.122	-117.081	US	Escondido	California
+c1399	33.2	-117.243	US	Vista	California
+c1400	41.08	-85.139	US	Fort Wayne	Indiana
+c1401	37.548	-121.989	US	Fremont	California
+c1402	33.678	-118	US	Huntington Beach	California
+c1403	33.617	-117.929	US	Newport Beach	California
+c1404	33.663	-117.903	US	Costa Mesa	California
+c1405	33.962	-118.353	US	Inglewood	California
+c1406	34.669	-86.442	US	Huntsville	Alabama
+c1407			US	Decatur	Alabama
+c1408	34.134	-86.878	US	Cullman	Alabama
+c1409	32.41	-90.162	US	Jackson	Mississippi
+c1410	40.8	-96.668	US	Lincoln	Nebraska
+c1411	33.785	-118.158	US	Long Beach	California
+c1412			US	Westminster	California
+c1413	33.832	-118.252	US	Carson	California
+c1414	33.895	-118.226	US	Compton	California
+c1415	43.075	-89.384	US	Madison	Wisconsin
+c1416			US	Fitchburg	Wisconsin
+c1417			US	Verona	Wisconsin
+c1418	43.106	-89.509	US	Middleton	Wisconsin
+c1419	43.183	-89.213	US	Sun Prairie	Wisconsin
+c1420	44.53	-88.025	US	Green Bay	Wisconsin
+c1421	44.261	-88.407	US	Appleton	Wisconsin
+c1422	44.021	-88.541	US	Oshkosh	Wisconsin
+c1423	43.775	-88.446	US	Fond du Lac	Wisconsin
+c1424	43.751	-87.715	US	Sheboygan	Wisconsin
+c1425	44.089	-87.658	US	Manitowoc	Wisconsin
+c1426	42.585	-87.821	US	Kenosha	Wisconsin
+c1427	33.436	-111.586	US	Mesa	Arizona
+c1428	33.294	-111.738	US	Gilbert	Arizona
+c1429	37.639	-120.997	US	Modesto	California
+c1430	37.595	-120.958	US	Ceres	California
+c1431			US	Salida	California
+c1432			US	Ripon	California
+c1433	37.799	-121.212	US	Manteca	California
+c1434	37.719	-121.434	US	Tracy	California
+c1435	29.95	-90.07	US	New Orleans	Louisiana
+c1436	30.002	-90.177	US	Metairie	Louisiana
+c1437	29.994	-90.242	US	Kenner	Louisiana
+c1438	32.522	-93.765	US	Shreveport	Louisiana
+c1439	32.506	-93.651	US	Bossier City	Louisiana
+c1440	30.224	-92.02	US	Lafayette	Louisiana
+c1441	33.196	-117.379	US	Oceanside	California
+c1442	33.158	-117.351	US	Carlsbad	California
+c1443	33.037	-117.292	US	Encinitas	California
+c1444	34.066	-117.648	US	Ontario	California
+c1445	34.013	-117.69	US	Chino	California
+c1446	34.103	-117.575	US	Rancho Cucamonga	California
+c1447	34.106	-117.37	US	Rialto	California
+c1448	34.092	-117.435	US	Fontana	California
+c1449	34.07	-117.249	US	Redlands	California
+c1450	33.953	-117.396	US	Riverside	California
+c1451			US	Corona	California
+c1452	34.055	-117.752	US	Pomona	California
+c1453	34.069	-117.939	US	West Covina	California
+c1454	34.016	-118.112	US	Montebello	California
+c1455	33.932	-117.946	US	La Habra	California
+c1456			US	Norwalk	California
+c1457	33.94	-118.133	US	Downey	California
+c1458	33.75	-117.87	US	Orange	California
+c1459	33.775	-117.946	US	Garden Grove	California
+c1460	33.704	-117.963	US	Fountain Valley	California
+c1461	33.597	-117.659	US	Mission Viejo	California
+c1462	33.938	-117.231	US	Moreno Valley	California
+c1463	33.783	-117.229	US	Perris	California
+c1464			US	Menifee	California
+c1465	33.578	-117.188	US	Murrieta	California
+c1466	33.495	-117.147	US	Temecula	California
+c1467	33.779	-117.036	US	Hemet	California
+c1468	33.825	-116.54	US	Palm Springs	California
+c1469	33.781	-116.464	US	Cathedral City	California
+c1470	33.729	-116.383	US	Palm Desert	California
+c1471	33.744	-116.223	US	Indio	California
+c1472	34.198	-119.18	US	Oxnard	California
+c1473	34.422	-119.703	US	Santa Barbara	California
+c1474	34.953	-120.436	US	Santa Maria	California
+c1475	34.344	-119.295	US	Ventura	California
+c1476	34.216	-119.038	US	Camarillo	California
+c1477	34.269	-118.781	US	Simi Valley	California
+c1478	34.286	-118.882	US	Moorpark	California
+c1479	34.354	-119.059	US	Santa Paula	California
+c1480	34.148	-118.144	US	Pasadena	California
+c1481	34.182	-118.326	US	Burbank	California
+c1482	35.78	-78.639	US	Raleigh	North Carolina
+c1483	35.788	-78.781	US	Cary	North Carolina
+c1484	35.733	-78.851	US	Apex	North Carolina
+c1485	35.913	-79.056	US	Chapel Hill	North Carolina
+c1486	44.95	-93.102	US	Saint Paul	Minnesota
+c1487	44.923	-92.959	US	Woodbury	Minnesota
+c1488			US	Bloomington	Minnesota
+c1489	44.855	-93.471	US	Eden Prairie	Minnesota
+c1490	44.913	-93.499	US	Minnetonka	Minnesota
+c1491			US	Plymouth	Minnesota
+c1492	44.818	-93.166	US	Eagan	Minnesota
+c1493	44.732	-93.218	US	Apple Valley	Minnesota
+c1494	45.1	-93.344	US	Brooklyn Park	Minnesota
+c1495	27.77	-82.67	US	Saint Petersburg	Florida
+c1496	27.86	-82.704	US	Pinellas Park	Florida
+c1497	27.909	-82.787	US	Largo	Florida
+c1498	28.046	-82.797	US	Dunedin	Florida
+c1499	28.078	-82.764	US	Palm Harbor	Florida
+c1500	28.148	-82.777	US	Tarpon Springs	Florida
+c1501	28.556	-82.45	US	Spring Hill (Hernando County)	Florida
+c1502	27.499	-82.575	US	Bradenton	Florida
+c1503	27.336	-82.531	US	Sarasota	Florida
+c1504	27.1	-82.454	US	Venice	Florida
+c1505			US	Englewood	Florida
+c1506	27.044	-82.236	US	North Port	Florida
+c1507	26.976	-82.091	US	Port Charlotte	Florida
+c1508	26.93	-82.045	US	Punta Gorda	Florida
+c1509	26.606	-81.981	US	Cape Coral	Florida
+c1510	26.641	-81.872	US	Fort Myers	Florida
+c1511			US	Iona	Florida
+c1512	26.353	-81.821	US	Bonita Springs	Florida
+c1513	26.219	-81.792	US	North Naples	Florida
+c1514	26.142	-81.795	US	Naples	Florida
+c1515	25.936	-81.695	US	Marco Island	Florida
+c1516	36.909	-121.753	US	Watsonville	California
+c1517	36.674	-121.655	US	Salinas	California
+c1518	37.354	-121.955	US	Santa Clara	California
+c1519	34.392	-118.543	US	Santa Clarita	California
+c1520			US	Lancaster	California
+c1521	34.579	-118.117	US	Palmdale	California
+c1522	37.958	-121.291	US	Stockton	California
+c1523	38.097	-121.388	US	Lodi	California
+c1524	38.255	-121.3	US	Galt	California
+c1525	34.171	-118.911	US	Thousand Oaks	California
+c1526	33.836	-118.341	US	Torrance	California
+c1527	33.911	-118.348	US	Hawthorne	California
+c1528	42.268	-83.731	US	Ann Arbor	Michigan
+c1529	42.241	-83.613	US	Ypsilanti	Michigan
+c1530	42.887	-78.878	US	Buffalo	New York
+c1531	43.021	-78.878	US	Tonawanda	New York
+c1532			US	Amherst	New York
+c1533	42.903	-78.755	US	Cheektowaga	New York
+c1534	42.839	-78.747	US	West Seneca	New York
+c1535	43.213	-77.58	US	Irondequoit	New York
+c1536			US	Penfield	New York
+c1537			US	Brighton (Monroe County)	New York
+c1538	35.227	-80.843	US	Charlotte	North Carolina
+c1539			US	Fayetteville	North Carolina
+c1540			US	Wilmington	North Carolina
+c1541			US	Jacksonville	North Carolina
+c1542			US	Fort Bragg	North Carolina
+c1543	34.97	-78.945	US	Hope Mills	North Carolina
+c1544	31.811	-106.501	US	El Paso	Texas
+c1545			US	Midland	Texas
+c1546	27.506	-99.509	US	Laredo	Texas
+c1547	39.291	-76.611	US	Baltimore	Maryland
+c1548			US	Columbia	Maryland
+c1549	38.996	-77.029	US	Silver Spring	Maryland
+c1550	39.267	-76.798	US	Ellicott City	Maryland
+c1551	39.084	-77.153	US	Rockville	Maryland
+c1552	39.163	-76.625	US	Glen Burnie	Maryland
+c1553	39.257	-76.524	US	Dundalk	Maryland
+c1554	39.09	-76.707	US	Odenton	Maryland
+c1555	39.485	-76.65	US	Cockeysville	Maryland
+c1556	39.459	-76.821	US	Reisterstown	Maryland
+c1557			US	Bel Air (Harford County)	Maryland
+c1558	41.505	-81.693	US	Cleveland	Ohio
+c1559	41.52	-81.556	US	Cleveland Heights	Ohio
+c1560	41.382	-81.736	US	Parma	Ohio
+c1561			US	Lakewood	Ohio
+c1562	41.455	-81.918	US	Westlake	Ohio
+c1563	41.314	-81.835	US	Strongsville	Ohio
+c1564	41.314	-81.725	US	North Royalton	Ohio
+c1565	41.368	-82.107	US	Elyria	Ohio
+c1566	41.467	-82.178	US	Lorain	Ohio
+c1567	41.593	-81.527	US	Euclid	Ohio
+c1568	41.519	-81.458	US	Mayfield Heights	Ohio
+c1569	41.416	-81.923	US	North Olmsted	Ohio
+c1570			US	Brunswick	Ohio
+c1571	41.083	-81.518	US	Akron	Ohio
+c1572	41.135	-81.485	US	Cuyahoga Falls	Ohio
+c1573	41.013	-81.605	US	Barberton	Ohio
+c1574	41.026	-81.73	US	Wadsworth	Ohio
+c1575	41.1	-81.938	US	Medina	Ohio
+c1576			US	Willoughby	Ohio
+c1577	41.666	-81.34	US	Mentor	Ohio
+c1578	41.724	-81.246	US	Painesville	Ohio
+c1579	39.739	-104.985	US	Denver	Colorado
+c1580	39.917	-104.905	US	Thornton	Colorado
+c1581	39.837	-105.037	US	Westminster	Colorado
+c1582	39.821	-105.221	US	Arvada	Colorado
+c1583	39.631	-105.11	US	Lakewood	Colorado
+c1584			US	Englewood	Colorado
+c1585	39.613	-105.017	US	Littleton	Colorado
+c1586			US	Aurora	Colorado
+c1587	39.568	-104.978	US	Centennial	Colorado
+c1588	39.938	-105.059	US	Broomfield	Colorado
+c1589	40.551	-105.067	US	Fort Collins	Colorado
+c1590	40.386	-105.044	US	Loveland	Colorado
+c1591	38.254	-104.609	US	Pueblo	Colorado
+c1592	36.065	-119.017	US	Porterville	California
+c1593	36.252	-118.853	US	Tulare	California
+c1594	36.33	-119.292	US	Visalia	California
+c1595	36.73	-119.709	US	Fresno	California
+c1596			US	Clovis	California
+c1597	44.977	-93.265	US	Minneapolis	Minnesota
+c1598	43.55	-96.7	US	Sioux Falls	South Dakota
+c1599	36.889	-76.248	US	Norfolk	Virginia
+c1600	36.853	-75.977	US	Virginia Beach	Virginia
+c1601			US	Arlington	Virginia
+c1602	38.83	-77.196	US	Annandale	Virginia
+c1603			US	Springfield	Virginia
+c1604	41.824	-71.413	US	Providence	Rhode Island
+c1605	41.879	-71.383	US	Pawtucket	Rhode Island
+c1606	41.85	-71.466	US	North Providence	Rhode Island
+c1607	41.814	-71.37	US	East Providence	Rhode Island
+c1608	41.781	-71.437	US	Cranston	Rhode Island
+c1609	41.7	-71.416	US	Warwick	Rhode Island
+c1610	41.7	-71.683	US	Coventry	Rhode Island
+c1611	41.66	-71.456	US	East Greenwich	Rhode Island
+c1612	41.551	-71.469	US	North Kingstown	Rhode Island
+c1613	41.456	-71.539	US	South Kingstown	Rhode Island
+c1614	41.49	-71.314	US	Newport	Rhode Island
+c1615			US	Newport East	Rhode Island
+c1616	41.378	-71.827	US	Westerly	Rhode Island
+c1617	41.351	-72.077	US	Groton	Connecticut
+c1618	41.356	-72.1	US	New London	Connecticut
+c1619	41.524	-72.076	US	Norwich	Connecticut
+c1620	32.717	-117.163	US	San Diego	California
+c1621	32.963	-117.036	US	Poway	California
+c1622	32.64	-117.084	US	Chula Vista	California
+c1623	32.795	-116.963	US	El Cajon	California
+c1624	27.948	-82.458	US	Tampa	Florida
+c1625	28.538	-81.545	US	Ocoee	Florida
+c1626	28.6	-81.343	US	Winter Park	Florida
+c1627			US	Pine Hills (Orange County)	Florida
+c1628	35.084	-106.651	US	Albuquerque	New Mexico
+c1629	35.269	-106.633	US	Rio Rancho	New Mexico
+c1630	32.314	-106.78	US	Las Cruces	New Mexico
+c1631	42.349	-83.057	US	Detroit	Michigan
+c1632			US	Jackson	Michigan
+c1633	47.604	-122.33	US	Seattle	Washington
+c1634	47.614	-122.192	US	Bellevue	Washington
+c1635	47.686	-122.192	US	Kirkland	Washington
+c1636	47.626	-122.52	US	Bainbridge Island	Washington
+c1637	47.533	-122.754	US	Bremerton	Washington
+c1638	47.659	-122.677	US	Silverdale	Washington
+c1639	47.47	-122.349	US	Burien	Washington
+c1640	47.48	-122.203	US	Renton	Washington
+c1641	47.535	-122.043	US	Issaquah	Washington
+c1642	47.669	-122.124	US	Redmond	Washington
+c1643	47.609	-122.042	US	Sammamish	Washington
+c1644	47.205	-121.992	US	Enumclaw	Washington
+c1645			US	Kent	Washington
+c1646			US	Auburn	Washington
+c1647	47.25	-122.44	US	Tacoma	Washington
+c1648	47.185	-122.292	US	Puyallup	Washington
+c1649			US	Lakewood	Washington
+c1650			US	Parkland	Washington
+c1651			US	South Hill	Washington
+c1652	47.098	-122.424	US	Spanaway	Washington
+c1653	47.313	-122.339	US	Federal Way	Washington
+c1654			US	Covington	Washington
+c1655	47.659	-117.425	US	Spokane	Washington
+c1656	47.669	-117.197	US	Spokane Valley	Washington
+c1657	47.967	-122.201	US	Everett	Washington
+c1658			US	Marysville	Washington
+c1659	36.156	-95.993	US	Tulsa	Oklahoma
+c1660	36.053	-95.791	US	Broken Arrow	Oklahoma
+c1661	40.767	-111.89	US	Salt Lake City	Utah
+c1662	40.697	-111.987	US	West Valley City	Utah
+c1663	40.688	-111.858	US	Millcreek	Utah
+c1664	40.669	-111.825	US	Holladay	Utah
+c1665	40.668	-111.939	US	Taylorsville	Utah
+c1666			US	Murray	Utah
+c1667	40.61	-111.939	US	West Jordan	Utah
+c1668	40.62	-111.81	US	Cottonwood Heights	Utah
+c1669	40.573	-111.833	US	Sandy	Utah
+c1670	40.562	-111.93	US	South Jordan	Utah
+c1671			US	Riverton	Utah
+c1672	40.525	-111.864	US	Draper	Utah
+c1673	40.377	-111.796	US	American Fork	Utah
+c1674	40.388	-111.849	US	Lehi	Utah
+c1675	40.364	-111.739	US	Pleasant Grove	Utah
+c1676	40.298	-111.694	US	Orem	Utah
+c1677	40.234	-111.659	US	Provo	Utah
+c1678	40.167	-111.611	US	Springville	Utah
+c1679			US	Mapleton	Utah
+c1680	40.115	-111.655	US	Spanish Fork	Utah
+c1681			US	Salem	Utah
+c1682			US	Payson	Utah
+c1683	39.962	-83.001	US	Columbus	Ohio
+c1684			US	Delaware	Ohio
+c1685	40.126	-82.929	US	Westerville	Ohio
+c1686	32.222	-110.926	US	Tucson	Arizona
+c1687	27.966	-82.8	US	Clearwater	Florida
+c1688	39.799	-89.644	US	Springfield	Missouri
+c1689	39.768	-86.158	US	Indianapolis	Indiana
+c1690			US	Rochester	Minnesota
+c1691	44.084	-93.226	US	Owatonna	Minnesota
+c1692	44.163	-93.999	US	Mankato	Minnesota
+c1693	29.425	-98.495	US	San Antonio	Texas
+c1694	32.863	-96.979	US	Irving	Texas
+c1695	32.702	-97.14	US	Arlington	Texas
+c1696	32.657	-97.028	US	Grand Prairie	Texas
+c1697	31.549	-97.147	US	Waco	Texas
+c1698	42.963	-85.668	US	Grand Rapids	Michigan
+c1699			US	Wyoming	Michigan
+c1700	42.869	-85.645	US	Kentwood	Michigan
+c1701			US	Georgetown Township	Michigan
+c1702	32.753	-97.333	US	Fort Worth	Texas
+c1703	32.767	-96.599	US	Mesquite	Texas
+c1704	33.014	-96.693	US	Plano	Texas
+c1705			US	Carrollton	Texas
+c1706	33.046	-96.994	US	Lewisville (Denton County)	Texas
+c1707	33.015	-97.097	US	Flower Mound	Texas
+c1708	33.151	-96.824	US	Frisco	Texas
+c1709	33.198	-96.615	US	McKinney	Texas
+c1710			US	Allen	Texas
+c1711	32.913	-96.639	US	Garland	Texas
+c1712	32.948	-96.73	US	Richardson	Texas
+c1713	32.934	-97.078	US	Grapevine	Texas
+c1714	32.847	-97.067	US	Euless	Texas
+c1715			US	Bedford	Texas
+c1716			US	Keller	Texas
+c1717	27.8	-97.396	US	Corpus Christi	Texas
+c1718	35.207	-101.834	US	Amarillo	Texas
+c1719	33.914	-98.493	US	Wichita Falls	Texas
+c1720	25.914	-97.489	US	Brownsville	Texas
+c1721	26.191	-97.696	US	Harlingen	Texas
+c1722	32.446	-99.733	US	Abilene	Texas
+c1723	30.086	-94.102	US	Beaumont	Texas
+c1724	29.899	-93.929	US	Port Arthur	Texas
+c1725			US	Odessa	Texas
+c1726	42.467	-70.949	US	Lynn	Massachusetts
+c1727	30.451	-91.155	US	Baton Rouge	Louisiana
+c1728	38.582	-121.494	US	Sacramento	California
+c1729	38.604	-121.383	US	Arden-Arcade	California
+c1730	38.409	-121.372	US	Elk Grove	California
+c1731	38.545	-121.745	US	Davis	California
+c1732	38.679	-121.773	US	Woodland	California
+c1733	38.589	-121.303	US	Rancho Cordova	California
+c1734	38.686	-121.372	US	North Highlands	California
+c1735	38.707	-121.281	US	Citrus Heights	California
+c1736	39.378	-123.341	US	Fair Oaks (Sacramento County)	California
+c1737	38.723	-121.186	US	Roseville	California
+c1738	38.791	-121.236	US	Rocklin	California
+c1739			US	Lincoln	California
+c1740	39.101	-84.512	US	Cincinnati	Ohio
+c1741	38.046	-84.497	US	Lexington	Kentucky
+c1742	39.084	-84.508	US	Covington	Kentucky
+c1743	36.166	-115.149	US	Las Vegas	Nevada
+c1744	36.201	-115.112	US	North Las Vegas	Nevada
+c1745	36.211	-115.073	US	Sunrise Manor	Nevada
+c1746			US	Henderson	Nevada
+c1747	35.979	-114.832	US	Boulder City	Nevada
+c1748	40.015	-105.271	US	Boulder	Colorado
+c1749	35.473	-97.517	US	Oklahoma City	Oklahoma
+c1750	35.223	-97.439	US	Norman	Oklahoma
+c1751	35.657	-97.465	US	Edmond	Oklahoma
+c1752	35.34	-97.487	US	Moore	Oklahoma
+c1753	26.122	-80.143	US	Fort Lauderdale	Florida
+c1754	26.127	-80.258	US	Plantation (Broward County)	Florida
+c1755	26.148	-80.329	US	Sunrise (Broward County)	Florida
+c1756	26.18	-80.137	US	Oakland Park (Broward County)	Florida
+c1757	26.265	-80.265	US	Coral Springs	Florida
+c1758	26.238	-80.125	US	Pompano Beach	Florida
+c1759	26.318	-80.1	US	Deerfield Beach	Florida
+c1760	26.461	-80.073	US	Delray Beach	Florida
+c1761	41.167	-73.205	US	Bridgeport	Connecticut
+c1762			US	Fairfield	Connecticut
+c1763	41.185	-73.133	US	Stratford	Connecticut
+c1764	41.118	-73.408	US	Norwalk	Connecticut
+c1765	41.053	-73.539	US	Stamford	Connecticut
+c1766	41.222	-73.056	US	Milford	Connecticut
+c1767	41.271	-72.947	US	West Haven	Connecticut
+c1768	41.308	-72.925	US	New Haven	Connecticut
+c1769	41.276	-72.868	US	East Haven	Connecticut
+c1770	41.391	-72.86	US	North Haven	Connecticut
+c1771	41.28	-72.815	US	Branford	Connecticut
+c1772	41.396	-72.897	US	Hamden	Connecticut
+c1773			US	Orange	Connecticut
+c1774	41.316	-73.093	US	Shelton	Connecticut
+c1775			US	Derby	Connecticut
+c1776	41.343	-73.079	US	Ansonia	Connecticut
+c1777			US	Trumbull	Connecticut
+c1778	41.457	-72.823	US	Wallingford	Connecticut
+c1779	41.763	-72.683	US	Hartford	Connecticut
+c1780	41.558	-73.051	US	Waterbury	Connecticut
+c1781	41.562	-72.651	US	Middletown	Connecticut
+c1782	41.395	-73.454	US	Danbury	Connecticut
+c1783	30.438	-84.281	US	Tallahassee	Florida
+c1784			US	Quincy	Florida
+c1785	33.449	-112.077	US	Phoenix	Arizona
+c1786	33.509	-111.899	US	Scottsdale	Arizona
+c1787	29.652	-82.325	US	Gainesville	Florida
+c1788	33.184	-97.141	US	Denton	Texas
+c1789	33.414	-111.909	US	Tempe	Arizona
+c1790	41.259	-95.938	US	Omaha	Nebraska
+c1791	36.073	-79.792	US	Greensboro	North Carolina
+c1792	35.956	-80.005	US	High Point	North Carolina
+c1793	36.1	-80.244	US	Winston-Salem	North Carolina
+c1794	43.035	-87.922	US	Milwaukee	Wisconsin
+c1795	38.627	-90.198	US	St. Louis	Missouri
+c1796	38.801	-90.628	US	St. Peters	Missouri
+c1797			US	St Charles	Missouri
+c1798	38.656	-90.574	US	Chesterfield	Missouri
+c1799	38.592	-89.911	US	O'Fallon	Missouri
+c1800	38.593	-90.546	US	Ballwin	Missouri
+c1801	38.47	-90.305	US	Oakville	Missouri
+c1802			US	Arnold	Missouri
+c1803	38.578	-90.419	US	Kirkwood	Missouri
+c1804	38.713	-90.43	US	Maryland Heights	Missouri
+c1805	38.771	-90.371	US	Hazelwood	Missouri
+c1806	38.789	-90.323	US	Florissant	Missouri
+c1807	37.336	-121.891	US	San Jose	California
+c1808	30.271	-97.744	US	Austin	Texas
+c1809	30.508	-97.679	US	Round Rock	Texas
+c1810	36.162	-86.774	US	Nashville	Tennessee
+c1811			US	Franklin	Tennessee
+c1812			US	Smyrna	Tennessee
+c1813			US	Brentwood	Tennessee
+c1814			US	Lebanon	Tennessee
+c1815	21.305	-157.856	US	Honolulu	Hawaii
+c1816	21.394	-157.744	US	Kailua	Hawaii
+c1817	21.406	-157.796	US	Kaneohe	Hawaii
+c1818			US	Aiea	Hawaii
+c1819	21.4	-157.969	US	Pearl City	Hawaii
+c1820	21.387	-158.009	US	Waipahu	Hawaii
+c1821	32.546	-85.419	US	Auburn	Alabama
+c1822	30.694	-88.043	US	Mobile	Alabama
+c1823	32.367	-86.301	US	Montgomery	Alabama
+c1824	32.464	-86.46	US	Prattville	Alabama
+c1825	35.96	-83.921	US	Knoxville	Tennessee
+c1826	36.01	-84.27	US	Oak Ridge	Tennessee
+c1827			US	Maryville	Tennessee
+c1828	35.885	-84.154	US	Farragut	Tennessee
+c1829			US	Clinton	Tennessee
+c1830	35.797	-84.256	US	Lenoir City	Tennessee
+c1831	35.846	-86.392	US	Murfreesboro	Tennessee
+c1832	34.108	-117.29	US	San Bernardino	California
+c1833	34.426	-117.301	US	Hesperia	California
+c1834	34.536	-117.291	US	Victorville	California
+c1835			US	Apple Valley	California
+c1836	36.6	-121.895	US	Monterey	California
+c1837	36.626	-121.817	US	Seaside	California
+c1838	37.007	-121.563	US	Gilroy	California
+c1839	26.359	-80.083	US	Boca Raton	Florida
+c1840			US	Columbia	Missouri
+c1841			US	Columbus	Georgia
+c1842	33.471	-81.975	US	Augusta	Georgia
+c1843	34.746	-92.29	US	Little Rock	Arkansas
+c1844	34.746	-92.153	US	North Little Rock	Arkansas
+c1845	34.815	-92.224	US	Sherwood (Pulaski County)	Arkansas
+c1846			US	Jacksonville (Pulaski County)	Arkansas
+c1847			US	Benton	Arkansas
+c1848	34.435	-93.046	US	Hot Springs	Arkansas
+c1849			US	Malvern	Arkansas
+c1850	34.121	-93.054	US	Arkadelphia	Arkansas
+c1851	34.228	-92.003	US	Pine Bluff	Arkansas
+c1852	34.975	-92.017	US	Cabot	Arkansas
+c1853	35.089	-92.442	US	Conway	Arkansas
+c1854	35.151	-92.744	US	Morrilton	Arkansas
+c1855	35.278	-93.134	US	Russellville	Arkansas
+c1856			US	Glendale	Arizona
+c1857			US	Peoria	Arizona
+c1858	33.629	-112.368	US	Surprise	Arizona
+c1859	33.436	-112.341	US	Avondale	Arizona
+c1860	35.994	-78.899	US	Durham	North Carolina
+c1861	30.332	-81.656	US	Jacksonville	Florida
+c1862	25.942	-80.24	US	Miami Gardens	Florida
+c1863	25.933	-80.163	US	North Miami Beach	Florida
+c1864	25.668	-80.302	US	Pinecrest (Miami-Dade County)	Florida
+c1865	26.023	-80.341	US	Pembroke Pines	Florida
+c1866	33.307	-111.841	US	Chandler	Arizona
+c1867	33.835	-117.912	US	Anaheim	California
+c1868	38.805	-77.047	US	Alexandria	Virginia
+c1869	26.525	-80.066	US	Boynton Beach	Florida
+c1870	26.621	-80.063	US	Lake Worth	Florida
+c1871			US	Wellington	Florida
+c1872	26.715	-80.053	US	West Palm Beach	Florida
+c1873	26.775	-80.058	US	Riviera Beach	Florida
+c1874	26.842	-80.135	US	Palm Beach Gardens	Florida
+c1875	26.927	-80.122	US	Jupiter	Florida
+c1876			US	Palm City	Florida
+c1877	27.294	-80.35	US	Port St. Lucie	Florida
+c1878	27.447	-80.326	US	Fort Pierce	Florida
+c1879	27.639	-80.398	US	Vero Beach	Florida
+c1880			US	Sebastian	Florida
+c1881	28.033	-80.643	US	Palm Bay	Florida
+c1882	28.084	-80.608	US	Melbourne	Florida
+c1883			US	Rockledge	Florida
+c1884	28.382	-80.776	US	Cocoa	Florida
+c1885	28.266	-80.664	US	Merritt Island	Florida
+c1886	28.612	-80.808	US	Titusville	Florida
+c1887	28.292	-81.408	US	Kissimmee	Florida
+c1888	28.665	-81.376	US	Altamonte Springs	Florida
+c1889	28.741	-81.534	US	Apopka	Florida
+c1890	28.659	-81.205	US	Oviedo	Florida
+c1891			US	University Park	Florida
+c1892	28.701	-81.349	US	Longwood	Florida
+c1893			US	Sanford	Florida
+c1894	28.901	-81.264	US	Deltona	Florida
+c1895	28.879	-81.323	US	DeBary	Florida
+c1896	29.02	-81.294	US	DeLand	Florida
+c1897	28.949	-81.299	US	Orange City	Florida
+c1898			US	Eustis	Florida
+c1899			US	Mt. Dora	Florida
+c1900	43.617	-116.201	US	Boise	Idaho
+c1901			US	Meridian	Idaho
+c1902	43.574	-116.56	US	Nampa	Idaho
+c1903			US	Caldwell	Idaho
+c1904	43.492	-116.42	US	Kuna	Idaho
+c1905	33.578	-101.855	US	Lubbock	Texas
+c1906	33.686	-117.826	US	Irvine	California
+c1907			US	Lake Forest	California
+c1908	42.263	-71.802	US	Worcester	Massachusetts
+c1909			US	Auburn	Massachusetts
+c1910	42.297	-71.714	US	Shrewsbury	Massachusetts
+c1911	42.346	-71.552	US	Marlborough	Massachusetts
+c1912	42.525	-71.76	US	Leominster	Massachusetts
+c1913	42.583	-71.802	US	Fitchburg	Massachusetts
+c1914	42.575	-71.998	US	Gardner	Massachusetts
+c1915			US	Littleton	Massachusetts
+c1916	42.712	-73.204	US	Williamstown	Massachusetts
+c1917	42.45	-73.245	US	Pittsfield	Massachusetts
+c1918			US	Springfield	Massachusetts
+c1919	42.125	-72.75	US	Westfield	Massachusetts
+c1920	42.171	-72.573	US	Chicopee	Massachusetts
+c1921	42.224	-72.64	US	Holyoke	Massachusetts
+c1922	42.267	-72.669	US	Easthampton	Massachusetts
+c1923	42.319	-72.631	US	Northampton	Massachusetts
+c1924	42.38	-72.523	US	Amherst	Massachusetts
+c1925	38.981	-77.123	US	Bethesda	Maryland
+c1926	39.046	-77.113	US	North Bethesda	Maryland
+c1927	41.154	-81.358	US	Kent	Ohio
+c1928	41.239	-81.346	US	Streetsboro	Ohio
+c1929			US	Warren	Ohio
+c1930			US	Niles	Ohio
+c1931	41.1	-80.65	US	Youngstown	Ohio
+c1932	41.098	-80.744	US	Austintown	Ohio
+c1933	41.025	-80.665	US	Boardman	Ohio
+c1934	40.915	-81.106	US	Alliance	Ohio
+c1935	40.799	-81.378	US	Canton	Ohio
+c1936	40.797	-81.522	US	Massillon	Ohio
+c1937	40.49	-81.446	US	New Philadelphia	Ohio
+c1938			US	Dover	Ohio
+c1939	40.805	-81.935	US	Wooster	Ohio
+c1940	40.619	-80.577	US	East Liverpool	Ohio
+c1941	45.631	-122.674	US	Vancouver	Washington
+c1942			US	Longview	Washington
+c1943	46.142	-122.906	US	Kelso	Washington
+c1944			US	Castle Rock	Washington
+c1945			US	Centralia	Washington
+c1946	46.602	-120.511	US	Yakima	Washington
+c1947	45.52	-122.674	US	Portland	Oregon
+c1948	45.487	-122.804	US	Beaverton	Oregon
+c1949	45.507	-122.437	US	Gresham	Oregon
+c1950	45.431	-122.772	US	Tigard	Oregon
+c1951	45.523	-122.99	US	Hillsboro	Oregon
+c1952	45.357	-122.607	US	Oregon City	Oregon
+c1953	45.384	-122.766	US	Tualatin	Oregon
+c1954	44.051	-123.095	US	Eugene	Oregon
+c1955			US	Springfield	Oregon
+c1956	44.939	-123.033	US	Salem	Oregon
+c1957			US	Albany	Oregon
+c1958	44.565	-123.262	US	Corvallis	Oregon
+c1959	45.211	-123.198	US	McMinnville	Oregon
+c1960	37.975	-87.556	US	Evansville	Indiana
+c1961	37.804	-122.271	US	Oakland	California
+c1962	37.906	-122.065	US	Walnut Creek	California
+c1963			US	Union City	New Jersey
+c1964	37.692	-97.338	US	Wichita	Kansas
+c1965	37.871	-122.273	US	Berkeley	California
+c1966	40.602	-75.471	US	Allentown	Pennsylvania
+c1967	40.618	-75.379	US	Bethlehem	Pennsylvania
+c1968	38.254	-85.759	US	Louisville	Kentucky
+c1969	37.988	-85.716	US	Shepherdsville	Kentucky
+c1970	39.529	-119.814	US	Reno	Nevada
+c1971	39.535	-119.753	US	Sparks	Nevada
+c1972	38.678	-121.176	US	Folsom	California
+c1973	38.669	-120.987	US	Cameron Park	California
+c1974	38.656	-121.074	US	El Dorado Hills	California
+c1975	35.149	-90.052	US	Memphis	Tennessee
+c1976	41.679	-83.513	US	Toledo	Ohio
+c1977			US	Oregon	Ohio
+c1978	41.557	-83.627	US	Perrysburg	Ohio
+c1979	35.046	-85.31	US	Chattanooga	Tennessee
+c1980			US	LaGrange	Georgia
+c1981			US	Smyrna	Georgia
+c1982	33.953	-84.55	US	Marietta	Georgia
+c1983	33.924	-84.379	US	Sandy Springs	Georgia
+c1984	32.841	-83.632	US	Macon	Georgia
+c1985			US	Athens	Georgia
+c1986	42.222	-70.999	US	Braintree	Massachusetts
+c1987	42.375	-71.106	US	Cambridge	Massachusetts
+c1988	42.195	-71.199	US	Norwood	Massachusetts
+c1989	42.616	-70.662	US	Gloucester	Massachusetts
+c1990	42.778	-71.077	US	Haverhill	Massachusetts
+c1991			US	Lawrence	Massachusetts
+c1992	42.633	-71.316	US	Lowell	Massachusetts
+c1993	42.6	-71.367	US	Chelmsford	Massachusetts
+c1994	42.611	-71.234	US	Tewksbury	Massachusetts
+c1995			US	Wilmington	Massachusetts
+c1996	42.726	-71.191	US	Methuen	Massachusetts
+c1997	42.813	-70.877	US	Newburyport	Massachusetts
+c1998	42.858	-70.93	US	Amesbury	Massachusetts
+c1999	42.588	-72.601	US	Greenfield (Franklin County)	Massachusetts
+c2000	42.701	-73.109	US	North Adams	Massachusetts
+c2001			US	Adams	Massachusetts
+c2002	42.283	-71.233	US	Needham	Massachusetts
+c2003	42.337	-71.209	US	Newton	Massachusetts
+c2004	42.376	-71.236	US	Waltham	Massachusetts
+c2005			US	Quincy	Massachusetts
+c2006	42.388	-71.099	US	Somerville	Massachusetts
+c2007			US	Medford	Massachusetts
+c2008	42.425	-71.066	US	Malden	Massachusetts
+c2009			US	Arlington	Massachusetts
+c2010			US	Belmont	Massachusetts
+c2011	42.242	-71.166	US	Dedham	Massachusetts
+c2012	42.279	-71.416	US	Framingham	Massachusetts
+c2013	42.408	-71.012	US	Revere	Massachusetts
+c2014			US	Salem	Massachusetts
+c2015	42.479	-71.152	US	Woburn	Massachusetts
+c2016	42.48	-71.099	US	Stoneham	Massachusetts
+c2017			US	Webster	Massachusetts
+c2018	42.075	-72.033	US	Southbridge	Massachusetts
+c2019	42.077	-71.63	US	Uxbridge	Massachusetts
+c2020			US	Milford	Massachusetts
+c2021			US	Franklin	Massachusetts
+c2022	42.065	-71.248	US	Foxborough	Massachusetts
+c2023			US	Mansfield	Massachusetts
+c2024	41.983	-71.333	US	North Attleborough	Massachusetts
+c2025	41.945	-71.286	US	Attleboro	Massachusetts
+c2026	41.9	-71.09	US	Taunton	Massachusetts
+c2027	41.893	-70.911	US	Middleborough	Massachusetts
+c2028			US	Fall River	Massachusetts
+c2029	41.636	-70.934	US	New Bedford	Massachusetts
+c2030	41.551	-70.615	US	Falmouth	Massachusetts
+c2031	41.578	-70.559	US	East Falmouth	Massachusetts
+c2032	42.221	-70.939	US	Weymouth	Massachusetts
+c2033	41.7	-70.299	US	Barnstable	Massachusetts
+c2034	41.653	-70.283	US	Hyannis	Massachusetts
+c2035			US	Yarmouth	Massachusetts
+c2036	41.667	-70.185	US	South Yarmouth	Massachusetts
+c2037	41.69	-70.156	US	South Dennis	Massachusetts
+c2038	41.686	-70.076	US	Harwich	Massachusetts
+c2039			US	Chatham	Massachusetts
+c2040			US	Brewster	Massachusetts
+c2041			US	Orleans	Massachusetts
+c2042	41.83	-69.974	US	Eastham	Massachusetts
+c2043	41.938	-70.033	US	Wellfleet	Massachusetts
+c2044	41.993	-70.05	US	Truro	Massachusetts
+c2045	42.033	-70.095	US	North Truro	Massachusetts
+c2046	42.058	-70.179	US	Provincetown	Massachusetts
+c2047	41.761	-88.32	US	Aurora	Illinois
+c2048	41.773	-88.148	US	Naperville	Illinois
+c2049	41.573	-87.784	US	Tinley Park	Illinois
+c2050			US	Homewood	Illinois
+c2051	41.506	-87.636	US	Chicago Heights	Illinois
+c2052	41.601	-87.607	US	South Holland	Illinois
+c2053	41.616	-87.529	US	Calumet City	Illinois
+c2054	41.63	-87.854	US	Orland Park	Illinois
+c2055	41.711	-87.758	US	Oak Lawn	Illinois
+c2056	41.525	-88.082	US	Joliet	Illinois
+c2057	41.429	-88.229	US	Channahon	Illinois
+c2058	41.356	-89.04	US	Lasalle	Illinois
+c2059	41.327	-89.129	US	Peru	Illinois
+c2060	41.121	-88.835	US	Streator	Illinois
+c2061	41.352	-88.845	US	Ottawa	Illinois
+c2062			US	Morris	Illinois
+c2063	41.648	-88.09	US	Romeoville	Illinois
+c2064	41.623	-88.228	US	Plainfield	Illinois
+c2065	41.7	-88.072	US	Bolingbrook	Illinois
+c2066	41.795	-88.007	US	Downers Grove	Illinois
+c2067	41.865	-88.11	US	Wheaton	Illinois
+c2068	41.88	-88.008	US	Lombard	Illinois
+c2069	41.899	-87.94	US	Elmhurst	Illinois
+c2070	41.914	-88.309	US	St. Charles	Illinois
+c2071	42.037	-88.281	US	Elgin	Illinois
+c2072	41.929	-88.75	US	Dekalb	Illinois
+c2073	41.989	-88.687	US	Sycamore	Illinois
+c2074			US	Geneva	Illinois
+c2075	41.913	-88.135	US	Carol Stream	Illinois
+c2076	41.91	-88.072	US	Glendale Heights	Illinois
+c2077	42.033	-88.083	US	Schaumburg	Illinois
+c2078	42.004	-87.971	US	Elk Grove Village	Illinois
+c2079	42.042	-87.887	US	Des Plaines	Illinois
+c2080	42.081	-87.98	US	Arlington Heights (Cook County)	Illinois
+c2081	42.066	-87.937	US	Mt Prospect	Illinois
+c2082	42.07	-87.811	US	Glenview (Cook County)	Illinois
+c2083	42.033	-87.733	US	Skokie	Illinois
+c2084	42.045	-87.693	US	Evanston	Illinois
+c2085	42.13	-87.83	US	Northbrook (Cook County)	Illinois
+c2086	42.125	-87.929	US	Wheeling	Illinois
+c2087	42.11	-88.034	US	Palatine	Illinois
+c2088	42.182	-87.8	US	Highland Park	Illinois
+c2089	42.171	-87.845	US	Deerfield	Illinois
+c2090	42.197	-88.093	US	Lake Zurich	Illinois
+c2091	42.219	-87.98	US	Vernon Hills	Illinois
+c2092	41.251	-87.831	US	Manteno	Illinois
+c2093	41.164	-87.884	US	Bourbonnais	Illinois
+c2094	41.12	-87.861	US	Kankakee	Illinois
+c2095	42.271	-89.094	US	Rockford	Illinois
+c2096	42.32	-89.058	US	Loves Park	Illinois
+c2097	42.347	-89.039	US	Machesney Park	Illinois
+c2098	41.507	-90.515	US	Moline	Illinois
+c2099	39.799	-89.644	US	Springfield	Illinois
+c2100	39.845	-88.952	US	Decatur	Illinois
+c2101	40.116	-88.243	US	Champaign	Illinois
+c2102	40.112	-88.207	US	Urbana	Illinois
+c2103	40.694	-89.589	US	Peoria	Illinois
+c2104	41.64	-87.455	US	East Chicago	Indiana
+c2105	41.602	-87.337	US	Gary	Indiana
+c2106	41.583	-87.5	US	Hammond	Indiana
+c2107	41.483	-87.333	US	Merrillville	Indiana
+c2108	41.417	-87.365	US	Crown Point	Indiana
+c2109	41.479	-87.455	US	Schererville	Indiana
+c2110	41.532	-87.255	US	Hobart	Indiana
+c2111			US	Portage	Indiana
+c2112	41.473	-87.061	US	Valparaiso	Indiana
+c2113	41.611	-87.064	US	Chesterton (Porter County)	Indiana
+c2114	41.708	-86.895	US	Michigan City	Indiana
+c2115	41.611	-86.723	US	La Porte	Indiana
+c2116	41.683	-86.25	US	South Bend	Indiana
+c2117	41.662	-86.159	US	Mishawaka	Indiana
+c2118	41.682	-85.977	US	Elkhart	Indiana
+c2119	41.582	-85.834	US	Goshen (Elkhart County)	Indiana
+c2120			US	Dublin	Ohio
+c2121	42.368	-83.353	US	Livonia	Michigan
+c2122			US	Garden City	Michigan
+c2123	42.324	-83.401	US	Westland	Michigan
+c2124	42.473	-83.222	US	Southfield	Michigan
+c2125	42.58	-83.03	US	Sterling Heights	Michigan
+c2126			US	Warren	Michigan
+c2127	42.497	-82.889	US	Saint Clair Shores	Michigan
+c2128	42.489	-83.145	US	Royal Oak	Michigan
+c2129	42.485	-83.377	US	Farmington Hills	Michigan
+c2130			US	Canton	Michigan
+c2131	42.481	-83.475	US	Novi	Michigan
+c2132			US	Pontiac	Michigan
+c2133			US	Waterford	Michigan
+c2134	42.658	-83.15	US	Rochester Hills	Michigan
+c2135	42.734	-84.555	US	Lansing	Michigan
+c2136	43.017	-83.724	US	Flint	Michigan
+c2137	29.736	-94.977	US	Baytown	Texas
+c2138			US	Pasadena	Texas
+c2139	29.564	-95.286	US	Pearland	Texas
+c2140	35.374	-119.019	US	Bakersfield	California
+c2141	34.142	-118.249	US	Glendale	California
+c2142	33.749	-117.873	US	Santa Ana	California
+c2143	25.691	-80.235	US	Coral Gables	Florida
+c2144			US	Cutler	Florida
+c2145	25.576	-80.341	US	Cutler Bay	Florida
+c2146			US	Kendall	Florida
+c2147	25.708	-80.326	US	Glenvar Heights	Florida
+c2148	25.708	-80.407	US	Kendale Lakes	Florida
+c2149	25.672	-80.448	US	The Hammocks	Florida
+c2150	25.634	-80.432	US	Country Walk	Florida
+c2151	25.61	-80.429	US	Richmond West	Florida
+c2152	25.563	-80.382	US	Goulds	Florida
+c2153	25.495	-80.429	US	Leisure City	Florida
+c2154	25.469	-80.478	US	Homestead	Florida
+c2155	25.448	-80.479	US	Florida City	Florida
+c2156	25.759	-80.398	US	Tamiami	Florida
+c2157	25.772	-80.348	US	Fountainebleau	Florida
+c2158	25.858	-80.278	US	Hialeah	Florida
+c2159	25.818	-80.354	US	Doral	Florida
+c2160	25.976	-80.335	US	Miramar	Florida
+c2161			US	Hollywood	Florida
+c2162	25.986	-80.14	US	Hallandale Beach	Florida
+c2163	40.728	-74.078	US	Jersey City	New Jersey
+c2164			US	Clifton	New Jersey
+c2165	40.736	-74.172	US	Newark	New Jersey
+c2166	40.664	-74.211	US	Elizabeth	New Jersey
+c2167			US	Union	New Jersey
+c2168			US	Irvington	New Jersey
+c2169	40.807	-74.185	US	Bloomfield	New Jersey
+c2170	40.857	-74.128	US	Passaic	New Jersey
+c2171			US	Belleville	New Jersey
+c2172	40.886	-74.043	US	Hackensack	New Jersey
+c2173	40.804	-74.012	US	North Bergen	New Jersey
+c2174	40.851	-73.97	US	Fort Lee	New Jersey
+c2175	40.931	-73.899	US	Yonkers	New York
+c2176			US	Mt Vernon (Westchester County)	New York
+c2177	40.912	-73.783	US	New Rochelle	New York
+c2178	41.034	-73.763	US	White Plains	New York
+c2179	41.002	-73.666	US	Port Chester	New York
+c2180	41.076	-73.859	US	Tarrytown	New York
+c2181	41.161	-73.878	US	Ossining	New York
+c2182	41.147	-73.99	US	New City	New York
+c2183			US	Hempstead	New York
+c2184	40.701	-73.713	US	Elmont	New York
+c2185	40.749	-73.641	US	Mineola	New York
+c2186	40.756	-73.588	US	Westbury	New York
+c2187	40.768	-73.525	US	Hicksville	New York
+c2188	40.726	-73.514	US	Levittown	New York
+c2189	40.664	-73.708	US	Valley Stream	New York
+c2190	40.659	-73.641	US	Rockville Centre	New York
+c2191			US	Freeport	New York
+c2192			US	Oceanside	New York
+c2193			US	Long Beach	New York
+c2194	40.714	-73.559	US	East Meadow	New York
+c2195	40.684	-73.51	US	Wantagh	New York
+c2196	40.681	-73.474	US	Massapequa	New York
+c2197	40.687	-73.373	US	Lindenhurst	New York
+c2198			US	Plainview	New York
+c2199	40.793	-73.415	US	Melville	New York
+c2200			US	Huntington	New York
+c2201	40.843	-73.293	US	Commack	New York
+c2202			US	Brentwood	New York
+c2203	40.725	-73.245	US	Bay Shore	New York
+c2204	40.856	-73.201	US	Smithtown	New York
+c2205	40.835	-73.131	US	Lake Ronkonkoma	New York
+c2206	40.826	-73.698	US	Port Washington	New York
+c2207	40.862	-73.634	US	Glen Cove	New York
+c2208	40.826	-73.502	US	Syosset	New York
+c2209	40.805	-73.336	US	Dix Hills	New York
+c2210	40.826	-73.203	US	Hauppauge	New York
+c2211			US	Holbrook	New York
+c2212	40.858	-73.1	US	Centereach	New York
+c2213	40.866	-73.036	US	Selden	New York
+c2214	40.869	-73.001	US	Coram	New York
+c2215	40.926	-73.141	US	Stony Brook	New York
+c2216	40.767	-72.996	US	East Patchogue	New York
+c2217	42.577	-78.914	US	Shirley	New York
+c2218	40.917	-72.662	US	Riverhead	New York
+c2219	40.869	-72.518	US	Hampton Bays	New York
+c2220			US	Southampton	New York
+c2221	39.85	-75.356	US	Chester	Pennsylvania
+c2222			US	Levittown	Pennsylvania
+c2223	40.355	-80.049	US	Mt Lebanon	Pennsylvania
+c2224	40.421	-79.788	US	Monroeville	Pennsylvania
+c2225	40.328	-80.039	US	Bethel Park	Pennsylvania
+c2226	40.348	-79.864	US	McKeesport	Pennsylvania
+c2227	40.473	-79.818	US	Penn Hills	Pennsylvania
+c2228	42.129	-80.085	US	Erie	Pennsylvania
+c2229	37.03	-76.345	US	Hampton	Virginia
+c2230	37.017	-76.451	US	Newport News	Virginia
+c2231	37.271	-76.707	US	Williamsburg	Virginia
+c2232	38.303	-77.461	US	Fredericksburg	Virginia
+c2233	37.539	-77.434	US	Richmond	Virginia
+c2234			US	Mechanicsville (Hanover County)	Virginia
+c2235			US	Tuckahoe	Virginia
+c2236			US	Midlothian	Virginia
+c2237			US	Sandston	Virginia
+c2238	37.666	-77.506	US	Glen Allen	Virginia
+c2239			US	Chester	Virginia
+c2240	39.099	-76.848	US	Laurel	Virginia
+c2241	37.304	-77.287	US	Hopewell (City of Hopewell)	Virginia
+c2242	37.192	-77.368	US	Petersburg	Virginia
+c2243	37.256	-77.411	US	Colonial Heights	Virginia
+c2244	37.401	-79.184	US	Lynchburg	Virginia
+c2245	37.238	-80.076	US	Roanoke	Virginia
+c2246			US	Salem	Virginia
+c2247			US	Cave Spring	Virginia
+c2248	37.348	-79.95	US	Hollins	Virginia
+c2249	38.029	-78.477	US	Charlottesville	Virginia
+c2250	37.932	-121.696	US	Brentwood (Contra Costa County)	California
+c2251	38.005	-121.806	US	Antioch	California
+c2252	37.669	-122.081	US	Hayward	California
+c2253	37.694	-122.086	US	Castro Valley	California
+c2254	37.725	-122.156	US	San Leandro	California
+c2255	37.596	-122.082	US	Union City	California
+c2256	37.702	-121.936	US	Dublin	California
+c2257	37.662	-121.875	US	Pleasanton	California
+c2258	37.682	-121.768	US	Livermore	California
+c2259	37.442	-122.163	US	Palo Alto	California
+c2260	34.075	-118.037	US	El Monte	California
+c2261			US	Richmond	California
+c2262	37.497	-122.333	US	San Mateo	California
+c2263	37.369	-122.036	US	Sunnyvale	California
+c2264	37.386	-122.082	US	Mountain View	California
+c2265	37.379	-122.117	US	Los Altos	California
+c2266	37.428	-121.907	US	Milpitas	California
+c2267	37.485	-122.236	US	Redwood City	California
+c2268	39.414	-77.411	US	Frederick	Maryland
+c2269			US	Portsmouth	Virginia
+c2270	36.718	-76.247	US	Chesapeake	Virginia
+c2271			US	Suffolk	Virginia
+c2272	32.788	-79.94	US	Charleston	South Carolina
+c2273	32.855	-79.975	US	North Charleston	South Carolina
+c2274	32.794	-79.863	US	Mt Pleasant	South Carolina
+c2275	42.996	-71.455	US	Manchester	New Hampshire
+c2276	42.765	-71.468	US	Nashua	New Hampshire
+c2277	43.207	-71.537	US	Concord	New Hampshire
+c2278	46.877	-96.79	US	Fargo	North Dakota
+c2279	45.787	-108.496	US	Billings	Montana
+c3691			US	Fairfax	Virginia
+c4750			US	Athens	Texas
+c4751			US	Carthage	Missouri
+c4752			US	Carthage	Mississippi
+c4753			US	Dothan	Alabama
+c4754			US	Elkton	Maryland
+c4755			US	Fayetteville	Arkansas
+c4756			US	Fort Scott	Kansas
+c4757			US	Fort Smith	Arkansas
+c4758			US	Hattiesburg	Mississippi
+c4759			US	Lawton	Oklahoma
+c4760			US	Longview	Texas
+c4761			US	Lufkin	Texas
+c4762			US	Meridian	Michigan
+c4763			US	Nacogdoches	Texas
+c4764			US	Nevada	Missouri
+c4765			US	Pensacola	Florida
+c4766			US	Philadelphia	Mississippi
+c4767			US	Richmond	Michigan
+c4768			US	Rogers	Arkansas
+c4769			US	Savannah	Georgia
+c4770			US	Springdale	Arkansas
+c4771			US	Tuscaloosa	Alabama
+c4772			US	Tyler	Texas
+c4773			US	Valdosta	Georgia
+c4774			US	Wiggins	Mississippi
+c4775			US	Wilmington	Delaware

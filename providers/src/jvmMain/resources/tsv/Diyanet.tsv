@@ -1248,7 +1248,7 @@
 9872	41.261	27.984	TR	tr=Çerkezköy;en=Cerkezkoy	tr=Tekirdağ;en=Tekirdag
 9873	41.115	27.752	TR	tr=Çorlu;en=Corlu	tr=Tekirdağ;en=Tekirdag
 9874	41.169	27.131	TR	Hayrabolu	tr=Tekirdağ;en=Tekirdag
-9875	40.97	27.948	TR	tr=M.ereğlisi;en=M.ereglisi	tr=Tekirdağ;en=Tekirdag
+9875	40.97	27.948	TR	Marmaraereğlisi	tr=Tekirdağ;en=Tekirdag
 9876	40.921	26.943	TR	Malkara	tr=Tekirdağ;en=Tekirdag
 9877	41.443	27.922	TR	Saray	tr=Tekirdağ;en=Tekirdag
 9878	40.68	27.132	TR	tr=Şarköy;en=Sarkoy	tr=Tekirdağ;en=Tekirdag
@@ -1326,7 +1326,7 @@
 9951	41.428	32.074	TR	tr=Çaycuma;en=Caycuma	Zonguldak
 9952	41.174	31.937	TR	Devrek	Zonguldak
 9953	41.306	32.144	TR	tr=Gökçebey;en=Gokcebey	Zonguldak
-9954	41.313	31.443	TR	tr=Karadeniz Ereğli;en=Karadeniz Eregli	Zonguldak
+9954	41.313	31.443	TR	tr=Ereğli;en=Eregli	Zonguldak
 9955	41.452	31.788	TR	Zonguldak	Zonguldak
 9956			AF	Calalabad
 9957	32.607	62.671	AF	Farah
@@ -1369,7 +1369,7 @@
 9994	48.803	8.32	DE	Gaggenau	Baden Wurttemberg
 9995	52.428	9.601	DE	Garbsen	tr=Niedersachsen;en=Lower Saxony
 9996	48.251	11.651	DE	Garching	tr=Bayern;en=Bavaria
-9997	47.492	11.095	DE	Garmisch-Part.	tr=Bayern;en=Bavaria
+9997	47.492	11.095	DE	Garmisch-Partenkirchen	tr=Bayern;en=Bavaria
 9998	48.683	11.612	DE	Geisenfeld	tr=Bayern;en=Bavaria
 9999	51.517	6.323	DE	Geldern	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10000	48.405	9.794	DE	Bismarck	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
@@ -1394,7 +1394,7 @@
 10019	49.628	8.863	DE	Grasellenbach	Hessen
 10020	52.093	7.612	DE	Greven	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10021	51.091	6.584	DE	Grevenbroich	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
-10022	49.919	8.485	DE	Gross-Gerau	Hessen
+10022	49.919	8.485	DE	de=Groß-Gerau;tr=Gross-Gerau	Hessen
 10023	49.566	8.164	DE	Grunstadt	tr=Rheinland-Pfalz;en=Rhineland-Palatinate
 10024	49.046	8.995	DE	Guglingen -Eibensbac	Baden Wurttemberg
 10025	51.028	7.563	DE	Gummersbach	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
@@ -1591,7 +1591,7 @@
 10219	50.317	7.805	DE	Nassau	tr=Rheinland-Pfalz;en=Rhineland-Palatinate
 10220	51.306	6.276	DE	Lobberich	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10221	50.055	8.696	DE	Neu-Isenburg	Hessen
-10222	49.28	11.459	DE	Neumarkt In Der Ober	tr=Bayern;en=Bavaria
+10222	49.28	11.459	DE	Neumarkt in der Oberpfalz	tr=Bayern;en=Bavaria
 10223	54.072	9.987	DE	Neumunster	Schleswig Holstein
 10224	50.714	6.891	DE	Neukirchen	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10225	49.35	7.184	DE	Neunkirchen	Saarland
@@ -1738,7 +1738,7 @@
 10367	50.818	6.134	DE	Wurselen	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10368	50.692	6.647	DE	Zulpich	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10369	49.249	7.364	DE	Zweibrucken	tr=Rheinland-Pfalz;en=Rhineland-Palatinate
-10370	47.767	11.849	DE	Hausham/miesbach	tr=Bayern;en=Bavaria
+10370	47.767	11.849	DE	Hausham	tr=Bayern;en=Bavaria
 10371	48.353	8.964	DE	Hechingen	Baden Wurttemberg
 10372	52.228	11.01	DE	Helmstedt	tr=Niedersachsen;en=Lower Saxony
 10373	49.508	11.428	DE	Hersbruck	tr=Bayern;en=Bavaria
@@ -1855,7 +1855,7 @@
 10484	50.25	12.033	DE	Rehau	tr=Bayern;en=Bavaria
 10485	50.381	11.531	DE	Rodach	tr=Bayern;en=Bavaria
 10486	47.854	12.127	DE	Rosenheim	tr=Bayern;en=Bavaria
-10487	49.389	10.218	DE	Rothenburg O.d.tauber	tr=Bayern;en=Bavaria
+10487	49.389	10.218	DE	Rothenburg ob der Tauber	tr=Bayern;en=Bavaria
 10488	48.965	9.058	DE	Sachsenheim	Baden Wurttemberg
 10489	52.046	10.372	DE	Salzgitter Bad	tr=Niedersachsen;en=Lower Saxony
 10490	52.853	11.154	DE	Salzwedel	Sachsen Anhalt
@@ -1870,7 +1870,7 @@
 10499	53.503	10.479	DE	Schwarzenbek	Schleswig Holstein
 10500	51.891	10.17	DE	Seesen	tr=Niedersachsen;en=Lower Saxony
 10501	50.17	12.132	DE	Selb	tr=Bayern;en=Bavaria
-10502	48.324	10.047	DE	Senden(bavaria)	tr=Bayern;en=Bavaria
+10502	48.324	10.047	DE	Senden	tr=Bayern;en=Bavaria
 10503	49.255	8.877	DE	Sinsheim	Baden Wurttemberg
 10504	48.554	10.29	DE	tr=Sontheim An Der Brenz;en=Sontheim  An Der Brenz	Baden Wurttemberg
 10505	48.073	8.74	DE	Spaichingen	Baden Wurttemberg
@@ -1947,7 +1947,7 @@
 10579	51.24	8.006	DE	Schomberg	Baden Wurttemberg
 10580	47.686	9.834	DE	Wangen Im Allgau	Baden Wurttemberg
 10581	49.455	7.793	DE	Kaiserslautern	tr=Rheinland-Pfalz;en=Rhineland-Palatinate
-10582	47.606	9.914	DE	Lindau (BAVARIA)	tr=Bayern;en=Bavaria
+10582	47.606	9.914	DE	Lindau	tr=Bayern;en=Bavaria
 10583	51.614	7.198	DE	Recklinghausen	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10584	49.943	11.576	DE	Bayreuth	tr=Bayern;en=Bavaria
 10585	48.266	13.028	DE	Simbach Am Inn	tr=Bayern;en=Bavaria
@@ -2341,7 +2341,7 @@
 10979	51.534	7.611	DE	Wickede (DORT.)	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10980	51.797	7.742	DE	Drensteinfurt	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10981	51.41	6.757	DE	Hochfeld (DUIS.)	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
-10982	51.407	6.74	DE	Rheinhausen (DUIS.)	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
+10982	51.407	6.74	DE	Rheinhausen	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10983	51.402	6.666	DE	Rumeln (DUIS.)	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10984	51.83	7.277	DE	Dulmen	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 10985	54.472	9.837	DE	Eckernforde	Schleswig Holstein
@@ -2432,7 +2432,7 @@
 11074	49.992	8.414	DE	Russelsheim	Hessen
 11075	50.776	6.084	DE	Hamminkeln	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 11076	51.18	7.194	DE	Remscheid	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
-11077	51.399	7.421	DE	Hagen (Ruhr Valley)	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
+11077	51.399	7.421	DE	Hagen	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 11078	52.15	10.359	DE	Salzgitter	tr=Niedersachsen;en=Lower Saxony
 11079	49.873	8.651	DE	Darmstadt	Hessen
 11080	48.596	8.867	DE	Herrenberg	Baden Wurttemberg
@@ -2858,7 +2858,7 @@
 11506	47.382	10.892	AT	Biberwier
 11507	47.4	10.918	AT	Ehrwald Oberdorf
 11508	47.34	10.543	AT	Elmen
-11509	47.041	15.96	AT	Lahn
+11509			AT	Lahn
 11510	47.531	10.693	AT	Oberpinswang
 11511	48.093	13.57	AT	Wassenbach
 11512	47.775	13.039	AT	Ainring
@@ -2873,7 +2873,7 @@
 11521	48.103	13.15	AT	Mattighofen
 11522	47.856	13.35	AT	Mondsee
 11523	47.855	13.178	AT	Neuhofen (Salzburg)
-11524	47.316	9.617	AT	Ried (S)
+11524	47.905	13.020	AT	Ried (S)
 11525	47.429	12.841	AT	Saalfelden
 11526	47.98	13.255	AT	Strasswalchen
 11527	47.738	13.448	AT	St. Wolfgang
@@ -3000,7 +3000,7 @@
 11650	22.428	-73.935	BS	Abrahams Bay
 11651	24.052	-74.528	BS	Cockburn Town
 11652	22.767	-74.217	BS	Colonel Hill
-11653			BS	Cooper\u0027s Town
+11653			BS	Cooper's Town
 11654	26.536	-78.695	BS	Freeport
 11655	26.612	-78.357	BS	Freetown
 11656	24.725	-77.793	BS	Fresh Creek
@@ -3015,7 +3015,7 @@
 11665	25.078	-77.338	BS	Nassau
 11666			BH	Al Muharrik
 11667	26.224	50.582	BH	Manama
-11668	26.134	50.538	BH	Ar Rifa\u0027algharbi
+11668	26.134	50.538	BH	Ar Rifa'algharbi
 11669	23.46	91.181	BD	Comilla
 11670	22.822	89.553	BD	Khulna
 11671	24.372	88.592	BD	Rajshahi
@@ -3375,7 +3375,7 @@
 12026	43.989	18.182	BA	Visoko
 12027	44.772	17.19	BA	Banja Luka
 12028	44.539	18.675	BA	Tuzla
-12029	43.86	18.399	BA	tr=Saraybosna(sarajevo);en=Sarajevo
+12029	43.86	18.399	BA	tr=Saraybosna;en=Sarajevo
 12030	43.338	17.811	BA	Mostar
 12031	44.201	17.908	BA	Zenica
 12032	-24.655	25.909	BW	Gaborone
@@ -3710,7 +3710,7 @@
 12365	12.211	43.169	DJ	Obock
 12366	11.857	42.758	DJ	Cibuti
 12367	45.766	126.616	CN	Harbin
-12368	36.0	109.0	CN	Xi\u0027an (SHAANXI)
+12368	36.0	109.0	CN	Xi'an (SHAANXI)
 12369	26.501	106.782	CN	Guiyang (GUIZHOU)
 12370	43.894	125.319	CN	Changchun (JILIN)
 12371	40.782	122.789	CN	Anshan
@@ -3733,8 +3733,8 @@
 12388	21.695	111.174	CN	Guanzhu
 12389	23.106	114.414	CN	Huizhou
 12390	32.127	114.068	CN	Xinyang
-12391	29.986	103.009	CN	Ya\u0027an
-12392	36.596	109.485	CN	Yan\u0027an
+12391	29.986	103.009	CN	Ya'an
+12392	36.596	109.485	CN	Yan'an
 12393	35.494	112.852	CN	Jincheng
 12394	22.094	111.725	CN	Yangjiang
 12395	32.393	119.437	CN	Yangzhou
@@ -3826,7 +3826,7 @@
 12481	40.885	111.626	CN	Huimin
 12482	26.476	103.399	CN	Huize
 12483	31.274	116.28	CN	Huoshan
-12484	27.036	118.318	CN	Jian\u0027ou
+12484	27.036	118.318	CN	Jian'ou
 12485	21.862	111.955	CN	Jiangchen ( Yangjiang )
 12486	30.128	112.504	CN	Jiangling ( Hubei )
 12487	31.909	120.263	CN	Jiangyin
@@ -4375,7 +4375,6 @@
 13034	49.315	6.282	FR	Metzervisse
 13035	46.074	1.045	FR	Richemont (M)
 13036	49.25	6.095	FR	Rombas
-13037	49.104	6.707	FR	Saint Avold
 13038	49.359	6.153	FR	Thionville (L)
 13039	49.303	6.15	FR	Uckange
 13040	49.152	6.152	FR	Woippy
@@ -4724,7 +4723,7 @@
 13388	43.552	7.013	FR	Cannes
 13389	50.949	1.875	FR	Calais
 13390	43.701	7.268	FR	Nice
-13391	45.292	4.815	FR	St. Rambert-D\u0027albon
+13391	45.292	4.815	FR	St. Rambert-D'albon
 13392	50.106	1.834	FR	Folschviller
 13393	43.53	5.447	FR	Aix-En-Provence
 13394	43.928	2.148	FR	Albi
@@ -4846,7 +4845,7 @@
 13510	37.469	126.661	KR	Incheon
 13511	33.394	126.563	KR	Jeju
 13512	37.753	128.876	KR	Gangneung
-13513	37.361	126.935	KR	Gunp\u0027o
+13513	37.361	126.935	KR	Gunp'o
 13514	35.968	126.737	KR	Gunsan
 13515	35.148	128.619	KR	Jinhae
 13516	35.149	126.863	KR	Gwangju
@@ -4882,7 +4881,7 @@
 13546	43.286	40.265	GE	Gagra
 13547	41.926	42.055	GE	Chala
 13549	41.535	45.029	GE	Rustavi
-13550	41.918	45.475	GE	T\u0027elavi
+13550	41.918	45.475	GE	T'elavi
 13551	42.225	43.971	GE	Tskhinvali
 13552	42.134	41.708	GE	Poti
 13553	42.629	41.737	GE	Gali
@@ -6199,18 +6198,18 @@
 14880	51.151	71.439	KZ	Nursultan
 14881	43.242	76.951	KZ	Abay
 14882			KZ	Akhmetau
-14883	51.161	71.47	KZ	Alekseyevka(astana)
+14883	51.161	71.47	KZ	Alekseyevka (astana)
 14884	51.811	68.363	KZ	Atbasar
 14885	50.663	72.392	KZ	Anar
-14886	51.161	71.47	KZ	Kamenka(astana)
+14886	51.161	71.47	KZ	Kamenka (astana)
 14887	56.322	160.843	KZ	Klyuchi
 14888	54.135	65.029	KZ	Krasnoznamenka
-14889	51.161	71.47	KZ	Marinovka(astana)
+14889	51.161	71.47	KZ	Marinovka (astana)
 14890	50.562	72.575	KZ	Osakarovka
 14891	51.415	72.635	KZ	Pavlovka
 14892	50.878	70.554	KZ	Sabyndy
 14893	50.843	72.699	KZ	Shortandy
-14894	51.161	71.47	KZ	Turgay(astana)
+14894	51.161	71.47	KZ	Turgay (astana)
 14895	51.743	71.709	KZ	Zholymbet
 14897	43.36	76.758	KZ	Aksengir
 14898	43.993	76.334	KZ	Akshiy (Almatı)
@@ -6456,7 +6455,6 @@
 15145	20.029	-75.829	CU	Santiago De Cuba
 15146	21.186	-76.901	CU	Manzanillo
 15147	23.138	-82.366	CU	Havana
-15148	31.779	35.227	PS	Kudus
 15149	29.273	47.498	KW	tr=Kuveyt;en=Kuwait
 15150	29.499	47.544	KW	Jahra
 15151	29.335	48.072	KW	Salmiya (AS Salimiyah)
@@ -6503,29 +6501,29 @@
 15192	47.139	9.523	LI	Vaduz
 15193	47.067	9.5	LI	Balzers
 15194	47.119	9.543	LI	Triesenberg
-15195	54.604	24.034	LT	Birstonas	tr=Litvanya;en=Lebanon
-15196	54.871	25.064	LT	Maisiagala	tr=Litvanya;en=Lebanon
-15197	54.556	23.35	LT	Marijampole	tr=Litvanya;en=Lebanon
-15198	54.848	25.469	LT	Nemencine	tr=Litvanya;en=Lebanon
-15199	54.983	25.766	LT	Pabrade	tr=Litvanya;en=Lebanon
-15200	55.052	24.951	LT	Sirvintos	tr=Litvanya;en=Lebanon
-15201	54.645	24.935	LT	Trakai	tr=Litvanya;en=Lebanon
-15202	54.769	24.816	LT	Vievis	tr=Litvanya;en=Lebanon
-15203	54.687	25.283	LT	Vilnius	tr=Litvanya;en=Lebanon
-15204	54.409	24.062	LT	Alytaus	tr=Litvanya;en=Lebanon
-15205	54.898	23.904	LT	Kaunas	tr=Litvanya;en=Lebanon
-15206	55.713	21.135	LT	Klaipeda	tr=Litvanya;en=Lebanon
-15207	55.923	21.068	LT	Palanga	tr=Litvanya;en=Lebanon
-15208	55.934	23.316	LT	Siauliai	tr=Litvanya;en=Lebanon
-15209	55.498	25.603	LT	Utena	tr=Litvanya;en=Lebanon
-15210	54.017	23.977	LT	Druskininkai	tr=Litvanya;en=Lebanon
-15211	33.272	35.196	LB	Sur	Lubnan
-15212	34.01	36.212	LB	Baalbek	Lubnan
-15213	33.855	35.862	LB	Juniyah	Lubnan
-15214	33.458	35.353	LB	Sayda	Lubnan
-15215	33.848	35.903	LB	Zahlah	Lubnan
-15216	33.896	35.478	LB	Beyrut	Lubnan
-15217	34.437	35.835	LB	tr=Trablussam;en=Tripoli	Lubnan
+15195	54.604	24.034	LT	Birstonas
+15196	54.871	25.064	LT	Maisiagala
+15197	54.556	23.35	LT	Marijampole
+15198	54.848	25.469	LT	Nemencine
+15199	54.983	25.766	LT	Pabrade
+15200	55.052	24.951	LT	Sirvintos
+15201	54.645	24.935	LT	Trakai
+15202	54.769	24.816	LT	Vievis
+15203	54.687	25.283	LT	Vilnius
+15204	54.409	24.062	LT	Alytaus
+15205	54.898	23.904	LT	Kaunas
+15206	55.713	21.135	LT	Klaipeda
+15207	55.923	21.068	LT	Palanga
+15208	55.934	23.316	LT	Siauliai
+15209	55.498	25.603	LT	Utena
+15210	54.017	23.977	LT	Druskininkai
+15211	33.272	35.196	LB	Sur
+15212	34.01	36.212	LB	Baalbek
+15213	33.855	35.862	LB	Juniyah
+15214	33.458	35.353	LB	Sayda
+15215	33.848	35.903	LB	Zahlah
+15216	33.896	35.478	LB	Beyrut
+15217	34.437	35.835	LB	tr=Trablussam;en=Tripoli
 15218	49.519	6.1	LU	Betembourg
 15219	50.055	6.028	LU	Clervaux
 15220	49.479	6.088	LU	Dudelange
@@ -7457,7 +7455,7 @@
 16159	58.015	56.247	RU	Gubakha
 16160			RU	Khanti-Mansisky
 16161	55.16	61.403	RU	Chelyabinsk
-16162	52.767	140.172	RU	Mineral\u0027nyye Vody
+16162	52.767	140.172	RU	Mineral'nyye Vody
 16163	61.741	50.726	RU	Syktyvkar
 16164	45.043	41.969	RU	Stavropol
 16165	55.571	38.228	RU	Ramenskoye
@@ -7977,7 +7975,7 @@
 16681	39.638	22.416	GR	Larisa
 16682	40.846	25.875	GR	Dedeagac
 16683	41.111	25.321	GR	Gumulcine(komotini)
-16684	40.635	22.933	GR	Selanik(thessaloniki)
+16684	40.635	22.933	GR	Selanik
 16685	37.984	23.728	GR	Atina
 16686	41.124	24.893	GR	Iskece(xanthi)
 16687	-12.81	28.207	ZM	Kitwe
@@ -7996,8 +7994,8 @@
 16700	45.021	-74.73	CA	Cornwall	Ontorio
 16703	48.595	2.255	FR	St. Germain Les Arpaj
 16704	36.987	32.455	TR	tr=Hadim;en=Hadim	Konya
-16705	51.514	6.849	DE	tr=Oberhausen;en=Oberhausen (NR-W)	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
-16706	40.311	38.411	TR	tr=Şebinkarahisar;en=Sebinkarahisar	tr=Giresun;en=Giresun
+16705	51.514	6.849	DE	Oberhausen	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
+16706	40.311	38.411	TR	Şebinkarahisar	tr=Giresun;en=Giresun
 16707	59.465	10.662	NO	Moss
 16708	45.289	21.888	RO	tr=Resita;en=Resita
 16709	49.017	140.284	RU	Sharypova
@@ -8174,7 +8172,7 @@
 17906	39.402	30.034	TR	Dumlupinar	tr=Kütahya;en=Kutahya
 17907	36.841	37.143	TR	Polateli	tr=Kilis;en=Kilis
 17908	37.386	36.847	TR	Türkoğlu	tr=Kahramanmaraş;en=Kahramanmaras
-17909	38.679	29.405	TR	tr=Ulubey;en=Usak	tr=Uşak;en=Usak
+17909	38.679	29.405	TR	tr=Ulubey;en=Ulubey	tr=Uşak;en=Usak
 17910	40.672	36.569	TR	Erbaa	Tokat
 17911	41.335	36.131	TR	Atakum	Samsun
 17912	38.323	43.408	TR	Gürpinar	Van
@@ -8214,7 +8212,7 @@
 18946	51.128	7.601	DE	Kierspe	tr=Nordrhein-Westfalen;en=North Rhein Westphalia
 18947	50.457	7.275	DE	Burgbrohl	tr=Rheinland-Pfalz;en=Rhineland-Palatinate
 18948	49.839	8.117	DE	Worrstadt	tr=Rheinland-Pfalz;en=Rhineland-Palatinate
-18949	49.339	10.792	DE	Heilsbron	tr=Bayern;en=Bavaria
+18949	49.339	10.792	DE	Heilsbronn	tr=Bayern;en=Bavaria
 18950	48.765	8.935	DE	Renningen	Baden Wurttemberg
 18951	48.677	10.153	DE	Heidenheim	Baden Wurttemberg
 18952	51.686	5.131	NL	Drunen
@@ -8273,7 +8271,7 @@
 19006			SY	Şerran
 19007	36.557	36.613	SY	Şeyh Hadid
 19008	36.772	36.819	SY	Bülbül
-19009			SY	Ma\u0027batli
+19009			SY	Ma'batli
 19010	36.395	36.688	SY	Cinderes
 19011			SY	Raco
 19012	42.268	-83.731	US	Ann Arbor	Michigan

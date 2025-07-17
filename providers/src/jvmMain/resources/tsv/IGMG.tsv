@@ -30,7 +30,7 @@
 30	48.05	14.418	AT	Steyr
 31	48.016	16.294	AT	Traiskirchen
 32	48.221	14.237	AT	Traun
-33	48.208	16.374	AT	de=Wien;tr=Viyana
+33	48.208	16.374	AT	Wien
 34	47.345	11.689	AT	Vomp
 35	48.003	13.925	AT	Vorchdorf
 36	48.165	14.037	AT	Wels
@@ -94,7 +94,7 @@
 95	47.327	8.801	CH	Wetzikon
 96	47.499	8.724	CH	Winterthur
 97	47.349	8.277	CH	Wohlen
-98	47.369	8.539	CH	de=Zürich;tr=Zürih
+98	47.369	8.539	CH	Zürich
 99	56.163	10.204	DK	Aarhus
 100	56.153	10.107	DK	Brabrand
 101	55.647	12.415	DK	Brøndby
@@ -185,13 +185,13 @@
 188	45.529	4.881	FR	Vienne
 189	45.614	5.15	FR	Villefontaine
 190	45.978	4.746	FR	Villefranche-sur-Saône
-191	50.623	3.144	FR	Villeneuve-d\u0027Ascq
+191	50.623	3.144	FR	Villeneuve-d'Ascq
 192	52.485	-1.89	EN	Birmingham
-193	50.823	-0.137	EN	Brighton
+193	50.823	-0.137	EN	Brighton77
 194	51.455	-2.588	EN	Bristol
 195	52.205	0.122	EN	Cambridge
 196	52.637	-1.14	EN	Leicester
-197	51.509	-0.125	EN	de=London;tr=Londra
+197	51.509	-0.125	EN	London
 198	51.879	-0.42	EN	Luton
 199	51.752	-1.258	EN	Oxford
 200	50.843	-0.214	EN	Portslade
@@ -201,7 +201,7 @@
 204	44.649	10.92	IT	Modena
 205	41.903	12.496	IT	Roma
 206	47.141	9.521	LI	Vaduz
-207	41.997	21.428	MK	de=Skopje;tr=Üsküp
+207	41.997	21.428	MK	Skopje
 209	51.924	4.477	NL	Rotterdam
 210	52.351	5.265	NL	Almere
 211	52.156	5.388	NL	Amersfoort
@@ -249,7 +249,7 @@
 257	55.605	13.004	SE	Malmö
 258	59.246	17.823	SE	Norsborg
 259	59.389	17.931	SE	Spånga
-260	59.329	18.065	SE	de=Stockholm;tr=Stokholm
+260	59.329	18.065	SE	Stockholm
 261	40.714	-74.006	US	New York
 262	58.853	5.733	NO	Sandnes
 263	63.431	10.395	NO	Trondheim
@@ -372,8 +372,7 @@
 1296	40.602	29.255	TR	Yalova
 1297	39.93	34.732	TR	Yozgat
 1298	41.437	31.743	TR	Zonguldak
-1410	48.26	7.456	FR	Sélestat
-1433	35.653	139.839	JP	de=Tokio;tr=Tokyo
+1433	35.653	139.839	JP	Tokio
 1434	-41.287	174.776	NZ	Wellington
 1435	-23.697	133.884	AU	Alice Springs
 1436	-34.425	150.893	AU	Wollongong
@@ -394,7 +393,6 @@
 1454	-24.85	152.35	AU	Bundaberg
 1455	-32.927	151.776	AU	Newcastle
 1456	50.933	7.285	DE	Overath
-1457	47.041	9.068	CH	Glarus
 1458	47.043	9.068	CH	Glarus
 1531	59.414	5.268	NO	Haugesund
 1532	51.454	-0.978	EN	Reading
@@ -476,7 +474,7 @@
 20075	51.571	6.985	DE	Gladbeck
 20076	53.544	10.217	DE	Glinde
 20077	51.906	10.429	DE	Goslar
-20078	49.92	8.485	DE	Groß Gerau
+20078	49.92	8.485	DE	Groß-Gerau
 20079	51.027	7.569	DE	Gummersbach
 20080	48.453	10.278	DE	Günzburg
 20081	51.367	7.463	DE	Hagen
@@ -548,7 +546,7 @@
 20148	48.949	8.852	DE	Mühlacker
 20149	48.246	12.522	DE	Mühldorf
 20150	51.419	6.885	DE	Mülheim an der Ruhr
-20151	48.137	11.576	DE	de=München;tr=Münih
+20151	48.137	11.576	DE	München
 20152	51.961	7.626	DE	Münster
 20153	48.547	8.723	DE	Nagold
 20154	52.511	8.066	DE	Neuenkirchen

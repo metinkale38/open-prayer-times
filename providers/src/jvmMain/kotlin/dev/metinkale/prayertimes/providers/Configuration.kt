@@ -19,9 +19,4 @@ object Configuration {
     var LONDON_PRAYER_TIMES_API_KEY: String = System.getenv("LONDON_PRAYER_TIMES_API_KEY") ?: ""
 
 
-    /**
-     * Reads city-list on the fly, if set to true
-     * Loads city-list into the memory, if set to false
-     */
-    var LOW_MEMORY_MODE : Boolean = true
 }

@@ -24,6 +24,16 @@ enum class HighLatsAdjustment {
      * In this method, the period between sunset and sunrise is divided into three parts. Isha begins after the first one-third part, and Fajr is at the beginning of the third part.
      */
     OneThird,
+
+    /**
+     * Adjust Methods for Higher Latitudes
+     * Method: fifth of night
+     *
+     *
+     * In this method, the period between sunset and sunrise is divided into five parts. Isha begins after the first one-fifth part, and Fajr is at the beginning of the last part.
+     */
+    OneFifth,
+
     /**
      * Adjust Methods for Higher Latitudes
      * Method: 1/7th of night

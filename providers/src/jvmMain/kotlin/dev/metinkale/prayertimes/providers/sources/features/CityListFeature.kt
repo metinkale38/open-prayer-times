@@ -9,16 +9,13 @@ import dev.metinkale.prayertimes.providers.utils.readFile
 import kotlin.math.abs
 
 
-private val CITIES_CACHE: MutableMap<String, List<Entry>> = mutableMapOf()
-
 interface CityListFeature : Source, ByLocationFeature, SearchFeature {
 
-    private fun parseCities()= readFile("/tsv/${name}.tsv").lineSequence()
-        .map { line -> Entry.decodeFromString(this, line) }.also { println("parsed") }
+    private fun parseCities() = readFile("/tsv/${name}.tsv").lineSequence()
+        .map { line -> Entry.decodeFromString(this, line) }
 
     val cities: Sequence<Entry>
-        get() = if(Configuration.LOW_MEMORY_MODE) parseCities()
-        else CITIES_CACHE.getOrPut(name) { parseCities().toList() }.asSequence()
+        get() = parseCities()
 
 
     override suspend fun search(query: String, location: Geolocation?): Entry? =

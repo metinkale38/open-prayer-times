@@ -92,10 +92,6 @@ data class PrayTimes(
             times.midnight = times.sunset + timeDiff(times.sunset, times.fajr) / 2.0
         }
 
-
-
-
-
         method.imsakMinute.let { times.imsak += it / 60.0 }
         method.fajrMinute.let { times.fajr += it / 60.0 }
         method.sunriseMinute.let { times.sunrise += it / 60.0 }
@@ -168,6 +164,7 @@ data class PrayTimes(
             HighLatsAdjustment.OneSeventh -> 1.0 / 7.0
             HighLatsAdjustment.NightMiddle -> 1.0 / 2.0
             HighLatsAdjustment.OneThird -> 1.0 / 3.0
+            HighLatsAdjustment.OneFifth -> 1.0 / 5.0
         }
     }
 
@@ -267,8 +264,8 @@ data class PrayTimes(
      * @return sun angle of sunset
      */
     private fun sunsetAngle(): Double {
-        //double earthRad = 6371009; // in meters
-        //double angle = DMath.arccos(earthRad/(earthRad+ elv));
+        //val earthRad = 6371009; // in meters
+        //val angle = DMath.arccos(earthRad/(earthRad+ elv));
         val angle: Double = if (method.useElevation) 0.0347 * sqrt(elevation) else 0.0 // an approximation
         return 0.833 + angle
     }

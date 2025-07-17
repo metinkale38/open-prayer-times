@@ -51,9 +51,9 @@ data class Entry(
 
         private fun List<String>.parseNames(): List<Map<String, String>> = map {
             if (!it.contains('=')) mapOf("" to it)
-            else it.split(";").map {
+            else it.split(";").associate {
                 it.split("=").let { it[0] to it[1] }
-            }.toMap()
+            }
         }
 
     }

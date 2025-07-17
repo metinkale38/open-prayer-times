@@ -12,7 +12,8 @@ import io.ktor.server.routing.*
 import kotlinx.serialization.json.Json
 
 fun main() {
-    Configuration.LOW_MEMORY_MODE = false
+    Configuration.LOW_MEMORY_MODE = true
+
 
     embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module)
         .start(wait = true)
