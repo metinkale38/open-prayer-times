@@ -12,7 +12,7 @@ class GeocoderTest {
     @Test
     fun searchByLocation() = runBlocking {
         sampleCities.forEach {
-            assertEquals(it.name.normalize(), Geocoder.byLocation(it.lat, it.lng)?.name?.normalize()?:"")
+            assertEquals(it.name.normalize(), Geocoder.byLocation(it.lat, it.lng)?.name?.normalize() ?: "")
         }
     }
 
@@ -20,9 +20,9 @@ class GeocoderTest {
     fun searchByName() = runBlocking {
         sampleCities.forEach { entry ->
             Geocoder.searchByName(entry.name)?.let {
-                assertTrue(abs(entry.lat - it.lat) < 2.0, entry.name + " Lat")
-                assertTrue(abs(entry.lng - it.lng) < 2.0, entry.name + " Lng")
-                assertEquals(entry.country,  entry.country,entry.name + " Country")
+                assertTrue(abs(entry.lat - it.lat) < 2.0, entry.name + " Lat " + it.lat)
+                assertTrue(abs(entry.lng - it.lng) < 2.0, entry.name + " Lng " + it.lng)
+                assertEquals(entry.country, it.country_code, entry.name + " Country " + it.country_code)
             }
         }
     }

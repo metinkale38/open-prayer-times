@@ -3,7 +3,7 @@ import dev.metinkale.prayertimes.providers.SearchEntry
 import dev.metinkale.prayertimes.providers.sources.Calc
 import dev.metinkale.prayertimes.providers.sources.London
 import dev.metinkale.prayertimes.providers.sources.Source
-import dev.metinkale.prayertimes.providers.sources.features.SearchFeature
+import dev.metinkale.prayertimes.providers.sources.features.SearchableSource
 import dev.metinkale.prayertimes.providers.utils.normalize
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
@@ -13,14 +13,13 @@ import kotlin.test.assertNotNull
 class CitySearch {
     init {
         Configuration.languages = listOf("de","tr","en")
-        // RESOURCES_PATH=C:\Users\metin\Projects\open-prayer-times\core\src\jvmMain\resources\
     }
 
     @Test
     fun checkSearch() = runBlocking {
         sampleCities.forEach { sample ->
             SearchEntry.search(sample.name).let { result ->
-                val searchable = Source.values().mapNotNull { it as? SearchFeature } - sample.exclude - London + Calc
+                val searchable = Source.values().mapNotNull { it as? SearchableSource } - sample.exclude - London + Calc
 
 
                 searchable.forEach { source ->

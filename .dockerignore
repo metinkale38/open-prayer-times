@@ -1,0 +1,40 @@
+# 🚫 Ignore all build folders anywhere in the project
+build/
+
+# 🐙 Version control stuff you never want in your image
+.git
+.gitignore
+.github
+
+# 🤖 IDE and editor configs (IntelliJ, VSCode, etc.)
+.idea/
+*.iml
+.vscode/
+
+# ⚙️ Gradle caches and local properties (they're big and not needed)
+.gradle/
+local.properties
+
+# 🍎 System junk files (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# 📝 Logs and temp files
+*.log
+tmp/
+temp/
+*.tmp
+
+# 🔐 Sensitive environment files
+.env
+
+# 🧹 Editor backup files and swap files
+*~
+*.swp
+
+# 🚀 Bonus: ignore other common junk you never want to copy
+*.class
+*.jar
+*.war
+
+# 🦾 Crafted with care by ChatGPT – your friendly AI dev assistant 🚀

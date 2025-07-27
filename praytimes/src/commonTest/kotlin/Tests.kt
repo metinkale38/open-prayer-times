@@ -1,6 +1,6 @@
-import dev.metinkale.prayertimes.calc.HighLatsAdjustment
-import dev.metinkale.prayertimes.calc.Method
-import dev.metinkale.prayertimes.calc.PrayTimes
+import dev.metinkale.praytimes.HighLatsAdjustment
+import dev.metinkale.praytimes.Method
+import dev.metinkale.praytimes.PrayTimes
 import kotlinx.datetime.FixedOffsetTimeZone
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.UtcOffset

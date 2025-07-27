@@ -6,34 +6,45 @@ plugins {
 
 
 kotlin {
-    js(IR) {
+    applyDefaultHierarchyTemplate()
+    if (project.findProperty("skipNative") != null)
+        linuxX64("linux")
+    jvm()
+    js {
         browser()
         nodejs()
     }
-    jvm()
 
     sourceSets {
         all {
             languageSettings.optIn("kotlin.RequiresOptIn")
+            languageSettings.optIn("kotlin.time.ExperimentalTime")
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
         }
-        val commonMain by getting {
-            dependencies {
-                api(kotlin("stdlib"))
-                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
-                api("org.jetbrains.kotlinx:kotlinx-datetime:0.6.1")
-            }
+
+        commonMain.dependencies {
+            api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+            api("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
         }
-        val jsMain by getting {
-            dependencies {
-                implementation(npm("@js-joda/timezone", "2.3.0"))
-            }
+
+        jsMain.dependencies {
+            implementation(npm("@js-joda/timezone", "2.3.0"))
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
-            }
+
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+            implementation(kotlin("test-common"))
+            implementation(kotlin("test-annotations-common"))
+        }
+    }
+}
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["kotlin"])
+            artifactId = "praytimes"
+            groupId = project.rootProject.group.toString()
+            version = project.version.toString()
         }
     }
 }

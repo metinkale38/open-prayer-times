@@ -1,0 +1,11 @@
+FROM gradle:8.9.0-jdk21 AS build
+COPY / /app/
+WORKDIR /app
+ENV GRADLE_OPTS="-Xmx4g"
+RUN gradle :server:native:linkReleaseExecutableLinux --no-daemon
+
+FROM alpine
+EXPOSE 8080
+RUN apk add --no-cache gcompat libstdc++
+COPY --from=build /app/server/native/build/bin/linux/releaseExecutable/* /
+ENTRYPOINT ["/native.kexe"]

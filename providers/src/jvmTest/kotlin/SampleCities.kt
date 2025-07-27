@@ -1,3 +1,4 @@
+import dev.metinkale.prayertimes.providers.sources.IGMG
 import dev.metinkale.prayertimes.providers.sources.Source
 
 data class Entry(

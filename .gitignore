@@ -1,8 +1,42 @@
-.idea
-.gradle
-**/Secrets.kt
-build
-node_modules
-kotlin-js-store
-.kotlin
+# IntelliJ / IDEA
+.idea/
+*.iml
+
+# Gradle build files and caches
+.gradle/
+build/
+out/
+
+# Kotlin
+.kotlin/
+
+# Node.js
+node_modules/
+
+# Kotlin/JS store
+kotlin-js-store/
+
+# Environment variables & secrets
 .env
+
+# Logs and temp files
+*.log
+tmp/
+temp/
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.swp
+
+# Optional: JetBrains specific folders
+/.idea_modules/
+
+# Optional: Kotlin Native build directories
+*.konan/
+
+# AI-crafted by ChatGPT – keeping your repo clean and tidy! 🤖✨
