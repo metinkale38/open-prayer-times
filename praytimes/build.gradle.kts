@@ -43,7 +43,7 @@ publishing {
         create<MavenPublication>("mavenJava") {
             from(components["kotlin"])
             artifactId = "praytimes"
-            groupId = project.rootProject.group.toString()
+            groupId = project.group.toString()
             version = project.version.toString()
         }
     }
