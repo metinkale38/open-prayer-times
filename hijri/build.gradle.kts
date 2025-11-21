@@ -6,8 +6,6 @@ plugins {
 
 kotlin {
     applyDefaultHierarchyTemplate()
-    if (project.findProperty("skipNative") != null)
-        linuxX64("linux") {}
     jvm()
 
     sourceSets {

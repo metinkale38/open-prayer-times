@@ -19,10 +19,10 @@ jobs:
         echo "VERSION=$VERSION" >> $GITHUB_ENV
 
     - name: Build with Gradle
-      run: ./gradlew build -DskipNative --no-daemon
+      run: ./gradlew build --no-daemon
 
     - name: Publish to GitHub Packages
-      run: ./gradlew publish -DskipNative --no-daemon
+      run: ./gradlew publish --no-daemon
       env:
         USERNAME: metinkale38
         TOKEN: ${{ secrets.ACCESS_TOKEN }}

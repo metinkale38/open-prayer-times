@@ -7,9 +7,8 @@ pluginManagement {
 
 rootProject.name = "open-prayer-times"
 
-include("praytimes")
-include("providers")
-include("hijri")
-include("server")
-include("server:jvm")
-include("server:native")
+include(":core")
+include(":calctimes")
+include(":hijri")
+include(":server")
+include(":diyanet-client")

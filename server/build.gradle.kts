@@ -3,52 +3,40 @@ val ktor_version: String by project
 val sqldelight_version: String by project
 
 plugins {
-    kotlin("multiplatform")
     id("org.jetbrains.kotlin.plugin.serialization")
     id("app.cash.sqldelight")
+    kotlin("jvm") version "2.2.0"
+    id("io.ktor.plugin") version "3.2.2"
+    application
 }
 
 sqldelight {
     databases {
         create("TimesDatabase") {
-            packageName.set("org.metinkale.prayertimes.db")
-            srcDirs.setFrom("src/commonMain/kotlin")
+            packageName.set("dev.metinkale.openprayertimes.db")
+            srcDirs.setFrom("src/main/kotlin")
         }
     }
 }
 
-
-kotlin {
-    applyDefaultHierarchyTemplate()
-    jvm { }
-    if (project.findProperty("skipNative") != null) {
-        linuxX64("linux") {}
-    }
-    sourceSets {
-        all {
-            languageSettings.optIn("kotlin.time.ExperimentalTime")
-            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
-        }
-
-
-        commonMain.dependencies {
-            api("io.ktor:ktor-server-core:$ktor_version")
-            implementation(project(":providers"))
-            api("io.ktor:ktor-server-cio:$ktor_version")
-            implementation(project(":hijri"))
-            implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
-            implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
-            implementation("io.ktor:ktor-server-cors:$ktor_version")
-            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
-            implementation("ch.qos.logback:logback-classic:$logback_version")
-            implementation("app.cash.sqldelight:runtime:$sqldelight_version")
-        }
-
-        linuxMain.dependencies {
-            implementation("app.cash.sqldelight:native-driver:${sqldelight_version}")
-        }
-        jvmMain.dependencies {
-            implementation("app.cash.sqldelight:sqlite-driver:${sqldelight_version}")
-        }
-    }
+application {
+    mainClass.set("dev.metinkale.openprayertimes.ApplicationKt")
 }
+
+
+dependencies {
+    implementation(project(":core"))
+    implementation(project(":hijri"))
+    implementation("io.ktor:ktor-server-core:$ktor_version")
+    implementation("io.ktor:ktor-server-cio:$ktor_version")
+    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+    implementation("io.ktor:ktor-server-cors:$ktor_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
+    implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("app.cash.sqldelight:runtime:$sqldelight_version")
+    implementation("app.cash.sqldelight:sqlite-driver:${sqldelight_version}")
+}
+
+
+

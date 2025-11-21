@@ -19,7 +19,6 @@ subprojects {
     version = "1.0-SNAPSHOT"
 
     plugins.withId("maven-publish") {
-
         publishing {
             repositories {
                 maven {
