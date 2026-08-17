@@ -1,4 +1,4 @@
-name: Gradle - Build and Deploy
+name: Build
 
 on:
   push:
@@ -12,17 +12,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Extract version from build.gradle.kts
-      id: extract_version
-      run: |
-        VERSION=$(grep 'version *= *"' build.gradle.kts | sed -E 's/.*version *= *"([^"]+)".*/\1/')
-        echo "VERSION=$VERSION" >> $GITHUB_ENV
-
     - name: Build with Gradle
       run: ./gradlew build --no-daemon
-
-    - name: Publish to GitHub Packages
-      run: ./gradlew publish --no-daemon
-      env:
-        USERNAME: metinkale38
-        TOKEN: ${{ secrets.ACCESS_TOKEN }}

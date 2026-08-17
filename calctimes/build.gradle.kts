@@ -1,38 +1,27 @@
 plugins {
-    kotlin("multiplatform")
+    kotlin("jvm")
     id("maven-publish")
 }
 
+dependencies {
+    api("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
+    testImplementation(kotlin("test"))
+}
 
 kotlin {
-    jvm()
-
-    sourceSets {
-        all {
-            languageSettings.optIn("kotlin.RequiresOptIn")
-            languageSettings.optIn("kotlin.time.ExperimentalTime")
-            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
-        }
-
-        commonMain.dependencies {
-            api("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
-        }
-
-
-        commonTest.dependencies {
-            implementation(kotlin("test"))
-            implementation(kotlin("test-common"))
-            implementation(kotlin("test-annotations-common"))
-        }
+    compilerOptions {
+        freeCompilerArgs.addAll(
+            "-opt-in=kotlin.RequiresOptIn",
+            "-opt-in=kotlin.time.ExperimentalTime"
+        )
     }
 }
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            from(components["kotlin"])
+            from(components["java"])
             artifactId = "calctimes"
-            groupId = project.group.toString()
-            version = project.version.toString()
         }
     }
 }

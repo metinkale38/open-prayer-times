@@ -1,37 +1,25 @@
 plugins {
-    kotlin("multiplatform")
+    kotlin("jvm")
     id("maven-publish")
 }
 
+dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
+}
 
 kotlin {
-    applyDefaultHierarchyTemplate()
-    jvm()
-
-    sourceSets {
-
-        all {
-            languageSettings.optIn("kotlin.time.ExperimentalTime")
-            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
-        }
-
-        commonMain.dependencies {
-            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
-        }
-
-        jvmMain.dependencies {
-            implementation(kotlin("stdlib"))
-        }
+    compilerOptions {
+        freeCompilerArgs.addAll(
+            "-opt-in=kotlin.time.ExperimentalTime"
+        )
     }
 }
 
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            from(components["kotlin"])
+            from(components["java"])
             artifactId = "hijri"
-            groupId = project.group.toString()
-            version = project.version.toString()
         }
     }
 }

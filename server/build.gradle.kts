@@ -1,41 +1,42 @@
-val logback_version: String by project
-val ktor_version: String by project
-val sqldelight_version: String by project
-
 plugins {
     id("org.jetbrains.kotlin.plugin.serialization")
-    id("app.cash.sqldelight")
-    kotlin("jvm") version "2.2.0"
-    id("io.ktor.plugin") version "3.2.2"
+    kotlin("jvm") version "2.4.10"
+    id("io.ktor.plugin") version "3.5.2"
     application
 }
 
-sqldelight {
-    databases {
-        create("TimesDatabase") {
-            packageName.set("dev.metinkale.openprayertimes.db")
-            srcDirs.setFrom("src/main/kotlin")
-        }
-    }
-}
-
 application {
-    mainClass.set("dev.metinkale.openprayertimes.ApplicationKt")
+    mainClass.set("dev.metinkale.openprayertimes.server.ApplicationKt")
 }
 
 
 dependencies {
-    implementation(project(":core"))
+    implementation(project(":client"))
+    implementation(project(":diyanet-client"))
     implementation(project(":hijri"))
-    implementation("io.ktor:ktor-server-core:$ktor_version")
-    implementation("io.ktor:ktor-server-cio:$ktor_version")
-    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
-    implementation("io.ktor:ktor-server-cors:$ktor_version")
+    implementation(project(":calctimes"))
+    implementation("io.ktor:ktor-server-core:3.5.2")
+    implementation("io.ktor:ktor-server-cors:3.5.2")
+    implementation("io.ktor:ktor-server-cio:3.5.2")
+    implementation("io.ktor:ktor-server-content-negotiation:3.5.2")
+    implementation("io.ktor:ktor-client-cio:3.5.2")
+    implementation("io.ktor:ktor-client-core:3.5.2")
+    implementation("io.ktor:ktor-client-logging:3.5.2")
+    implementation("io.ktor:ktor-client-content-negotiation:3.5.2")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.5.2")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("app.cash.sqldelight:runtime:$sqldelight_version")
-    implementation("app.cash.sqldelight:sqlite-driver:${sqldelight_version}")
+    implementation("ch.qos.logback:logback-classic:1.6.3")
+
+
+    "1.3.1".let { version ->
+        implementation("org.jetbrains.exposed:exposed-core:${version}")
+        implementation("org.jetbrains.exposed:exposed-jdbc:${version}")
+        implementation("org.jetbrains.exposed:exposed-json:${version}")
+        implementation("org.jetbrains.exposed:exposed-java-time:${version}")
+    }
+
+    implementation("org.postgresql:postgresql:42.7.2")
+    implementation("com.zaxxer:HikariCP:5.1.0")
 }
 
 

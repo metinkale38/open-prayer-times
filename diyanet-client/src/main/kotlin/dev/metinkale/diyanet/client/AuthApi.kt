@@ -6,34 +6,13 @@ import io.ktor.client.request.get
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 
-class AuthApi(
-    private val client: HttpClient,
-    private val parent: DiyanetApiClient
-) {
+class AuthApi(private val client: HttpClient) {
 
-    suspend fun login(email: String, password: String): AuthResponse {
-        val response: AuthResponse = client.post("/Auth/Login") {
+    suspend fun login(email: String, password: String): Response<TokenData> =
+        client.post("/Auth/Login") {
             setBody(LoginRequest(email, password))
         }.body()
 
-        parent.saveTokens(
-            response.data.accessToken,
-            response.data.refreshToken
-        )
-
-        return response
-    }
-
-    suspend fun register(request: RegisterRequest): AuthResponse =
-        client.post("/Auth/Register") {
-            setBody(request)
-        }.body()
-
-    suspend fun refreshToken(refreshToken: String): AuthResponse =
+    suspend fun refreshToken(refreshToken: String): Response<TokenData> =
         client.get("/Auth/RefreshToken/$refreshToken").body()
-
-    suspend fun forgotPassword(email: String) =
-        client.post("/Auth/ForgotPassword") {
-            setBody(mapOf("email" to email))
-        }
 }

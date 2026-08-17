@@ -7,7 +7,7 @@ pluginManagement {
 
 rootProject.name = "open-prayer-times"
 
-include(":core")
+include(":client")
 include(":calctimes")
 include(":hijri")
 include(":server")

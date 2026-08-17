@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "shapeMoonUrl": "https://awqatsalah.diyanet.gov.tr/images/r3.gif",
+      "fajr": "04:11",
+      "sunrise": "06:13",
+      "dhuhr": "13:36",
+      "asr": "17:32",
+      "maghrib": "20:49",
+      "isha": "22:33",
+      "astronomicalSunset": "20:42",
+      "astronomicalSunrise": "06:20",
+      "hijriDateShort": "3.3.1448",
+      "hijriDateShortIso8601": null,
+      "hijriDateLong": "3 Rebiulevvel 1448",
+      "hijriDateLongIso8601": null,
+      "qiblaTime": "11:04",
+      "gregorianDateShort": "16.08.2026",
+      "gregorianDateShortIso8601": "16.08.2026",
+      "gregorianDateLong": "16 Ağustos 2026 Pazar",
+      "gregorianDateLongIso8601": "2026-08-16T00:00:00.0000000+03:00",
+      "greenwichMeanTimeZone": 2
+    }
+  ],
+  "success": true,
+  "message": null
+}

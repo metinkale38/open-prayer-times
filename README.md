@@ -9,21 +9,18 @@ The goal is to offer a modular, platform-independent solution that can be reused
 
 ## Project Modules
 
-### core — Main Library (Provider Aggregator)
 
-This is the primary multiplatform module that brings together both:
+### server — REST API (Ktor)
 
-- Web-based providers (e.g. Diyanet, IGMG, NamazVakti)
-- Offline calculation via the calctimes module
+A Ktor-based server exposing the full functionality of openprayertimes via a REST interface.
 
-All providers implement a shared Source interface that offers:
+Features:
+- Search cities by name or coordinates
+- Retrieve daily prayer times from any provider
+- Prayer times are cached on a postgres server
 
-- City search (by query or lat/lng)
-- Daily prayer time retrieval
-- Unified access regardless of provider type
 
-Included Providers:
-- Calc – Uses the internal calctimes module (offline)
+Supported prayer times providers
 - Diyanet – Presidency of Religious Affairs, Turkey
 - IGMG – Islamische Gemeinschaft Millî Görüş, Germany
 - London – Unified Islamic Prayer Timetable (londonprayertimes.com)
@@ -31,13 +28,6 @@ Included Providers:
 - Semerkand – Semerkand Takvimi (semerkandtakvimi.com)
 
 Want to add another provider? Open a pull request!
-
-Example:
-
-    val entry = Diyanet.search("Braunschweig").firstOrNull()
-    val times = entry?.let { Diyanet.getDayTimes(it.id) }
-
----
 
 ### calctimes — Local Calculation Engine
 
@@ -73,11 +63,3 @@ Features:
 
 ---
 
-### server — REST API (Ktor)
-
-A Ktor-based server exposing the full functionality of openprayertimes via a REST interface.
-
-Features:
-- Search cities by name or coordinates
-- Retrieve daily prayer times from any provider
-- Host your own backend for mobile or web clients

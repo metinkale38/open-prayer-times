@@ -1,6 +1,7 @@
+
 plugins {
     id("org.jetbrains.kotlin.plugin.serialization")
-    kotlin("jvm") version "2.2.0"
+    kotlin("jvm") version "2.4.10"
     application
 }
 
@@ -12,13 +13,13 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    implementation("io.ktor:ktor-client-cio:2.3.7")
-    implementation("io.ktor:ktor-client-core:2.3.7")
-    implementation("io.ktor:ktor-client-auth:2.3.7")
-    implementation("io.ktor:ktor-client-logging:2.3.7")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.7")
-    implementation("io.ktor:ktor-client-content-negotiation:2.3.7")
+    implementation("com.auth0:java-jwt:4.6.0")
+    implementation("io.ktor:ktor-client-cio:3.5.2")
+    implementation("io.ktor:ktor-client-core:3.5.2")
+    implementation("io.ktor:ktor-client-auth:3.5.2")
+    implementation("io.ktor:ktor-client-logging:3.5.2")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.5.2")
+    implementation("io.ktor:ktor-client-content-negotiation:3.5.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
 }
 
