@@ -19,7 +19,7 @@ private val today get() = LocalDate.now()
 private val lastOfYear get() = LocalDate(today.year, Month.DECEMBER, 31)
 
 private suspend fun resolveCity(path: List<String>): City {
-    return ListableProvider.getCity(path.map { it.replace("+", " ") } ) ?: throw NotFoundException("City not found")
+    return ListableProvider.getCity(path.map { it.replace("+", " ") }) ?: throw NotFoundException("City not found")
 }
 
 suspend fun RoutingContext.handleCSV(path: List<String>) {
@@ -59,11 +59,40 @@ private suspend fun getPrayerTimes(
     from: LocalDate,
     to: LocalDate
 ): List<DayTimes> {
+
     var times = TimesTable.get(provider, key, from, to)
     if (times.size < from.daysUntil(to) + 1) {
+        // all times are cached, we should not try again and again if it did not work last time
+        if (requestedLastHours.contains(provider.name + key)) throw RuntimeException("Could not fetch prayer times for this city, please try later again.")
+        requestedLastHours.add(provider.name + key)
         times = PrayerTimesFetcher.find(provider).getPrayerTimes(key)
             .also { TimesTable.save(provider, key, it) }
             .filter { it.date >= from && (it.date <= to) }
     }
     return times
+}
+
+
+private val requestedLastHours = SimpleTimedSet<String>(60 * 60 * 1000)
+
+class SimpleTimedSet<T>(private val ttlMillis: Long) {
+    private val map = mutableMapOf<T, Long>()
+
+    fun add(key: T) {
+        map[key] = System.currentTimeMillis() + ttlMillis
+    }
+
+    operator fun contains(key: T): Boolean {
+        val expireTime = map[key] ?: return false
+        if (System.currentTimeMillis() > expireTime) {
+            map.remove(key)
+            return false
+        }
+        return true
+    }
+
+    val size: Int
+        get() {
+            return map.size
+        }
 }

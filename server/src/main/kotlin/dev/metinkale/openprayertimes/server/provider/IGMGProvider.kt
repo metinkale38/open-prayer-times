@@ -13,7 +13,12 @@ object IGMGProvider : PrayerTimesFetcher {
     private val json = Json { ignoreUnknownKeys = true }
     private fun LocalDate.toDMY() = toString().split("-").reversed().joinToString(".")
 
+
+
+
     override suspend fun getPrayerTimes(key: String): List<DayTimes> {
+
+
         val from = LocalDate.now().let { it.withDayOfMonth(1) }
         val to = from.withMonth(12).withDayOfMonth(31)
 
@@ -24,7 +29,9 @@ object IGMGProvider : PrayerTimesFetcher {
                     "&to=" + to.toDMY())
         ) {
             header("X-API-Key", System.getenv("IGMG_API_KEY"))
-        }.bodyAsText().let { json.decodeFromString(PrayerTimesResponse.serializer(), it) }.list
+        }.bodyAsText().let {
+            json.decodeFromString(PrayerTimesResponse.serializer(), it)
+        }.list
 
 
         return list.map {
@@ -57,3 +64,4 @@ object IGMGProvider : PrayerTimesFetcher {
         val ishaa: String
     )
 }
+

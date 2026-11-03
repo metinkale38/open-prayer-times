@@ -1,7 +1,5 @@
 package dev.metinkale.openprayertimes.hijri
 
-import com.metinkale.prayer.date.HijriEvent
-import com.metinkale.prayer.date.HijriMonth
 import kotlinx.datetime.*
 import kotlinx.datetime.LocalDate
 

@@ -1,4 +1,4 @@
-package com.metinkale.prayer.date
+package dev.metinkale.openprayertimes.hijri
 
 
 enum class HijriEvent {

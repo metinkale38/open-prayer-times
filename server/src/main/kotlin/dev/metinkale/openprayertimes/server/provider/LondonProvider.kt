@@ -35,7 +35,7 @@ object LondonProvider : PrayerTimesFetcher {
             var last: LocalTime? = null
             times.forEachIndexed { index, time ->
                 if (last == null) last = time
-                else if (last!! > time) times[index] = LocalTime(time.hour + 12, time.minute)
+                else if (last > time) times[index] = LocalTime(time.hour + 12, time.minute)
             }
 
             DayTimes(
