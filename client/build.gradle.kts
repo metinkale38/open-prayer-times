@@ -14,6 +14,7 @@ dependencies {
 
     testImplementation(kotlin("test"))
     testImplementation(kotlin("test-junit"))
+    testImplementation("io.ktor:ktor-client-mock:3.5.2")
 }
 
 kotlin {
