@@ -48,9 +48,7 @@ val ishaa = times.ishaa
 
 #### Provenance and License
 
-`calctimes` is a Kotlin port of **PrayTimes.js 2.3**. It was translated from
-the author's earlier Java port of the same version. The `PrayTimes-Java 0.9`
-project is not the source; it reused code from that earlier port.
+`calctimes` is a Kotlin port of **PrayTimes.js 2.3**.
 
 The upstream library carries this header:
 
@@ -65,47 +63,27 @@ History in this repository:
 
 - Added on 2022-11-02 in commit `dd424a4` as the `praytimes` module.
 - Renamed to `calctimes` in commit `271c118`.
-- The older 2015 `vakit/times/PrayTime.java` in `prayer-times-android` is a
-  separate PrayTimes 1.0 port and is not the source of this module.
 
-PrayTimes.js 2.3 and its Java port are licensed under **GNU LGPL v3.0**. As a
-derivative work, `calctimes` must be treated as LGPL-3.0. Redistributions must
-retain the copyright notice, credit PrayTimes.org, link back to the original
-project, and comply with the LGPL (including source availability for
-modifications). It cannot be relicensed as MIT or Apache-2.0 only.
+PrayTimes.js 2.3 is licensed under **GNU LGPL v3.0**. As a derivative work,
+`calctimes` must be treated as LGPL-3.0. Redistributions must retain the
+copyright notice, credit PrayTimes.org, link back to the original project, and
+comply with the LGPL (including source availability for modifications). It
+cannot be relicensed as MIT or Apache-2.0 only.
 
 The repository currently has no top-level `LICENSE` file. The one-line
 `calctimes/NOTICE.txt` is not a replacement for the full LGPL-3.0 text.
 
 #### Differences from PrayTimes.js 2.3
 
-The astronomy core is based on 2.3: Julian day conversion, solar declination,
-equation of time, sunrise/sunset angle, Asr shadow factors, high-latitude night
-portions, and midnight calculation. The public API and several behaviors differ:
+The astronomy core is based on 2.3. The API and behavior differ in these areas:
 
-- Kotlin/JVM API using `kotlinx-datetime`. The caller supplies a `TimeZone`, and
-  `CalcTimes.getPrayerTimes(LocalDate)` returns typed `LocalTime` values instead
-  of the JavaScript string-based `getTimes()` result.
-- Returns `imsak`, `fajr`, `sunrise`, `zawal`, `dhuhr`, `asrShafi`,
-  `asrHanafi`, `sunset`, `maghrib`, `ishaa`, `firstThird`, `midnight`, and
-  `lastThird`. The original returns only one Asr value and no Zawal or night
-  thirds.
-- Adds `HighLatsType.Max` and `HighLatsType.Strict`. `Max` matches the original
-  behavior of clamping whenever a calculated time exceeds the night portion;
-  `Strict` only adjusts when the time cannot be calculated.
-- Adds `HighLatsAdjustment.OneThird` and `HighLatsAdjustment.OneFifth`. The
-  original 2.3 modes are `None`, `NightMiddle`, `OneSeventh`, and `AngleBased`.
-- Adds method presets `UOIF`, `Russia`, and `Singapore`. `UOIF` was added to the
-  Java port later; `Russia` and `Singapore` were added in this repository.
-- Exposes per-prayer minute offsets and angle overrides through `Method`, plus a
-  `useElevation` switch. The original always applies the elevation correction.
-- Defaults differ. The bundled presets use `HighLatsAdjustment.None` and set
-  Imsak to the Fajr angle. PrayTimes.js 2.3 defaults to `NightMiddle` and
-  calculates Imsak 10 minutes before Fajr. Set the method fields explicitly if
-  you need behavior identical to the original.
-- The JavaScript `adjust()`, `tune()`, `getMethod()`, `getSetting()`, and
-  string-formatting APIs are replaced by immutable `Method` values and
-  `Method.copy(...)`.
+- Kotlin/JVM API returning typed `LocalTime` values instead of formatted strings.
+- Returns both Asr variants, Zawal, and the first/last thirds of the night.
+- Adds high-latitude modes `OneThird`/`OneFifth` and `HighLatsType.Max`/`Strict`.
+- Adds the method presets `UOIF`, `Russia`, and `Singapore`.
+- Exposes per-prayer offsets, angle overrides, and an elevation toggle.
+- Defaults differ: bundled presets use no high-latitude adjustment and Imsak =
+  Fajr, while 2.3 defaults to `NightMiddle` and Imsak 10 minutes before Fajr.
 
 ### client - Hosted API Client
 
