@@ -12,6 +12,10 @@ repositories {
     mavenCentral()
 }
 
+tasks.withType<Jar>().configureEach {
+    from(rootProject.file("LICENSE")) { into("META-INF") }
+}
+
 dependencies {
     implementation("com.auth0:java-jwt:4.6.0")
     implementation("io.ktor:ktor-client-cio:3.5.2")

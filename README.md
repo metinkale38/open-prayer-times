@@ -10,6 +10,9 @@ logic can be reused independently. The current build targets the JVM; the module
 boundaries are intended to allow additional targets later, but Kotlin
 Multiplatform is not enabled yet.
 
+`calctimes` is licensed under LGPL-3.0; all other modules are licensed under
+Apache-2.0.
+
 ## Project Modules
 
 ### calctimes - Local Calculation Engine
@@ -60,13 +63,14 @@ License: GNU LGPL v3.0
 ```
 
 PrayTimes.js 2.3 is licensed under **GNU LGPL v3.0**. As a derivative work,
-`calctimes` must be treated as LGPL-3.0. Redistributions must retain the
+`calctimes` is licensed under LGPL-3.0. Redistributions must retain the
 copyright notice, credit PrayTimes.org, link back to the original project, and
 comply with the LGPL (including source availability for modifications). It
 cannot be relicensed as MIT or Apache-2.0 only.
 
-The repository currently has no top-level `LICENSE` file. The one-line
-`calctimes/NOTICE.txt` is not a replacement for the full LGPL-3.0 text.
+The full license text is in `calctimes/LICENSE`, with the incorporated GPL-3.0
+terms in `calctimes/LICENSE.GPL-3.0`. Upstream attribution is in
+`calctimes/NOTICE.txt`.
 
 #### Differences from PrayTimes.js 2.3
 
@@ -185,6 +189,8 @@ GET /hijri/{year}                          # Hijri events in a Hijri year
 
 ## License
 
-`calctimes` is subject to GNU LGPL v3.0 because it derives from PrayTimes.js 2.3.
-See the provenance section above. A top-level `LICENSE` file and licensing
-information for the other modules are currently missing from this repository.
+This repository uses two licenses:
+
+- `calctimes/`: GNU Lesser General Public License v3.0. See
+  `calctimes/LICENSE`, `calctimes/LICENSE.GPL-3.0`, and `calctimes/NOTICE.txt`.
+- All other modules and files: Apache License 2.0. See the root `LICENSE`.

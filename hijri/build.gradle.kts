@@ -15,11 +15,24 @@ kotlin {
     }
 }
 
+tasks.withType<Jar>().configureEach {
+    from(rootProject.file("LICENSE")) { into("META-INF") }
+}
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
             artifactId = "hijri"
+            pom {
+                licenses {
+                    license {
+                        name.set("Apache License, Version 2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+                        distribution.set("repo")
+                    }
+                }
+            }
         }
     }
 }

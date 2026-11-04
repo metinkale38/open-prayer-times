@@ -17,11 +17,26 @@ kotlin {
     }
 }
 
+tasks.withType<Jar>().configureEach {
+    from("LICENSE") { into("META-INF") }
+    from("LICENSE.GPL-3.0") { into("META-INF") }
+    from("NOTICE.txt") { into("META-INF") }
+}
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
             artifactId = "calctimes"
+            pom {
+                licenses {
+                    license {
+                        name.set("GNU Lesser General Public License v3.0")
+                        url.set("https://www.gnu.org/licenses/lgpl-3.0.html")
+                        distribution.set("repo")
+                    }
+                }
+            }
         }
     }
 }
