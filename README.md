@@ -81,8 +81,6 @@ The astronomy core is based on 2.3. The API and behavior differ in these areas:
 - Adds high-latitude modes `OneThird`/`OneFifth` and `HighLatsType.Max`/`Strict`.
 - Adds the method presets `UOIF`, `Russia`, `Malaysia`, and `Singapore`.
 - Uses `Midnight.SunsetFajr` as the default and for every bundled method.
-- Rounds earlier times down and prayer starts up: Imsak, Fajr, Sunrise, Zawal,
-  Sunset and night times are floored; Dhuhr, Asr, Maghrib and Ishaa are ceiled.
 - Exposes per-prayer offsets, angle overrides, and an elevation toggle.
 - Defaults differ: bundled presets use no high-latitude adjustment and Imsak =
   Fajr, while 2.3 defaults to `NightMiddle` and Imsak 10 minutes before Fajr.
@@ -187,8 +185,6 @@ GET /date/{year}                           # Hijri events in a Gregorian year
 GET /hijri/{yyyy-mm-dd}
 GET /hijri/{year}                          # Hijri events in a Hijri year
 ```
-
-`/api/...` is still available as a deprecated alias for the same routes.
 
 ## License
 

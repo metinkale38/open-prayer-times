@@ -37,8 +37,11 @@ class CalculationTest {
         assertEquals(LocalTime(5, 23), times.sunrise)
         assertEquals(LocalTime(13, 13), times.dhuhr)
         assertEquals(LocalTime(17, 26), times.asrShafi)
-        assertEquals(LocalTime(21, 1), times.sunset)
+        assertEquals(LocalTime(21, 2), times.sunset)
         assertEquals(LocalTime(21, 2), times.maghrib)
         assertEquals(LocalTime(23, 52), times.ishaa)
+        assertEquals(LocalTime(22, 44), times.firstThird)
+        assertEquals(LocalTime(23, 35), times.midnight)
+        assertEquals(LocalTime(0, 26), times.lastThird)
     }
 }

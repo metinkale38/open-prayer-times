@@ -102,14 +102,14 @@ data class CalcTimes(
         }
 
 
-        // add midnight time
-        if (method.midnight === Midnight.SunsetSunrise) {
-            times.midnight = times.sunset + timeDiff(times.sunset, times.sunrise) / 2.0
-            times.lastThird = times.sunset + timeDiff(times.sunset, times.sunrise) * (2.0 / 3.0)
-        } else if (method.midnight === Midnight.SunsetFajr) {
-            times.midnight = times.sunset + timeDiff(times.sunset, times.fajr) / 2.0
-            times.lastThird = times.sunset + timeDiff(times.sunset, times.fajr) * (2.0 / 3.0)
+        // add midnight and night thirds
+        val night = when (method.midnight) {
+            Midnight.SunsetSunrise -> timeDiff(times.sunset, times.sunrise)
+            Midnight.SunsetFajr -> timeDiff(times.sunset, times.fajr)
         }
+        times.midnight = times.sunset + night / 2.0
+        times.firstThird = times.sunset + night / 3.0
+        times.lastThird = times.sunset + night * (2.0 / 3.0)
 
         times.imsak += method.imsakMinute / 60.0
         times.fajr += method.fajrMinute / 60.0

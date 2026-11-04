@@ -7,6 +7,7 @@ import kotlinx.datetime.atStartOfDayIn
 import kotlinx.datetime.toLocalDateTime
 import kotlin.math.ceil
 import kotlin.math.floor
+import kotlin.math.round
 import kotlin.time.Duration.Companion.minutes
 
 
@@ -46,13 +47,13 @@ internal data class DoubleTimes(
     }
 
     fun toTimes(date: LocalDate, timezone: TimeZone): PrayerTimes {
-        fun Double.toLocalTime(roundUp: Boolean): LocalTime {
+        fun Double.toLocalTime(roundUp: Boolean?): LocalTime {
             if (isNaN()) return LocalTime(0, 0)
 
-            val totalMinutes = if (roundUp) {
-                ceil(this * 60.0).toInt()
-            } else {
-                floor(this * 60.0).toInt()
+            val totalMinutes = when (roundUp) {
+                true -> ceil(this * 60.0).toInt()
+                false -> floor(this * 60.0).toInt()
+                null -> round(this * 60.0).toInt()
             }
 
             return (date.atStartOfDayIn(TimeZone.UTC) + totalMinutes.minutes)
@@ -63,16 +64,16 @@ internal data class DoubleTimes(
             imsak = imsak.toLocalTime(false),
             fajr = fajr.toLocalTime(false),
             sunrise = sunrise.toLocalTime(false),
-            zawal = zawal.toLocalTime(false),
+            zawal = zawal.toLocalTime(null),
             dhuhr = dhuhr.toLocalTime(true),
             asrShafi = asrShafi.toLocalTime(true),
             asrHanafi = asrHanafi.toLocalTime(true),
-            sunset = sunset.toLocalTime(false),
+            sunset = sunset.toLocalTime(null),
             maghrib = maghrib.toLocalTime(true),
             ishaa = ishaa.toLocalTime(true),
-            midnight = midnight.toLocalTime(false),
-            firstThird = firstThird.toLocalTime(false),
-            lastThird = lastThird.toLocalTime(false),
+            midnight = midnight.toLocalTime(null),
+            firstThird = firstThird.toLocalTime(null),
+            lastThird = lastThird.toLocalTime(null),
             usedHighLatsAdjustmentFajr = usedHighLatsAdjustmentFajr,
             usedHighLatsAdjustmentImsak = usedHighLatsAdjustmentImsak,
             usedHighLatsAdjustmentMaghrib = usedHighLatsAdjustmentMaghrib,
