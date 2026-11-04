@@ -3,10 +3,11 @@ package dev.metinkale.calctimes
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.TimeZone
-import kotlinx.datetime.atTime
-import kotlinx.datetime.toInstant
+import kotlinx.datetime.atStartOfDayIn
 import kotlinx.datetime.toLocalDateTime
+import kotlin.math.ceil
 import kotlin.math.floor
+import kotlin.time.Duration.Companion.minutes
 
 
 internal data class DoubleTimes(
@@ -45,30 +46,33 @@ internal data class DoubleTimes(
     }
 
     fun toTimes(date: LocalDate, timezone: TimeZone): PrayerTimes {
-        fun Double.toLocalTime(): LocalTime {
-            return (if (isNaN()) {
-                LocalTime(0, 0)
+        fun Double.toLocalTime(roundUp: Boolean): LocalTime {
+            if (isNaN()) return LocalTime(0, 0)
+
+            val totalMinutes = if (roundUp) {
+                ceil(this * 60.0).toInt()
             } else {
-                date.atTime(
-                    floor(this).toInt(), floor((this - floor(this)) * 60).toInt()
-                ).toInstant(TimeZone.UTC).toLocalDateTime(timezone).time
-            })
+                floor(this * 60.0).toInt()
+            }
+
+            return (date.atStartOfDayIn(TimeZone.UTC) + totalMinutes.minutes)
+                .toLocalDateTime(timezone).time
         }
 
         return PrayerTimes(
-            imsak = imsak.toLocalTime(),
-            fajr = fajr.toLocalTime(),
-            sunrise = sunrise.toLocalTime(),
-            zawal = zawal.toLocalTime(),
-            dhuhr = dhuhr.toLocalTime(),
-            asrShafi = asrShafi.toLocalTime(),
-            asrHanafi = asrHanafi.toLocalTime(),
-            sunset = sunset.toLocalTime(),
-            maghrib = maghrib.toLocalTime(),
-            ishaa = ishaa.toLocalTime(),
-            midnight = midnight.toLocalTime(),
-            firstThird = firstThird.toLocalTime(),
-            lastThird = lastThird.toLocalTime(),
+            imsak = imsak.toLocalTime(false),
+            fajr = fajr.toLocalTime(false),
+            sunrise = sunrise.toLocalTime(false),
+            zawal = zawal.toLocalTime(false),
+            dhuhr = dhuhr.toLocalTime(true),
+            asrShafi = asrShafi.toLocalTime(true),
+            asrHanafi = asrHanafi.toLocalTime(true),
+            sunset = sunset.toLocalTime(false),
+            maghrib = maghrib.toLocalTime(true),
+            ishaa = ishaa.toLocalTime(true),
+            midnight = midnight.toLocalTime(false),
+            firstThird = firstThird.toLocalTime(false),
+            lastThird = lastThird.toLocalTime(false),
             usedHighLatsAdjustmentFajr = usedHighLatsAdjustmentFajr,
             usedHighLatsAdjustmentImsak = usedHighLatsAdjustmentImsak,
             usedHighLatsAdjustmentMaghrib = usedHighLatsAdjustmentMaghrib,

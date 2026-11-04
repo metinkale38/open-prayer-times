@@ -22,7 +22,7 @@ Offline prayer time calculations based on a Kotlin port of
 
 - No internet connection required
 - Multiple calculation methods: MWL, ISNA, Egypt, Makkah, Karachi, UOIF,
-  Russia, Singapore, Tehran, Jafari
+  Russia, Malaysia, Singapore, Tehran, Jafari
 - Configurable high-latitude adjustments and midnight modes
 - Uses latitude, longitude, elevation, timezone, and date
 
@@ -79,7 +79,10 @@ The astronomy core is based on 2.3. The API and behavior differ in these areas:
 - Kotlin/JVM API returning typed `LocalTime` values instead of formatted strings.
 - Returns both Asr variants, Zawal, and the first/last thirds of the night.
 - Adds high-latitude modes `OneThird`/`OneFifth` and `HighLatsType.Max`/`Strict`.
-- Adds the method presets `UOIF`, `Russia`, and `Singapore`.
+- Adds the method presets `UOIF`, `Russia`, `Malaysia`, and `Singapore`.
+- Uses `Midnight.SunsetFajr` as the default and for every bundled method.
+- Rounds earlier times down and prayer starts up: Imsak, Fajr, Sunrise, Zawal,
+  Sunset and night times are floored; Dhuhr, Asr, Maghrib and Ishaa are ceiled.
 - Exposes per-prayer offsets, angle overrides, and an elevation toggle.
 - Defaults differ: bundled presets use no high-latitude adjustment and Imsak =
   Fajr, while 2.3 defaults to `NightMiddle` and Imsak 10 minutes before Fajr.
