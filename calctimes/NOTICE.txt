@@ -1,1 +1,14 @@
-This module is a kotlin port of http://praytimes.org/
+calctimes
+=========
+
+This module is a Kotlin port of PrayTimes.js 2.3.
+
+PrayTimes.js: Prayer Times Calculator (ver 2.3)
+Copyright (C) 2007-2011 PrayTimes.org
+Developer: Hamid Zarrabi-Zadeh
+License: GNU LGPL v3.0
+
+Original project: http://praytimes.org/
+
+The full LGPL-3.0 text is in LICENSE. The GPL-3.0 terms incorporated by
+reference are in LICENSE.GPL-3.0.

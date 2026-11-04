@@ -68,7 +68,7 @@ data class Method(
     companion object {
 
         fun values(): List<MethodBuilder> =
-            listOf(MWL, ISNA, Egypt, Makkah, Karachi, UOIF, Russia, Singapore, Tehran, Jafari)
+            listOf(MWL, ISNA, Egypt, Makkah, Karachi, UOIF, Russia, Malaysia, Singapore, Tehran, Jafari)
 
         /**
          * Muslim World League
@@ -76,7 +76,7 @@ data class Method(
          */
         val MWL = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             imsakAngle = 18.0,
             fajrAngle = 18.0,
             ishaaAngle = 17.0
@@ -91,9 +91,9 @@ data class Method(
          */
         val ISNA = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
-            fajrAngle = 18.0,
-            imsakAngle = 18.0,
+            midnight = Midnight.SunsetFajr,
+            fajrAngle = 15.0,
+            imsakAngle = 15.0,
             ishaaAngle = 15.0
         ).apply {
             shortName = "ISNA"
@@ -106,7 +106,7 @@ data class Method(
          */
         val Egypt = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 19.5,
             imsakAngle = 19.5,
             ishaaAngle = 17.5
@@ -121,7 +121,7 @@ data class Method(
          */
         val Makkah = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 18.5,
             imsakAngle = 18.5,
             ishaaMinute = 90
@@ -133,14 +133,14 @@ data class Method(
 
         /**
          * University of Islamic Sciences, Karachi
-         * Fajr: 18*, Maghrib: Sunset, Ishaa: 15*
+         * Fajr: 18*, Maghrib: Sunset, Ishaa: 18*
          */
         val Karachi = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 18.0,
             imsakAngle = 18.0,
-            ishaaAngle = 15.0
+            ishaaAngle = 18.0
         ).apply {
             shortName = "Karachi"
             name = "University of Islamic Sciences, Karachi"
@@ -152,7 +152,7 @@ data class Method(
          */
         val UOIF = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 12.0,
             imsakAngle = 12.0,
             ishaaAngle = 12.0
@@ -166,7 +166,7 @@ data class Method(
          */
         val Russia = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 16.0,
             imsakAngle = 16.0,
             maghribAngle = 0.0,
@@ -177,11 +177,26 @@ data class Method(
         }
 
         /**
+         * Department of Islamic Development Malaysia (JAKIM)
+         */
+        val Malaysia = Method(
+            highLats = HighLatsAdjustment.None,
+            midnight = Midnight.SunsetFajr,
+            fajrAngle = 20.0,
+            imsakAngle = 20.0,
+            maghribAngle = 0.0,
+            ishaaAngle = 18.0
+        ).apply {
+            shortName = "Malaysia"
+            name = "Department of Islamic Development Malaysia (JAKIM)"
+        }
+
+        /**
          * Islamic Religious Council of Singapore
          */
         val Singapore = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 20.0,
             imsakAngle = 20.0,
             maghribAngle = 0.0,
@@ -197,7 +212,7 @@ data class Method(
          */
         val Tehran = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 17.7,
             imsakAngle = 17.7,
             maghribAngle = 4.5,
@@ -214,7 +229,7 @@ data class Method(
          */
         val Jafari = Method(
             highLats = HighLatsAdjustment.None,
-            midnight = Midnight.SunsetSunrise,
+            midnight = Midnight.SunsetFajr,
             fajrAngle = 16.0,
             imsakAngle = 16.0,
             maghribAngle = 4.0,
