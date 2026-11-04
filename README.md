@@ -85,7 +85,7 @@ The astronomy core is based on 2.3. The API and behavior differ in these areas:
 - Defaults differ: bundled presets use no high-latitude adjustment and Imsak =
   Fajr, while 2.3 defaults to `NightMiddle` and Imsak 10 minutes before Fajr.
 
-### client - Hosted API Client
+### client - API Client
 
 JVM client for the hosted open-prayer-times API. The default base URL is
 `https://opt.mk38.de` and can be changed at runtime:
