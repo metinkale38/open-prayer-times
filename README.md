@@ -87,14 +87,21 @@ The astronomy core is based on 2.3. The API and behavior differ in these areas:
 
 ### client - Hosted API Client
 
-JVM client for the hosted open-prayer-times API at `https://opt.mk38.de`.
+JVM client for the hosted open-prayer-times API. The default base URL is
+`https://opt.mk38.de` and can be changed at runtime:
 
 ```kotlin
 import dev.metinkale.openprayertimes.OpenPrayerTimes
 
+OpenPrayerTimes.configure("https://prayer.example.org/api")
+
 val cities = OpenPrayerTimes.search("Berlin")
 val times = OpenPrayerTimes.fetch(cities.first().provider, cities.first().id)
 ```
+
+Only `http://` and `https://` URLs are accepted. The URL may include a path
+prefix; a single trailing slash is removed. Invalid or empty URLs are rejected
+with `IllegalArgumentException`.
 
 ### server - REST API (Ktor)
 
@@ -165,6 +172,17 @@ It listens on `0.0.0.0:8080`. The server expects an existing PostgreSQL schema
 with the provider/city tables, the `times` cache table, the `geonames` table, and
 the `join_names` database function. Schema migrations are not included in this
 repository.
+
+### Self-hosting
+
+To use your own deployment, start the `server/` module and configure the client
+with its public URL:
+
+```kotlin
+OpenPrayerTimes.configure("https://prayer.example.org")
+```
+
+The default remains `https://opt.mk38.de`.
 
 ## REST API
 
