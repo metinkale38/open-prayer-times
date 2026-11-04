@@ -59,11 +59,6 @@ Developer: Hamid Zarrabi-Zadeh
 License: GNU LGPL v3.0
 ```
 
-History in this repository:
-
-- Added on 2022-11-02 in commit `dd424a4` as the `praytimes` module.
-- Renamed to `calctimes` in commit `271c118`.
-
 PrayTimes.js 2.3 is licensed under **GNU LGPL v3.0**. As a derivative work,
 `calctimes` must be treated as LGPL-3.0. Redistributions must retain the
 copyright notice, credit PrayTimes.org, link back to the original project, and
