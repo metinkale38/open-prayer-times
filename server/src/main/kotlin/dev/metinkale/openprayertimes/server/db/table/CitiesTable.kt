@@ -42,6 +42,7 @@ object IGMGTable : CitiesTable("igmg", Provider.IGMG)
 object DiyanetTable : CitiesTable("diyanet", Provider.Diyanet)
 object SemerkandTable : CitiesTable("semerkand", Provider.Semerkand)
 object NVCTable : CitiesTable("nvc", Provider.NVC)
+object JAKIMTable : CitiesTable("jakim", Provider.JAKIM)
 
 private class JoinNamesExpression(
     val first: Column<List<String>>, val second: Column<List<String>>

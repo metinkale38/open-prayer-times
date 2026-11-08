@@ -4,6 +4,7 @@ import dev.metinkale.openprayertimes.City
 import dev.metinkale.openprayertimes.Provider
 import dev.metinkale.openprayertimes.server.db.table.DiyanetTable
 import dev.metinkale.openprayertimes.server.db.table.IGMGTable
+import dev.metinkale.openprayertimes.server.db.table.JAKIMTable
 import dev.metinkale.openprayertimes.server.db.table.NVCTable
 import dev.metinkale.openprayertimes.server.db.table.SemerkandTable
 
@@ -22,6 +23,7 @@ interface ListableProvider {
                 Provider.IGMG -> IGMGTable
                 Provider.London -> LondonProvider
                 Provider.NVC -> NVCTable
+                Provider.JAKIM -> JAKIMTable
                 Provider.Calc -> null
                 Provider.Semerkand -> SemerkandTable
             }?.let { provider.name to it }
