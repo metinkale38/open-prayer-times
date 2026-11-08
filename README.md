@@ -134,17 +134,12 @@ and offset can be configured globally:
 
 ```kotlin
 import dev.metinkale.openprayertimes.hijri.HijriCalculation
+import dev.metinkale.openprayertimes.hijri.HijriConfiguration
 import dev.metinkale.openprayertimes.hijri.HijriConfig
 
-HijriConfig.configure(HijriCalculation.UmmulQura, dayOffset = 1)
-HijriConfig.reset()
-```
-
-They can also be passed explicitly for a single conversion:
-
-```kotlin
-val hijri = LocalDate(2022, 11, 16).toHijriDate(HijriCalculation.UmmulQura, 1)
-val gregorian = hijri.toLocalDate(HijriCalculation.UmmulQura, 1)
+HijriConfig.current = HijriConfiguration(HijriCalculation.UmmulQura, dayOffset = 1)
+// ...
+HijriConfig.current = HijriConfiguration()
 ```
 
 ### diyanet-client - Diyanet API Client

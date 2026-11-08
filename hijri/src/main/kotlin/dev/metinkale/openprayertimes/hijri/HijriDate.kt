@@ -16,12 +16,7 @@ class HijriDate private constructor(val year: Int, val monthValue: Int, val day:
 
     fun toLocalDate(): LocalDate = toLocalDate(HijriConfig.current)
 
-    fun toLocalDate(
-        calculation: HijriCalculation,
-        dayOffset: Int = 0
-    ): LocalDate = toLocalDate(HijriConfiguration(calculation, dayOffset))
-
-    fun toLocalDate(config: HijriConfiguration): LocalDate {
+    private fun toLocalDate(config: HijriConfiguration): LocalDate {
         val localDate = when (config.calculation) {
             HijriCalculation.Diyanet -> diyanetToLocalDate(this)
             HijriCalculation.UmmulQura -> convertFromHijri(this)
@@ -147,19 +142,10 @@ class HijriDate private constructor(val year: Int, val monthValue: Int, val day:
 
         fun now() = fromLocalDate(LocalDate.now())
 
-        fun now(calculation: HijriCalculation, dayOffset: Int = 0) =
-            fromLocalDate(LocalDate.now(), calculation, dayOffset)
-
         fun fromLocalDate(localDate: LocalDate): HijriDate =
             fromLocalDate(localDate, HijriConfig.current)
 
-        fun fromLocalDate(
-            localDate: LocalDate,
-            calculation: HijriCalculation,
-            dayOffset: Int = 0
-        ): HijriDate = fromLocalDate(localDate, HijriConfiguration(calculation, dayOffset))
-
-        fun fromLocalDate(localDate: LocalDate, config: HijriConfiguration): HijriDate {
+        private fun fromLocalDate(localDate: LocalDate, config: HijriConfiguration): HijriDate {
             val adjustedDate = if (config.dayOffset == 0) {
                 localDate
             } else {
@@ -190,8 +176,3 @@ class HijriDate private constructor(val year: Int, val monthValue: Int, val day:
 }
 
 fun LocalDate.toHijriDate() = HijriDate.fromLocalDate(this)
-
-fun LocalDate.toHijriDate(
-    calculation: HijriCalculation,
-    dayOffset: Int = 0
-) = HijriDate.fromLocalDate(this, calculation, dayOffset)

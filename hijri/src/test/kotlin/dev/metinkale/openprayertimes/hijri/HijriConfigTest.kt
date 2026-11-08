@@ -8,10 +8,14 @@ import kotlin.test.assertEquals
 
 class HijriConfigTest {
     @BeforeTest
-    fun resetBefore() = HijriConfig.reset()
+    fun resetBefore() {
+        HijriConfig.current = HijriConfiguration()
+    }
 
     @AfterTest
-    fun resetAfter() = HijriConfig.reset()
+    fun resetAfter() {
+        HijriConfig.current = HijriConfiguration()
+    }
 
     @Test
     fun defaultsToDiyanetWithoutOffset() {
@@ -24,43 +28,36 @@ class HijriConfigTest {
 
     @Test
     fun switchesToUmmulQura() {
+        HijriConfig.current = HijriConfiguration(HijriCalculation.UmmulQura)
+
         val date = LocalDate(2022, 11, 16)
-        assertEquals(
-            HijriDate.of(1444, 4, 22),
-            date.toHijriDate(HijriCalculation.UmmulQura)
-        )
-        assertEquals(
-            date,
-            HijriDate.of(1444, 4, 22).toLocalDate(HijriCalculation.UmmulQura)
-        )
+        assertEquals(HijriDate.of(1444, 4, 22), date.toHijriDate())
+        assertEquals(date, HijriDate.of(1444, 4, 22).toLocalDate())
     }
 
     @Test
-    fun appliesDayOffset() {
+    fun appliesPositiveDayOffset() {
+        HijriConfig.current = HijriConfiguration(HijriCalculation.Diyanet, 1)
+
         val date = LocalDate(2022, 11, 16)
-        assertEquals(
-            HijriDate.of(1444, 4, 22),
-            date.toHijriDate(HijriCalculation.Diyanet, 1)
-        )
-        assertEquals(
-            date,
-            HijriDate.of(1444, 4, 22).toLocalDate(HijriCalculation.Diyanet, 1)
-        )
-        assertEquals(
-            HijriDate.of(1444, 4, 20),
-            date.toHijriDate(HijriCalculation.Diyanet, -1)
-        )
+        assertEquals(HijriDate.of(1444, 4, 22), date.toHijriDate())
+        assertEquals(date, HijriDate.of(1444, 4, 22).toLocalDate())
     }
 
     @Test
-    fun usesGlobalConfiguration() {
-        HijriConfig.configure(HijriCalculation.UmmulQura, 1)
+    fun appliesNegativeDayOffset() {
+        HijriConfig.current = HijriConfiguration(HijriCalculation.Diyanet, -1)
 
         val date = LocalDate(2022, 11, 16)
-        assertEquals(
-            date.toHijriDate(HijriCalculation.UmmulQura, 1),
-            date.toHijriDate()
-        )
+        assertEquals(HijriDate.of(1444, 4, 20), date.toHijriDate())
+    }
+
+    @Test
+    fun combinesCalculationAndOffset() {
+        HijriConfig.current = HijriConfiguration(HijriCalculation.UmmulQura, 1)
+
+        val date = LocalDate(2022, 11, 16)
         assertEquals(HijriDate.of(1444, 4, 23), date.toHijriDate())
+        assertEquals(date, HijriDate.of(1444, 4, 23).toLocalDate())
     }
 }
