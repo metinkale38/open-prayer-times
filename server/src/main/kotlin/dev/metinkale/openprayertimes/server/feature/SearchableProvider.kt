@@ -6,6 +6,7 @@ import dev.metinkale.openprayertimes.server.db.table.DiyanetTable
 import dev.metinkale.openprayertimes.server.db.table.IGMGTable
 import dev.metinkale.openprayertimes.server.db.table.NVCTable
 import dev.metinkale.openprayertimes.server.db.table.SemerkandTable
+import dev.metinkale.openprayertimes.server.db.table.VaktijaTable
 
 
 interface SearchableProvider {
@@ -26,6 +27,7 @@ interface SearchableProvider {
                 Provider.NVC -> NVCTable
                 Provider.Calc -> CalcProvider
                 Provider.Semerkand -> SemerkandTable
+                Provider.Vaktija -> VaktijaTable
             }
         }
 

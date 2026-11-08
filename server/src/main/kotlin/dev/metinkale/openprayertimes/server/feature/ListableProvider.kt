@@ -6,6 +6,7 @@ import dev.metinkale.openprayertimes.server.db.table.DiyanetTable
 import dev.metinkale.openprayertimes.server.db.table.IGMGTable
 import dev.metinkale.openprayertimes.server.db.table.NVCTable
 import dev.metinkale.openprayertimes.server.db.table.SemerkandTable
+import dev.metinkale.openprayertimes.server.db.table.VaktijaTable
 
 
 interface ListableProvider {
@@ -24,6 +25,7 @@ interface ListableProvider {
                 Provider.NVC -> NVCTable
                 Provider.Calc -> null
                 Provider.Semerkand -> SemerkandTable
+                Provider.Vaktija -> VaktijaTable
             }?.let { provider.name to it }
         }.toMap()
 
