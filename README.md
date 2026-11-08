@@ -187,7 +187,8 @@ It listens on `0.0.0.0:8080`. The server expects an existing PostgreSQL schema
 with the provider/city tables, the `times` cache table, the `geonames` table, and
 the `join_names` database function. Schema migrations are not included in this
 repository. The Vaktija provider tables and their location data can be created with
-`sql/vaktija-eu.sql` and `sql/vaktija-ba.sql`.
+`sql/vaktija-eu.sql` and `sql/vaktija-ba.sql`. Vaktija.ba coordinates are derived
+from OpenStreetMap via Photon (ODbL 1.0).
 
 ### Self-hosting
 
