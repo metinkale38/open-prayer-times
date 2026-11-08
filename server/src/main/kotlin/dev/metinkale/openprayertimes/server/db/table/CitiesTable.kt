@@ -7,8 +7,12 @@ import dev.metinkale.openprayertimes.server.db.provider.ListFromTable
 import dev.metinkale.openprayertimes.server.db.provider.SearchFromTable
 import org.jetbrains.exposed.v1.core.*
 
-sealed class CitiesTable(table: String, val provider: Provider) : Table(table), SearchFromTable, ListFromTable {
-    override val id = varchar("id", 16)
+sealed class CitiesTable(
+    table: String,
+    val provider: Provider,
+    idLength: Int = 16
+) : Table(table), SearchFromTable, ListFromTable {
+    override val id = varchar("id", idLength)
     override val latitude = float("lat").nullable()
     override val longitude = float("lng").nullable()
     override val country = varchar("country", 2)
@@ -42,6 +46,8 @@ object IGMGTable : CitiesTable("igmg", Provider.IGMG)
 object DiyanetTable : CitiesTable("diyanet", Provider.Diyanet)
 object SemerkandTable : CitiesTable("semerkand", Provider.Semerkand)
 object NVCTable : CitiesTable("nvc", Provider.NVC)
+object VaktijaEuTable : CitiesTable("vaktija_eu", Provider.VaktijaEu, 64)
+object VaktijaBaTable : CitiesTable("vaktija_ba", Provider.VaktijaBa)
 
 private class JoinNamesExpression(
     val first: Column<List<String>>, val second: Column<List<String>>

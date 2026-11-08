@@ -18,6 +18,8 @@ sealed interface PrayerTimesFetcher {
             Provider.London -> LondonProvider
             Provider.Semerkand -> SemerkandProvider
             Provider.NVC -> NVCProvider
+            Provider.VaktijaEu -> VaktijaEuProvider
+            Provider.VaktijaBa -> VaktijaBaProvider
             Provider.Calc -> throw RuntimeException("Calc provider is not supported on the server")
         }
     }
