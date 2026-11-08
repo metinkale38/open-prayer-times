@@ -129,6 +129,24 @@ import kotlinx.datetime.LocalDate
 val hijri = LocalDate(2022, 11, 16).toHijriDate()
 ```
 
+By default the Diyanet mapping is used with a day offset of `0`. The calculation
+and offset can be configured globally:
+
+```kotlin
+import dev.metinkale.openprayertimes.hijri.HijriCalculation
+import dev.metinkale.openprayertimes.hijri.HijriConfig
+
+HijriConfig.configure(HijriCalculation.UmmulQura, dayOffset = 1)
+HijriConfig.reset()
+```
+
+They can also be passed explicitly for a single conversion:
+
+```kotlin
+val hijri = LocalDate(2022, 11, 16).toHijriDate(HijriCalculation.UmmulQura, 1)
+val gregorian = hijri.toLocalDate(HijriCalculation.UmmulQura, 1)
+```
+
 ### diyanet-client - Diyanet API Client
 
 Low-level client for the Diyanet Awqat Salah API. It handles login, JWT access
