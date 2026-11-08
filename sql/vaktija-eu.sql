@@ -6,7 +6,7 @@
 
 BEGIN;
 
-CREATE TABLE IF NOT EXISTS vaktija (
+CREATE TABLE IF NOT EXISTS vaktija_eu (
     id varchar(64) PRIMARY KEY,
     lat real,
     lng real,
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS vaktija (
     name_en text[] NOT NULL
 );
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('montmarault', 46.31738, 2.95472, 'FR', ARRAY['Montmarault'], ARRAY['Montmarault']),
 ('campello-sul-clitunno', 42.82007258, 12.77692185, 'IT', ARRAY['Campello sul Clitunno'], ARRAY['Campello sul Clitunno']),
 ('auenwald', 48.93694444, 9.50083333, 'DE', ARRAY['Auenwald'], ARRAY['Auenwald']),
@@ -523,7 +523,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('hinterlainsach', 47.283844, 15.096931, 'AT', ARRAY['Hinterlainsach'], ARRAY['Hinterlainsach']),
 ('dellbruck', 50.983109, 7.096757, 'DE', ARRAY['Dellbrück'], ARRAY['Dellbrück']),
 ('skender-vakuf', 44.4667, 17.55, 'BA', ARRAY['Skender-Vakuf'], ARRAY['Skender-Vakuf']),
@@ -1031,7 +1031,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('sulzau-wimm', 47.4928733, 13.1765192, 'AT', ARRAY['Sulzau (Wimm)'], ARRAY['Sulzau (Wimm)']),
 ('telfs', 47.3131, 11.0711, 'AT', ARRAY['Telfs'], ARRAY['Telfs']),
 ('ternitz-flatz', 47.7167, 16.0333, 'AT', ARRAY['Ternitz (Flatz)'], ARRAY['Ternitz (Flatz)']),
@@ -1539,7 +1539,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('ruti', 47.26138889, 8.85555556, 'CH', ARRAY['Rüti'], ARRAY['Rüti']),
 ('centar', 45.556065, 18.705968, 'HR', ARRAY['Centar'], ARRAY['Centar']),
 ('rauhenstein', 48.001328, 16.227849, 'AT', ARRAY['Rauhenstein'], ARRAY['Rauhenstein']),
@@ -2047,7 +2047,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('mierlo', 51.45, 5.61666667, 'NL', ARRAY['Mierlo'], ARRAY['Mierlo']),
 ('adro', 45.6179, 9.9625, 'IT', ARRAY['Adro'], ARRAY['Adro']),
 ('trebesing', 46.893947, 13.523861, 'AT', ARRAY['Trebesing'], ARRAY['Trebesing']),
@@ -2555,7 +2555,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('strasshof-an-der-nordbahn', 48.322991, 16.668361, 'AT', ARRAY['Strasshof an der Nordbahn'], ARRAY['Strasshof an der Nordbahn']),
 ('gaimersheim', 48.799054, 11.372536, 'DE', ARRAY['Gaimersheim'], ARRAY['Gaimersheim']),
 ('kottenheim', 50.35245, 7.260099, 'DE', ARRAY['Kottenheim'], ARRAY['Kottenheim']),
@@ -3063,7 +3063,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('stranda', 62.062076, 7.262891, 'NO', ARRAY['Stranda'], ARRAY['Stranda']),
 ('gonars', 45.880442, 13.257124, 'IT', ARRAY['Gonars'], ARRAY['Gonars']),
 ('nellingen', 48.520925, 9.806229, 'DE', ARRAY['Nellingen'], ARRAY['Nellingen']),
@@ -3571,7 +3571,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('brunnthal', 48.031477, 11.668014, 'DE', ARRAY['Brunnthal'], ARRAY['Brunnthal']),
 ('eurasburg', 48.342891, 11.150982, 'DE', ARRAY['Eurasburg'], ARRAY['Eurasburg']),
 ('grossenaspe', 54.015364, 9.932615, 'DE', ARRAY['Großenaspe'], ARRAY['Großenaspe']),
@@ -4079,7 +4079,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('belm', 52.299986, 8.129256, 'DE', ARRAY['Belm'], ARRAY['Belm']),
 ('isola-del-cantone', 44.657157, 8.948554, 'IT', ARRAY['Isola del Cantone'], ARRAY['Isola del Cantone']),
 ('schweich', 49.818628, 6.753194, 'DE', ARRAY['Schweich'], ARRAY['Schweich']),
@@ -4587,7 +4587,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('frankenau', 51.067534, 8.918499, 'DE', ARRAY['Frankenau'], ARRAY['Frankenau']),
 ('koniz', 46.92459437, 7.37722399, 'CH', ARRAY['Köniz'], ARRAY['Köniz']),
 ('eberstalzell', 48.0383997, 13.9929355, 'AT', ARRAY['Eberstalzell'], ARRAY['Eberstalzell']),
@@ -5095,7 +5095,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('tinjan', 45.21254, 13.823814, 'HR', ARRAY['Tinjan'], ARRAY['Tinjan']),
 ('eisenberg', 50.958487, 11.847005, 'DE', ARRAY['Eisenberg'], ARRAY['Eisenberg']),
 ('spremberg', 51.533107, 14.363847, 'DE', ARRAY['Spremberg'], ARRAY['Spremberg']),
@@ -5603,7 +5603,7 @@ ON CONFLICT (id) DO UPDATE SET
     name_tr = EXCLUDED.name_tr,
     name_en = EXCLUDED.name_en;
 
-INSERT INTO vaktija (id, lat, lng, country, name_tr, name_en) VALUES
+INSERT INTO vaktija_eu (id, lat, lng, country, name_tr, name_en) VALUES
 ('unterbernbach', 48.532057, 11.173189, 'DE', ARRAY['Unterbernbach'], ARRAY['Unterbernbach']),
 ('hude-oldenburg', 53.114031, 8.456654, 'DE', ARRAY['Hude (Oldenburg)'], ARRAY['Hude (Oldenburg)']),
 ('schlaitdorf', 48.604454, 9.225782, 'DE', ARRAY['Schlaitdorf'], ARRAY['Schlaitdorf']),

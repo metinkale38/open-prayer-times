@@ -8,7 +8,7 @@ import kotlinx.datetime.LocalTime
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
-object VaktijaProvider : PrayerTimesFetcher {
+object VaktijaEuProvider : PrayerTimesFetcher {
     private val json = Json { ignoreUnknownKeys = true }
 
     override suspend fun getPrayerTimes(key: String): List<DayTimes> {

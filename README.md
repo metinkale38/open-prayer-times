@@ -115,7 +115,8 @@ Supported providers:
 - London - Unified Islamic Prayer Timetable (londonprayertimes.com)
 - NVC - NamazVakti.com
 - Semerkand - Semerkand Takvimi (semerkandtakvimi.com)
-- Vaktija - Vaktija.eu (vaktija.eu)
+- Vaktija.eu - Vaktija.eu (vaktija.eu)
+- Vaktija.ba - Vaktija.ba (vaktija.ba)
 - Calc - Local calculation from GeoNames coordinates using `calctimes`
 
 ### hijri - Hijri Date Conversion
@@ -185,8 +186,8 @@ export DB_POOL_SIZE="5" # optional
 It listens on `0.0.0.0:8080`. The server expects an existing PostgreSQL schema
 with the provider/city tables, the `times` cache table, the `geonames` table, and
 the `join_names` database function. Schema migrations are not included in this
-repository. The Vaktija provider table and its location data can be created with
-`sql/vaktija.sql`.
+repository. The Vaktija provider tables and their location data can be created with
+`sql/vaktija-eu.sql` and `sql/vaktija-ba.sql`.
 
 ### Self-hosting
 
