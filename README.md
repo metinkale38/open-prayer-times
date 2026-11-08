@@ -115,6 +115,7 @@ Supported providers:
 - London - Unified Islamic Prayer Timetable (londonprayertimes.com)
 - NVC - NamazVakti.com
 - Semerkand - Semerkand Takvimi (semerkandtakvimi.com)
+- JAKIM - Jabatan Kemajuan Islam Malaysia e-Solat (e-solat.gov.my)
 - Calc - Local calculation from GeoNames coordinates using `calctimes`
 
 ### hijri - Hijri Date Conversion
@@ -184,7 +185,7 @@ export DB_POOL_SIZE="5" # optional
 It listens on `0.0.0.0:8080`. The server expects an existing PostgreSQL schema
 with the provider/city tables, the `times` cache table, the `geonames` table, and
 the `join_names` database function. Schema migrations are not included in this
-repository.
+repository. The JAKIM zones can be created with `sql/jakim.sql`.
 
 ### Self-hosting
 

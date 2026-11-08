@@ -1,5 +1,5 @@
 package dev.metinkale.openprayertimes
 
 enum class Provider {
-    Diyanet, IGMG, London, NVC, Semerkand, Calc
+    Diyanet, IGMG, London, NVC, Semerkand, JAKIM, Calc
 }
