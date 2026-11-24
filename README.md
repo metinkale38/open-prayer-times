@@ -168,6 +168,100 @@ Individual modules can be built or tested with their Gradle path, for example:
 ./gradlew :server:build
 ```
 
+## Published Packages
+
+The first release starts at `1.0.0`. Every following push to `main` creates a
+semantic version tag (`vMAJOR.MINOR.PATCH`) and publishes the library modules to
+GitHub Packages:
+
+| Module      | Maven coordinates              |
+|-------------|--------------------------------|
+| `calctimes` | `dev.metinkale:calctimes`      |
+| `client`    | `dev.metinkale:client`         |
+| `hijri`     | `dev.metinkale:hijri`          |
+
+The version is derived from conventional commit messages:
+
+- `feat:` -> minor version
+- `fix:` and other commits -> patch version
+- `feat!:` or a `BREAKING CHANGE:` footer -> major version
+
+Local builds use `1.0.0-SNAPSHOT` by default. Use `-PreleaseVersion=1.2.3`
+to build or publish a specific version locally.
+
+GitHub Packages requires authentication even for public packages. Create a
+personal access token with the `read:packages` scope and use it as the password.
+
+### Gradle
+
+```kotlin
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/metinkale38/open-prayer-times")
+        credentials {
+            username = System.getenv("GITHUB_ACTOR")
+            password = System.getenv("GITHUB_TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation("dev.metinkale:calctimes:1.0.0")
+    implementation("dev.metinkale:client:1.0.0")
+    implementation("dev.metinkale:hijri:1.0.0")
+}
+```
+
+### Maven
+
+Add the repository and credentials to your `pom.xml` / `settings.xml`:
+
+```xml
+<repositories>
+    <repository>
+        <id>github</id>
+        <url>https://maven.pkg.github.com/metinkale38/open-prayer-times</url>
+    </repository>
+</repositories>
+```
+
+```xml
+<servers>
+    <server>
+        <id>github</id>
+        <username>YOUR_GITHUB_USERNAME</username>
+        <password>${env.GITHUB_TOKEN}</password>
+    </server>
+</servers>
+```
+
+```xml
+<dependency>
+    <groupId>dev.metinkale</groupId>
+    <artifactId>calctimes</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### Docker Image
+
+The server image is published to GitHub Container Registry for every release:
+
+```bash
+docker pull ghcr.io/metinkale38/open-prayer-times/server:latest
+
+docker run --rm -p 8080:8080 \
+  -e JDBC_URL="jdbc:postgresql://host:5432/openprayertimes" \
+  -e JDBC_USERNAME="openprayertimes" \
+  -e JDBC_PASSWORD="secret" \
+  ghcr.io/metinkale38/open-prayer-times/server:latest
+```
+
+Available tags are `latest`, `MAJOR.MINOR.PATCH`, `MAJOR.MINOR`, `MAJOR`, and
+`sha-<commit>`. Packages are private by default. Either authenticate with
+`docker login ghcr.io` using a token with `read:packages`, or make the package
+public in the repository's package settings.
+
 ## Run the Server
 
 The server reads its database configuration from environment variables:
