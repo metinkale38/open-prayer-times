@@ -1,3 +1,4 @@
+import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.tasks.testing.Test
 
 plugins {
@@ -8,6 +9,12 @@ plugins {
     id("maven-publish")
 }
 
+// Release workflows pass the semantic version via the VERSION environment variable.
+// Local builds can use -PreleaseVersion=1.2.3, otherwise a snapshot version is used.
+val releaseVersion = providers.environmentVariable("VERSION")
+    .orElse(providers.gradleProperty("releaseVersion"))
+    .orElse("1.0.0-SNAPSHOT")
+
 allprojects {
     repositories {
         mavenCentral()
@@ -17,9 +24,30 @@ allprojects {
 
 subprojects {
     group = "dev.metinkale"
-    version = "1.0-SNAPSHOT"
+    version = releaseVersion.get()
 
     tasks.withType<Test>().configureEach {
         failOnNoDiscoveredTests = false
+    }
+
+    plugins.withId("maven-publish") {
+        configure<PublishingExtension> {
+            repositories {
+                maven {
+                    name = "GitHubPackages"
+                    // GitHub Packages needs the repository in lowercase.
+                    val repository = System.getenv("GITHUB_REPOSITORY")
+                        ?: "metinkale38/open-prayer-times"
+                    url = uri("https://maven.pkg.github.com/${repository.lowercase()}")
+
+                    credentials {
+                        username = System.getenv("GITHUB_ACTOR")
+                            ?: System.getenv("GITHUB_REPOSITORY_OWNER")
+                            ?: ""
+                        password = System.getenv("GITHUB_TOKEN") ?: ""
+                    }
+                }
+            }
+        }
     }
 }
